@@ -3,8 +3,8 @@ name: Deploy Flask API to Azure Functions
 on:
   push:
     branches:
-      - main
-  workflow_dispatch:
+      - main  # ✅ Triggers deployment only on changes to main branch
+  workflow_dispatch:  # ✅ Allows manual deployment trigger
 
 permissions:
   id-token: write
@@ -20,7 +20,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v3
         with:
-          python-version: '3.9'
+          python-version: '3.9'  # ✅ Recommended Python version for Azure Functions
 
       - name: Install dependencies
         run: |
@@ -37,5 +37,5 @@ jobs:
       - name: Deploy Flask API to Azure Functions
         uses: azure/functions-action@v1
         with:
-          app-name: "ministry-api"
-          package: "backend"
+          app-name: "ministry-api"  # ✅ Replace with your actual Azure Function App name
+          package: "backend"  # ✅ Points to the Flask API folder inside your repo
