@@ -1,38 +1,98 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ministry Website</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="js/script.js" defer></script>
-</head>
-<body>
-    <header>
-        <nav>
-            <div class="logo">Ministry Logo</div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Programs</a></li>
-                <li><a href="#">Get Involved</a></li>
-            </ul>
-            <a href="#" class="donate-btn">Donate Now</a>
-        </nav>
-    </header>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Join Us.<br>Change Their World.</h1>
-            <p>Change Yours. This Will Change Everything.</p>
-            <a href="#" class="cta-button">Donate Now</a>
-        </div>
-    </section>
+body {
+    background-color: #f5f5f5;
+    color: #333;
+}
 
-    <section class="info">
-        <p>Each day, an estimated 734 children become orphans</p>
-    </section>
-</body>
-</html>
+header {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: orange;
+}
+
+.donate-btn {
+    background: orange;
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.hero {
+    background: url("../images/hero-background.jpg") no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.hero-content p {
+    font-size: 22px;
+    margin: 20px 0;
+}
+
+.cta-button {
+    background: orange;
+    padding: 15px 25px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.cta-button:hover {
+    background: darkorange;
+}
+
+.info {
+    padding: 50px;
+    text-align: center;
+    font-size: 22px;
+    background: white;
+}
