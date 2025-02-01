@@ -3,8 +3,8 @@ name: Deploy Flask API to Azure Functions
 on:
   push:
     branches:
-      - main  # ✅ Only trigger on main branch
-  workflow_dispatch: # ✅ Allow manual trigger
+      - main
+  workflow_dispatch:
 
 permissions:
   id-token: write
