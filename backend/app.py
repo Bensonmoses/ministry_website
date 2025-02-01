@@ -1,18 +1,15 @@
-from flask import Flask, render_template
+import azure.functions as func
+from flask import Flask, jsonify
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)  # Enable CORS for frontend communication
 
-@app.route('/')
+@app.route("/")
 def home():
-    return render_template('index.html')
+    return jsonify({"message": "Ministry Backend is Running!"})
 
-@app.route('/about')
-def about():
-    return render_template('about.html')
-
-@app.route('/contact')
-def contact():
-    return render_template('contact.html')
-
-if __name__ == '__main__':
-    app.run(debug=True)
+# Azure Function entry point
+def main(req: func.HttpRequest) -> func.HttpResponse:
+    """Azure Function entry point to handle HTTP requests"""
+    return func.WsgiMiddleware(app.wsgi_app).handle(req)
