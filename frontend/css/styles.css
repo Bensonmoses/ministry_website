@@ -1,69 +1,25 @@
-/* ✅ Header */
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: rgba(30, 30, 30, 0.8);
-    padding: 10px 20px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    transition: background 0.4s ease-in-out;
+// ✅ Function to Toggle Mobile Navigation Menu
+function toggleMenu() {
+    var mobileNav = document.getElementById("mobileNav");
+    mobileNav.classList.toggle("active");
 }
 
-header.scrolled {
-    background: #1E1E1E;
-}
+// ✅ Close Menu When Clicking Outside
+document.addEventListener("click", function (event) {
+    var menu = document.getElementById("mobileNav");
+    var menuButton = document.getElementById("menuButton");
 
-/* ✅ Logo */
-.logo img {
-    width: 60px;
-}
+    if (!menu.contains(event.target) && event.target !== menuButton) {
+        menu.classList.remove("active");
+    }
+});
 
-/* ✅ Navigation */
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-size: 16px;
-}
-
-/* ✅ Hero Section */
-.hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 80vh;
-    background: url("../images/pic1.webp") no-repeat center center/cover;
-    color: white;
-}
-
-/* ✅ Founder Section */
-.founder {
-    text-align: center;
-    background: white;
-    padding: 50px 20px;
-}
-
-/* ✅ Video Section */
-.video-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-/* ✅ Footer */
-footer {
-    background: black;
-    color: white;
-    text-align: center;
-    padding: 15px;
-}
+// ✅ Add Transparent Header on Scroll
+window.addEventListener("scroll", function() {
+    var header = document.getElementById("mainHeader");
+    if (window.scrollY > 50) {
+        header.classList.add("scrolled");
+    } else {
+        header.classList.remove("scrolled");
+    }
+});
