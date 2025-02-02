@@ -1,18 +1,17 @@
 /* ✅ Header */
 header {
-    background: #1E1E1E;
-    color: white;
-    padding: 10px 40px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    background: #1E1E1E;
+    padding: 10px 20px;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
 }
 
-/* ✅ Navigation Menu */
+/* ✅ Navigation */
 .nav-links {
     display: flex;
     list-style: none;
@@ -38,7 +37,9 @@ header {
 /* ✅ Social Media Icons */
 .social-icons {
     display: flex;
+    justify-content: center;
     gap: 10px;
+    margin-top: 10px;
 }
 
 .social-icons img {
@@ -46,36 +47,35 @@ header {
     height: 30px;
 }
 
-/* ✅ Mobile Navigation */
-#mobileNav {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 200px;
-    background: #1E1E1E;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-#mobileNav.active {
+/* ✅ Hero Section */
+.hero {
     display: flex;
-}
-
-/* ✅ Hamburger Button */
-#menuButton {
-    display: none;
-    font-size: 28px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 80vh;
+    background: url("../images/pic1.webp") no-repeat center center/cover;
     color: white;
-    cursor: pointer;
+    position: relative;
 }
 
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-    #menuButton {
-        display: block;
-    }
+/* ✅ Embedded Video Section */
+.video-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.video-container iframe {
+    width: 80%;
+    height: 400px;
+    border-radius: 10px;
+}
+
+/* ✅ Footer */
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 15px;
 }
