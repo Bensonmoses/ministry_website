@@ -11,68 +11,83 @@
 
     <!-- ✅ Header Section -->
     <header id="mainHeader">
-        <div class="logo">
-            <img src="images/logo.png" alt="Church Logo">
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Church Logo">
+            </div>
+            
+            <!-- ✅ Mobile Menu Button -->
+            <button id="menuButton" onclick="toggleMenu()">☰</button>
+            
+            <nav>
+                <!-- ✅ Desktop Navigation -->
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="sermons.html">Sermons</a></li>
+                    <li><a href="ministries.html">Ministries</a></li>
+                    <li><a href="orphanage.html">Orphanage</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="volunteer.html">Get Involved</a></li>
+                    <li><a href="donate.html" class="donate-btn">Donate Now</a></li>
+                </ul>
+            </nav>
         </div>
-
-        <!-- ✅ Mobile Menu Button -->
-        <button id="menuButton" onclick="toggleMenu()">☰</button>
-
-        <nav>
-            <!-- ✅ Desktop Navigation -->
-            <ul class="nav-links">
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="about.html">ABOUT</a></li>
-                <li><a href="sermons.html">SERMONS</a></li>
-                <li><a href="ministries.html">MINISTRIES</a></li>
-                <li><a href="orphanage.html">ORPHANAGE</a></li>
-                <li><a href="events.html">EVENTS</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
-                <li><a href="volunteer.html">GET INVOLVED</a></li>
-                <li><a href="donate.html" class="donate-btn">DONATE NOW</a></li>
-            </ul>
-        </nav>
     </header>
-
-    <!-- ✅ Mobile Navigation Menu (Hidden by Default) -->
-    <ul id="mobileNav">
-        <li><a href="index.html">HOME</a></li>
-        <li><a href="about.html">ABOUT</a></li>
-        <li><a href="sermons.html">SERMONS</a></li>
-        <li><a href="ministries.html">MINISTRIES</a></li>
-        <li><a href="orphanage.html">ORPHANAGE</a></li>
-        <li><a href="events.html">EVENTS</a></li>
-        <li><a href="contact.html">CONTACT</a></li>
-        <li><a href="volunteer.html">GET INVOLVED</a></li>
-        <li><a href="donate.html" class="donate-btn">DONATE NOW</a></li>
-    </ul>
 
     <!-- ✅ Hero Section -->
     <section class="hero">
-        <div class="overlay"></div>
-        <div class="hero-content">
-            <h2>INSPIRED BY FAITH</h2>
-            <h1>TRANSFORMING LIVES THROUGH THE LOVE OF CHRIST</h1>
-            <p>Bringing Hope, Love, and Support to the Community</p>
-            <a href="visit.html" class="cta-button">PLAN YOUR VISIT</a>
+        <div class="hero-container">
+            <div class="hero-content">
+                <h2>Inspired by Faith</h2>
+                <h1>Transforming Lives Through the Love of Christ</h1>
+                <p>Bringing Hope, Love, and Support to the Community</p>
+                <a href="visit.html" class="cta-button">Plan Your Visit</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ✅ Main Content Sections -->
+    <section class="about-section">
+        <div class="about-container">
+            <h2>About Us</h2>
+            <p>We are dedicated to spreading faith and love through our ministries.</p>
+        </div>
+    </section>
+    
+    <section class="ministries-section">
+        <div class="ministries-container">
+            <h2>Our Ministries</h2>
+            <p>Serving the community through prayer, outreach, and support.</p>
+        </div>
+    </section>
+    
+    <section class="donate-section">
+        <div class="donate-container">
+            <h2>Support Our Mission</h2>
+            <p>Your donations help us continue our work in serving the needy.</p>
+            <a href="donate.html" class="cta-button">Donate Now</a>
         </div>
     </section>
 
     <!-- ✅ Footer Section -->
     <footer>
-        <p>&copy; 2025 HOLY SPIRIT PRAYER HOUSE | All Rights Reserved</p>
+        <div class="footer-container">
+            <p>&copy; 2025 HOLY SPIRIT PRAYER HOUSE | All Rights Reserved</p>
 
-        <!-- ✅ Social Media Icons -->
-        <div class="social-icons">
-            <a href="https://www.youtube.com/@pastorpmoses" target="_blank">
-                <img src="images/youtube.png" alt="YouTube">
-            </a>
-            <a href="https://www.instagram.com/hsph_oduru/" target="_blank">
-                <img src="images/instagram.png" alt="Instagram">
-            </a>
-            <a href="https://www.facebook.com/holy.jesus132" target="_blank">
-                <img src="images/facebook.png" alt="Facebook">
-            </a>
+            <!-- ✅ Social Media Icons -->
+            <div class="social-icons">
+                <a href="https://www.youtube.com/@pastorpmoses" target="_blank">
+                    <img src="images/youtube.png" alt="YouTube">
+                </a>
+                <a href="https://www.instagram.com/hsph_oduru/" target="_blank">
+                    <img src="images/instagram.png" alt="Instagram">
+                </a>
+                <a href="https://www.facebook.com/holy.jesus132" target="_blank">
+                    <img src="images/facebook.png" alt="Facebook">
+                </a>
+            </div>
         </div>
     </footer>
 

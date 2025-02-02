@@ -1,25 +1,24 @@
-// ✅ Function to Toggle Mobile Navigation Menu
-function toggleMenu() {
-    var mobileNav = document.getElementById("mobileNav");
-    mobileNav.classList.toggle("active");
-}
+document.addEventListener("DOMContentLoaded", function() {
+    // Mobile Menu Toggle
+    const menuButton = document.getElementById("menuButton");
+    const mobileNav = document.getElementById("mobileNav");
+    
+    menuButton.addEventListener("click", function() {
+        mobileNav.classList.toggle("active");
+    });
 
-// ✅ Close Menu When Clicking Outside
-document.addEventListener("click", function (event) {
-    var menu = document.getElementById("mobileNav");
-    var menuButton = document.getElementById("menuButton");
+    // Close menu when clicking outside
+    document.addEventListener("click", function(event) {
+        if (!menuButton.contains(event.target) && !mobileNav.contains(event.target)) {
+            mobileNav.classList.remove("active");
+        }
+    });
 
-    if (!menu.contains(event.target) && event.target !== menuButton) {
-        menu.classList.remove("active");
-    }
-});
-
-// ✅ Add Transparent Header on Scroll
-window.addEventListener("scroll", function() {
-    var header = document.getElementById("mainHeader");
-    if (window.scrollY > 50) {
-        header.classList.add("scrolled");
-    } else {
-        header.classList.remove("scrolled");
+    // Hero Section Button Click Event
+    const learnMoreButton = document.querySelector(".cta-button");
+    if (learnMoreButton) {
+        learnMoreButton.addEventListener("click", function() {
+            alert("Thank you for your interest! More information coming soon.");
+        });
     }
 });
