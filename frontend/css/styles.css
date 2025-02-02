@@ -1,25 +1,67 @@
-// ✅ Function to Toggle Mobile Navigation Menu
-function toggleMenu() {
-    var mobileNav = document.getElementById("mobileNav");
-    mobileNav.classList.toggle("active");
+/* ✅ Header (Transparent Initially) */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(30, 30, 30, 0.8);
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background 0.4s ease-in-out;
 }
 
-// ✅ Close Menu When Clicking Outside
-document.addEventListener("click", function (event) {
-    var menu = document.getElementById("mobileNav");
-    var menuButton = document.getElementById("menuButton");
+header.scrolled {
+    background: #1E1E1E;
+}
 
-    if (!menu.contains(event.target) && event.target !== menuButton) {
-        menu.classList.remove("active");
-    }
-});
+/* ✅ Navigation */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
 
-// ✅ Add Transparent Header on Scroll
-window.addEventListener("scroll", function() {
-    var header = document.getElementById("mainHeader");
-    if (window.scrollY > 50) {
-        header.classList.add("scrolled");
-    } else {
-        header.classList.remove("scrolled");
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* ✅ Mobile Navigation (Hidden by Default) */
+#mobileNav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: rgba(30, 30, 30, 0.9);
+    text-align: center;
+}
+
+#mobileNav.active {
+    display: flex; /* ✅ Show when toggled */
+}
+
+/* ✅ Mobile Menu Button */
+#menuButton {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+/* ✅ Responsive Design */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none; /* 🔴 FIX: Hide Desktop Menu on Mobile */
     }
-});
+    #menuButton {
+        display: block; /* ✅ Show Mobile Menu Button */
+    }
+}

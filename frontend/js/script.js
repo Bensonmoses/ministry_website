@@ -4,7 +4,7 @@ function toggleMenu() {
     mobileNav.classList.toggle("active");
 }
 
-// ✅ Close menu when clicking outside
+// ✅ Close Menu When Clicking Outside
 document.addEventListener("click", function (event) {
     var menu = document.getElementById("mobileNav");
     var menuButton = document.getElementById("menuButton");
