@@ -1,4 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
+    // ✅ Fix Title Issue (Ensures title is always correct)
+    document.title = "HOLY SPIRIT PRAYER HOUSE";
+
+    // ✅ Mobile Navigation Logic (Fix for onclick issue)
     const menuButton = document.getElementById("menuButton");
     const mobileNav = document.getElementById("mobileNav");
 
