@@ -1,98 +1,92 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Church Ministry</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <nav>
+            <div class="logo">Church Logo</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="sermons.html">Sermons</a></li>
+                <li><a href="ministries.html">Ministries</a></li>
+                <li><a href="orphanage.html">Orphanage Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="volunteer.html">Get Involved</a></li>
+            </ul>
+            <a href="donate.html" class="donate-btn">Donate Now</a>
+        </nav>
+    </header>
 
-body {
-    background-color: #f5f5f5;
-    color: #333;
-}
+    <!-- Hero Section with Image -->
+    <section class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <img src="images/pic1.webp" alt="Church Mission" class="hero-img">
+            <h1>Welcome to Our Church</h1>
+            <p>Spreading the Love of Christ and Serving the Community</p>
+            <a href="visit.html" class="cta-button">Plan Your Visit</a>
+        </div>
+    </section>
 
-header {
-    background: rgba(0, 0, 0, 0.8);
-    padding: 10px 20px;
-    position: fixed;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1000;
-}
+    <!-- About Section -->
+    <section class="info">
+        <h2>Our Mission</h2>
+        <p>"Go therefore and make disciples of all nations..." - Matthew 28:19</p>
+        <p>Our church is dedicated to preaching the Gospel, serving the community, and providing a place of worship for all.</p>
+    </section>
 
-.logo {
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
-}
+    <!-- Orphanage and Food Distribution Ministry -->
+    <section class="orphanage">
+        <h2>Orphanage Home & Feeding Program</h2>
+        <p>Our church operates an <strong>Orphanage Home</strong>, providing shelter, education, and love to children in need.</p>
+        <p>Every week, we organize a <strong>Food Distribution Program</strong>, offering meals to underprivileged families and the homeless.</p>
 
-.nav-links {
-    list-style: none;
-    display: flex;
-}
+        <div class="orphanage-content">
+            <div class="orphanage-item">
+                <img src="images/pic1.webp" alt="Orphanage Children" class="orphanage-img">
+                <h3>Orphanage Home</h3>
+                <p>We provide a safe home for children who have lost their parents, ensuring they receive education, healthcare, and spiritual guidance.</p>
+            </div>
+            <div class="orphanage-item">
+                <h3>Weekly Food Distribution</h3>
+                <p>Every week, our volunteers prepare and distribute food to poor families, bringing hope to those struggling to find meals.</p>
+            </div>
+        </div>
+        <a href="donate.html" class="cta-button">Support This Cause</a>
+    </section>
 
-.nav-links li {
-    margin: 0 15px;
-}
+    <!-- Upcoming Events -->
+    <section class="events">
+        <h2>Upcoming Events</h2>
+        <div class="event">
+            <h3>Sunday Worship</h3>
+            <p>Every Sunday at 10 AM</p>
+        </div>
+        <div class="event">
+            <h3>Bible Study</h3>
+            <p>Wednesdays at 7 PM</p>
+        </div>
+        <div class="event">
+            <h3>Food Distribution</h3>
+            <p>Every Saturday at 12 PM – Join us in serving the homeless and needy.</p>
+        </div>
+    </section>
 
-.nav-links a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    transition: 0.3s;
-}
+    <!-- Call to Action -->
+    <section class="cta">
+        <h2>Join Our Mission</h2>
+        <p>Be part of something greater. Let’s make a difference together.</p>
+        <a href="volunteer.html" class="cta-button">Get Involved</a>
+    </section>
 
-.nav-links a:hover {
-    color: orange;
-}
-
-.donate-btn {
-    background: orange;
-    padding: 10px 15px;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.hero {
-    background: url("../images/hero-background.jpg") no-repeat center center/cover;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-    padding: 20px;
-}
-
-.hero-content h1 {
-    font-size: 50px;
-    font-weight: bold;
-}
-
-.hero-content p {
-    font-size: 22px;
-    margin: 20px 0;
-}
-
-.cta-button {
-    background: orange;
-    padding: 15px 25px;
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-    border-radius: 5px;
-    transition: 0.3s;
-}
-
-.cta-button:hover {
-    background: darkorange;
-}
-
-.info {
-    padding: 50px;
-    text-align: center;
-    font-size: 22px;
-    background: white;
-}
+</body>
+</html>
