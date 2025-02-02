@@ -13,12 +13,4 @@ document.addEventListener("DOMContentLoaded", function() {
             mobileNav.classList.remove("active");
         }
     });
-
-    // Hero Section Button Click Event
-    const learnMoreButton = document.querySelector(".cta-button");
-    if (learnMoreButton) {
-        learnMoreButton.addEventListener("click", function() {
-            alert("Thank you for your interest! More information coming soon.");
-        });
-    }
 });
