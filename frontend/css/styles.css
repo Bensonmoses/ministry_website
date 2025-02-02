@@ -146,17 +146,49 @@ header {
     color: black;
 }
 
-/* ✅ Sections */
-.about-section, .ministries-section, .donate-section {
-    text-align: center;
-    padding: 40px 20px;
+
+/* ✅ Section Container for Side-by-Side Layout */
+.section-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    max-width: 1200px;
+    margin: auto;
 }
 
-/* ✅ Donation Section */
-.donate-section {
-    background: rgb(196, 44, 44);
+/* ✅ Individual Section */
+.section {
+    flex: 1;
+    padding: 30px;
+    text-align: center;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+/* ✅ Adjusted Background Colors */
+.about {
+    background-color: #222; /* Softer black */
     color: white;
 }
+
+.ministries {
+    background-color: #222; /* Softer black */
+    color: white;
+}
+
+.donate {
+    background-color: #cc3333; /* Softer red */
+    color: white;
+}
+
+/* ✅ Responsive Design (Stack Sections on Mobile) */
+@media (max-width: 768px) {
+    .section-container {
+        flex-direction: column;
+    }
+}
+
 
 /* ✅ Footer */
 footer {
