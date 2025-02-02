@@ -167,10 +167,11 @@ header {
 .section-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch; /* Ensures all sections have equal height */
     padding: 60px 30px;
     max-width: 1200px;
     margin: auto;
+    gap: 15px;
 }
 
 .section {
@@ -179,6 +180,10 @@ header {
     text-align: center;
     margin: 10px;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -186,8 +191,21 @@ header {
     transform: translateY(-5px);
 }
 
-/* ✅ Adjusted Background Colors */
-.about, .ministries {
+/* ✅ About Section Fix */
+.about {
+    background-color: #222;
+    color: white;
+    padding: 40px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 250px; /* Ensures consistent size */
+}
+
+/* ✅ Ministries & Donate Sections */
+.ministries {
     background-color: #222;
     color: white;
 }
@@ -202,6 +220,11 @@ header {
     .section-container {
         flex-direction: column;
         align-items: center;
+    }
+
+    .about {
+        min-height: auto;
+        padding: 30px;
     }
 }
 
