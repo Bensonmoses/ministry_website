@@ -4,17 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HOLY SPIRIT PRAYER HOUSE</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="frontend/css/styles.css">
+    <script src="frontend/js/script.js" defer></script>
 </head>
 <body>
 
-    <!-- Top Navigation Bar -->
+    <!-- ✅ Header Section -->
     <header>
-        <div class="logo-container">
-            <img src="images/logo.png" alt="Church Logo">
-            <h1>HOLY SPIRIT PRAYER HOUSE</h1>
-        </div>
+        <!-- Mobile Menu Button -->
+        <button id="menuButton" onclick="toggleMenu()">☰</button>
+
         <nav>
             <ul class="nav-links">
                 <li><a href="index.html">HOME</a></li>
@@ -25,12 +24,43 @@
                 <li><a href="events.html">EVENTS</a></li>
                 <li><a href="contact.html">CONTACT</a></li>
                 <li><a href="volunteer.html">GET INVOLVED</a></li>
+                <li><a href="donate.html" class="donate-btn">DONATE NOW</a></li>
             </ul>
         </nav>
-        <a href="donate.html" class="donate-btn">DONATE NOW</a>
+
+        <!-- ✅ Social Media Links -->
+        <div class="social-icons">
+            <a href="https://www.youtube.com/@pastorpmoses" target="_blank">
+                <img src="images/youtube.png" alt="YouTube">
+            </a>
+            <a href="https://www.instagram.com/hsph_oduru/" target="_blank">
+                <img src="images/instagram.png" alt="Instagram">
+            </a>
+            <a href="https://www.facebook.com/holy.jesus132" target="_blank">
+                <img src="images/facebook.png" alt="Facebook">
+            </a>
+        </div>
+
+        <!-- ✅ Logo Positioned to the Right -->
+        <div class="logo">
+            <img src="images/logo.png" alt="Church Logo">
+        </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- ✅ Mobile Navigation Menu (Hidden by Default) -->
+    <ul id="mobileNav">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="sermons.html">SERMONS</a></li>
+        <li><a href="ministries.html">MINISTRIES</a></li>
+        <li><a href="orphanage.html">ORPHANAGE</a></li>
+        <li><a href="events.html">EVENTS</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+        <li><a href="volunteer.html">GET INVOLVED</a></li>
+        <li><a href="donate.html" class="donate-btn">DONATE NOW</a></li>
+    </ul>
+
+    <!-- ✅ Hero Section -->
     <section class="hero">
         <div class="overlay"></div>
         <div class="hero-content">
@@ -41,43 +71,34 @@
         </div>
     </section>
 
-    <!-- About Us Section -->
-    <section class="about-us">
-        <h2>OUR FOUNDER & FAMILY</h2>
-        <div class="about-content">
-            <p><strong>Founder:</strong> Pastor P. Moses</p>
-            <p><strong>Late Wife:</strong> P. Mary Kumary</p>
-            <p><strong>Children:</strong> P. Benson Moses, P. Billygraham Moses & P. Esthar Roj</p>
-            <p>Our church is dedicated to spreading faith, love, and service.</p>
+    <!-- ✅ Embedded YouTube Videos Section -->
+    <section class="videos">
+        <h2>WATCH OUR SERMONS</h2>
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed?listType=user_uploads&list=UCXXXXXXXXXXXXXXXXXXXXXX"
+                frameborder="0" allowfullscreen>
+            </iframe>
         </div>
-        <div class="about-images">
-            <img src="images/founder.jpg" alt="Pastor P. Moses">
-            <img src="images/family.jpg" alt="Church Family">
-        </div>
+        <a href="https://www.youtube.com/@pastorpmoses" target="_blank" class="cta-button">
+            VISIT OUR YOUTUBE CHANNEL
+        </a>
     </section>
 
-    <!-- Ministries Section -->
-    <section class="ministries">
-        <h2>OUR MINISTRIES</h2>
-        <div class="ministry-list">
-            <div class="ministry">
-                <h3>CHILDREN’S MINISTRY</h3>
-                <p>Helping kids grow in faith through engaging lessons and activities.</p>
-            </div>
-            <div class="ministry">
-                <h3>YOUTH MINISTRY</h3>
-                <p>Empowering young people to live for Christ.</p>
-            </div>
-            <div class="ministry">
-                <h3>COMMUNITY OUTREACH</h3>
-                <p>Serving the poor, supporting orphanages, and spreading hope.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
+    <!-- ✅ Footer Section -->
     <footer>
         <p>&copy; 2025 HOLY SPIRIT PRAYER HOUSE | All Rights Reserved</p>
+        <div class="social-icons">
+            <a href="https://www.youtube.com/@pastorpmoses" target="_blank">
+                <img src="images/youtube.png" alt="YouTube">
+            </a>
+            <a href="https://www.instagram.com/hsph_oduru/" target="_blank">
+                <img src="images/instagram.png" alt="Instagram">
+            </a>
+            <a href="https://www.facebook.com/holy.jesus132" target="_blank">
+                <img src="images/facebook.png" alt="Facebook">
+            </a>
+        </div>
     </footer>
 
 </body>
