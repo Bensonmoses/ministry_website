@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Church Ministry</title>
+    <title>Church Ministry - Pastor P Moses</title>
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/script.js" defer></script>
 </head>
 <body>
-    <!-- Header & Navigation -->
+
+    <!-- Top Navigation Bar -->
     <header>
         <nav>
-            <div class="logo">Church Logo</div>
+            <div class="logo">
+                <img src="images/logo.png" alt="Church Logo"> Church Ministry
+            </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -26,35 +29,64 @@
         </nav>
     </header>
 
-    <!-- Hero Section with Image -->
+    <!-- Hero Section with Background Video -->
     <section class="hero">
+        <video autoplay muted loop class="hero-video">
+            <source src="videos/hero-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
         <div class="overlay"></div>
         <div class="hero-content">
-            <img src="images/pic1.webp" alt="Church Mission" class="hero-img">
-            <h1>Welcome to Our Church</h1>
-            <p>Spreading the Love of Christ and Serving the Community</p>
+            <h1>Inspired by Faith, Driven by Love</h1>
+            <p>Transforming lives through the love of Christ and community service.</p>
             <a href="visit.html" class="cta-button">Plan Your Visit</a>
         </div>
     </section>
 
-    <!-- Orphanage and Food Distribution Ministry -->
-    <section class="orphanage">
-        <h2>Orphanage Home & Feeding Program</h2>
-        <p>Our church operates an <strong>Orphanage Home</strong>, providing shelter, education, and love to children in need.</p>
-        <p>Every week, we organize a <strong>Food Distribution Program</strong>, offering meals to underprivileged families and the homeless.</p>
-
-        <div class="orphanage-content">
-            <div class="orphanage-item">
-                <img src="images/pic1.webp" alt="Orphanage Children" class="orphanage-img">
-                <h3>Orphanage Home</h3>
-                <p>We provide a safe home for children who have lost their parents, ensuring they receive education, healthcare, and spiritual guidance.</p>
+    <!-- Ministries Section -->
+    <section class="ministries">
+        <h2>Our Ministries</h2>
+        <div class="ministry-list">
+            <div class="ministry">
+                <h3>Children’s Ministry</h3>
+                <p>Helping kids grow in faith through engaging lessons and activities.</p>
             </div>
-            <div class="orphanage-item">
-                <h3>Weekly Food Distribution</h3>
-                <p>Every week, our volunteers prepare and distribute food to poor families, bringing hope to those struggling to find meals.</p>
+            <div class="ministry">
+                <h3>Youth Ministry</h3>
+                <p>Empowering young people to live for Christ.</p>
+            </div>
+            <div class="ministry">
+                <h3>Community Outreach</h3>
+                <p>Serving the poor, supporting orphanages, and spreading hope.</p>
             </div>
         </div>
-        <a href="donate.html" class="cta-button">Support This Cause</a>
     </section>
+
+    <!-- YouTube Channel Section -->
+    <section class="youtube-channel">
+        <h2>Watch Our YouTube Channel</h2>
+        <p>Join us for worship, sermons, and live events directly from our YouTube channel.</p>
+
+        <div class="video-container">
+            <iframe 
+                width="100%" height="500" 
+                src="https://www.youtube.com/embed?listType=user_uploads&list=UCXXXXXXXXXXXXXXXXXXXXXX" 
+                frameborder="0" 
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <div class="youtube-link">
+            <a href="https://www.youtube.com/@pastorpmoses" target="_blank" class="cta-button">
+                Visit Our YouTube Channel
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Church Ministry | All Rights Reserved</p>
+    </footer>
+
 </body>
 </html>
