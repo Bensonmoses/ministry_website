@@ -1,9 +1,9 @@
-/* ✅ Header with Transparent Background on Scroll */
+/* ✅ Header */
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: rgba(30, 30, 30, 0.9); /* Transparent */
+    background: rgba(30, 30, 30, 0.8);
     padding: 10px 20px;
     position: fixed;
     width: 100%;
@@ -13,7 +13,7 @@ header {
 }
 
 header.scrolled {
-    background: #1E1E1E; /* Solid Background */
+    background: #1E1E1E;
 }
 
 /* ✅ Logo */
@@ -33,26 +33,6 @@ header.scrolled {
     color: white;
     font-weight: bold;
     font-size: 16px;
-}
-
-/* ✅ Donate Button */
-.donate-btn {
-    background: #B71C1C;
-    padding: 8px 16px;
-    color: white;
-    border-radius: 5px;
-    text-decoration: none;
-}
-
-/* ✅ Social Media Icons */
-.social-icons {
-    display: flex;
-    gap: 10px;
-}
-
-.social-icons img {
-    width: 30px;
-    height: 30px;
 }
 
 /* ✅ Hero Section */
