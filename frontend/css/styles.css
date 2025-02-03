@@ -316,6 +316,7 @@ header {
     max-width: 1200px;
     margin: auto;
     flex-wrap: wrap;
+    text-align: center;
 }
 
 .founder-image img {
@@ -348,11 +349,33 @@ footer {
 }
 
 /* ✅ Footer Container */
-.footer-container {
+.founder-container {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: auto;
+    flex-wrap: wrap;
+    text-align: center; /* ✅ Centers text when stacked */
 }
+
+/* ✅ Ensure Image and Text Stack on Small Screens */
+@media (max-width: 768px) {
+    .founder-container {
+        flex-direction: column; /* ✅ Stacks image and text */
+        text-align: center;
+    }
+
+    .founder-image {
+        margin-bottom: 15px; /* ✅ Adds spacing between image and text */
+    }
+
+    .founder-content {
+        text-align: center; /* ✅ Ensures text stays centered */
+        max-width: 90%; /* ✅ Prevents text from being too wide */
+    }
+}
+
 
 /* ✅ Social Icons */
 .social-icons {
