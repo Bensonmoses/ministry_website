@@ -22,13 +22,16 @@ body {
 
 /* ✅ Title inside Hero Section */
 .page-title {
-    font-size: 50px; /* ✅ Adjust for visibility */
+    font-size: 38px; /* Adjust based on screen size */
     font-weight: bold;
-    color: white; /* ✅ Ensure it’s visible */
-    text-shadow: 2px 2px 5px black; /* ✅ Improves readability */
-    margin-bottom: 15px;
-    text-align: center;
+    margin-bottom: 10px;
+    line-height: 1.2;
+    white-space: nowrap; /* ✅ Prevents text from breaking into two lines */
+    overflow: hidden; /* ✅ Ensures it doesn't overflow container */
+    text-overflow: ellipsis; /* ✅ Adds "..." if the text is too long */
+    max-width: 100%; /* ✅ Ensures it adapts to screen width */
 }
+
 
 /* ✅ Hero Section */
 .hero {
@@ -72,6 +75,7 @@ body {
     line-height: 1.2;
 }
 
+
 /* ✅ Subtitle */
 .hero-content h2 {
     font-size: 24px;
@@ -103,10 +107,12 @@ body {
 
 /* ✅ Mobile Optimization */
 @media (max-width: 768px) {
-    .hero {
-        height: 450px; /* Reduce height for small screens */
-        padding: 15px;
+    .page-title {
+        font-size: 28px; /* ✅ Reduce font size for small screens */
+        white-space: nowrap;
     }
+}
+
 
     .page-title {
         font-size: 28px; /* Smaller text on mobile */
