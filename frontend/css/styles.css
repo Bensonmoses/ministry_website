@@ -98,19 +98,29 @@ header {
 .desktop-nav ul li a:hover {
     color: #ffd700;
 }
+/* ✅ Hide Mobile Menu on Desktop */
+@media (min-width: 769px) {
+    .mobile-nav {
+        display: none !important;
+    }
 
-/* ✅ Mobile Menu */
+    #menuButton {
+        display: none !important;
+    }
+}
+
+/* ✅ Mobile Navigation */
 .mobile-nav {
     position: fixed;
     top: 0;
-    right: -100%; /* Initially hidden */
+    right: -100%;
     width: 250px;
     height: 100vh;
     background: #111;
     padding-top: 60px;
     box-shadow: -4px 0 6px rgba(0, 0, 0, 0.5);
     transition: right 0.4s ease-in-out;
-    z-index: 1000;
+    z-index: 1100; /* Ensure it's on top */
 }
 
 /* ✅ When Active, Slide in from Right */
@@ -141,29 +151,26 @@ header {
     color: #ffd700;
 }
 
-/* ✅ Mobile Menu Button */
-#menuButton {
-    display: none;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 28px;
-    cursor: pointer;
-    position: absolute;
-    right: 15px;
-    top: 15px;
-    z-index: 1100;
-}
-
-/* ✅ Show Mobile Menu Button Only on Mobile */
+/* ✅ Mobile Menu Button (Visible Only on Mobile) */
 @media (max-width: 768px) {
     .desktop-nav {
         display: none;
     }
+
     #menuButton {
         display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 28px;
+        cursor: pointer;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        z-index: 1200; /* Ensure button is on top */
     }
 }
+
 
 /* ✅ Page Content: Ensures footer stays at the bottom */
 .page-content {
