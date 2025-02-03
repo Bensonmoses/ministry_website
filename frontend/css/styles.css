@@ -13,11 +13,12 @@ html, body {
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', sans-serif;
     background-color: #000;
     color: #fff;
     line-height: 1.6;
 }
+
 
 /* ✅ Title inside Hero Section */
 .page-title {
