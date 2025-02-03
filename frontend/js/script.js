@@ -1,12 +1,28 @@
 document.addEventListener("DOMContentLoaded", function() {
-    document.title = "HOLY SPIRIT PRAYER HOUSE";
+    // ✅ Load Header
+    fetch("header.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("header-container").innerHTML = data;
+            setupMobileMenu(); // Ensure mobile menu works after loading
+        });
 
-    const menuButton = document.getElementById("menuButton");
-    const mobileNav = document.getElementById("mobileNav");
+    // ✅ Load Footer
+    fetch("footer.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("footer-container").innerHTML = data;
+        });
 
-    if (menuButton && mobileNav) {
-        menuButton.addEventListener("click", function(event) {
-            event.stopPropagation();
+    // ✅ Setup Mobile Menu
+    function setupMobileMenu() {
+        const menuButton = document.getElementById("menuButton");
+        const mobileNav = document.createElement("nav");
+        mobileNav.className = "mobile-nav";
+        mobileNav.innerHTML = document.querySelector(".desktop-nav").innerHTML;
+        document.body.appendChild(mobileNav);
+
+        menuButton.addEventListener("click", function() {
             mobileNav.classList.toggle("active");
         });
 
@@ -15,23 +31,5 @@ document.addEventListener("DOMContentLoaded", function() {
                 mobileNav.classList.remove("active");
             }
         });
-
-        mobileNav.addEventListener("click", function(event) {
-            event.stopPropagation();
-        });
     }
-
-    // ✅ Hide menu button on desktop automatically
-    function toggleMenuButtonVisibility() {
-        if (window.innerWidth > 768) {
-            menuButton.style.display = "none"; // Hide on desktop
-            mobileNav.classList.remove("active"); // Ensure menu closes
-        } else {
-            menuButton.style.display = "block"; // Show on mobile
-        }
-    }
-
-    // ✅ Run function on load and resize
-    toggleMenuButtonVisibility();
-    window.addEventListener("resize", toggleMenuButtonVisibility);
 });
