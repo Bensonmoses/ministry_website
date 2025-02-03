@@ -18,6 +18,8 @@ document.addEventListener("DOMContentLoaded", function () {
         const menuButton = document.getElementById("menuButton");
         const mobileNav = document.getElementById("mobileNav");
 
+        if (!menuButton || !mobileNav) return;
+
         // ✅ Toggle Mobile Menu on Button Click
         menuButton.addEventListener("click", function () {
             mobileNav.classList.toggle("active");
@@ -28,6 +30,13 @@ document.addEventListener("DOMContentLoaded", function () {
             if (!menuButton.contains(event.target) && !mobileNav.contains(event.target)) {
                 mobileNav.classList.remove("active");
             }
+        });
+
+        // ✅ Ensure Menu Links Work on Click
+        document.querySelectorAll(".mobile-nav ul li a").forEach(link => {
+            link.addEventListener("click", function () {
+                mobileNav.classList.remove("active");
+            });
         });
     }
 });
