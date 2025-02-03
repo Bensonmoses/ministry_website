@@ -24,8 +24,8 @@ body {
 /* This section styles the hero/banner section at the top of the page */
 /* ✅ Hero Section with Background Image */
 .hero {
-    background: url('../images/pic1.webp') center/cover no-repeat;
-    height: 700px; /* Increased height from 500px to 700px */
+    background: url('../images/background.jpg') center/cover no-repeat;
+    height: 850px; /* Increased height from 500px to 700px */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,7 +36,7 @@ body {
 /* ✅ Ensuring full-width and responsiveness */
 .hero img {
     width: 100%; /* Ensures the image spans the entire width */
-    height: auto; /* Maintains aspect ratio */
+    height: 100%; /* Maintains aspect ratio */
     object-fit: cover; /* Ensures the image covers the area properly */
 }
 
