@@ -19,20 +19,17 @@ body {
     line-height: 1.6;
 }
 
-/* ✅ Hero Section with Full Background Coverage */
+/* ✅ Hero Section with Background Image */
 .hero {
     background: url('../images/pic1.webp') center/cover no-repeat;
-    width: 100vw; /* Full viewport width */
-    height: 100vh; /* Full viewport height */
+    height: 500px; /* Adjust height */
     display: flex;
     justify-content: center;
-    align-items: flex-end; /* Moves text to the bottom */
+    align-items: center;
     text-align: center;
     position: relative;
-    padding-bottom: 50px; /* Adjust spacing from bottom */
 }
 
-/* ✅ Text on Image (Always at the Bottom Middle) */
 .hero-content {
     position: relative;
     z-index: 2;
@@ -41,19 +38,24 @@ body {
     max-width: 80%;
     text-align: center;
     margin: auto;
-    font-size: 1.5rem;
 }
 
-/* ✅ Adjust hero text for mobile */
-@media (max-width: 768px) {
-    .hero {
-        height: 80vh; /* Slightly reduce height on smaller screens */
-        padding-bottom: 20px;
-    }
+.cta-button {
+    background: red;
+    color: white;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
 
-    .hero-content {
-        font-size: 1.2rem;
-    }
+.cta-button:hover {
+    background: white;
+    color: black;
 }
 
 /* ✅ Header Section */
@@ -101,7 +103,7 @@ header {
 .mobile-nav {
     position: fixed;
     top: 0;
-    right: -100%;
+    right: -100%; /* Initially hidden */
     width: 250px;
     height: 100vh;
     background: #111;
@@ -165,7 +167,7 @@ header {
 
 /* ✅ Page Content: Ensures footer stays at the bottom */
 .page-content {
-    flex: 1;
+    flex: 1;  /* Pushes the footer to the bottom */
     padding: 20px;
     text-align: center;
 }
@@ -223,13 +225,79 @@ header {
     }
 }
 
+/* ✅ Founder Section */
+.founder-section {
+    background-color: #222;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.founder-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.founder-image img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 25px;
+    border: 3px solid #cc3333;
+    transition: transform 0.3s ease-in-out;
+}
+
+.founder-image img:hover {
+    transform: scale(1.1);
+}
+
+.founder-content {
+    max-width: 600px;
+    text-align: left;
+}
+
+.founder-content h2 {
+    font-size: 26px;
+    color: #cc3333;
+}
+
+.founder-content h3 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.founder-content p {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+/* ✅ Responsive: Stack on Mobile */
+@media (max-width: 768px) {
+    .founder-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .founder-image img {
+        margin-bottom: 15px;
+        margin-right: 0;
+    }
+    .founder-content {
+        text-align: center;
+    }
+}
+
 /* ✅ Footer Stays at Bottom */
 footer {
     background: rgb(189, 47, 47);
     color: white;
     text-align: center;
     padding: 20px;
-    margin-top: auto;
+    margin-top: auto; /* Pushes footer to bottom */
     width: 100%;
 }
 
