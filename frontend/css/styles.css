@@ -5,6 +5,13 @@
     padding: 0;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #000;
@@ -14,7 +21,7 @@ body {
 
 /* ✅ Hero Section with Background Image */
 .hero {
-    background: url('../images/pic1.webp') center/cover no-repeat; /* ✅ Fixed Background Image */
+    background: url('../images/pic1.webp') center/cover no-repeat;
     height: 500px; /* Adjust height */
     display: flex;
     justify-content: center;
@@ -29,7 +36,7 @@ body {
     color: white;
     text-shadow: 2px 2px 5px black;
     max-width: 80%;
-    text-align: center; /* ✅ Ensure proper text alignment */
+    text-align: center;
     margin: auto;
 }
 
@@ -92,11 +99,11 @@ header {
     color: #ffd700;
 }
 
-/* ✅ Mobile Menu (Slides in from Right) */
+/* ✅ Mobile Menu */
 .mobile-nav {
     position: fixed;
     top: 0;
-    right: -100%; /* Off-screen initially */
+    right: -100%; /* Initially hidden */
     width: 250px;
     height: 100vh;
     background: #111;
@@ -108,7 +115,7 @@ header {
 
 /* ✅ When Active, Slide in from Right */
 .mobile-nav.active {
-    right: 0; /* Slide-in effect */
+    right: 0;
 }
 
 /* ✅ Mobile Menu Items */
@@ -134,9 +141,9 @@ header {
     color: #ffd700;
 }
 
-/* ✅ Mobile Menu Button (Visible Only on Mobile) */
+/* ✅ Mobile Menu Button */
 #menuButton {
-    display: none; /* Hidden on desktop */
+    display: none;
     background: none;
     border: none;
     color: white;
@@ -153,17 +160,23 @@ header {
     .desktop-nav {
         display: none;
     }
-
     #menuButton {
-        display: block; /* Show only on mobile */
+        display: block;
     }
+}
+
+/* ✅ Page Content: Ensures footer stays at the bottom */
+.page-content {
+    flex: 1;  /* Pushes the footer to the bottom */
+    padding: 20px;
+    text-align: center;
 }
 
 /* ✅ Sections */
 .section-container {
     display: flex;
     justify-content: space-between;
-    align-items: stretch; /* Ensures all sections have equal height */
+    align-items: stretch;
     padding: 60px 30px;
     max-width: 1200px;
     margin: auto;
@@ -187,9 +200,9 @@ header {
     transform: translateY(-5px);
 }
 
-/* ✅ About, Ministries, and Donate Sections (Same Color) */
+/* ✅ About, Ministries, and Donate Sections */
 .about, .ministries, .donate {
-    background-color: #222; /* Dark gray for uniform look */
+    background-color: #222;
     color: white;
     padding: 40px;
     border-radius: 10px;
@@ -197,7 +210,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 250px; /* Ensures equal height */
+    min-height: 250px;
 }
 
 /* ✅ Responsive Design */
@@ -206,7 +219,6 @@ header {
         flex-direction: column;
         align-items: center;
     }
-
     .about {
         min-height: auto;
         padding: 30px;
@@ -270,32 +282,33 @@ header {
         flex-direction: column;
         text-align: center;
     }
-
     .founder-image img {
         margin-bottom: 15px;
         margin-right: 0;
     }
-
     .founder-content {
         text-align: center;
     }
 }
 
-/* ✅ Footer */
+/* ✅ Footer Stays at Bottom */
 footer {
-    text-align: center;
-    padding: 20px;
     background: rgb(189, 47, 47);
     color: white;
-    margin-top: 30px;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto; /* Pushes footer to bottom */
+    width: 100%;
 }
 
+/* ✅ Footer Container */
 .footer-container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/* ✅ Social Icons */
 .social-icons {
     margin-top: 15px;
 }
