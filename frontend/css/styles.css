@@ -1,27 +1,29 @@
 /* ✅ General Styles */
+/* This section defines basic styles for all elements to ensure a consistent layout */
 * {
-    box-sizing: border-box;
+    box-sizing: border-box; /* Ensures padding and border are included in element width/height */
     margin: 0;
     padding: 0;
 }
 
 html, body {
-    height: 100%;
+    height: 100%; /* Ensures the page takes full height */
     margin: 0;
     display: flex;
     flex-direction: column;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #000;
-    color: #fff;
-    line-height: 1.6;
+    font-family: Arial, sans-serif; /* Sets a clean and readable font */
+    background-color: #000; /* Dark theme background */
+    color: #fff; /* White text for contrast */
+    line-height: 1.6; /* Improves readability */
 }
 
 /* ✅ Hero Section with Background Image */
+/* This section styles the hero/banner section at the top of the page */
 .hero {
-    background: url('../images/pic1.webp') center/cover no-repeat;
+    background: url('../images/pic1.webp') center/cover no-repeat; /* Background image */
     height: 500px; /* Adjust height */
     display: flex;
     justify-content: center;
@@ -32,16 +34,18 @@ body {
 
 .hero-content {
     position: relative;
-    z-index: 2;
+    z-index: 2; /* Ensures text appears above the background */
     color: white;
-    text-shadow: 2px 2px 5px black;
+    text-shadow: 2px 2px 5px black; /* Improves text readability */
     max-width: 80%;
     text-align: center;
     margin: auto;
 }
 
+/* ✅ Call-To-Action Button */
+/* Styles the main button used in the hero section */
 .cta-button {
-    background: red;
+    background: red; /* Highlights the call-to-action */
     color: white;
     padding: 12px 25px;
     font-size: 18px;
@@ -49,18 +53,19 @@ body {
     text-decoration: none;
     display: inline-block;
     margin-top: 20px;
-    border-radius: 5px;
+    border-radius: 5px; /* Rounded corners */
     transition: background 0.3s ease-in-out;
 }
 
 .cta-button:hover {
     background: white;
-    color: black;
+    color: black; /* Inverts colors on hover */
 }
 
 /* ✅ Header Section */
+/* Styles the navigation bar and logo */
 header {
-    background: rgb(163, 40, 40);
+    background: rgb(163, 40, 40); /* Dark red theme for branding */
     color: white;
     padding: 1rem 0;
 }
@@ -74,10 +79,11 @@ header {
 }
 
 .logo img {
-    height: 55px;
+    height: 55px; /* Sets logo size */
 }
 
 /* ✅ Desktop Navigation */
+/* Styles the navigation bar for large screens */
 .desktop-nav ul {
     list-style: none;
     padding: 0;
@@ -96,9 +102,11 @@ header {
 }
 
 .desktop-nav ul li a:hover {
-    color: #ffd700;
+    color: #ffd700; /* Highlights links on hover */
 }
+
 /* ✅ Hide Mobile Menu on Desktop */
+/* Ensures the mobile menu does not appear on larger screens */
 @media (min-width: 769px) {
     .mobile-nav {
         display: none !important;
@@ -110,17 +118,18 @@ header {
 }
 
 /* ✅ Mobile Navigation */
+/* Styles the mobile menu, which slides in from the right */
 .mobile-nav {
     position: fixed;
     top: 0;
-    right: -100%;
+    right: -100%; /* Hidden by default */
     width: 250px;
     height: 100vh;
     background: #111;
     padding-top: 60px;
     box-shadow: -4px 0 6px rgba(0, 0, 0, 0.5);
-    transition: right 0.4s ease-in-out;
-    z-index: 1100; /* Ensure it's on top */
+    transition: right 0.4s ease-in-out; /* Smooth slide-in animation */
+    z-index: 1100;
 }
 
 /* ✅ When Active, Slide in from Right */
@@ -167,19 +176,19 @@ header {
         position: absolute;
         right: 15px;
         top: 15px;
-        z-index: 1200; /* Ensure button is on top */
+        z-index: 1200;
     }
 }
 
-
 /* ✅ Page Content: Ensures footer stays at the bottom */
 .page-content {
-    flex: 1;  /* Pushes the footer to the bottom */
+    flex: 1; /* Pushes the footer to the bottom */
     padding: 20px;
     text-align: center;
 }
 
 /* ✅ Sections */
+/* Styles general sections of the page */
 .section-container {
     display: flex;
     justify-content: space-between;
@@ -204,7 +213,7 @@ header {
 }
 
 .section:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px); /* Adds hover effect */
 }
 
 /* ✅ About, Ministries, and Donate Sections */
@@ -268,43 +277,13 @@ header {
     text-align: left;
 }
 
-.founder-content h2 {
-    font-size: 26px;
-    color: #cc3333;
-}
-
-.founder-content h3 {
-    font-size: 22px;
-    font-weight: bold;
-}
-
-.founder-content p {
-    font-size: 17px;
-    line-height: 1.6;
-}
-
-/* ✅ Responsive: Stack on Mobile */
-@media (max-width: 768px) {
-    .founder-container {
-        flex-direction: column;
-        text-align: center;
-    }
-    .founder-image img {
-        margin-bottom: 15px;
-        margin-right: 0;
-    }
-    .founder-content {
-        text-align: center;
-    }
-}
-
 /* ✅ Footer Stays at Bottom */
 footer {
     background: rgb(189, 47, 47);
     color: white;
     text-align: center;
     padding: 20px;
-    margin-top: auto; /* Pushes footer to bottom */
+    margin-top: auto;
     width: 100%;
 }
 
