@@ -29,6 +29,8 @@ body {
     color: white;
     text-shadow: 2px 2px 5px black;
     max-width: 80%;
+    text-align: center; /* ✅ Ensure proper text alignment */
+    margin: auto;
 }
 
 .cta-button {
@@ -61,6 +63,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0 30px;
+    position: relative;
 }
 
 .logo img {
@@ -131,9 +134,9 @@ header {
     color: #ffd700;
 }
 
-/* ✅ Mobile Menu Button */
+/* ✅ Mobile Menu Button (Visible Only on Mobile) */
 #menuButton {
-    display: block;
+    display: none; /* Hidden on desktop */
     background: none;
     border: none;
     color: white;
@@ -145,14 +148,14 @@ header {
     z-index: 1100;
 }
 
-/* ✅ Show Mobile Menu on Small Screens */
+/* ✅ Show Mobile Menu Button Only on Mobile */
 @media (max-width: 768px) {
     .desktop-nav {
         display: none;
     }
 
     #menuButton {
-        display: block;
+        display: block; /* Show only on mobile */
     }
 }
 

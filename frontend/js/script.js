@@ -20,4 +20,18 @@ document.addEventListener("DOMContentLoaded", function() {
             event.stopPropagation();
         });
     }
+
+    // ✅ Hide menu button on desktop automatically
+    function toggleMenuButtonVisibility() {
+        if (window.innerWidth > 768) {
+            menuButton.style.display = "none"; // Hide on desktop
+            mobileNav.classList.remove("active"); // Ensure menu closes
+        } else {
+            menuButton.style.display = "block"; // Show on mobile
+        }
+    }
+
+    // ✅ Run function on load and resize
+    toggleMenuButtonVisibility();
+    window.addEventListener("resize", toggleMenuButtonVisibility);
 });
