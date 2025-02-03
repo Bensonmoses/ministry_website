@@ -23,7 +23,7 @@ body {
 /* ✅ Hero Section with Background Image */
 /* This section styles the hero/banner section at the top of the page */
 .hero {
-    background: url('../images/pic1.webp') center/cover no-repeat; /* Background image */
+    background: url('../images/background.jpg') center/cover no-repeat; /* Background image */
     height: 500px; /* Adjust height */
     display: flex;
     justify-content: center;
