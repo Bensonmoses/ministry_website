@@ -6,13 +6,12 @@
     <meta name="description" content="Holy Spirit Prayer House - A place for faith, love, and community outreach.">
     <meta name="keywords" content="Church, Holy Spirit, Prayer, Ministries, Donations">
     <meta name="author" content="Holy Spirit Prayer House">
-    <title>HOLY SPIRIT PRAYER HOUSE</title> <!-- ✅ Title issue fixed -->
+    <title>HOLY SPIRIT PRAYER HOUSE</title>
     <link rel="icon" type="image/png" href="images/favicon.png"> 
     <link rel="stylesheet" href="css/styles.css">
-    <script src="js/script.js" defer></script> <!-- ✅ Ensures script runs after HTML is loaded -->
+    <script src="js/script.js" defer></script>
 </head>
 <body>
-
 
     <!-- ✅ Header Section -->
     <header id="mainHeader">
@@ -21,6 +20,7 @@
                 <img src="images/logo.webp" alt="HSPH">
             </div>
 
+            <!-- ✅ Desktop Navigation -->
             <nav class="desktop-nav">
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
@@ -35,9 +35,11 @@
                 </ul>
             </nav>
 
-            <button id="menuButton" onclick="toggleMenu()">☰</button>
+            <!-- ✅ Mobile Menu Button (Hidden on Desktop) -->
+            <button id="menuButton" class="mobile-only">☰</button>
         </div>
 
+        <!-- ✅ Mobile Navigation -->
         <nav class="mobile-nav" id="mobileNav">
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -55,6 +57,7 @@
 
     <!-- ✅ Hero Section -->
     <section class="hero">
+        <div class="overlay"></div> <!-- ✅ Overlay for readability -->
         <div class="hero-container">
             <div class="hero-content">
                 <h2>Inspired by Faith</h2>
@@ -64,6 +67,7 @@
             </div>
         </div>
     </section>
+
 
     <section class="section-container">
         <!-- ✅ About Us Section -->
