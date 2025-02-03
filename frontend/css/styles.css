@@ -22,15 +22,24 @@ body {
 
 /* ✅ Hero Section with Background Image */
 /* This section styles the hero/banner section at the top of the page */
+/* ✅ Hero Section with Background Image */
 .hero {
-    background: url('../images/background.jpg') center/cover no-repeat; /* Background image */
-    height: 500px; /* Adjust height */
+    background: url('../images/pic1.webp') center/cover no-repeat;
+    height: 700px; /* Increased height from 500px to 700px */
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     position: relative;
 }
+
+/* ✅ Ensuring full-width and responsiveness */
+.hero img {
+    width: 100%; /* Ensures the image spans the entire width */
+    height: auto; /* Maintains aspect ratio */
+    object-fit: cover; /* Ensures the image covers the area properly */
+}
+
 
 .hero-content {
     position: relative;
