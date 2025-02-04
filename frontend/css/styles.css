@@ -1,10 +1,10 @@
-/* ✅ General Styles */
+/* 🎨 General Styles */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
- 
+
 html, body {
     height: 100%;
     margin: 0;
@@ -19,19 +19,18 @@ body {
     line-height: 1.6;
 }
 
-
-/* 🎨 Hero Section - Properly Centered & No Overlapping */
+/* 🎨 Hero Section - Centered & Properly Spaced */
 .hero {
     position: relative;
-    height: 600px;
+    height: 650px; /* ✅ Increased height to prevent overlaps */
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* ✅ Centers content */
+    justify-content: center;
     text-align: center;
     background: url('../images/background.jpg') center/cover no-repeat;
-    padding-top: 150px; /* ✅ Increased padding to push title below navbar */
-    padding-bottom: 60px;
+    padding-top: 160px; /* ✅ Pushes title below navbar */
+    padding-bottom: 80px;
 }
 
 /* ✅ Background Overlay for Better Readability */
@@ -42,10 +41,10 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* ✅ Dark overlay */
+    background: rgba(0, 0, 0, 0.5);
 }
 
-/* 🎨 3D Text Effect for Title - Fixed Overlapping */
+/* 🎨 3D Text Effect for Title */
 .page-title {
     font-size: clamp(40px, 5vw, 52px);
     font-weight: bold;
@@ -55,23 +54,23 @@ body {
     text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8), 
                  5px 5px 12px rgba(255, 0, 0, 0.6), 
                  7px 7px 18px rgba(255, 255, 0, 0.6);
-    transform: perspective(500px) rotateX(5deg); /* ✅ Subtle 3D effect */
-    margin-bottom: 30px; /* ✅ Extra space below title */
+    transform: perspective(500px) rotateX(5deg);
+    margin-bottom: 25px;
     z-index: 2;
 }
 
-/* ✅ Subtitle & Supporting Text */
+/* ✅ Hero Text - Ensures Proper Spacing */
 .hero-content p {
     font-size: 20px;
     max-width: 700px;
     text-align: center;
     color: white;
     text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7);
-    margin-bottom: 40px; /* ✅ Extra spacing to avoid overlap */
+    margin-bottom: 50px; /* ✅ Adds spacing between text and button */
     z-index: 2;
 }
 
-/* ✅ Call-To-Action Button - Proper Position */
+/* ✅ Fix "Plan Your Visit" Button - Proper Position */
 .cta-button {
     background: linear-gradient(135deg, #ff0000, #ff6a00);
     color: white;
@@ -80,20 +79,18 @@ body {
     font-weight: bold;
     text-decoration: none;
     border-radius: 6px;
-    position: absolute;
-    bottom: 40px; /* ✅ Moved lower */
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative; /* ✅ Changed from absolute to prevent overlap */
+    margin-top: 10px;
     box-shadow: 0 5px 15px rgba(255, 0, 0, 0.4);
     z-index: 2;
 }
 
 .cta-button:hover {
     background: linear-gradient(135deg, #ff6a00, #ff0000);
-    transform: translateX(-50%) scale(1.05);
+    transform: scale(1.05);
 }
 
-/* ✅ Fix Navigation Bar */
+/* ✅ Navigation Bar */
 .navbar {
     display: flex;
     justify-content: center;
@@ -101,161 +98,24 @@ body {
     top: 0;
     width: 100%;
     z-index: 10;
-    background: rgba(0, 0, 0, 0.8); /* ✅ Ensures navbar doesn’t interfere */
+    background: rgba(0, 0, 0, 0.8);
     padding: 15px 0;
 }
 
-/* ✅ Mobile Optimization */
-@media (max-width: 768px) {
-    .hero {
-        height: 500px;
-        padding-top: 120px; /* ✅ Push title lower on mobile */
-        padding-bottom: 50px;
-    }
-
-    .page-title {
-        font-size: clamp(28px, 4.5vw, 42px);
-        transform: perspective(300px) rotateX(3deg); /* ✅ Reduced 3D effect */
-    }
-
-    .hero-content p {
-        font-size: 16px;
-        max-width: 90%;
-        margin-bottom: 30px; /* ✅ Ensures text and button spacing */
-    }
-
-    .cta-button {
-        font-size: 18px;
-        padding: 12px 24px;
-        bottom: 30px; /* ✅ Adjust button position */
-    }
-
-    .navbar {
-        padding: 10px 0;
-    }
-}
-
-
-
-
-
-
-/* ✅ Header */
-header {
-    background: rgb(163, 40, 40);
-    color: white;
-    padding: 1rem 0;
-}
-
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 30px;
-    position: relative;
-}
-
-.logo img {
-    height: 55px;
-}
-
-/* ✅ Desktop Navigation */
-.desktop-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-}
-
-.desktop-nav ul li {
-    margin: 0 15px;
-}
-
-.desktop-nav ul li a {
+.navbar a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease-in-out;
-}
-
-.desktop-nav ul li a:hover {
-    color: #ffd700;
-}
-
-/* ✅ Mobile Navigation */
-@media (min-width: 769px) {
-    .mobile-nav {
-        display: none !important;
-    }
-    #menuButton {
-        display: none !important;
-    }
-}
-
-.mobile-nav {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 250px;
-    height: 100vh;
-    background: #111;
-    padding-top: 60px;
-    box-shadow: -4px 0 6px rgba(0, 0, 0, 0.5);
-    transition: right 0.4s ease-in-out;
-    z-index: 1100;
-}
-
-.mobile-nav.active {
-    right: 0;
-}
-
-.mobile-nav ul {
-    list-style: none;
-    padding: 0;
-    text-align: center;
-}
-
-.mobile-nav ul li {
-    padding: 15px 0;
-}
-
-.mobile-nav ul li a {
-    color: white;
-    text-decoration: none;
+    padding: 12px 22px;
     font-size: 18px;
     font-weight: bold;
     transition: color 0.3s ease-in-out;
 }
 
-.mobile-nav ul li a:hover {
+.navbar a:hover {
     color: #ffd700;
 }
 
-@media (max-width: 768px) {
-    .desktop-nav {
-        display: none;
-    }
-    #menuButton {
-        display: block;
-        background: none;
-        border: none;
-        color: white;
-        font-size: 28px;
-        cursor: pointer;
-        position: absolute;
-        right: 15px;
-        top: 15px;
-        z-index: 1200;
-    }
-}
-
-/* ✅ Page Content */
-.page-content {
-    flex: 1;
-    padding: 20px;
-    text-align: center;
-}
-
-/* ✅ Sections */
+/* ✅ Sections - Proper Button Placement */
 .section-container {
     display: flex;
     justify-content: space-between;
@@ -270,12 +130,12 @@ header {
     flex: 1;
     padding: 40px;
     text-align: center;
-    margin: 10px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    background-color: #222;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -283,29 +143,22 @@ header {
     transform: translateY(-5px);
 }
 
-/* ✅ About, Ministries, and Donate Sections */
-.about, .ministries, .donate {
-    background-color: #222;
+/* ✅ Fix "Donate Now" Button - Proper Alignment */
+.donate-button {
+    background: linear-gradient(135deg, #ff0000, #ff6a00);
     color: white;
-    padding: 40px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 250px;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-top: 15px; /* ✅ Adds spacing */
+    display: inline-block;
 }
 
-/* ✅ Responsive Design */
-@media (max-width: 768px) {
-    .section-container {
-        flex-direction: column;
-        align-items: center;
-    }
-    .about {
-        min-height: auto;
-        padding: 30px;
-    }
+.donate-button:hover {
+    background: linear-gradient(135deg, #ff6a00, #ff0000);
+    transform: scale(1.05);
 }
 
 /* ✅ Founder Section */
@@ -355,36 +208,7 @@ footer {
     width: 100%;
 }
 
-/* ✅ Footer Container */
-.founder-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 1200px;
-    margin: auto;
-    flex-wrap: wrap;
-    text-align: center; /* ✅ Centers text when stacked */
-}
-
-/* ✅ Ensure Image and Text Stack on Small Screens */
-@media (max-width: 768px) {
-    .founder-container {
-        flex-direction: column; /* ✅ Stacks image and text */
-        text-align: center;
-    }
-
-    .founder-image {
-        margin-bottom: 15px; /* ✅ Adds spacing between image and text */
-    }
-
-    .founder-content {
-        text-align: center; /* ✅ Ensures text stays centered */
-        max-width: 90%; /* ✅ Prevents text from being too wide */
-    }
-}
-
-
-/* ✅ Social Icons */
+/* ✅ Footer Social Icons */
 .social-icons {
     margin-top: 15px;
 }
@@ -397,4 +221,44 @@ footer {
 
 .social-icons a img:hover {
     transform: scale(1.2);
+}
+
+/* ✅ Mobile Optimization */
+@media (max-width: 768px) {
+    .hero {
+        height: 550px;
+        padding-top: 130px;
+        padding-bottom: 60px;
+    }
+
+    .page-title {
+        font-size: clamp(28px, 4.5vw, 42px);
+        transform: perspective(300px) rotateX(3deg);
+    }
+
+    .hero-content p {
+        font-size: 16px;
+        max-width: 90%;
+        margin-bottom: 35px;
+    }
+
+    .cta-button {
+        font-size: 18px;
+        padding: 12px 24px;
+        margin-top: 15px;
+    }
+
+    .section-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .donate-button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .navbar {
+        padding: 10px 0;
+    }
 }
