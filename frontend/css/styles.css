@@ -1,4 +1,4 @@
-/* 🎨 General Styles */
+/* 🎨 GLOBAL STYLES */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -8,197 +8,209 @@
 html, body {
     height: 100%;
     margin: 0;
-    display: flex;
-    flex-direction: column;
-}
-
-body {
     font-family: 'Inter', sans-serif;
     background-color: #000;
     color: #fff;
     line-height: 1.6;
 }
 
-/* 🎨 Hero Section - Centered & Properly Spaced */
-.hero {
-    position: relative;
-    height: 650px; /* ✅ Increased height to prevent overlaps */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: url('../images/background.jpg') center/cover no-repeat;
-    padding-top: 160px; /* ✅ Pushes title below navbar */
-    padding-bottom: 80px;
+/* 🎯 DESKTOP STYLES */
+@media (min-width: 769px) {
+    /* 🔹 HERO SECTION */
+    .hero {
+        position: relative;
+        height: 650px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background: url('../images/background.jpg') center/cover no-repeat;
+        padding-top: 160px; /* Prevents overlapping */
+        padding-bottom: 80px;
+    }
+
+    /* 🔹 Background Overlay */
+    .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    /* 🔹 3D TITLE */
+    .page-title {
+        font-size: clamp(40px, 5vw, 52px);
+        font-weight: bold;
+        color: white;
+        text-align: center;
+        max-width: 100%;
+        text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8), 
+                     5px 5px 12px rgba(255, 0, 0, 0.6), 
+                     7px 7px 18px rgba(255, 255, 0, 0.6);
+        transform: perspective(500px) rotateX(5deg);
+        margin-bottom: 25px;
+        z-index: 2;
+    }
+
+    /* 🔹 HERO TEXT */
+    .hero-content p {
+        font-size: 20px;
+        max-width: 700px;
+        text-align: center;
+        color: white;
+        text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7);
+        margin-bottom: 50px;
+        z-index: 2;
+    }
+
+    /* 🔹 CALL TO ACTION BUTTON */
+    .cta-button {
+        background: linear-gradient(135deg, #ff0000, #ff6a00);
+        color: white;
+        padding: 14px 28px;
+        font-size: 20px;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 6px;
+        position: relative;
+        margin-top: 10px;
+        box-shadow: 0 5px 15px rgba(255, 0, 0, 0.4);
+        z-index: 2;
+    }
+
+    .cta-button:hover {
+        background: linear-gradient(135deg, #ff6a00, #ff0000);
+        transform: scale(1.05);
+    }
+
+    /* 🔹 NAVBAR */
+    .navbar {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 10;
+        background: rgba(0, 0, 0, 0.8);
+        padding: 15px 0;
+    }
+
+    .navbar a {
+        color: white;
+        text-decoration: none;
+        padding: 12px 22px;
+        font-size: 18px;
+        font-weight: bold;
+        transition: color 0.3s ease-in-out;
+    }
+
+    .navbar a:hover {
+        color: #ffd700;
+    }
+
+    /* 🔹 PAGE SECTIONS */
+    .section-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        padding: 60px 30px;
+        max-width: 1200px;
+        margin: auto;
+        gap: 15px;
+    }
+
+    .section {
+        flex: 1;
+        padding: 40px;
+        text-align: center;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #222;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .section:hover {
+        transform: translateY(-5px);
+    }
+
+    /* 🔹 DONATE BUTTON */
+    .donate-button {
+        background: linear-gradient(135deg, #ff0000, #ff6a00);
+        color: white;
+        padding: 12px 24px;
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 6px;
+        margin-top: 15px;
+        display: inline-block;
+    }
+
+    .donate-button:hover {
+        background: linear-gradient(135deg, #ff6a00, #ff0000);
+        transform: scale(1.05);
+    }
 }
 
-/* ✅ Background Overlay for Better Readability */
-.hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+/* 🎯 MOBILE VIEW (Hides Certain Elements, Adjusts Layout) */
+@media (max-width: 768px) {
+    /* 🔹 Adjust Hero Section */
+    .hero {
+        height: 550px;
+        padding-top: 130px;
+        padding-bottom: 60px;
+    }
+
+    /* 🔹 Mobile Title */
+    .page-title {
+        font-size: clamp(28px, 4.5vw, 42px);
+        transform: perspective(300px) rotateX(3deg);
+    }
+
+    /* 🔹 Hero Text */
+    .hero-content p {
+        font-size: 16px;
+        max-width: 90%;
+        margin-bottom: 35px;
+    }
+
+    /* 🔹 Hide Navbar (Use Mobile Menu Instead) */
+    .navbar {
+        display: none;
+    }
+
+    /* 🔹 Adjust Buttons */
+    .cta-button {
+        font-size: 18px;
+        padding: 12px 24px;
+        margin-top: 15px;
+    }
+
+    .donate-button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    /* 🔹 Stack Sections */
+    .section-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* 🔹 Hide Founder Section (Optional) */
+    .founder-section {
+        display: none;
+    }
 }
 
-/* 🎨 3D Text Effect for Title */
-.page-title {
-    font-size: clamp(40px, 5vw, 52px);
-    font-weight: bold;
-    color: white;
-    text-align: center;
-    max-width: 100%;
-    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8), 
-                 5px 5px 12px rgba(255, 0, 0, 0.6), 
-                 7px 7px 18px rgba(255, 255, 0, 0.6);
-    transform: perspective(500px) rotateX(5deg);
-    margin-bottom: 25px;
-    z-index: 2;
-}
-
-/* ✅ Hero Text - Ensures Proper Spacing */
-.hero-content p {
-    font-size: 20px;
-    max-width: 700px;
-    text-align: center;
-    color: white;
-    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7);
-    margin-bottom: 50px; /* ✅ Adds spacing between text and button */
-    z-index: 2;
-}
-
-/* ✅ Fix "Plan Your Visit" Button - Proper Position */
-.cta-button {
-    background: linear-gradient(135deg, #ff0000, #ff6a00);
-    color: white;
-    padding: 14px 28px;
-    font-size: 20px;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 6px;
-    position: relative; /* ✅ Changed from absolute to prevent overlap */
-    margin-top: 10px;
-    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.4);
-    z-index: 2;
-}
-
-.cta-button:hover {
-    background: linear-gradient(135deg, #ff6a00, #ff0000);
-    transform: scale(1.05);
-}
-
-/* ✅ Navigation Bar */
-.navbar {
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 10;
-    background: rgba(0, 0, 0, 0.8);
-    padding: 15px 0;
-}
-
-.navbar a {
-    color: white;
-    text-decoration: none;
-    padding: 12px 22px;
-    font-size: 18px;
-    font-weight: bold;
-    transition: color 0.3s ease-in-out;
-}
-
-.navbar a:hover {
-    color: #ffd700;
-}
-
-/* ✅ Sections - Proper Button Placement */
-.section-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    padding: 60px 30px;
-    max-width: 1200px;
-    margin: auto;
-    gap: 15px;
-}
-
-.section {
-    flex: 1;
-    padding: 40px;
-    text-align: center;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #222;
-    transition: transform 0.3s ease-in-out;
-}
-
-.section:hover {
-    transform: translateY(-5px);
-}
-
-/* ✅ Fix "Donate Now" Button - Proper Alignment */
-.donate-button {
-    background: linear-gradient(135deg, #ff0000, #ff6a00);
-    color: white;
-    padding: 12px 24px;
-    font-size: 18px;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 6px;
-    margin-top: 15px; /* ✅ Adds spacing */
-    display: inline-block;
-}
-
-.donate-button:hover {
-    background: linear-gradient(135deg, #ff6a00, #ff0000);
-    transform: scale(1.05);
-}
-
-/* ✅ Founder Section */
-.founder-section {
-    background-color: #222;
-    color: white;
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.founder-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 1200px;
-    margin: auto;
-    flex-wrap: wrap;
-    text-align: center;
-}
-
-.founder-image img {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 25px;
-    border: 3px solid #cc3333;
-    transition: transform 0.3s ease-in-out;
-}
-
-.founder-image img:hover {
-    transform: scale(1.1);
-}
-
-.founder-content {
-    max-width: 600px;
-    text-align: left;
-}
-
-/* ✅ Footer */
+/* 🎯 FOOTER */
 footer {
     background: rgb(189, 47, 47);
     color: white;
@@ -208,7 +220,7 @@ footer {
     width: 100%;
 }
 
-/* ✅ Footer Social Icons */
+/* 🔹 Footer Social Icons */
 .social-icons {
     margin-top: 15px;
 }
@@ -221,44 +233,4 @@ footer {
 
 .social-icons a img:hover {
     transform: scale(1.2);
-}
-
-/* ✅ Mobile Optimization */
-@media (max-width: 768px) {
-    .hero {
-        height: 550px;
-        padding-top: 130px;
-        padding-bottom: 60px;
-    }
-
-    .page-title {
-        font-size: clamp(28px, 4.5vw, 42px);
-        transform: perspective(300px) rotateX(3deg);
-    }
-
-    .hero-content p {
-        font-size: 16px;
-        max-width: 90%;
-        margin-bottom: 35px;
-    }
-
-    .cta-button {
-        font-size: 18px;
-        padding: 12px 24px;
-        margin-top: 15px;
-    }
-
-    .section-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .donate-button {
-        font-size: 16px;
-        padding: 10px 20px;
-    }
-
-    .navbar {
-        padding: 10px 0;
-    }
 }
