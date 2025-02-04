@@ -17,6 +17,7 @@ body {
     background-color: #000;
     color: #fff;
     line-height: 1.6;
+    font-weight: normal;
 }
 
 /* ✅ Title inside Hero Section */
@@ -24,10 +25,10 @@ body {
     font-size: 50px; /* ✅ Adjust for visibility */
     font-weight: bold;
     color: white; /* ✅ Ensure it’s visible */
-    text-shadow: 2px 2px 5px black, 4px 4px 10px rgba(0, 0, 0, 0.5); /* ✅ Improves readability */
+    text-shadow: 1px 1px 2px black, 2px 2px 5px rgba(0, 0, 0, 0.5); /* ✅ Improves readability */
     margin-bottom: 15px;
     text-align: center;
-    transform: perspective(500px) rotateX(10deg); /* ✅ Adds 3D effect */
+    transform: perspective(500px) rotateX(5deg); /* ✅ Adds 3D effect */
 }
 
 /* ✅ Hero Section */
