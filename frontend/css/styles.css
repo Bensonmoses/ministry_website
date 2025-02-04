@@ -1,4 +1,4 @@
-/* 🎨 GLOBAL STYLES */
+/* ✅ General Styles */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -8,209 +8,329 @@
 html, body {
     height: 100%;
     margin: 0;
-    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    font-family: Arial, sans-serif;
     background-color: #000;
     color: #fff;
     line-height: 1.6;
 }
 
-/* 🎯 DESKTOP STYLES */
-@media (min-width: 769px) {
-    /* 🔹 HERO SECTION */
-    .hero {
-        position: relative;
-        height: 650px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        background: url('../images/background.jpg') center/cover no-repeat;
-        padding-top: 160px; /* Prevents overlapping */
-        padding-bottom: 80px;
-    }
-
-    /* 🔹 Background Overlay */
-    .hero::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-    }
-
-    /* 🔹 3D TITLE */
-    .page-title {
-        font-size: clamp(40px, 5vw, 52px);
-        font-weight: bold;
-        color: white;
-        text-align: center;
-        max-width: 100%;
-        text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8), 
-                     5px 5px 12px rgba(255, 0, 0, 0.6), 
-                     7px 7px 18px rgba(255, 255, 0, 0.6);
-        transform: perspective(500px) rotateX(5deg);
-        margin-bottom: 25px;
-        z-index: 2;
-    }
-
-    /* 🔹 HERO TEXT */
-    .hero-content p {
-        font-size: 20px;
-        max-width: 700px;
-        text-align: center;
-        color: white;
-        text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7);
-        margin-bottom: 50px;
-        z-index: 2;
-    }
-
-    /* 🔹 CALL TO ACTION BUTTON */
-    .cta-button {
-        background: linear-gradient(135deg, #ff0000, #ff6a00);
-        color: white;
-        padding: 14px 28px;
-        font-size: 20px;
-        font-weight: bold;
-        text-decoration: none;
-        border-radius: 6px;
-        position: relative;
-        margin-top: 10px;
-        box-shadow: 0 5px 15px rgba(255, 0, 0, 0.4);
-        z-index: 2;
-    }
-
-    .cta-button:hover {
-        background: linear-gradient(135deg, #ff6a00, #ff0000);
-        transform: scale(1.05);
-    }
-
-    /* 🔹 NAVBAR */
-    .navbar {
-        display: flex;
-        justify-content: center;
-        position: absolute;
-        top: 0;
-        width: 100%;
-        z-index: 10;
-        background: rgba(0, 0, 0, 0.8);
-        padding: 15px 0;
-    }
-
-    .navbar a {
-        color: white;
-        text-decoration: none;
-        padding: 12px 22px;
-        font-size: 18px;
-        font-weight: bold;
-        transition: color 0.3s ease-in-out;
-    }
-
-    .navbar a:hover {
-        color: #ffd700;
-    }
-
-    /* 🔹 PAGE SECTIONS */
-    .section-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: stretch;
-        padding: 60px 30px;
-        max-width: 1200px;
-        margin: auto;
-        gap: 15px;
-    }
-
-    .section {
-        flex: 1;
-        padding: 40px;
-        text-align: center;
-        border-radius: 10px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background-color: #222;
-        transition: transform 0.3s ease-in-out;
-    }
-
-    .section:hover {
-        transform: translateY(-5px);
-    }
-
-    /* 🔹 DONATE BUTTON */
-    .donate-button {
-        background: linear-gradient(135deg, #ff0000, #ff6a00);
-        color: white;
-        padding: 12px 24px;
-        font-size: 18px;
-        font-weight: bold;
-        text-decoration: none;
-        border-radius: 6px;
-        margin-top: 15px;
-        display: inline-block;
-    }
-
-    .donate-button:hover {
-        background: linear-gradient(135deg, #ff6a00, #ff0000);
-        transform: scale(1.05);
-    }
+/* ✅ Title inside Hero Section */
+.page-title {
+    font-size: 50px; /* ✅ Adjust for visibility */
+    font-weight: bold;
+    color: white; /* ✅ Ensure it’s visible */
+    text-shadow: 2px 2px 5px black; /* ✅ Improves readability */
+    margin-bottom: 15px;
+    text-align: center;
 }
 
-/* 🎯 MOBILE VIEW (Hides Certain Elements, Adjusts Layout) */
+/* ✅ Hero Section */
+.hero {
+    background: url('../images/background.jpg') center/cover no-repeat;
+    height: 600px; /* Reduce height for better mobile view */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding: 20px;
+}
+
+/* ✅ Add a Semi-transparent Overlay */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay for readability */
+}
+
+/* ✅ Hero Content */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    max-width: 90%;
+    text-align: center;
+    margin: auto;
+}
+
+/* ✅ Main Title Styling */
+.page-title {
+    font-size: 38px; /* Reduce size for mobile */
+    font-weight: bold;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+/* ✅ Subtitle */
+.hero-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* ✅ Description Text */
+.hero-content p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+/* ✅ Call-To-Action Button */
+.cta-button {
+    background: red;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+    background: white;
+    color: black;
+}
+
+/* ✅ Mobile Optimization */
 @media (max-width: 768px) {
-    /* 🔹 Adjust Hero Section */
     .hero {
-        height: 550px;
-        padding-top: 130px;
-        padding-bottom: 60px;
+        height: 450px; /* Reduce height for small screens */
+        padding: 15px;
     }
 
-    /* 🔹 Mobile Title */
     .page-title {
-        font-size: clamp(28px, 4.5vw, 42px);
-        transform: perspective(300px) rotateX(3deg);
+        font-size: 28px; /* Smaller text on mobile */
     }
 
-    /* 🔹 Hero Text */
+    .hero-content h2 {
+        font-size: 20px;
+    }
+
     .hero-content p {
-        font-size: 16px;
-        max-width: 90%;
-        margin-bottom: 35px;
+        font-size: 14px;
     }
 
-    /* 🔹 Hide Navbar (Use Mobile Menu Instead) */
-    .navbar {
+    .cta-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+
+/* ✅ Header */
+header {
+    background: rgb(163, 40, 40);
+    color: white;
+    padding: 1rem 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    position: relative;
+}
+
+.logo img {
+    height: 55px;
+}
+
+/* ✅ Desktop Navigation */
+.desktop-nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.desktop-nav ul li {
+    margin: 0 15px;
+}
+
+.desktop-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.desktop-nav ul li a:hover {
+    color: #ffd700;
+}
+
+/* ✅ Mobile Navigation */
+@media (min-width: 769px) {
+    .mobile-nav {
+        display: none !important;
+    }
+    #menuButton {
+        display: none !important;
+    }
+}
+
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100vh;
+    background: #111;
+    padding-top: 60px;
+    box-shadow: -4px 0 6px rgba(0, 0, 0, 0.5);
+    transition: right 0.4s ease-in-out;
+    z-index: 1100;
+}
+
+.mobile-nav.active {
+    right: 0;
+}
+
+.mobile-nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.mobile-nav ul li {
+    padding: 15px 0;
+}
+
+.mobile-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.mobile-nav ul li a:hover {
+    color: #ffd700;
+}
+
+@media (max-width: 768px) {
+    .desktop-nav {
         display: none;
     }
-
-    /* 🔹 Adjust Buttons */
-    .cta-button {
-        font-size: 18px;
-        padding: 12px 24px;
-        margin-top: 15px;
+    #menuButton {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 28px;
+        cursor: pointer;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        z-index: 1200;
     }
+}
 
-    .donate-button {
-        font-size: 16px;
-        padding: 10px 20px;
-    }
+/* ✅ Page Content */
+.page-content {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
 
-    /* 🔹 Stack Sections */
+/* ✅ Sections */
+.section-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 60px 30px;
+    max-width: 1200px;
+    margin: auto;
+    gap: 15px;
+}
+
+.section {
+    flex: 1;
+    padding: 40px;
+    text-align: center;
+    margin: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+}
+
+/* ✅ About, Ministries, and Donate Sections */
+.about, .ministries, .donate {
+    background-color: #222;
+    color: white;
+    padding: 40px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 250px;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
     .section-container {
         flex-direction: column;
         align-items: center;
     }
-
-    /* 🔹 Hide Founder Section (Optional) */
-    .founder-section {
-        display: none;
+    .about {
+        min-height: auto;
+        padding: 30px;
     }
 }
 
-/* 🎯 FOOTER */
+/* ✅ Founder Section */
+.founder-section {
+    background-color: #222;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.founder-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.founder-image img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 25px;
+    border: 3px solid #cc3333;
+    transition: transform 0.3s ease-in-out;
+}
+
+.founder-image img:hover {
+    transform: scale(1.1);
+}
+
+.founder-content {
+    max-width: 600px;
+    text-align: left;
+}
+
+/* ✅ Footer */
 footer {
     background: rgb(189, 47, 47);
     color: white;
@@ -220,7 +340,14 @@ footer {
     width: 100%;
 }
 
-/* 🔹 Footer Social Icons */
+/* ✅ Footer Container */
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ✅ Social Icons */
 .social-icons {
     margin-top: 15px;
 }
