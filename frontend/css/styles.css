@@ -20,46 +20,21 @@ body {
 }
 
 
-/* 🎨 3D Text Effect for Title with Depth & Glow */
-.page-title {
-    font-size: clamp(36px, 5vw, 52px); /* Responsive font size */
-    font-weight: bold;
-    margin-bottom: 20px;
-    line-height: 1.2;
-    text-align: center;
-    color: white;
-    max-width: 100%;
-    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8), 
-                 5px 5px 12px rgba(255, 0, 0, 0.6), 
-                 7px 7px 18px rgba(255, 255, 0, 0.6);
-    transform: perspective(400px) rotateX(5deg); /* Subtle 3D effect */
-    position: relative;
-    z-index: 2;
-}
-
-/* ✅ Mobile Optimization */
-@media (max-width: 768px) {
-    .page-title {
-        font-size: clamp(28px, 4.5vw, 42px);
-        transform: perspective(300px) rotateX(3deg); /* Less tilt on smaller screens */
-        white-space: normal; /* Allows multi-line text */
-    }
-}
-
-/* 🎨 Hero Section - Centered with Proper Alignment */
+/* 🎨 Hero Section - Properly Centered & No Overlapping */
 .hero {
     position: relative;
     height: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* Centers content */
+    justify-content: center; /* ✅ Centers content */
     text-align: center;
     background: url('../images/background.jpg') center/cover no-repeat;
-    padding: 120px 20px 50px; /* Prevents overlap */
+    padding-top: 150px; /* ✅ Increased padding to push title below navbar */
+    padding-bottom: 60px;
 }
 
-/* ✅ Background Overlay */
+/* ✅ Background Overlay for Better Readability */
 .hero::before {
     content: "";
     position: absolute;
@@ -67,7 +42,22 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Darkens background */
+    background: rgba(0, 0, 0, 0.5); /* ✅ Dark overlay */
+}
+
+/* 🎨 3D Text Effect for Title - Fixed Overlapping */
+.page-title {
+    font-size: clamp(40px, 5vw, 52px);
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    max-width: 100%;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8), 
+                 5px 5px 12px rgba(255, 0, 0, 0.6), 
+                 7px 7px 18px rgba(255, 255, 0, 0.6);
+    transform: perspective(500px) rotateX(5deg); /* ✅ Subtle 3D effect */
+    margin-bottom: 30px; /* ✅ Extra space below title */
+    z-index: 2;
 }
 
 /* ✅ Subtitle & Supporting Text */
@@ -77,11 +67,11 @@ body {
     text-align: center;
     color: white;
     text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7);
-    margin-bottom: 30px;
+    margin-bottom: 40px; /* ✅ Extra spacing to avoid overlap */
     z-index: 2;
 }
 
-/* ✅ Call-To-Action Button - Positioned at the Bottom */
+/* ✅ Call-To-Action Button - Proper Position */
 .cta-button {
     background: linear-gradient(135deg, #ff0000, #ff6a00);
     color: white;
@@ -91,7 +81,7 @@ body {
     text-decoration: none;
     border-radius: 6px;
     position: absolute;
-    bottom: 40px; /* Moves it lower */
+    bottom: 40px; /* ✅ Moved lower */
     left: 50%;
     transform: translateX(-50%);
     box-shadow: 0 5px 15px rgba(255, 0, 0, 0.4);
@@ -103,79 +93,45 @@ body {
     transform: translateX(-50%) scale(1.05);
 }
 
-/* ✅ 3D Navigation Buttons (Home, About, Contact) */
+/* ✅ Fix Navigation Bar */
 .navbar {
     display: flex;
     justify-content: center;
     position: absolute;
-    top: 10px;
+    top: 0;
     width: 100%;
     z-index: 10;
-}
-
-.navbar a {
-    background: linear-gradient(135deg, #222, #444);
-    color: white;
-    padding: 12px 22px;
-    font-size: 18px;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 8px;
-    margin: 0 10px;
-    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4), 
-                inset 2px 2px 5px rgba(255, 255, 255, 0.2);
-}
-
-.navbar a:hover {
-    transform: translateY(-3px);
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6), 
-                inset 3px 3px 6px rgba(255, 255, 255, 0.3);
-}
-
-/* ✅ Donate Button in Background */
-.donate-background {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 80px;
-    font-weight: bold;
-    color: rgba(255, 0, 0, 0.2);
-    text-transform: uppercase;
-    z-index: 1;
-    user-select: none;
+    background: rgba(0, 0, 0, 0.8); /* ✅ Ensures navbar doesn’t interfere */
+    padding: 15px 0;
 }
 
 /* ✅ Mobile Optimization */
 @media (max-width: 768px) {
     .hero {
         height: 500px;
-        padding: 100px 15px 40px;
+        padding-top: 120px; /* ✅ Push title lower on mobile */
+        padding-bottom: 50px;
     }
 
     .page-title {
-        font-size: 32px;
+        font-size: clamp(28px, 4.5vw, 42px);
+        transform: perspective(300px) rotateX(3deg); /* ✅ Reduced 3D effect */
     }
 
     .hero-content p {
         font-size: 16px;
         max-width: 90%;
+        margin-bottom: 30px; /* ✅ Ensures text and button spacing */
     }
 
     .cta-button {
         font-size: 18px;
         padding: 12px 24px;
-        bottom: 30px;
+        bottom: 30px; /* ✅ Adjust button position */
     }
 
-    .navbar a {
-        font-size: 16px;
-        padding: 10px 18px;
-    }
-
-    .donate-background {
-        font-size: 50px;
+    .navbar {
+        padding: 10px 0;
     }
 }
 
