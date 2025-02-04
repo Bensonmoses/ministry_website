@@ -18,6 +18,7 @@ body {
     color: #fff;
     line-height: 1.6;
     font-weight: normal;
+    text-transform: none;
 }
 
 /* ✅ Title inside Hero Section */
@@ -29,6 +30,12 @@ body {
     margin-bottom: 15px;
     text-align: center;
     transform: perspective(500px) rotateX(5deg); /* ✅ Adds 3D effect */
+    text-transform: uppercase; /* ✅ Uppercase for emphasis */
+}
+
+/* ✅ Subtitle Styling */
+h2, h3 {
+    text-transform: uppercase; /* Ensure subtitles are uppercase */
 }
 
 /* ✅ Hero Section */
@@ -295,38 +302,35 @@ header {
 
 /* ✅ Founder Section */
 .founder-section {
-    background-color: #222;
-    color: white;
-    padding: 60px 20px;
-    text-align: center;
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    text-align: center; /* Center the text */
+    flex-direction: column; /* Stack items vertically */
+    padding: 20px;
 }
 
 .founder-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    max-width: 1200px;
-    margin: auto;
-    flex-wrap: wrap;
 }
 
 .founder-image img {
-    width: 160px;
-    height: 160px;
+    max-width: 100%;
+    height: auto;
     border-radius: 50%;
-    object-fit: cover;
-    margin-right: 25px;
-    border: 3px solid #cc3333;
-    transition: transform 0.3s ease-in-out;
 }
 
-.founder-image img:hover {
-    transform: scale(1.1);
+.founder-content h2,
+.founder-content h3 {
+    font-weight: bold; /* Make titles and subtitles bold */
+    text-transform: uppercase; /* Ensure titles and subtitles are uppercase */
 }
 
-.founder-content {
-    max-width: 600px;
-    text-align: center;
+.founder-content p {
+    font-weight: normal; /* Ensure normal text for paragraphs */
+    text-transform: none; /* Ensure normal text case for paragraphs */
 }
 
 /* ✅ Footer */
