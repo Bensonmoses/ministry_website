@@ -1,9 +1,10 @@
 (async function() {
     try {
         console.log("Fetching Direct Line Token...");
+
         const response = await fetch('https://directline.botframework.com/v3/directline/tokens/generate', {
             method: 'POST',
-            headers: { 'Authorization': 'Bearer 8wBOgG8xJgSk81WXqYwrNiq3OvDFK34SHkPsjErWZ2ib4vhc3uJ1JQQJ99BBACi5YpzAArohAAABAZBS3KHD.FE9G3z76yOo8cD01bzxHFo8YYAzNFt2GCNvgJFNsGgx8eE0jUGPSJQQJ99BBACi5YpzAArohAAABAZBS3RAU' } // 🔹 Replace with actual key
+            headers: { 'Authorization': 'Bearer 8wBOgG8xJgSk81WXqYwrNiq3OvDFK34SHkPsjErWZ2ib4vhc3uJ1JQQJ99BBACi5YpzAArohAAABAZBS3KHD' } // 🔹 Replace with actual key
         });
 
         if (!response.ok) {
