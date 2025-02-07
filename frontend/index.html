@@ -117,5 +117,38 @@
         </div>
     </footer>
 
+    <!-- ✅ Chatbot Floating Button -->
+    <button id="chatbot-toggle" style="position: fixed; bottom: 20px; right: 20px; background-color: #004aad; color: white; border: none; padding: 10px 20px; border-radius: 50px; cursor: pointer;">💬 Chat</button>
+
+    <!-- ✅ Chatbot Container (Initially Hidden) -->
+    <div id="webchat-container" style="display: none; position: fixed; bottom: 80px; right: 20px; width: 350px; height: 500px; background: white; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0,0,0,0.2);"></div>
+
+    <!-- ✅ Chatbot Script -->
+    <script src="https://cdn.botframework.com/botframework-webchat/latest/webchat.js"></script>
+    <script>
+    (async function() {
+        const res = await fetch('https://directline.botframework.com/v3/directline/tokens/generate', {
+            method: 'POST',
+            headers: {
+                'Authorization': 'Bearer YOUR_DIRECT_LINE_SECRET'
+            }
+        });
+        const { token } = await res.json();
+        window.WebChat.renderWebChat({
+            directLine: window.WebChat.createDirectLine({ token }),
+            userID: 'USER_ID',
+            username: 'User',
+            locale: 'en-US'
+        }, document.getElementById('webchat-container'));
+
+        // ✅ Toggle Chatbot Visibility
+        document.getElementById("chatbot-toggle").addEventListener("click", function() {
+            let chatbox = document.getElementById("webchat-container");
+            chatbox.style.display = (chatbox.style.display === "none" || chatbox.style.display === "") ? "block" : "none";
+        });
+    })();
+    </script>
+
+
 </body>
 </html>
