@@ -118,7 +118,9 @@
     </footer>
 
     <!-- ✅ Chatbot Floating Button -->
-    <button id="chatbot-toggle" style="position: fixed; bottom: 20px; right: 20px; background-color: #004aad; color: white; border: none; padding: 10px 20px; border-radius: 50px; cursor: pointer;">💬 Chat</button>
+    <button id="chatbot-toggle" style="position: fixed; bottom: 20px; right: 20px; background: none; border: none; cursor: pointer;">
+        <img src="images/chatbot-amma.png" alt="Talk with Amma" style="width: 120px; height: auto;">
+    </button>
 
     <!-- ✅ Chatbot Container (Initially Hidden) -->
     <div id="webchat-container" style="display: none; position: fixed; bottom: 80px; right: 20px; width: 350px; height: 500px; background: white; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0,0,0,0.2);"></div>
@@ -130,7 +132,7 @@
         const res = await fetch('https://directline.botframework.com/v3/directline/tokens/generate', {
             method: 'POST',
             headers: {
-                'Authorization': 'Bearer 8wBOgG8xJgSk81WXqYwrNiq3OvDFK34SHkPsjErWZ2ib4vhc3uJ1JQQJ99BBACi5YpzAArohAAABAZBS3KHD.FE9G3z76yOo8cD01bzxHFo8YYAzNFt2GCNvgJFNsGgx8eE0jUGPSJQQJ99BBACi5YpzAArohAAABAZBS3RAU'
+                'Authorization': 'Bearer YOUR_DIRECT_LINE_SECRET'
             }
         });
         const { token } = await res.json();
