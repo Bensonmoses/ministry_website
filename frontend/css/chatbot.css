@@ -8,7 +8,7 @@
     cursor: pointer;
     text-align: center;
     z-index: 1500;
-    display: flex; /* Ensure proper alignment */
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -24,10 +24,10 @@
 
 /* ✅ Chatbot Image (Round) */
 .chatbot-button img {
-    width: 60px;
-    height: 60px;
+    width: 50px;  /* Reduced size */
+    height: 50px;
     border-radius: 50%;
-    box-shadow: 0px 4px 6px rgba(0,0,0,0.3);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease-in-out;
 }
 
@@ -38,7 +38,7 @@
 /* ✅ Chatbot Text Below the Button */
 .chatbot-button span {
     color: white;
-    font-size: 14px;
+    font-size: 13px; /* Reduced font size */
     font-weight: bold;
     margin-top: 5px;
     display: block;
@@ -49,8 +49,8 @@
     position: fixed;
     bottom: 80px; /* Adjusted for button alignment */
     right: 20px;
-    width: 350px;
-    height: 500px;
+    width: 320px; /* Reduced width */
+    height: 400px; /* Reduced height */
     background: white;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
@@ -58,14 +58,15 @@
     display: none; /* Hidden by default */
     z-index: 2000;
     opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 /* ✅ Chatbot Header */
 .chatbot-header {
     background: #0078D7;
     color: white;
-    padding: 12px;
+    padding: 10px;
     text-align: center;
     font-weight: bold;
     display: flex;
@@ -78,7 +79,7 @@
     background: none;
     border: none;
     color: white;
-    font-size: 20px;
+    font-size: 18px;
     cursor: pointer;
     transition: transform 0.2s;
 }
@@ -91,6 +92,7 @@
 .chatbot-popup.active {
     display: block;
     opacity: 1;
+    transform: translateY(0);
 }
 
 /* ✅ Hide Chatbot Button when Chatbot is Open */
@@ -105,10 +107,11 @@
         width: 90%;
         right: 5%;
         bottom: 60px;
+        height: 380px; /* Adjusted for smaller screens */
     }
 
     .chatbot-button img {
-        width: 50px;
-        height: 50px;
+        width: 45px;
+        height: 45px;
     }
 }

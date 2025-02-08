@@ -6,18 +6,18 @@ document.addEventListener("DOMContentLoaded", function () {
     chatbotToggle.addEventListener("click", function () {
         chatbotPopup.classList.add("active");
 
-        // Smooth transition
-        setTimeout(() => {
-            chatbotToggle.style.display = "none"; // Hide button smoothly
-        }, 300);
+        // Smoothly fade out the button instead of hiding it instantly
+        chatbotToggle.style.opacity = "0";
+        chatbotToggle.style.pointerEvents = "none";
     });
 
     closeChatbot.addEventListener("click", function () {
         chatbotPopup.classList.remove("active");
 
-        // Delay before showing button again
+        // Smoothly fade in the button after chatbot closes
         setTimeout(() => {
-            chatbotToggle.style.display = "flex";
+            chatbotToggle.style.opacity = "1";
+            chatbotToggle.style.pointerEvents = "auto";
         }, 300);
     });
 });
