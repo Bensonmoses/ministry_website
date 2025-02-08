@@ -6,7 +6,10 @@ document.addEventListener("DOMContentLoaded", function () {
     chatbotToggle.addEventListener("click", function () {
         chatbotPopup.classList.add("active");
 
-        // Smoothly fade out the button instead of hiding it instantly
+        // Ensure chatbot popup is visible on mobile
+        chatbotPopup.style.display = "block";
+
+        // Smooth fade-out effect for button
         chatbotToggle.style.opacity = "0";
         chatbotToggle.style.pointerEvents = "none";
     });
@@ -14,8 +17,9 @@ document.addEventListener("DOMContentLoaded", function () {
     closeChatbot.addEventListener("click", function () {
         chatbotPopup.classList.remove("active");
 
-        // Smoothly fade in the button after chatbot closes
+        // Ensure chatbot button returns after closing
         setTimeout(() => {
+            chatbotPopup.style.display = "none";
             chatbotToggle.style.opacity = "1";
             chatbotToggle.style.pointerEvents = "auto";
         }, 300);
