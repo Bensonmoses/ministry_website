@@ -5,11 +5,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
     chatbotToggle.addEventListener("click", function () {
         chatbotPopup.classList.add("active");
-        chatbotToggle.style.display = "none"; // Hide button when chatbot is open
+
+        // Smooth transition
+        setTimeout(() => {
+            chatbotToggle.style.display = "none"; // Hide button smoothly
+        }, 300);
     });
 
     closeChatbot.addEventListener("click", function () {
         chatbotPopup.classList.remove("active");
-        chatbotToggle.style.display = "block"; // Show button when chatbot is closed
+
+        // Delay before showing button again
+        setTimeout(() => {
+            chatbotToggle.style.display = "flex";
+        }, 300);
     });
 });
