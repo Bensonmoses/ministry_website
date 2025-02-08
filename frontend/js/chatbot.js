@@ -2,14 +2,15 @@ document.addEventListener("DOMContentLoaded", function () {
     const chatbotToggle = document.getElementById("chatbot-toggle");
     const chatbotPopup = document.getElementById("chatbot-popup");
     const closeChatbot = document.getElementById("close-chatbot");
+    const chatbotIframe = chatbotPopup.querySelector("iframe");
 
     chatbotToggle.addEventListener("click", function () {
         chatbotPopup.classList.add("active");
 
-        // Ensure chatbot popup is visible on mobile
-        chatbotPopup.style.display = "block";
+        // Ensure iframe reloads when chatbot opens
+        chatbotIframe.src = chatbotIframe.src;
 
-        // Smooth fade-out effect for button
+        chatbotPopup.style.display = "block";
         chatbotToggle.style.opacity = "0";
         chatbotToggle.style.pointerEvents = "none";
     });
@@ -17,7 +18,6 @@ document.addEventListener("DOMContentLoaded", function () {
     closeChatbot.addEventListener("click", function () {
         chatbotPopup.classList.remove("active");
 
-        // Ensure chatbot button returns after closing
         setTimeout(() => {
             chatbotPopup.style.display = "none";
             chatbotToggle.style.opacity = "1";
