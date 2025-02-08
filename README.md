@@ -3,7 +3,7 @@
 Welcome to the **Holy Spirit Prayer House** website, a platform dedicated to spreading the gospel of Jesus Christ and supporting communities in need. This website provides ministry updates, donation options, prayer resources, and an AI-powered chatbot for interactive guidance.
 
 ## 🌍 Live Website
-🔗 **[Visit the Holy Spirit Prayer House Website](#)** (Add your deployment link)
+🔗 **[Visit the Holy Spirit Prayer House Website](#)** (https://happy-cliff-02d159410.4.azurestaticapps.net/index.html)
 
 ---
 
