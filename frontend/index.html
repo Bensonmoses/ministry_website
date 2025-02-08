@@ -15,6 +15,9 @@
 
     <!-- ✅ Stylesheets -->
     <link rel="stylesheet" href="css/styles.css">
+    <!-- ✅ Add chatbot.css -->
+    <link rel="stylesheet" href="css/chatbot.css">
+
 </head>
 <body>
 
@@ -83,19 +86,24 @@
         </div>
     </section>
 
-    <!-- ✅ Founder Section -->
-    <section class="founder-section">
-        <div class="founder-container">
-            <div class="founder-image">
-                <img src="images/founder.jpg" alt="Founder - Rev P. Moses">
-            </div>
-            <div class="founder-content">
-                <h2>Founder</h2>
-                <h3>Rev P. Moses</h3>
-                <p>Pastor P. Moses is the visionary behind the Holy Spirit Prayer House, dedicated to spreading faith, love, and hope to communities worldwide. Through prayer, outreach, and ministry, he has transformed lives and continues to guide people in their spiritual journey.</p>
-            </div>
-        </div>
-    </section>
+<!-- ✅ Floating Chatbot Button -->
+<button id="chatbot-toggle" class="chatbot-button" aria-label="Open Chatbot">
+    <div class="chatbot-wrapper">
+        <img src="images/founder.jpg" alt="Chat with Amma">
+        <span>Talk with Amma</span>
+    </div>
+</button>
+
+<!-- ✅ Chatbot Popup -->
+<div id="chatbot-popup" class="chatbot-popup hidden">
+    <div class="chatbot-header">
+        <span>Chat with Amma</span>
+        <button id="close-chatbot" class="close-button">&times;</button>
+    </div>
+    <iframe src="https://talkwithamma.azurewebsites.net" width="100%" height="400"></iframe>
+</div>
+
+
 
     <!-- ✅ Footer -->
     <footer>
@@ -115,22 +123,7 @@
         </div>
     </footer>
 
-    <!-- ✅ Back to Top Button -->
-    <button id="backToTopBtn" title="Go to top">Top</button>
-
-    <!-- ✅ Chatbot Floating Button -->
-    <button id="chatbot-toggle" class="chatbot-button" aria-label="Open Chatbot">
-        <div class="chatbot-wrapper">
-            <img src="images/chatbot-amma.png" alt="Chat with Amma">
-            <span>Talk with Amma</span>
-        </div>
-    </button>
-
-    <!-- ✅ Chatbot Container -->
-    <div id="webchat-container" style="display: none;"></div>
-
     <!-- ✅ JavaScript Files -->
-    <script src="https://cdn.botframework.com/botframework-webchat/latest/webchat.js"></script>
     <script src="js/chatbot.js" defer></script>
     <script src="js/script.js" defer></script>
 
