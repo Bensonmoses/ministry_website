@@ -34,10 +34,16 @@ logs/
 local.settings.json
 host.json
 function.json
+.venv/
+*.swp
+*.bak
+*.orig
 
 # 🔄 Ignore Node Modules (If Frontend Uses Node.js)
 node_modules/
 npm-debug.log
+yarn.lock
+package-lock.json
 
 # 📸 Ignore Media Uploads (If Any)
 uploads/
@@ -45,9 +51,14 @@ static/uploads/
 media/
 
 # 🚀 Ignore Azure Deployment Files
-*.swp
-*.bak
-*.orig
+azure-pipelines.yml
+.github/
+*.deployment
+
+# 🐳 Ignore Docker Files (If Using Docker)
+.dockerignore
+docker-compose.yml
+Dockerfile
 
 # 🖥️ Ignore MacOS & Windows System Files
 .DS_Store
