@@ -15,7 +15,6 @@
 
     <!-- ✅ Stylesheets -->
     <link rel="stylesheet" href="css/styles.css">
-    <!-- ✅ Add chatbot.css -->
     <link rel="stylesheet" href="css/chatbot.css">
 
 </head>
@@ -86,24 +85,33 @@
         </div>
     </section>
 
-<!-- ✅ Floating Chatbot Button -->
-<button id="chatbot-toggle" class="chatbot-button" aria-label="Open Chatbot">
-    <div class="chatbot-wrapper">
-        <img src="images/founder.jpg" alt="Chat with Amma">
-        <span>Talk with Amma</span>
+    <!-- ✅ Founder Section -->
+    <section class="founder-section">
+        <div class="founder-container">
+            <img src="images/founder.jpg" alt="Founder Image" class="founder-img">
+            <div class="founder-content">
+                <h2>Our Founder</h2>
+                <p>Pastor P. Moses, the founder of Holy Spirit Prayer House, has dedicated his life to spreading the Gospel and helping those in need.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ✅ Floating Chatbot Button -->
+    <button id="chatbot-toggle" class="chatbot-button" aria-label="Open Chatbot">
+        <div class="chatbot-wrapper">
+            <img src="images/founder.jpg" alt="Chat with Amma">
+            <span>Talk with Amma</span>
+        </div>
+    </button>
+
+    <!-- ✅ Chatbot Popup -->
+    <div id="chatbot-popup" class="chatbot-popup hidden">
+        <div class="chatbot-header">
+            <span>Chat with Amma</span>
+            <button id="close-chatbot" class="close-button">&times;</button>
+        </div>
+        <iframe src="https://talkwithamma.azurewebsites.net" width="100%" height="400"></iframe>
     </div>
-</button>
-
-<!-- ✅ Chatbot Popup -->
-<div id="chatbot-popup" class="chatbot-popup hidden">
-    <div class="chatbot-header">
-        <span>Chat with Amma</span>
-        <button id="close-chatbot" class="close-button">&times;</button>
-    </div>
-    <iframe src="https://talkwithamma.azurewebsites.net" width="100%" height="400"></iframe>
-</div>
-
-
 
     <!-- ✅ Footer -->
     <footer>
