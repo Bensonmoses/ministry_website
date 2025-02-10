@@ -21,7 +21,7 @@ pip-log.txt
 pip-delete-this-directory.txt
 
 # ⚙️ Ignore IDE & Editor-Specific Files
-.vscode/
+
 .idea/
 *.sublime-project
 *.sublime-workspace
