@@ -1,24 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Donate - HOLY SPIRIT PRAYER HOUSE</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="js/script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Donate to support Holy Spirit Prayer House - a place for faith, love, and community outreach.">
+  <meta name="keywords" content="Donate, Church, Holy Spirit, Prayer, Ministries, Support">
+  <meta name="author" content="Holy Spirit Prayer House">
+  <title>Donate - Holy Spirit Prayer House | హోలీ స్పిరిట్ ప్రార్థన మందిరం</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+Telugu&display=swap" rel="stylesheet">
+  
+  <!-- External Stylesheets -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/founder.css">
+  <link rel="stylesheet" href="css/chatbot.css">
+  
+  <!-- Language Toggle Script -->
+  <script>
+    function toggleLanguage(lang) {
+      document.body.classList.remove("english", "telugu");
+      document.body.classList.add(lang);
+    }
+  </script>
 </head>
-<body>
-
-    <!-- ✅ Include the header -->
-    <div id="header-container"></div>
-
-    <!-- ✅ Donate Section -->
-    <section class="page-content">
-        <h1>Support Our Mission</h1>
-        <p>Your generous donation helps us continue spreading faith and love through our outreach programs.</p>
-        <a href="donate.html" class="cta-button">Donate Now</a>
-    </section>
-
-    <!-- ✅ Include the footer -->
-    <div id="footer-container"></div>
-
+<body class="english">
+  <!-- Language Toggle Button (Top Center) -->
+  <div class="language-toggle">
+    <button onclick="toggleLanguage('english')">English</button>
+    <button onclick="toggleLanguage('telugu')">తెలుగు</button>
+  </div>
+  
+  <!-- Include the header -->
+  <div id="header-container"></div>
+  
+  <!-- Donate Section -->
+  <section class="page-content">
+    <h1>
+      <span class="english-text">Donate</span>
+      <span class="telugu-text">దానం</span>
+    </h1>
+    <p>
+      <span class="english-text">Your generous donation helps us continue our mission of providing hope, love, and support to the community.</span>
+      <span class="telugu-text">మీ విరాళం మన సమాజానికి ఆశ, ప్రేమ, మరియు మద్దతు అందించే మా కార్యక్రమాన్ని కొనసాగించడానికి సహాయపడుతుంది.</span>
+    </p>
+    <p>
+      <span class="english-text">Please choose your preferred donation method below:</span>
+      <span class="telugu-text">దయచేసి మీకు సరిపోయే దానం పద్ధతిని క్రింది నుండి ఎంచుకోండి:</span>
+    </p>
+    
+    <!-- Donation Options -->
+    <div class="donation-options">
+      <div class="donation-option">
+        <h2>
+          <span class="english-text">Online Donation</span>
+          <span class="telugu-text">ఆన్లైన్ దానం</span>
+        </h2>
+        <p>
+          <span class="english-text">Donate securely online using your credit/debit card or PayPal.</span>
+          <span class="telugu-text">మీ క్రెడిట్/డెబిట్ కార్డ్ లేదా PayPal ద్వారా సురక్షితంగా ఆన్లైన్ ద్వారా దానం చేయండి.</span>
+        </p>
+        <a href="https://donate.example.com" class="cta-button">
+          <span class="english-text">Donate Now</span>
+          <span class="telugu-text">దానం చేయండి</span>
+        </a>
+      </div>
+      <div class="donation-option">
+        <h2>
+          <span class="english-text">Bank Transfer</span>
+          <span class="telugu-text">బ్యాంక్ మార్పిడి</span>
+        </h2>
+        <p>
+          <span class="english-text">Transfer funds directly to our bank account.</span>
+          <span class="telugu-text">మా బ్యాంక్ ఖాతాకు నేరుగా రుసుములను బదిలీ చేయండి.</span>
+        </p>
+        <p>
+          <span class="english-text">Account Number: 123456789</span>
+          <span class="telugu-text">ఖాతా నెంబర్: 123456789</span>
+        </p>
+        <p>
+          <span class="english-text">IFSC: ABCD0123456</span>
+          <span class="telugu-text">IFSC: ABCD0123456</span>
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Include the footer -->
+  <div id="footer-container"></div>
+  
+  <!-- External JavaScript Files -->
+  <script src="js/chatbot.js" defer></script>
+  <script src="js/script.js" defer></script>
 </body>
 </html>

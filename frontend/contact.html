@@ -1,26 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Contact Us - HOLY SPIRIT PRAYER HOUSE</title>
+    <meta charset="UTF-8">
+    <title>Contact Us - Holy Spirit Prayer House | హోలీ స్పిరిట్ ప్రార్థన మందిరం</title>
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/script.js" defer></script>
+    <script>
+        function toggleLanguage(lang) {
+            document.body.classList.remove("english", "telugu");
+            document.body.classList.add(lang);
+        }
+    </script>
 </head>
-<body>
+<body class="english">
+    <!-- Language Toggle Button (Top Center) -->
+    <div class="language-toggle">
+        <button onclick="toggleLanguage('english')">English</button>
+        <button onclick="toggleLanguage('telugu')">తెలుగు</button>
+    </div>
 
-    <!-- ✅ Include the header -->
+    <!-- Include the header -->
     <div id="header-container"></div>
 
-    <!-- ✅ Contact Section -->
+    <!-- Contact Section -->
     <section class="page-content">
-        <h1>Contact Us</h1>
-        <p>Email: pastorpmoses2014@gmail.com</p>
-        <p>Phone: +91 9848315170</p>
-        <p>Phone: +1 (551) 697-6451</p>
-        <p>Address: 94 Street, Andhra Pradesh, India</p>
+        <h1>
+            <span class="english-text">Contact Us</span>
+            <span class="telugu-text">మమ్మల్ని సంప్రదించండి</span>
+        </h1>
+        <p>
+            <span class="english-text">Email: pastorpmoses2014@gmail.com</span>
+            <span class="telugu-text">ఇమెయిల్: pastorpmoses2014@gmail.com</span>
+        </p>
+        <p>
+            <span class="english-text">Phone: +91 9848315170</span>
+            <span class="telugu-text">ఫోన్: +91 9848315170</span>
+        </p>
+        <p>
+            <span class="english-text">Phone: +1 (551) 697-6451</span>
+            <span class="telugu-text">ఫోన్: +1 (551) 697-6451</span>
+        </p>
+        <p>
+            <span class="english-text">Address: 94 Street, Andhra Pradesh, India</span>
+            <span class="telugu-text">చిరునామా: 94 వీధి, ఆంధ్రప్రదేశ్, ఇండియా</span>
+        </p>
     </section>
 
-    <!-- ✅ Include the footer -->
+    <!-- Include the footer -->
     <div id="footer-container"></div>
-
 </body>
 </html>

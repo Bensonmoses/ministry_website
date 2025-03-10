@@ -1,0 +1,53 @@
+your-project/
+├── frontend/
+│   ├── index.html            # Home page
+│   ├── about.html            # About/Contact page
+│   ├── donate.html           # Donation page
+│   ├── events.html           # Events page
+│   ├── sermons.html          # Sermons page (if applicable)
+│   ├── ministries.html       # Ministries page (if applicable)
+│   ├── css/
+│   │   ├── styles.css        # Main styles
+│   │   ├── founder.css       # Styles for founder section
+│   │   └── chatbot.css       # Styles for chatbot popup/button
+│   ├── js/
+│   │   ├── script.js         # Main JavaScript (navigation, toggle, etc.)
+│   │   └── chatbot.js        # Chatbot-specific JavaScript
+│   └── images/               # All images and icons
+│       ├── logo.webp
+│       ├── background.jpg
+│       ├── founder.jpg
+│       ├── co-founder.jpg
+│       ├── youtube.png
+│       ├── instagram.png
+│       └── facebook.png
+│
+├── backend/
+│   ├── package.json          # Node.js dependencies & scripts
+│   ├── server.js             # Main server file (e.g., Express server)
+│   ├── config/               # Configuration files (e.g., database config)
+│   │   └── database.js
+│   ├── models/               # Data models (e.g., Mongoose schemas)
+│   │   ├── sermon.js
+│   │   ├── ministry.js
+│   │   └── event.js
+│   ├── controllers/          # Business logic for routes
+│   │   ├── indexController.js
+│   │   ├── sermonsController.js
+│   │   ├── ministriesController.js
+│   │   └── eventsController.js
+│   ├── routes/               # API and page routes
+│   │   ├── index.js
+│   │   ├── sermons.js
+│   │   ├── ministries.js
+│   │   └── events.js
+│   └── views/                # (Optional) Templates if using SSR (e.g., EJS, Pug)
+│       ├── index.ejs
+│       ├── about.ejs
+│       ├── donate.ejs
+│       ├── events.ejs
+│       ├── sermons.ejs
+│       └── ministries.ejs
+│
+├── .gitignore                # Files/folders to ignore in version control
+└── README.md                 # Project documentation

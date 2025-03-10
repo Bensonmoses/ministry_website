@@ -3,25 +3,25 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-
-html, body {
+  }
+  
+  html, body {
     height: 100%;
     margin: 0;
     display: flex;
     flex-direction: column;
-}
-
-body {
-    font-family: 'Merriweather', sans-serif;
+  }
+  
+  body {
+    font-family: 'Noto Sans', 'Noto Sans Telugu', sans-serif;
     background-color: #000;
     color: #fff;
     line-height: 1.6;
     font-weight: normal;
-}
-
-/* ✅ Title inside Hero Section */
-.page-title {
+  }
+  
+  /* ✅ Title inside Hero Section */
+  .page-title {
     font-size: 50px; /* ✅ Adjust for visibility */
     font-weight: bold;
     color: white; /* ✅ Ensure it’s visible */
@@ -29,10 +29,10 @@ body {
     margin-bottom: 15px;
     text-align: center;
     transform: perspective(500px) rotateX(5deg); /* ✅ Adds 3D effect */
-}
-
-/* ✅ Hero Section */
-.hero {
+  }
+  
+  /* ✅ Hero Section */
+  .hero {
     background: url('../images/background.jpg') center/cover no-repeat;
     height: 600px; /* Reduce height for better mobile view */
     display: flex;
@@ -41,10 +41,10 @@ body {
     text-align: center;
     position: relative;
     padding: 20px;
-}
-
-/* ✅ Add a Semi-transparent Overlay */
-.hero::before {
+  }
+  
+  /* ✅ Add a Semi-transparent Overlay */
+  .hero::before {
     content: "";
     position: absolute;
     top: 0;
@@ -52,38 +52,38 @@ body {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.6); /* Dark overlay for readability */
-}
-
-/* ✅ Hero Content */
-.hero-content {
+  }
+  
+  /* ✅ Hero Content */
+  .hero-content {
     position: relative;
     z-index: 2;
     color: white;
     text-shadow: none;
-}
-
-/* ✅ Main Title Styling */
-.page-title {
+  }
+  
+  /* ✅ Main Title Styling */
+  .page-title {
     font-size: 38px; /* Reduce size for mobile */
     font-weight: bold;
     margin-bottom: 10px;
     line-height: 1.2;
-}
-
-/* ✅ Subtitle */
-.hero-content h2 {
+  }
+  
+  /* ✅ Subtitle */
+  .hero-content h2 {
     font-size: 24px;
     margin-bottom: 10px;
-}
-
-/* ✅ Description Text */
-.hero-content p {
+  }
+  
+  /* ✅ Description Text */
+  .hero-content p {
     font-size: 16px;
     margin-bottom: 15px;
-}
-
-/* ✅ Call-To-Action Button */
-.cta-button {
+  }
+  
+  /* ✅ Call-To-Action Button */
+  .cta-button {
     background: red;
     color: white;
     padding: 10px 20px;
@@ -92,91 +92,90 @@ body {
     text-decoration: none;
     border-radius: 5px;
     transition: background 0.3s ease-in-out;
-}
-
-.cta-button:hover {
+  }
+  
+  .cta-button:hover {
     background: white;
     color: black;
-}
-
-/* ✅ Mobile Optimization */
-@media (max-width: 768px) {
+  }
+  
+  /* ✅ Mobile Optimization */
+  @media (max-width: 768px) {
     .hero {
-        height: 450px; /* Reduce height for small screens */
-        padding: 15px;
+      height: 450px; /* Reduce height for small screens */
+      padding: 15px;
     }
-
+    
     .page-title {
-        font-size: 28px; /* Smaller text on mobile */
+      font-size: 28px; /* Smaller text on mobile */
     }
-
+    
     .hero-content h2 {
-        font-size: 20px;
+      font-size: 20px;
     }
-
+    
     .hero-content p {
-        font-size: 14px;
+      font-size: 14px;
     }
-
+    
     .cta-button {
-        font-size: 14px;
-        padding: 8px 16px;
+      font-size: 14px;
+      padding: 8px 16px;
     }
-}
-
-
-/* ✅ Header */
-header {
+  }
+  
+  /* ✅ Header */
+  header {
     background: rgb(163, 40, 40);
     color: white;
     padding: 1rem 0;
-}
-
-.header-container {
+  }
+  
+  .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 30px;
     position: relative;
-}
-
-.logo img {
+  }
+  
+  .logo img {
     height: 55px;
-}
-
-/* ✅ Desktop Navigation */
-.desktop-nav ul {
+  }
+  
+  /* ✅ Desktop Navigation */
+  .desktop-nav ul {
     list-style: none;
     padding: 0;
     display: flex;
-}
-
-.desktop-nav ul li {
+  }
+  
+  .desktop-nav ul li {
     margin: 0 15px;
-}
-
-.desktop-nav ul li a {
+  }
+  
+  .desktop-nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease-in-out;
-}
-
-.desktop-nav ul li a:hover {
+  }
+  
+  .desktop-nav ul li a:hover {
     color: #ffd700;
-}
-
-/* ✅ Mobile Navigation */
-@media (min-width: 769px) {
+  }
+  
+  /* ✅ Mobile Navigation */
+  @media (min-width: 769px) {
     .mobile-nav {
-        display: none !important;
+      display: none !important;
     }
     #menuButton {
-        display: none !important;
+      display: none !important;
     }
-}
-
-.mobile-nav {
+  }
+  
+  .mobile-nav {
     position: fixed;
     top: 0;
     right: -100%;
@@ -187,61 +186,61 @@ header {
     box-shadow: -4px 0 6px rgba(0, 0, 0, 0.5);
     transition: right 0.4s ease-in-out;
     z-index: 1100;
-}
-
-.mobile-nav.active {
+  }
+  
+  .mobile-nav.active {
     right: 0;
-}
-
-.mobile-nav ul {
+  }
+  
+  .mobile-nav ul {
     list-style: none;
     padding: 0;
     text-align: center;
-}
-
-.mobile-nav ul li {
+  }
+  
+  .mobile-nav ul li {
     padding: 15px 0;
-}
-
-.mobile-nav ul li a {
+  }
+  
+  .mobile-nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
     transition: color 0.3s ease-in-out;
-}
-
-.mobile-nav ul li a:hover {
+  }
+  
+  .mobile-nav ul li a:hover {
     color: #ffd700;
-}
-
-@media (max-width: 768px) {
+  }
+  
+  @media (max-width: 768px) {
     .desktop-nav {
-        display: none;
+      display: none;
     }
     #menuButton {
-        display: block;
-        background: none;
-        border: none;
-        color: white;
-        font-size: 28px;
-        cursor: pointer;
-        position: absolute;
-        right: 15px;
-        top: 15px;
-        z-index: 1200;
+      display: block;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 28px;
+      cursor: pointer;
+      position: absolute;
+      right: 15px;
+      top: 15px;
+      z-index: 1200;
     }
-}
-
-/* ✅ Page Content */
-.page-content {
+  }
+  
+  /* ✅ Page Content */
+  .page-content {
     flex: 1;
     padding: 20px;
     text-align: center;
-}
-
-/* ✅ Sections */
-.section-container {
+  }
+  
+  /* ✅ Sections */
+  .section-container {
     display: flex;
     justify-content: space-between;
     align-items: stretch;
@@ -249,9 +248,9 @@ header {
     max-width: 1200px;
     margin: auto;
     gap: 15px;
-}
-
-.section {
+  }
+  
+  .section {
     flex: 1;
     padding: 40px;
     text-align: center;
@@ -262,14 +261,14 @@ header {
     justify-content: center;
     align-items: center;
     transition: transform 0.3s ease-in-out;
-}
-
-.section:hover {
+  }
+  
+  .section:hover {
     transform: translateY(-5px);
-}
-
-/* ✅ About, Ministries, and Donate Sections */
-.about, .ministries, .donate {
+  }
+  
+  /* ✅ About, Ministries, and Donate Sections */
+  .about, .ministries, .donate {
     background-color: #222;
     color: white;
     padding: 40px;
@@ -279,51 +278,49 @@ header {
     align-items: center;
     justify-content: center;
     min-height: 250px;
-}
-
-/* ✅ Responsive Design */
-@media (max-width: 768px) {
+  }
+  
+  /* ✅ Responsive Design */
+  @media (max-width: 768px) {
     .section-container {
-        flex-direction: column;
-        align-items: center;
+      flex-direction: column;
+      align-items: center;
     }
     .about {
-        min-height: auto;
-        padding: 30px;
+      min-height: auto;
+      padding: 30px;
     }
-}
-
-
-
-
-/* ✅ Footer */
-footer {
+  }
+  
+  /* ✅ Footer */
+  footer {
     background: rgb(189, 47, 47);
     color: white;
     text-align: center;
     padding: 20px;
     margin-top: auto;
     width: 100%;
-}
-
-/* ✅ Footer Container */
-.footer-container {
+  }
+  
+  /* ✅ Footer Container */
+  .footer-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-/* ✅ Social Icons */
-.social-icons {
+  }
+  
+  /* ✅ Social Icons */
+  .social-icons {
     margin-top: 15px;
-}
-
-.social-icons a img {
+  }
+  
+  .social-icons a img {
     width: 35px;
     margin: 0 8px;
     transition: transform 0.3s ease-in-out;
-}
-
-.social-icons a img:hover {
+  }
+  
+  .social-icons a img:hover {
     transform: scale(1.2);
-}
+  }
+  
