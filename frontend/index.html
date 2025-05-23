@@ -47,144 +47,39 @@
 
   
   
-<style>
-  body {
-    font-family: 'Noto Sans', sans-serif;
-    margin: 0;
-    background-color: #f9f9f9;
-    color: #333;
-  }
-
-  .language-toggle {
-    text-align: center;
-    padding: 16px 0;
-    background-color: #fff;
-    border-bottom: 1px solid #ddd;
-  }
-
-  .language-toggle button {
-    margin: 0 6px;
-    padding: 10px 18px;
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    border: none;
-    background-color: #004080;
-    color: #fff;
-    border-radius: 4px;
-    font-family: 'Roboto', sans-serif;
-    transition: background-color 0.3s, box-shadow 0.3s;
-  }
-
-  .language-toggle button:hover {
-    background-color: #002c5a;
-  }
-
-  .hero {
-    padding: 80px 20px;
-    background: linear-gradient(to right, #ffffff, #e6f0ff);
-    text-align: center;
-  }
-
-  .page-title {
-    font-size: 38px;
-    font-weight: bold;
-    color: #00264d;
-    margin-bottom: 10px;
-  }
-
-  .hero-content p {
-    font-size: 18px;
-    color: #333;
-    max-width: 700px;
-    margin: 0 auto 30px;
-  }
-
-  .cta-button {
-    display: inline-block;
-    padding: 12px 24px;
-    font-size: 16px;
-    background-color: #004080;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 6px;
-    transition: background-color 0.3s ease;
-  }
-
-  .cta-button:hover {
-    background-color: #003060;
-  }
-
-  .section-container {
-    padding: 60px 20px;
-    background-color: #ffffff;
-    text-align: center;
-  }
-
-  .section h2 {
-    font-size: 28px;
-    margin-bottom: 10px;
-    color: #004080;
-  }
-
-  .section p {
-    font-size: 17px;
-    max-width: 700px;
-    margin: 0 auto 20px;
-    color: #444;
-  }
-
-  .founders-section {
-    background-color: #f0f4f8;
-    padding: 60px 20px;
-    text-align: center;
-  }
-
-  .founder-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 40px;
-  }
-
-  .founder, .co-founder {
-    max-width: 300px;
-  }
-
-  .founder-img {
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  }
-
-  .founder h2, .co-founder h2 {
-    font-size: 22px;
-    color: #004080;
-  }
-
-  .founder h3, .co-founder h3 {
-    font-size: 18px;
-    color: #333;
-  }
-
-  footer {
-    background-color: #1f1f1f;
-    color: #ccc;
-    padding: 20px 0;
-    text-align: center;
-  }
-
-  footer .social-icons img {
-    width: 30px;
-    margin: 0 10px;
-    filter: brightness(90%);
-  }
-
-  /* Multilingual toggle */
-  .telugu .english-text { display: none; }
-  .english .telugu-text { display: none; }
-</style>
+  <!-- Inline Styles for Language Toggle -->
+  <style>
+    .language-toggle {
+      text-align: center;
+      padding: 20px 0;
+    }
+    .language-toggle button {
+      margin: 0 5px;
+      padding: 8px 16px;
+      font-size: 14px;
+      cursor: pointer;
+      border: none;
+      background-color: #fff;
+      font-family: 'Roboto', sans-serif;
+      color: #5f6368;
+      border-radius: 4px;
+      transition: background-color 0.3s, box-shadow 0.3s;
+    }
+    .language-toggle button:hover {
+      background-color: #f8f9fa;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    }
+    /* Hide alternate language spans based on body class */
+    .telugu .english-text { display: none; }
+    .english .telugu-text { display: none; }
+  </style>
+</head>
+<body class="english">
+  <!-- Language Toggle Button (Top Center) -->
+  <div class="language-toggle">
+    <button onclick="toggleLanguage('english')">English</button>
+    <button onclick="toggleLanguage('telugu')">తెలుగు</button>
+  </div>
 
 
 
@@ -192,8 +87,7 @@
 
 
 
-
-
+  
   
   <!-- Header -->
   <header id="mainHeader">
