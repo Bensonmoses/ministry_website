@@ -6,11 +6,11 @@
   <title>Events - Holy Spirit Prayer House | హోలీ స్పిరిట్ ప్రార్థన మందిరం</title>
   <link rel="icon" type="image/png" href="images/favicon.png">
 
-  <!-- Google Fonts -->
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 
-  <!-- External Stylesheets -->
+  <!-- Styles -->
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/founder.css">
   <link rel="stylesheet" href="css/chatbot.css">
@@ -29,27 +29,63 @@
     });
   </script>
 
-  <!-- Inline Styles for Language Toggle -->
   <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      background-color: #ffffff;
+      color: #333;
+    }
+
     .language-toggle {
       text-align: center;
-      padding: 20px 0;
+      padding: 20px;
     }
     .language-toggle button {
-      margin: 0 5px;
-      padding: 8px 16px;
-      font-size: 14px;
-      cursor: pointer;
+      margin: 0 8px;
+      padding: 10px 20px;
+      font-size: 15px;
+      background-color: #ff5c5c;
+      color: white;
       border: none;
-      background-color: #fff;
-      font-family: 'Roboto', sans-serif;
-      color: #5f6368;
-      border-radius: 4px;
-      transition: background-color 0.3s, box-shadow 0.3s;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: 0.3s ease;
     }
     .language-toggle button:hover {
-      background-color: #f8f9fa;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+      background-color: #e64848;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+      color: #fff;
+    }
+
+    .page-title {
+      font-size: 36px;
+      font-family: 'Bungee', cursive;
+      margin-bottom: 20px;
+    }
+
+    .hero-content p {
+      font-size: 18px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    footer {
+      background-color: #1f1f1f;
+      color: #ccc;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .social-icons img {
+      width: 32px;
+      margin: 0 10px;
+      filter: brightness(90%);
     }
 
     .telugu .english-text { display: none; }
@@ -57,81 +93,35 @@
   </style>
 </head>
 <body class="english">
-  <!-- Language Toggle Button (Top Center) -->
+  <!-- Language Toggle -->
   <div class="language-toggle">
     <button onclick="toggleLanguage('english')">English</button>
     <button onclick="toggleLanguage('telugu')">తెలుగు</button>
   </div>
 
   <!-- Header -->
-  <header id="mainHeader">
-    <div class="header-container">
-      <div class="logo">
-        <img src="images/logo.webp" alt="Holy Spirit Prayer House Logo">
-      </div>
-      <nav class="desktop-nav">
-        <ul class="nav-links">
-          <li><a href="index.html"><span class="english-text">Home</span><span class="telugu-text">హోమ్</span></a></li>
-          <li><a href="about.html"><span class="english-text">About</span><span class="telugu-text">గురించి</span></a></li>
-          <li><a href="sermons.html"><span class="english-text">Sermons</span><span class="telugu-text">ప్రసంగాలు</span></a></li>
-          <li><a href="ministries.html"><span class="english-text">Ministries</span><span class="telugu-text">సేవలు</span></a></li>
-          <li><a href="orphanage.html"><span class="english-text">Orphanage</span><span class="telugu-text">అనాథాశ్రమం</span></a></li>
-          <li><a href="events.html"><span class="english-text">Events</span><span class="telugu-text">ఈవెంట్స్</span></a></li>
-          <li><a href="contact.html"><span class="english-text">Contact</span><span class="telugu-text">సంప్రదించండి</span></a></li>
-          <li><a href="volunteer.html"><span class="english-text">Get Involved</span><span class="telugu-text">చేరడం</span></a></li>
-          <li><a href="donate.html" class="donate-btn"><span class="english-text">Donate Now</span><span class="telugu-text">దానం చేయండి</span></a></li>
-        </ul>
-      </nav>
-      <button id="menuButton" class="mobile-menu-button" aria-label="Open Menu">☰</button>
-    </div>
-    <nav class="mobile-nav" id="mobileNav">
-      <ul class="nav-links">
-        <li><a href="index.html"><span class="english-text">Home</span><span class="telugu-text">హోమ్</span></a></li>
-        <li><a href="about.html"><span class="english-text">About</span><span class="telugu-text">గురించి</span></a></li>
-        <li><a href="sermons.html"><span class="english-text">Sermons</span><span class="telugu-text">ప్రసంగాలు</span></a></li>
-        <li><a href="ministries.html"><span class="english-text">Ministries</span><span class="telugu-text">సేవలు</span></a></li>
-        <li><a href="orphanage.html"><span class="english-text">Orphanage</span><span class="telugu-text">అనాథాశ్రమం</span></a></li>
-        <li><a href="events.html"><span class="english-text">Events</span><span class="telugu-text">ఈవెంట్స్</span></a></li>
-        <li><a href="contact.html"><span class="english-text">Contact</span><span class="telugu-text">సంప్రదించండి</span></a></li>
-        <li><a href="volunteer.html"><span class="english-text">Get Involved</span><span class="telugu-text">చేరడం</span></a></li>
-        <li><a href="donate.html" class="donate-btn"><span class="english-text">Donate Now</span><span class="telugu-text">దానం చేయండి</span></a></li>
-      </ul>
-    </nav>
-  </header>
-
-
-
-
-
 
 
 
 
   
+  <div id="header-container">
+    <!-- Keep your shared header/nav here -->
+  </div>
 
-  <!-- Hero Section for Events -->
+  <!-- Hero Section -->
   <section class="hero">
-    <div class="overlay"></div>
-    <div class="hero-container">
-      <div class="hero-content">
-        <h1 class="page-title">
-          <span class="english-text">Upcoming Events</span>
-          <span class="telugu-text">ఆగామి ఈవెంట్స్</span>
-        </h1>
-        <p>
-          <span class="english-text">Join us for upcoming events, worship services, and community programs.</span>
-          <span class="telugu-text">భవిష్యత్తులో జరిగే ఈవెంట్స్, ప్రార్థనా సేవలు మరియు సమాజ ప్రోగ్రామ్లలో పాల్గొనండి.</span>
-        </p>
-      </div>
+    <div class="hero-content">
+      <h1 class="page-title">
+        <span class="english-text">Upcoming Events</span>
+        <span class="telugu-text">ఆగామి ఈవెంట్స్</span>
+      </h1>
+      <p>
+        <span class="english-text">Join us for upcoming events, worship services, and community programs.</span>
+        <span class="telugu-text">ఈవెంట్లు, ప్రార్థన సేవలు మరియు సమాజ కార్యక్రమాలలో పాల్గొనండి.</span>
+      </p>
     </div>
   </section>
-
-
-
-
-
-
-
 
 
 
@@ -141,20 +131,18 @@
 
   <!-- Footer -->
   <footer>
-    <div class="footer-container">
-      <p>&copy; 2025 Holy Spirit Prayer House |
-        <span class="english-text">All Rights Reserved</span>
-        <span class="telugu-text">అన్ని హక్కులు పరిరక్షించబడినవి</span>
-      </p>
-      <div class="social-icons">
-        <a href="https://www.youtube.com/@pastorpmoses" target="_blank" aria-label="YouTube"><img src="images/youtube.png" alt="YouTube"></a>
-        <a href="https://www.instagram.com/hsph_oduru/" target="_blank" aria-label="Instagram"><img src="images/instagram.png" alt="Instagram"></a>
-        <a href="https://www.facebook.com/holy.jesus132" target="_blank" aria-label="Facebook"><img src="images/facebook.png" alt="Facebook"></a>
-      </div>
+    <p>&copy; 2025 Holy Spirit Prayer House |
+      <span class="english-text">All Rights Reserved</span>
+      <span class="telugu-text">అన్ని హక్కులు పరిరక్షించబడినవి</span>
+    </p>
+    <div class="social-icons">
+      <a href="https://www.youtube.com/@pastorpmoses" target="_blank"><img src="images/youtube.png" alt="YouTube"></a>
+      <a href="https://www.instagram.com/hsph_oduru/" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
+      <a href="https://www.facebook.com/holy.jesus132" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
     </div>
   </footer>
 
-  <!-- External JavaScript Files -->
+  <!-- JS -->
   <script src="js/chatbot.js" defer></script>
   <script src="js/script.js" defer></script>
 </body>
