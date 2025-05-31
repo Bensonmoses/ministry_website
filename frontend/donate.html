@@ -3,15 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Donate to support Holy Spirit Prayer House - a place for faith, love, and community outreach.">
-  <meta name="keywords" content="Donate, Church, Holy Spirit, Prayer, Ministries, Support">
-  <meta name="author" content="Holy Spirit Prayer House">
-  <title>Donate - Holy Spirit Prayer House | హోలీ స్పిరిట్ ప్రార్థన మందిరం</title>
+  <title>Events - Holy Spirit Prayer House | హోలీ స్పిరిట్ ప్రార్థన మందిరం</title>
   <link rel="icon" type="image/png" href="images/favicon.png">
-  
+
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+Telugu&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
   <!-- External Stylesheets -->
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/founder.css">
@@ -31,7 +29,7 @@
     });
   </script>
 
-  <!-- Toggle Style -->
+  <!-- Inline Styles for Language Toggle -->
   <style>
     .language-toggle {
       text-align: center;
@@ -44,13 +42,13 @@
       cursor: pointer;
       border: none;
       background-color: #fff;
+      font-family: 'Roboto', sans-serif;
       color: #5f6368;
       border-radius: 4px;
-      font-family: 'Roboto', sans-serif;
       transition: background-color 0.3s, box-shadow 0.3s;
     }
     .language-toggle button:hover {
-      background-color: #f1f3f4;
+      background-color: #f8f9fa;
       box-shadow: 0 1px 2px rgba(0,0,0,0.1);
     }
 
@@ -64,9 +62,60 @@
     <button onclick="toggleLanguage('english')">English</button>
     <button onclick="toggleLanguage('telugu')">తెలుగు</button>
   </div>
+
+  <!-- Header -->
+  <header id="mainHeader">
+    <div class="header-container">
+      <div class="logo">
+        <img src="images/logo.webp" alt="Holy Spirit Prayer House Logo">
+      </div>
+      <nav class="desktop-nav">
+        <ul class="nav-links">
+          <li><a href="index.html"><span class="english-text">Home</span><span class="telugu-text">హోమ్</span></a></li>
+          <li><a href="about.html"><span class="english-text">About</span><span class="telugu-text">గురించి</span></a></li>
+          <li><a href="sermons.html"><span class="english-text">Sermons</span><span class="telugu-text">ప్రసంగాలు</span></a></li>
+          <li><a href="ministries.html"><span class="english-text">Ministries</span><span class="telugu-text">సేవలు</span></a></li>
+          <li><a href="orphanage.html"><span class="english-text">Orphanage</span><span class="telugu-text">అనాథాశ్రమం</span></a></li>
+          <li><a href="events.html"><span class="english-text">Events</span><span class="telugu-text">ఈవెంట్స్</span></a></li>
+          <li><a href="contact.html"><span class="english-text">Contact</span><span class="telugu-text">సంప్రదించండి</span></a></li>
+          <li><a href="volunteer.html"><span class="english-text">Get Involved</span><span class="telugu-text">చేరడం</span></a></li>
+          <li><a href="donate.html" class="donate-btn"><span class="english-text">Donate Now</span><span class="telugu-text">దానం చేయండి</span></a></li>
+        </ul>
+      </nav>
+      <button id="menuButton" class="mobile-menu-button" aria-label="Open Menu">☰</button>
+    </div>
+    <nav class="mobile-nav" id="mobileNav">
+      <ul class="nav-links">
+        <li><a href="index.html"><span class="english-text">Home</span><span class="telugu-text">హోమ్</span></a></li>
+        <li><a href="about.html"><span class="english-text">About</span><span class="telugu-text">గురించి</span></a></li>
+        <li><a href="sermons.html"><span class="english-text">Sermons</span><span class="telugu-text">ప్రసంగాలు</span></a></li>
+        <li><a href="ministries.html"><span class="english-text">Ministries</span><span class="telugu-text">సేవలు</span></a></li>
+        <li><a href="orphanage.html"><span class="english-text">Orphanage</span><span class="telugu-text">అనాథాశ్రమం</span></a></li>
+        <li><a href="events.html"><span class="english-text">Events</span><span class="telugu-text">ఈవెంట్స్</span></a></li>
+        <li><a href="contact.html"><span class="english-text">Contact</span><span class="telugu-text">సంప్రదించండి</span></a></li>
+        <li><a href="volunteer.html"><span class="english-text">Get Involved</span><span class="telugu-text">చేరడం</span></a></li>
+        <li><a href="donate.html" class="donate-btn"><span class="english-text">Donate Now</span><span class="telugu-text">దానం చేయండి</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+    
+
+
   
-  <!-- Include the header -->
-  <div id="header-container"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
   
   <!-- Donate Section -->
   <section class="page-content">
@@ -121,9 +170,23 @@
     </div>
   </section>
   
-  <!-- Include the footer -->
-  <div id="footer-container"></div>
-  
+
+
+   <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2025 Holy Spirit Prayer House |
+        <span class="english-text">All Rights Reserved</span>
+        <span class="telugu-text">అన్ని హక్కులు పరిరక్షించబడినవి</span>
+      </p>
+      <div class="social-icons">
+        <a href="https://www.youtube.com/@pastorpmoses" target="_blank" aria-label="YouTube"><img src="images/youtube.png" alt="YouTube"></a>
+        <a href="https://www.instagram.com/hsph_oduru/" target="_blank" aria-label="Instagram"><img src="images/instagram.png" alt="Instagram"></a>
+        <a href="https://www.facebook.com/holy.jesus132" target="_blank" aria-label="Facebook"><img src="images/facebook.png" alt="Facebook"></a>
+      </div>
+    </div>
+  </footer>
+
   <!-- External JavaScript Files -->
   <script src="js/chatbot.js" defer></script>
   <script src="js/script.js" defer></script>
