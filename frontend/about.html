@@ -2,220 +2,153 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Holy Spirit Prayer House - A place for faith, love, and community outreach." />
   <meta name="keywords" content="Church, Holy Spirit, Prayer, Ministries, Donations" />
   <meta name="author" content="Holy Spirit Prayer House" />
-
   <title>Holy Spirit Prayer House | హోలీ స్పిరిట్ ప్రార్థన మందిరం</title>
   <link rel="icon" href="images/favicon.png" type="image/png" />
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Noto+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+Telugu&display=swap" rel="stylesheet" />
 
-  <!-- CSS -->
+  <!-- External CSS -->
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/founder.css" />
+  <link rel="stylesheet" href="css/chatbot.css" />
+
   <style>
-    body {
-      background-color: #f9f9f9;
-      color: #333;
-      font-family: 'Noto Sans', sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    header {
-      background-color: #b22222;
-      color: #fff;
-      padding: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-
-    .logo {
-      font-size: 1.8rem;
-      font-family: 'Bungee', cursive;
-    }
-
-    nav {
-      margin-top: 10px;
-    }
-
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 12px;
-      font-weight: 600;
-      font-size: 1rem;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #ffe4e1;
-    }
-
-    .language-toggle {
-      text-align: center;
-      padding: 20px 0;
-    }
-
-    .language-toggle button {
-      margin: 0 5px;
-      padding: 8px 16px;
-      font-size: 14px;
-      cursor: pointer;
-      border: none;
-      background-color: #fff;
-      color: #5f6368;
-      border-radius: 4px;
-      font-family: 'Noto Sans', sans-serif;
-      transition: background-color 0.3s, box-shadow 0.3s;
-    }
-
-    .language-toggle button:hover {
-      background-color: #f8f9fa;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.1);
-    }
-
-    .telugu .english-text,
-    .english .telugu-text {
-      display: none;
-    }
-
-    .page-title {
+    /* Inline styling for page content */
+    .page-content {
       max-width: 960px;
       margin: 40px auto;
-      padding: 40px 20px;
-      background-color: #ffffff;
+      background: #fff;
+      padding: 30px 25px;
       border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      font-family: 'Roboto', sans-serif;
+      color: #333;
     }
-
-    .page-title h1,
-    .page-title h2 {
+    .page-content h1, .page-content h2 {
       font-family: 'Bungee', cursive;
-      text-align: center;
       color: #b22222;
-      margin-bottom: 30px;
+      text-align: center;
+      margin-bottom: 25px;
     }
-
-    .page-title p {
+    .page-content p {
       font-size: 1.1rem;
-      line-height: 1.8;
-      margin-bottom: 24px;
+      line-height: 1.7;
+      margin-bottom: 20px;
       text-align: justify;
     }
-
-    .page-title p:nth-of-type(2) {
+    .page-content p.italic {
       font-style: italic;
-      background-color: #f0f0f0;
-      padding: 15px;
+      background: #f9f9f9;
       border-left: 4px solid #b22222;
-      border-radius: 4px;
-      color: #444;
-    }
-
-    footer {
-      background-color: #8B0000;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-    }
-
-    .footer-container .social-icons img {
-      width: 24px;
-      margin: 0 10px;
-      filter: brightness(0) invert(1);
-    }
-
-    @media (max-width: 600px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      nav {
-        margin-top: 10px;
-      }
-
-      .page-title {
-        padding: 20px 15px;
-      }
-
-      .page-title p {
-        font-size: 1rem;
-      }
+      padding: 15px;
+      color: #555;
     }
   </style>
 
-  <!-- External CSS -->
-  <link rel="stylesheet" href="css/chatbot.css" />
+  <script>
+    // Language toggle - persistent in localStorage & applies class to body
+    function toggleLanguage(lang) {
+      localStorage.setItem("preferredLanguage", lang);
+      document.body.classList.remove("english", "telugu");
+      document.body.classList.add(lang);
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const savedLang = localStorage.getItem("preferredLanguage") || "english";
+      document.body.classList.add(savedLang);
+    });
+  </script>
 </head>
 <body class="english">
 
-  <!-- Header -->
-  <header>
-    <div class="logo">
-      Holy Spirit Prayer House
+  <!-- Language Switcher UI -->
+  <div class="language-toggle">
+    <button onclick="toggleLanguage('english')">English</button>
+    <button onclick="toggleLanguage('telugu')">తెలుగు</button>
+  </div>
+
+  <!-- Header Section: Logo + Navigation -->
+  <header id="mainHeader">
+    <div class="header-container">
+      <div class="logo">
+        <img src="images/logo.webp" alt="Holy Spirit Prayer House Logo" />
+      </div>
+      <nav class="desktop-nav">
+        <ul class="nav-links">
+          <li><a href="index.html"><span class="english-text">Home</span><span class="telugu-text">హోమ్</span></a></li>
+          <li><a href="about.html" class="active"><span class="english-text">About</span><span class="telugu-text">గురించి</span></a></li>
+          <li><a href="sermons.html"><span class="english-text">Sermons</span><span class="telugu-text">ప్రసంగాలు</span></a></li>
+          <li><a href="ministries.html"><span class="english-text">Ministries</span><span class="telugu-text">సేవలు</span></a></li>
+          <li><a href="orphanage.html"><span class="english-text">Orphanage</span><span class="telugu-text">అనాథాశ్రమం</span></a></li>
+          <li><a href="events.html"><span class="english-text">Events</span><span class="telugu-text">ఈవెంట్స్</span></a></li>
+          <li><a href="contact.html"><span class="english-text">Contact</span><span class="telugu-text">సంప్రదించండి</span></a></li>
+          <li><a href="volunteer.html"><span class="english-text">Get Involved</span><span class="telugu-text">చేరడం</span></a></li>
+          <li><a href="donate.html" class="donate-btn"><span class="english-text">Donate Now</span><span class="telugu-text">దానం చేయండి</span></a></li>
+        </ul>
+      </nav>
+      <button id="menuButton" class="mobile-menu-button" aria-label="Open Menu">☰</button>
     </div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="ministries.html">Ministries</a>
-      <a href="contact.html">Contact</a>
+    <nav class="mobile-nav" id="mobileNav">
+      <ul class="nav-links">
+        <li><a href="index.html"><span class="english-text">Home</span><span class="telugu-text">హోమ్</span></a></li>
+        <li><a href="about.html" class="active"><span class="english-text">About</span><span class="telugu-text">గురించి</span></a></li>
+        <li><a href="sermons.html"><span class="english-text">Sermons</span><span class="telugu-text">ప్రసంగాలు</span></a></li>
+        <li><a href="ministries.html"><span class="english-text">Ministries</span><span class="telugu-text">సేవలు</span></a></li>
+        <li><a href="orphanage.html"><span class="english-text">Orphanage</span><span class="telugu-text">అనాథాశ్రమం</span></a></li>
+        <li><a href="events.html"><span class="english-text">Events</span><span class="telugu-text">ఈవెంట్స్</span></a></li>
+        <li><a href="contact.html"><span class="english-text">Contact</span><span class="telugu-text">సంప్రదించండి</span></a></li>
+        <li><a href="volunteer.html"><span class="english-text">Get Involved</span><span class="telugu-text">చేరడం</span></a></li>
+        <li><a href="donate.html" class="donate-btn"><span class="english-text">Donate Now</span><span class="telugu-text">దానం చేయండి</span></a></li>
+      </ul>
     </nav>
   </header>
 
-  <!-- Language Toggle -->
-  <div class="language-toggle" role="group" aria-label="Language switcher">
-    <button onclick="toggleLanguage('english')" aria-label="Switch to English">English</button>
-    <button onclick="toggleLanguage('telugu')" aria-label="Switch to Telugu">తెలుగు</button>
-  </div>
-
   <!-- Main Content -->
-  <main>
-    <section class="page-title">
-      <h1>
-        <span class="english-text">About Us</span>
-        <span class="telugu-text">మా గురించి</span>
-      </h1>
+  <section class="page-content">
+    <h1>
+      <span class="english-text">About Us</span>
+      <span class="telugu-text">మా గురించి</span>
+    </h1>
 
-      <p>
-        <span class="english-text">
-          We are a group of believers, a Church called by the name "Holy Spirit Prayer House" led by Rev. Palaparthi Moses, located in Oduru, West Godavari, Andhra Pradesh, India.
-        </span>
-        <span class="telugu-text">
-          మేము విశ్వాసుల సమూహం, "హోలీ స్పిరిట్ ప్రార్థన మందిరం" అనే చర్చ్, ఇది రెవ్. పాలపర్తి మోషే సారథ్యంలో ఆంధ్రప్రదేశ్ రాష్ట్రం, పశ్చిమ గోదావరి జిల్లాలోని ఓదూరులో ఉంది.
-        </span>
-      </p>
+    <p>
+      <span class="english-text">
+        We are a group of believers, a Church called by the name "Holy Spirit Prayer House" led by Rev. Palaparthi Moses, located in Oduru, West Godavari, Andhra Pradesh, India.
+      </span>
+      <span class="telugu-text">
+        మేము విశ్వాసుల సమూహం, "హోలీ స్పిరిట్ ప్రార్థన మందిరం" అనే చర్చ్, ఇది రెవ్. పాలపర్తి మోషే సారథ్యంలో ఆంధ్రప్రదేశ్ రాష్ట్రం, పశ్చిమ గోదావరి జిల్లాలోని ఓదూరులో ఉంది.
+      </span>
+    </p>
 
-      <p>
-        <span class="english-text">
-          “Repent and be baptized, every one of you, in the name of Jesus Christ for the forgiveness of your sins. And you will receive the gift of the Holy Spirit. The promise is for you and your children and for all who are far off—for all whom the Lord our God will call.” — Acts 2:38–39
-        </span>
-        <span class="telugu-text">
-          “మీ పాపముల క్షమాపణ కొరకు మీలో ప్రతి ఒక్కడు యేసుక్రీస్తు నామమునందు బాప్తిస్మము పొందుడి; మీరు పవిత్రాత్మ యొక్క బహుమతిని పొందుదురు. ఈ వాగ్దానం మీకును మీ పిల్లలకును దూరముగా ఉన్నవారికిని, మన దేవుడైన ప్రభువు పిలిచిన వారందరికిని వర్తించును.” — అపొస్తలుల కార్యములు 2:38–39
-        </span>
-      </p>
+    <p class="italic">
+      <span class="english-text">
+        “Repent and be baptized, every one of you, in the name of Jesus Christ for the forgiveness of your sins. And you will receive the gift of the Holy Spirit. The promise is for you and your children and for all who are far off—for all whom the Lord our God will call.” — Acts 2:38–39
+      </span>
+      <span class="telugu-text">
+        “మీ పాపముల క్షమాపణ కొరకు మీలో ప్రతి ఒక్కడు యేసుక్రీస్తు నామమునందు బాప్తిస్మము పొందుడి; మీరు పవిత్రాత్మ యొక్క బహుమతిని పొందుదురు. ఈ వాగ్దానం మీకును మీ పిల్లలకును దూరముగా ఉన్నవారికిని, మన దేవుడైన ప్రభువు పిలిచిన వారందరికిని వర్తించును.” — అపొస్తలుల కార్యములు 2:38–39
+      </span>
+    </p>
 
-      <h2>
-        <span class="english-text">Our Mission (What we do)</span>
-        <span class="telugu-text">మా లక్ష్యం (మేము ఏమి చేస్తాము)</span>
-      </h2>
+    <h2>
+      <span class="english-text">Our Mission (What we do)</span>
+      <span class="telugu-text">మా లక్ష్యం (మేము ఏమి చేస్తాము)</span>
+    </h2>
 
-      <p>
-        <span class="english-text">
-          We introduce our God the Father, His Son and our Friend Jesus, and the Holy Spirit. We help people discover hope, develop faith, and demonstrate love by following the way of Jesus through the Word of God (The Bible) and the guidance of the Holy Spirit.
-        </span>
-        <span class="telugu-text">
-          మేము మా పరలోక తండ్రిని, ఆయన కుమారుడైన మరియు మా స్నేహితుడైన యేసును, అలాగే పవిత్రాత్మను పరిచయం చేస్తాము. దేవుని వాక్యం (బైబిల్) మరియు పవిత్రాత్మ సహాయంతో, మేము ప్రజలు ఆశను కనుగొనడంలో, విశ్వాసాన్ని పెంపొందించడంలో, ప్రేమను ప్రదర్శించడంలో సహాయపడతాము.
-        </span>
-      </p>
-    </section>
-  </main>
+    <p>
+      <span class="english-text">
+        We introduce our God the Father, His Son and our Friend Jesus, and the Holy Spirit. We help people discover hope, develop faith, and demonstrate love by following the way of Jesus through the Word of God (The Bible) and the guidance of the Holy Spirit.
+      </span>
+      <span class="telugu-text">
+        మేము మా పరలోక తండ్రిని, ఆయన కుమారుడైన మరియు మా స్నేహితుడైన యేసును, అలాగే పవిత్రాత్మను పరిచయం చేస్తాము. దేవుని వాక్యం (బైబిల్) మరియు పవిత్రాత్మ సహాయంతో, మేము ప్రజలు ఆశను కనుగొనడంలో, విశ్వాసాన్ని పెంపొందించడంలో, ప్రేమను ప్రదర్శించడంలో సహాయపడతాము.
+      </span>
+    </p>
+  </section>
 
   <!-- Footer -->
   <footer>
@@ -225,25 +158,14 @@
         <span class="telugu-text">అన్ని హక్కులు పరిరక్షించబడినవి</span>
       </p>
       <div class="social-icons">
-        <a href="https://www.youtube.com/@pastorpmoses" target="_blank" aria-label="YouTube">
-          <img src="images/youtube.png" alt="YouTube" />
-        </a>
-        <a href="https://www.instagram.com/hsph_oduru/" target="_blank" aria-label="Instagram">
-          <img src="images/instagram.png" alt="Instagram" />
-        </a>
-        <a href="https://www.facebook.com/holy.jesus132" target="_blank" aria-label="Facebook">
-          <img src="images/facebook.png" alt="Facebook" />
-        </a>
+        <a href="https://www.youtube.com/@pastorpmoses" target="_blank" aria-label="YouTube"><img src="images/youtube.png" alt="YouTube" /></a>
+        <a href="https://www.instagram.com/hsph_oduru/" target="_blank" aria-label="Instagram"><img src="images/instagram.png" alt="Instagram" /></a>
+        <a href="https://www.facebook.com/holy.jesus132" target="_blank" aria-label="Facebook"><img src="images/facebook.png" alt="Facebook" /></a>
       </div>
     </div>
   </footer>
 
-  <!-- Scripts -->
-  <script>
-    function toggleLanguage(lang) {
-      document.body.className = lang;
-    }
-  </script>
   <script src="js/chatbot.js" defer></script>
+  <script src="js/script.js" defer></script>
 </body>
 </html>
