@@ -1,26 +1,36 @@
+<!-- HTML STARTS -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Basic Metadata -->
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive for mobile -->
   <meta name="description" content="Holy Spirit Prayer House - A place for faith, love, and community outreach.">
   <meta name="keywords" content="Church, Holy Spirit, Prayer, Ministries, Donations">
   <meta name="author" content="Holy Spirit Prayer House">
-  <title>About Us | Holy Spirit Prayer House | హోలీ స్పిరిట్ ప్రార్థన మందిరం</title>
-  <link rel="icon" type="image/png" href="images/favicon.png">
+  <title>Holy Spirit Prayer House | హోలీ స్పిరిట్ ప్రార్థన మందిరం</title>
+  <link rel="icon" type="image/png" href="images/favicon.png"> <!-- Site tab icon -->
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+Telugu&display=swap" rel="stylesheet">
+  <!-- Google Fonts (used throughout the site) -->
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet"> <!-- Title font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet"> <!-- Body font -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+Telugu&display=swap" rel="stylesheet"> <!-- Telugu font -->
 
+  <!-- External Stylesheets -->
+  <link rel="stylesheet" href="css/styles.css">        <!-- Main layout and styling -->
+  <link rel="stylesheet" href="css/founder.css">       <!-- Founder section styles -->
+  <link rel="stylesheet" href="css/chatbot.css">       <!-- Chatbot button & popup styles -->
+
+  <!-- Language Toggle Script -->
   <script>
+    // Save selected language to localStorage and apply it to <body>
     function toggleLanguage(lang) {
       localStorage.setItem("preferredLanguage", lang);
       document.body.classList.remove("english", "telugu");
       document.body.classList.add(lang);
     }
 
+    // Load saved language on page load
     document.addEventListener("DOMContentLoaded", function() {
       const savedLang = localStorage.getItem("preferredLanguage") || "english";
       document.body.classList.remove("english", "telugu");
@@ -28,411 +38,38 @@
     });
   </script>
 
+  <!-- Inline Style for Language Toggle + Default Appearance -->
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      background-color: #1a1a1a;
-      color: #f5f5f5;
-      font-family: 'Noto Sans', sans-serif;
-      line-height: 1.6;
-    }
-
-    /* Language Toggle */
     .language-toggle {
-      text-align: center;
-      padding: 20px 0;
-      background-color: #2a2a2a;
+      text-align: center;            /* Center the language buttons */
+      padding: 20px 0;               /* Vertical space */
     }
 
     .language-toggle button {
-      margin: 0 5px;
-      padding: 8px 16px;
+      margin: 0 5px;                 /* Space between buttons */
+      padding: 8px 16px;             /* Button padding */
       font-size: 14px;
       cursor: pointer;
       border: none;
-      background-color: #fff;
+      background-color: #fff;        /* Bright white background */
+      font-family: 'Noto Sans', sans-serif;
       color: #5f6368;
       border-radius: 4px;
-      font-family: 'Roboto', sans-serif;
       transition: background-color 0.3s, box-shadow 0.3s;
     }
 
     .language-toggle button:hover {
-      background-color: #f8f9fa;
-      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+      background-color: #f8f9fa;     /* Light grey on hover */
+      box-shadow: 0 1px 2px rgba(0,0,0,0.1); /* Soft shadow */
     }
 
-    /* Language Display Rules */
-    .telugu .english-text,
-    .english .telugu-text {
-      display: none;
-    }
-
-    /* Header */
-    header {
-      background-color: #b22222;
-      color: #fff;
-      padding: 20px;
-    }
-
-    .header-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-
-    .logo img {
-      max-height: 50px;
-    }
-
-    .desktop-nav ul {
-      display: flex;
-      list-style: none;
-      gap: 30px;
-    }
-
-    .desktop-nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1rem;
-      transition: color 0.3s;
-    }
-
-    .desktop-nav a:hover {
-      color: #ffe4e1;
-    }
-
-    .donate-btn {
-      background-color: #ff4444;
-      padding: 8px 16px;
-      border-radius: 4px;
-      transition: background-color 0.3s;
-    }
-
-    .donate-btn:hover {
-      background-color: #ff6666;
-    }
-
-    .mobile-menu-button {
-      display: none;
-      background: none;
-      border: none;
-      font-size: 2rem;
-      color: white;
-      cursor: pointer;
-    }
-
-    .mobile-nav {
-      display: none;
-      background-color: #b22222;
-      padding: 15px 20px;
-    }
-
-    /* Hero Section */
-    .hero {
-      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><rect fill="%23333" width="1200" height="400"/><text x="600" y="200" font-family="Arial" font-size="24" fill="%23666" text-anchor="middle">Church Community Background</text></svg>');
-      background-size: cover;
-      background-position: center;
-      height: 400px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .hero-container {
-      text-align: center;
-      max-width: 800px;
-      padding: 0 20px;
-    }
-
-    .hero-content h1 {
-      font-family: 'Bungee', cursive;
-      font-size: 3rem;
-      margin-bottom: 20px;
-      color: #fff;
-    }
-
-    .hero-content p {
-      font-size: 1.3rem;
-      margin-bottom: 30px;
-      color: #f0f0f0;
-    }
-
-    .cta-button {
-      display: inline-block;
-      background-color: #b22222;
-      color: white;
-      padding: 15px 30px;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: 600;
-      font-size: 1.1rem;
-      transition: background-color 0.3s, transform 0.3s;
-    }
-
-    .cta-button:hover {
-      background-color: #8b0000;
-      transform: translateY(-2px);
-    }
-
-    /* Main Content Sections */
-    .section-container {
-      max-width: 1200px;
-      margin: 60px auto;
-      padding: 0 20px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 40px;
-    }
-
-    .section {
-      background-color: #2a2a2a;
-      padding: 40px;
-      border-radius: 8px;
-      text-align: center;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .section:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-    }
-
-    .section h2 {
-      font-family: 'Bungee', cursive;
-      font-size: 1.8rem;
-      margin-bottom: 20px;
-      color: #b22222;
-    }
-
-    .section p {
-      font-size: 1.1rem;
-      line-height: 1.7;
-      margin-bottom: 20px;
-      color: #e0e0e0;
-    }
-
-    .bible-verse {
-      background-color: #3a3a3a;
-      border-left: 4px solid #b22222;
-      padding: 20px;
-      margin: 20px 0;
-      font-style: italic;
-      color: #f0f0f0;
-      border-radius: 4px;
-    }
-
-    /* Mission Section */
-    .mission-section {
-      background-color: #222;
-      padding: 60px 20px;
-      margin: 40px 0;
-    }
-
-    .mission-content {
-      max-width: 800px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .mission-content h2 {
-      font-family: 'Bungee', cursive;
-      font-size: 2.5rem;
-      margin-bottom: 30px;
-      color: #b22222;
-    }
-
-    .mission-content p {
-      font-size: 1.2rem;
-      line-height: 1.8;
-      color: #e0e0e0;
-    }
-
-    /* Founders Section */
-    .founders-section {
-      background-color: #1a1a1a;
-      padding: 60px 20px;
-    }
-
-    .founder-container {
-      max-width: 800px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 40px;
-      text-align: center;
-    }
-
-    .founder, .co-founder {
-      background-color: #2a2a2a;
-      padding: 40px;
-      border-radius: 8px;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .founder:hover, .co-founder:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-    }
-
-    .founder-img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 20px;
-      border: 4px solid #b22222;
-    }
-
-    .founder h2, .co-founder h2 {
-      font-family: 'Bungee', cursive;
-      color: #b22222;
-      font-size: 1.3rem;
-      margin-bottom: 10px;
-    }
-
-    .founder h3, .co-founder h3 {
-      color: #e0e0e0;
-      font-size: 1.1rem;
-      font-weight: 500;
-    }
-
-    /* Chatbot */
-    .chatbot-button {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #b22222;
-      border: none;
-      border-radius: 50px;
-      padding: 15px 20px;
-      cursor: pointer;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-      transition: transform 0.3s;
-      z-index: 1000;
-    }
-
-    .chatbot-button:hover {
-      transform: scale(1.05);
-    }
-
-    .chatbot-wrapper {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      color: white;
-      font-weight: 500;
-    }
-
-    .chatbot-wrapper img {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-    }
-
-    .chatbot-popup {
-      position: fixed;
-      bottom: 90px;
-      right: 20px;
-      width: 350px;
-      height: 500px;
-      background-color: white;
-      border-radius: 8px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-      z-index: 1001;
-      transition: opacity 0.3s, transform 0.3s;
-    }
-
-    .chatbot-popup.hidden {
-      display: none;
-    }
-
-    .chatbot-header {
-      background-color: #b22222;
-      color: white;
-      padding: 15px;
-      border-radius: 8px 8px 0 0;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .close-button {
-      background: none;
-      border: none;
-      color: white;
-      font-size: 20px;
-      cursor: pointer;
-    }
-
-    /* Footer */
-    footer {
-      background-color: #8b0000;
-      color: #fff;
-      text-align: center;
-      padding: 40px 20px;
-      margin-top: 60px;
-    }
-
-    .footer-container p {
-      margin-bottom: 20px;
-      font-size: 0.9rem;
-    }
-
-    .social-icons img {
-      width: 24px;
-      margin: 0 10px;
-      filter: brightness(0) invert(1);
-      transition: opacity 0.3s;
-    }
-
-    .social-icons img:hover {
-      opacity: 0.7;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      .desktop-nav {
-        display: none;
-      }
-
-      .mobile-menu-button {
-        display: block;
-      }
-
-      .hero-content h1 {
-        font-size: 2rem;
-      }
-
-      .hero-content p {
-        font-size: 1.1rem;
-      }
-
-      .section-container {
-        grid-template-columns: 1fr;
-        margin: 40px auto;
-      }
-
-      .founder-container {
-        grid-template-columns: 1fr;
-      }
-
-      .chatbot-popup {
-        width: 90%;
-        right: 5%;
-      }
-    }
+    /* Language toggle behavior: show only selected language */
+    .telugu .english-text { display: none; }  /* Hide English when Telugu is active */
+    .english .telugu-text { display: none; }  /* Hide Telugu when English is active */
   </style>
 </head>
+
+  
 <body class="english">
   <!-- Language Toggle -->
   <div class="language-toggle">
