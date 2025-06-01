@@ -1,18 +1,42 @@
+<!-- HTML STARTS -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Holy Spirit Prayer House - A place for faith, love, and community outreach." />
-  <meta name="keywords" content="Church, Holy Spirit, Prayer, Ministries, Donations" />
-  <meta name="author" content="Holy Spirit Prayer House" />
-
+  <!-- Basic Metadata -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive for mobile -->
+  <meta name="description" content="Holy Spirit Prayer House - A place for faith, love, and community outreach.">
+  <meta name="keywords" content="Church, Holy Spirit, Prayer, Ministries, Donations">
+  <meta name="author" content="Holy Spirit Prayer House">
   <title>Holy Spirit Prayer House | హోలీ స్పిరిట్ ప్రార్థన మందిరం</title>
-  <link rel="icon" href="images/favicon.png" type="image/png" />
+  <link rel="icon" type="image/png" href="images/favicon.png"> <!-- Site tab icon -->
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Noto+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Google Fonts (used throughout the site) -->
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet"> <!-- Title font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet"> <!-- Body font -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+Telugu&display=swap" rel="stylesheet"> <!-- Telugu font -->
+
+  <!-- External Stylesheets -->
+  <link rel="stylesheet" href="css/styles.css">        <!-- Main layout and styling -->
+  <link rel="stylesheet" href="css/founder.css">       <!-- Founder section styles -->
+  <link rel="stylesheet" href="css/chatbot.css">       <!-- Chatbot button & popup styles -->
+
+  <!-- Language Toggle Script -->
+  <script>
+    // Save selected language to localStorage and apply it to <body>
+    function toggleLanguage(lang) {
+      localStorage.setItem("preferredLanguage", lang);
+      document.body.classList.remove("english", "telugu");
+      document.body.classList.add(lang);
+    }
+
+    // Load saved language on page load
+    document.addEventListener("DOMContentLoaded", function() {
+      const savedLang = localStorage.getItem("preferredLanguage") || "english";
+      document.body.classList.remove("english", "telugu");
+      document.body.classList.add(savedLang);
+    });
+  </script>
 
   <!-- CSS -->
   <style>
@@ -162,24 +186,62 @@
 </head>
 <body class="english">
 
-  <!-- Header -->
-  <header>
-    <div class="logo">
-      Holy Spirit Prayer House
+    /* Language toggle behavior: show only selected language */
+    .telugu .english-text { display: none; }  /* Hide English when Telugu is active */
+    .english .telugu-text { display: none; }  /* Hide Telugu when English is active */
+  </style>
+</head>
+<body class="english">
+
+  <!-- Language Switcher UI -->
+  <div class="language-toggle">
+    <button onclick="toggleLanguage('english')">English</button>
+    <button onclick="toggleLanguage('telugu')">తెలుగు</button>
+  </div>
+
+  <!-- Header Section: Logo + Navigation (Desktop + Mobile) -->
+  <header id="mainHeader">
+    <div class="header-container">
+      <div class="logo">
+        <img src="images/logo.webp" alt="Holy Spirit Prayer House Logo">
+      </div>
+      <nav class="desktop-nav">
+        <!-- Top navigation links (English + Telugu) -->
+        <ul class="nav-links">
+          <!-- Each link contains two spans: English & Telugu -->
+          <li><a href="index.html"><span class="english-text">Home</span><span class="telugu-text">హోమ్</span></a></li>
+          <li><a href="about.html"><span class="english-text">About</span><span class="telugu-text">గురించి</span></a></li>
+          <li><a href="sermons.html"><span class="english-text">Sermons</span><span class="telugu-text">ప్రసంగాలు</span></a></li>
+          <li><a href="ministries.html"><span class="english-text">Ministries</span><span class="telugu-text">సేవలు</span></a></li>
+          <li><a href="orphanage.html"><span class="english-text">Orphanage</span><span class="telugu-text">అనాథాశ్రమం</span></a></li>
+          <li><a href="events.html"><span class="english-text">Events</span><span class="telugu-text">ఈవెంట్స్</span></a></li>
+          <li><a href="contact.html"><span class="english-text">Contact</span><span class="telugu-text">సంప్రదించండి</span></a></li>
+          <li><a href="volunteer.html"><span class="english-text">Get Involved</span><span class="telugu-text">చేరడం</span></a></li>
+          <li><a href="donate.html" class="donate-btn"><span class="english-text">Donate Now</span><span class="telugu-text">దానం చేయండి</span></a></li>
+        </ul>
+      </nav>
+      <button id="menuButton" class="mobile-menu-button" aria-label="Open Menu">☰</button>
     </div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="ministries.html">Ministries</a>
-      <a href="contact.html">Contact</a>
+
+    <!-- Mobile version of the nav menu -->
+    <nav class="mobile-nav" id="mobileNav">
+      <ul class="nav-links">
+        <li><a href="index.html"><span class="english-text">Home</span><span class="telugu-text">హోమ్</span></a></li>
+        <li><a href="about.html"><span class="english-text">About</span><span class="telugu-text">గురించి</span></a></li>
+        <li><a href="sermons.html"><span class="english-text">Sermons</span><span class="telugu-text">ప్రసంగాలు</span></a></li>
+        <li><a href="ministries.html"><span class="english-text">Ministries</span><span class="telugu-text">సేవలు</span></a></li>
+        <li><a href="orphanage.html"><span class="english-text">Orphanage</span><span class="telugu-text">అనాథాశ్రమం</span></a></li>
+        <li><a href="events.html"><span class="english-text">Events</span><span class="telugu-text">ఈవెంట్స్</span></a></li>
+        <li><a href="contact.html"><span class="english-text">Contact</span><span class="telugu-text">సంప్రదించండి</span></a></li>
+        <li><a href="volunteer.html"><span class="english-text">Get Involved</span><span class="telugu-text">చేరడం</span></a></li>
+        <li><a href="donate.html" class="donate-btn"><span class="english-text">Donate Now</span><span class="telugu-text">దానం చేయండి</span></a></li>
+      </ul>
     </nav>
   </header>
 
-  <!-- Language Toggle -->
-  <div class="language-toggle" role="group" aria-label="Language switcher">
-    <button onclick="toggleLanguage('english')" aria-label="Switch to English" aria-pressed="true">English</button>
-    <button onclick="toggleLanguage('telugu')" aria-label="Switch to Telugu" aria-pressed="false">తెలుగు</button>
-  </div>
+
+
+  
 
   <!-- Main Content -->
   <main>
@@ -223,43 +285,55 @@
     </section>
   </main>
 
+
+
+
+  
+
+ <!-- Chatbot Floating Button -->
+  <button id="chatbot-toggle" class="chatbot-button" aria-label="Open Chatbot">
+    <div class="chatbot-wrapper">
+      <img src="images/founder.jpg" alt="Chat with Amma">
+      <span>
+        <span class="english-text">Talk with Amma</span>
+        <span class="telugu-text">అమ్మతో చాట్ చేయండి</span>
+      </span>
+    </div>
+  </button>
+
+  <!-- Chatbot Popup IFrame -->
+  <div id="chatbot-popup" class="chatbot-popup hidden">
+    <div class="chatbot-header">
+      <span><span class="english-text">Chat with Amma</span><span class="telugu-text">అమ్మతో చాట్ చేయండి</span></span>
+      <button id="close-chatbot" class="close-button">&times;</button>
+    </div>
+    <iframe src="https://talkwithamma.azurewebsites.net" width="100%" height="400"></iframe>
+  </div>
+
   <!-- Footer -->
   <footer>
     <div class="footer-container">
-      <p>&copy; 2025 Holy Spirit Prayer House |
+      <p>&copy; 2025 Holy Spirit Prayer House | 
         <span class="english-text">All Rights Reserved</span>
         <span class="telugu-text">అన్ని హక్కులు పరిరక్షించబడినవి</span>
       </p>
       <div class="social-icons">
+        <!-- Social media icon links -->
         <a href="https://www.youtube.com/@pastorpmoses" target="_blank" aria-label="YouTube">
-          <img src="images/youtube.png" alt="YouTube" />
+          <img src="images/youtube.png" alt="YouTube">
         </a>
         <a href="https://www.instagram.com/hsph_oduru/" target="_blank" aria-label="Instagram">
-          <img src="images/instagram.png" alt="Instagram" />
+          <img src="images/instagram.png" alt="Instagram">
         </a>
         <a href="https://www.facebook.com/holy.jesus132" target="_blank" aria-label="Facebook">
-          <img src="images/facebook.png" alt="Facebook" />
+          <img src="images/facebook.png" alt="Facebook">
         </a>
       </div>
     </div>
   </footer>
 
-  <!-- Scripts -->
-  <script>
-    function toggleLanguage(lang) {
-      document.body.className = lang;
-      localStorage.setItem('preferredLanguage', lang);
-      const buttons = document.querySelectorAll('.language-toggle button');
-      buttons.forEach(button => {
-        button.setAttribute('aria-pressed', button.textContent.toLowerCase() === lang);
-      });
-    }
-
-    window.onload = () => {
-      const savedLang = localStorage.getItem('preferredLanguage') || 'english';
-      toggleLanguage(savedLang);
-    };
-  </script>
-  <script src="js/chatbot.js" defer></script>
+  <!-- External JavaScript -->
+  <script src="js/chatbot.js" defer></script> <!-- Manages chatbot toggle -->
+  <script src="js/script.js" defer></script>   <!-- General page scripts (likely nav or menu) -->
 </body>
 </html>
