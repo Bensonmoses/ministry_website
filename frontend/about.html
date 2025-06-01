@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Metadata -->
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Holy Spirit Prayer House - A place for faith, love, and community outreach.">
-  <meta name="keywords" content="Church, Holy Spirit, Prayer, Ministries, Donations">
-  <meta name="author" content="Holy Spirit Prayer House">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Holy Spirit Prayer House - A place for faith, love, and community outreach." />
+  <meta name="keywords" content="Church, Holy Spirit, Prayer, Ministries, Donations" />
+  <meta name="author" content="Holy Spirit Prayer House" />
 
   <title>Holy Spirit Prayer House | హోలీ స్పిరిట్ ప్రార్థన మందిరం</title>
-  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="icon" href="images/favicon.png" type="image/png" />
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+Telugu&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Noto+Sans:wght@400;600&display=swap" rel="stylesheet">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/founder.css">
-  <link rel="stylesheet" href="css/chatbot.css">
-
-  <!-- Inline Language Switch Styling -->
+  <!-- Inline CSS Fixes -->
   <style>
+    body {
+      background-color: #f9f9f9;
+      color: #333;
+      font-family: 'Noto Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
     .language-toggle {
       text-align: center;
       padding: 20px 0;
@@ -38,7 +38,7 @@
       background-color: #fff;
       color: #5f6368;
       border-radius: 4px;
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Noto Sans', sans-serif;
       transition: background-color 0.3s, box-shadow 0.3s;
     }
 
@@ -51,7 +51,67 @@
     .english .telugu-text {
       display: none;
     }
+
+    .page-title {
+      max-width: 960px;
+      margin: 40px auto;
+      padding: 40px 20px;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .page-title h1,
+    .page-title h2 {
+      font-family: 'Bungee', cursive;
+      text-align: center;
+      color: #b22222;
+      margin-bottom: 30px;
+    }
+
+    .page-title p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 24px;
+      text-align: justify;
+    }
+
+    .page-title p:nth-of-type(2) {
+      font-style: italic;
+      background-color: #f0f0f0;
+      padding: 15px;
+      border-left: 4px solid #b22222;
+      border-radius: 4px;
+      color: #444;
+    }
+
+    footer {
+      background-color: #8B0000;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+
+    .footer-container .social-icons img {
+      width: 24px;
+      margin: 0 10px;
+      filter: brightness(0) invert(1);
+    }
+
+    @media (max-width: 600px) {
+      .page-title {
+        padding: 20px 15px;
+      }
+
+      .page-title p {
+        font-size: 1rem;
+      }
+    }
   </style>
+
+  <!-- External CSS (optional) -->
+  <link rel="stylesheet" href="css/chatbot.css" />
 </head>
 <body class="english">
 
@@ -60,47 +120,6 @@
     <button onclick="toggleLanguage('english')" aria-label="Switch to English">English</button>
     <button onclick="toggleLanguage('telugu')" aria-label="Switch to Telugu">తెలుగు</button>
   </div>
-
-  <!-- Header -->
-  <header id="mainHeader">
-    <div class="header-container">
-      <div class="logo">
-        <img src="images/logo.webp" alt="Holy Spirit Prayer House Logo">
-      </div>
-
-      <nav class="desktop-nav">
-        <ul class="nav-links">
-          <li><a href="index.html"><span class="english-text">Home</span><span class="telugu-text">హోమ్</span></a></li>
-          <li><a href="about.html"><span class="english-text">About</span><span class="telugu-text">గురించి</span></a></li>
-          <li><a href="sermons.html"><span class="english-text">Sermons</span><span class="telugu-text">ప్రసంగాలు</span></a></li>
-          <li><a href="ministries.html"><span class="english-text">Ministries</span><span class="telugu-text">సేవలు</span></a></li>
-          <li><a href="orphanage.html"><span class="english-text">Orphanage</span><span class="telugu-text">అనాథాశ్రమం</span></a></li>
-          <li><a href="events.html"><span class="english-text">Events</span><span class="telugu-text">ఈవెంట్స్</span></a></li>
-          <li><a href="contact.html"><span class="english-text">Contact</span><span class="telugu-text">సంప్రదించండి</span></a></li>
-          <li><a href="volunteer.html"><span class="english-text">Get Involved</span><span class="telugu-text">చేరడం</span></a></li>
-          <li><a href="donate.html" class="donate-btn"><span class="english-text">Donate Now</span><span class="telugu-text">దానం చేయండి</span></a></li>
-        </ul>
-      </nav>
-
-      <!-- Mobile Menu Button -->
-      <button id="menuButton" class="mobile-menu-button" aria-label="Open Menu">☰</button>
-    </div>
-
-    <!-- Mobile Navigation -->
-    <nav class="mobile-nav" id="mobileNav">
-      <ul class="nav-links">
-        <li><a href="index.html"><span class="english-text">Home</span><span class="telugu-text">హోమ్</span></a></li>
-        <li><a href="about.html"><span class="english-text">About</span><span class="telugu-text">గురించి</span></a></li>
-        <li><a href="sermons.html"><span class="english-text">Sermons</span><span class="telugu-text">ప్రసంగాలు</span></a></li>
-        <li><a href="ministries.html"><span class="english-text">Ministries</span><span class="telugu-text">సేవలు</span></a></li>
-        <li><a href="orphanage.html"><span class="english-text">Orphanage</span><span class="telugu-text">అనాథాశ్రమం</span></a></li>
-        <li><a href="events.html"><span class="english-text">Events</span><span class="telugu-text">ఈవెంట్స్</span></a></li>
-        <li><a href="contact.html"><span class="english-text">Contact</span><span class="telugu-text">సంప్రదించండి</span></a></li>
-        <li><a href="volunteer.html"><span class="english-text">Get Involved</span><span class="telugu-text">చేరడం</span></a></li>
-        <li><a href="donate.html" class="donate-btn"><span class="english-text">Donate Now</span><span class="telugu-text">దానం చేయండి</span></a></li>
-      </ul>
-    </nav>
-  </header>
 
   <!-- Main Content -->
   <main>
@@ -121,12 +140,10 @@
 
       <p>
         <span class="english-text">
-          We are called according to the promise in Acts 2:38–39:<br>
-          “Repent and be baptized, every one of you, in the name of Jesus Christ for the forgiveness of your sins. And you will receive the gift of the Holy Spirit. The promise is for you and your children and for all who are far off—for all whom the Lord our God will call.”
+          “Repent and be baptized, every one of you, in the name of Jesus Christ for the forgiveness of your sins. And you will receive the gift of the Holy Spirit. The promise is for you and your children and for all who are far off—for all whom the Lord our God will call.” — Acts 2:38–39
         </span>
         <span class="telugu-text">
-          మనమందరం అపొస్తలుల కార్యములు 2:38–39 వాగ్దానం ప్రకారం పిలవబడ్డాము:<br>
-          “మీ పాపముల క్షమాపణ కొరకు మీలో ప్రతి ఒక్కడు యేసుక్రీస్తు నామమునందు బాప్తిస్మము పొందుడి; మీరు పవిత్రాత్మ యొక్క బహుమతిని పొందుదురు. ఈ వాగ్దానం మీకును మీ పిల్లలకును దూరముగా ఉన్నవారికిని, మన దేవుడైన ప్రభువు పిలిచిన వారందరికిని వర్తించును.”
+          “మీ పాపముల క్షమాపణ కొరకు మీలో ప్రతి ఒక్కడు యేసుక్రీస్తు నామమునందు బాప్తిస్మము పొందుడి; మీరు పవిత్రాత్మ యొక్క బహుమతిని పొందుదురు. ఈ వాగ్దానం మీకును మీ పిల్లలకును దూరముగా ఉన్నవారికిని, మన దేవుడైన ప్రభువు పిలిచిన వారందరికిని వర్తించును.” — అపొస్తలుల కార్యములు 2:38–39
         </span>
       </p>
 
@@ -149,26 +166,30 @@
   <!-- Footer -->
   <footer>
     <div class="footer-container">
-      <p>&copy; 2025 Holy Spirit Prayer House | 
+      <p>&copy; 2025 Holy Spirit Prayer House |
         <span class="english-text">All Rights Reserved</span>
         <span class="telugu-text">అన్ని హక్కులు పరిరక్షించబడినవి</span>
       </p>
       <div class="social-icons">
         <a href="https://www.youtube.com/@pastorpmoses" target="_blank" aria-label="YouTube">
-          <img src="images/youtube.png" alt="YouTube">
+          <img src="images/youtube.png" alt="YouTube" />
         </a>
         <a href="https://www.instagram.com/hsph_oduru/" target="_blank" aria-label="Instagram">
-          <img src="images/instagram.png" alt="Instagram">
+          <img src="images/instagram.png" alt="Instagram" />
         </a>
         <a href="https://www.facebook.com/holy.jesus132" target="_blank" aria-label="Facebook">
-          <img src="images/facebook.png" alt="Facebook">
+          <img src="images/facebook.png" alt="Facebook" />
         </a>
       </div>
     </div>
   </footer>
 
   <!-- Scripts -->
+  <script>
+    function toggleLanguage(lang) {
+      document.body.className = lang;
+    }
+  </script>
   <script src="js/chatbot.js" defer></script>
-  <script src="js/script.js" defer></script>
 </body>
 </html>
