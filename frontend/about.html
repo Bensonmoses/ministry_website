@@ -8,70 +8,41 @@
   <meta name="author" content="Holy Spirit Prayer House" />
   <title>Holy Spirit Prayer House | హోలీ స్పిరిట్ ప్రార్థన మందిరం</title>
   <link rel="icon" type="image/png" href="images/favicon.png" />
+  
   <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+Telugu&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css" />
-  <link rel="stylesheet" href="css/founder.css" />
-  <link rel="stylesheet" href="css/chatbot.css" />
 
   <script>
     function toggleLanguage(lang) {
-      localStorage.setItem("preferredLanguage", lang);
       document.body.classList.remove("english", "telugu");
       document.body.classList.add(lang);
     }
 
     document.addEventListener("DOMContentLoaded", function () {
-      const savedLang = localStorage.getItem("preferredLanguage") || "english";
-      document.body.classList.remove("english", "telugu");
-      document.body.classList.add(savedLang);
+      document.body.classList.add("english");
     });
   </script>
 
   <style>
-    body {
-      background-color: #000; /* Black background */
-      color: #f5f5f5; /* Light text */
-      font-family: 'Noto Sans', sans-serif;
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
-    header {
-      background-color: #b22222;
-      color: #fff;
-      padding: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
+    body {
+      background-color: #1a1a1a;
+      color: #f5f5f5;
+      font-family: 'Noto Sans', sans-serif;
+      line-height: 1.6;
     }
 
-    .logo img {
-      max-height: 50px;
-    }
-
-    nav {
-      margin-top: 10px;
-    }
-
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 12px;
-      font-weight: 600;
-      font-size: 1rem;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #ffe4e1;
-    }
-
+    /* Language Toggle */
     .language-toggle {
       text-align: center;
       padding: 20px 0;
+      background-color: #2a2a2a;
     }
 
     .language-toggle button {
@@ -83,7 +54,7 @@
       background-color: #fff;
       color: #5f6368;
       border-radius: 4px;
-      font-family: 'Noto Sans', sans-serif;
+      font-family: 'Roboto', sans-serif;
       transition: background-color 0.3s, box-shadow 0.3s;
     }
 
@@ -92,65 +63,62 @@
       box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     }
 
-    .language-toggle button:focus {
-      outline: 2px solid #b22222;
-      outline-offset: 2px;
-    }
-
+    /* Language Display Rules */
     .telugu .english-text,
     .english .telugu-text {
       display: none;
     }
 
-    .page-title {
-      max-width: 960px;
-      margin: 40px auto;
-      padding: 40px 20px;
-      background-color: #fff; /* White box */
-      border-radius: 0;        /* Flat look */
-      box-shadow: none;        /* No 3D effect */
-      color: #000;             /* Black text inside white box */
-    }
-
-    .page-title h1,
-    .page-title h2 {
-      font-family: 'Bungee', cursive;
-      text-align: center;
-      color: #b22222;
-      margin-bottom: 30px;
-    }
-
-    .page-title p {
-      font-size: 1.1rem;
-      line-height: 1.8;
-      margin-bottom: 24px;
-      text-align: justify;
-    }
-
-    .page-title p:nth-of-type(2) {
-      font-style: italic;
-      background-color: #f0f0f0;
-      padding: 15px;
-      border-left: 4px solid #b22222;
-      border-radius: 4px;
-      color: #444;
-    }
-
-    footer {
-      background-color: #8b0000;
+    /* Header */
+    header {
+      background-color: #b22222;
       color: #fff;
-      text-align: center;
       padding: 20px;
-      font-size: 0.9rem;
     }
 
-    .footer-container .social-icons img {
-      width: 24px;
-      margin: 0 10px;
-      filter: brightness(0) invert(1);
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
     }
 
-    #menuButton {
+    .logo img {
+      max-height: 50px;
+    }
+
+    .desktop-nav ul {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+    }
+
+    .desktop-nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+
+    .desktop-nav a:hover {
+      color: #ffe4e1;
+    }
+
+    .donate-btn {
+      background-color: #ff4444;
+      padding: 8px 16px;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+
+    .donate-btn:hover {
+      background-color: #ff6666;
+    }
+
+    .mobile-menu-button {
       display: none;
       background: none;
       border: none;
@@ -165,63 +133,243 @@
       padding: 15px 20px;
     }
 
-    .mobile-nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><rect fill="%23333" width="1200" height="400"/><text x="600" y="200" font-family="Arial" font-size="24" fill="%23666" text-anchor="middle">Church Community Background</text></svg>');
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
     }
 
-    .mobile-nav ul li {
-      margin-bottom: 10px;
-    }
-
-    .mobile-nav ul li a {
+    .hero-content h1 {
+      font-family: 'Bungee', cursive;
+      font-size: 3rem;
+      margin-bottom: 20px;
       color: #fff;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1.2rem;
     }
 
-    @media (max-width: 600px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
+    .hero-content p {
+      font-size: 1.3rem;
+      margin-bottom: 30px;
+      color: #f0f0f0;
+    }
 
-      nav.desktop-nav {
+    /* Main Content Sections */
+    .section-container {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+    }
+
+    .section {
+      background-color: #2a2a2a;
+      padding: 40px;
+      border-radius: 8px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    .section h2 {
+      font-family: 'Bungee', cursive;
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: #b22222;
+    }
+
+    .section p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 20px;
+      color: #e0e0e0;
+    }
+
+    .bible-verse {
+      background-color: #3a3a3a;
+      border-left: 4px solid #b22222;
+      padding: 20px;
+      margin: 20px 0;
+      font-style: italic;
+      color: #f0f0f0;
+    }
+
+    /* Mission Section */
+    .mission-section {
+      background-color: #222;
+      padding: 60px 20px;
+      margin: 40px 0;
+    }
+
+    .mission-content {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .mission-content h2 {
+      font-family: 'Bungee', cursive;
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      color: #b22222;
+    }
+
+    .mission-content p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      color: #e0e0e0;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #8b0000;
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px;
+      margin-top: 60px;
+    }
+
+    .footer-container p {
+      margin-bottom: 20px;
+      font-size: 0.9rem;
+    }
+
+    .social-icons img {
+      width: 24px;
+      margin: 0 10px;
+      filter: brightness(0) invert(1);
+      transition: opacity 0.3s;
+    }
+
+    .social-icons img:hover {
+      opacity: 0.7;
+    }
+
+    /* Chatbot */
+    .chatbot-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #b22222;
+      border: none;
+      border-radius: 50px;
+      padding: 15px 20px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: transform 0.3s;
+      z-index: 1000;
+    }
+
+    .chatbot-button:hover {
+      transform: scale(1.05);
+    }
+
+    .chatbot-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: white;
+      font-weight: 500;
+    }
+
+    .chatbot-wrapper img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    .chatbot-popup {
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
+      width: 350px;
+      height: 500px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+      z-index: 1001;
+      transition: opacity 0.3s, transform 0.3s;
+    }
+
+    .chatbot-popup.hidden {
+      display: none;
+    }
+
+    .chatbot-header {
+      background-color: #b22222;
+      color: white;
+      padding: 15px;
+      border-radius: 8px 8px 0 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .close-button {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .desktop-nav {
         display: none;
       }
 
-      #menuButton {
+      .mobile-menu-button {
         display: block;
-        margin-top: 10px;
       }
 
-      .page-title {
-        padding: 20px 15px;
+      .hero-content h1 {
+        font-size: 2rem;
       }
 
-      .page-title p {
-        font-size: 1rem;
+      .hero-content p {
+        font-size: 1.1rem;
+      }
+
+      .section-container {
+        grid-template-columns: 1fr;
+        margin: 40px auto;
+      }
+
+      .chatbot-popup {
+        width: 90%;
+        right: 5%;
       }
     }
   </style>
 </head>
 <body class="english">
+  <!-- Language Toggle -->
   <div class="language-toggle" role="region" aria-label="Language selection">
     <button onclick="toggleLanguage('english')" aria-pressed="true">English</button>
     <button onclick="toggleLanguage('telugu')" aria-pressed="false">తెలుగు</button>
   </div>
 
+  <!-- Header -->
   <header id="mainHeader">
-    <div class="header-container" style="width: 100%; display: flex; justify-content: space-between; align-items: center;">
+    <div class="header-container">
       <div class="logo">
         <img src="images/logo.webp" alt="Holy Spirit Prayer House Logo" />
       </div>
       <nav class="desktop-nav" role="navigation" aria-label="Primary navigation">
-        <ul class="nav-links" style="display: flex; list-style: none; margin: 0; padding: 0;">
+        <ul class="nav-links">
           <li><a href="index.html"><span class="english-text">Home</span><span class="telugu-text">హోమ్</span></a></li>
-          <li><a href="about.html"><span class="english-text">About</span><span class="telugu-text">గురించి</span></a></li>
+          <li><a href="about.html" style="color: #ffe4e1;"><span class="english-text">About</span><span class="telugu-text">గురించి</span></a></li>
           <li><a href="sermons.html"><span class="english-text">Sermons</span><span class="telugu-text">ప్రసంగాలు</span></a></li>
           <li><a href="ministries.html"><span class="english-text">Ministries</span><span class="telugu-text">సేవలు</span></a></li>
           <li><a href="orphanage.html"><span class="english-text">Orphanage</span><span class="telugu-text">అనాథాశ్రమం</span></a></li>
@@ -231,7 +379,7 @@
           <li><a href="donate.html" class="donate-btn"><span class="english-text">Donate Now</span><span class="telugu-text">దానం చేయండి</span></a></li>
         </ul>
       </nav>
-      <button id="menuButton" class="mobile-menu-button" aria-label="Open Menu" aria-expanded="false" aria-controls="mobileNav">☰</button>
+      <button id="menuButton" class="mobile-menu-button" aria-label="Open Menu" aria-expanded="false">☰</button>
     </div>
     <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
       <ul class="nav-links">
@@ -248,47 +396,92 @@
     </nav>
   </header>
 
-  <main>
-    <section class="page-title" aria-label="About Us">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
       <h1>
         <span class="english-text">About Us</span>
         <span class="telugu-text">మా గురించి</span>
       </h1>
-
       <p>
-        <span class="english-text">
-          We are a group of believers, a Church called by the name "Holy Spirit Prayer House" led by Rev. Palaparthi Moses, located in Oduru, West Godavari, Andhra Pradesh, India.
-        </span>
-        <span class="telugu-text">
-          మేము విశ్వాసుల సమూహం, "హోలీ స్పిరిట్ ప్రార్థన మందిరం" అనే చర్చ్, ఇది రెవ్. పాలపర్తి మోషే సారథ్యంలో ఆంధ్రప్రదేశ్ రాష్ట్రం, పశ్చిమ గోదావరి జిల్లాలోని ఓదూరులో ఉంది.
-        </span>
+        <span class="english-text">Learn about our faith, mission, and community</span>
+        <span class="telugu-text">మా విశ్వాసం, లక్ష్యం మరియు సమాజం గురించి తెలుసుకోండి</span>
       </p>
+    </div>
+  </section>
 
-      <p>
-        <span class="english-text">
-          “Repent and be baptized, every one of you, in the name of Jesus Christ for the forgiveness of your sins..." — Acts 2:38–39
-        </span>
-        <span class="telugu-text">
-          “మీ పాపముల క్షమాపణ కొరకు... అపొస్తలుల కార్యములు 2:38–39
-        </span>
-      </p>
+  <!-- Main Content -->
+  <main>
+    <section class="section-container">
+      <!-- Who We Are -->
+      <div class="section">
+        <h2>
+          <span class="english-text">Who We Are</span>
+          <span class="telugu-text">మేము ఎవరు</span>
+        </h2>
+        <p>
+          <span class="english-text">
+            We are a group of believers, a Church called by the name "Holy Spirit Prayer House" led by Rev. Palaparthi Moses, located in Oduru, West Godavari, Andhra Pradesh, India.
+          </span>
+          <span class="telugu-text">
+            మేము విశ్వాసుల సమూహం, "హోలీ స్పిరిట్ ప్రార్థన మందిరం" అనే చర్చ్, ఇది రెవ్. పాలపర్తి మోషే సారథ్యంలో ఆంధ్రప్రదేశ్ రాష్ట్రం, పశ్చిమ గోదావరి జిల్లాలోని ఓదూరులో ఉంది.
+          </span>
+        </p>
+      </div>
 
-      <h2>
-        <span class="english-text">Our Mission (What we do)</span>
-        <span class="telugu-text">మా లక్ష్యం (మేము ఏమి చేస్తాము)</span>
-      </h2>
+      <!-- Our Foundation -->
+      <div class="section">
+        <h2>
+          <span class="english-text">Our Foundation</span>
+          <span class="telugu-text">మా పునాది</span>
+        </h2>
+        <div class="bible-verse">
+          <span class="english-text">
+            "Repent and be baptized, every one of you, in the name of Jesus Christ for the forgiveness of your sins..." — Acts 2:38–39
+          </span>
+          <span class="telugu-text">
+            "మీ పాపముల క్షమాపణ కొరకు..." — అపొస్తలుల కార్యములు 2:38–39
+          </span>
+        </div>
+      </div>
 
-      <p>
-        <span class="english-text">
-          We introduce our God the Father, His Son and our Friend Jesus, and the Holy Spirit...
-        </span>
-        <span class="telugu-text">
-          మేము మా పరలోక తండ్రిని, ఆయన కుమారుడైన యేసును, పవిత్రాత్మను పరిచయం చేస్తాము...
-        </span>
-      </p>
+      <!-- Our Values -->
+      <div class="section">
+        <h2>
+          <span class="english-text">Our Values</span>
+          <span class="telugu-text">మా విలువలు</span>
+        </h2>
+        <p>
+          <span class="english-text">
+            We are dedicated to spreading faith, hope, and love through our ministries and community outreach programs. Our church serves as a beacon of light for those seeking spiritual guidance and support.
+          </span>
+          <span class="telugu-text">
+            మా సేవల ద్వారా విశ్వాసం, ఆశ మరియు ప్రేమను వ్యాప్తి చేయడమే మా లక్ష్యం. మా చర్చ్ ఆధ్యాత్మిక మార్గదర్శకత్వం మరియు మద్దతు కోరే వారికి వెలుగు మార్గంలా ఉంటుంది.
+          </span>
+        </p>
+      </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission-section">
+      <div class="mission-content">
+        <h2>
+          <span class="english-text">Our Mission</span>
+          <span class="telugu-text">మా లక్ష్యం</span>
+        </h2>
+        <p>
+          <span class="english-text">
+            We introduce our God the Father, His Son and our Friend Jesus, and the Holy Spirit to all who seek truth and salvation. Through prayer, worship, and community service, we strive to make a positive impact in the lives of those around us.
+          </span>
+          <span class="telugu-text">
+            మేము మా పరలోక తండ్రిని, ఆయన కుమారుడైన యేసును, పవిత్రాత్మను సత్యం మరియు మోక్షం కోరే వారందరికీ పరిచయం చేస్తాము. ప్రార్థన, ఆరాధన మరియు సమాజ సేవ ద్వారా మన చుట్టూ ఉన్న వారి జీవితాలపై సానుకూల ప్రభావం చూపడానికి ప్రయత్నిస్తాము.
+          </span>
+        </p>
+      </div>
     </section>
   </main>
 
+  <!-- Chatbot Button -->
   <button id="chatbot-toggle" class="chatbot-button" aria-label="Open Chatbot">
     <div class="chatbot-wrapper">
       <img src="images/founder.jpg" alt="Chat with Amma" />
@@ -299,14 +492,16 @@
     </div>
   </button>
 
+  <!-- Chatbot Popup -->
   <div id="chatbot-popup" class="chatbot-popup hidden" role="dialog" aria-modal="true" aria-labelledby="chatbot-header">
     <div class="chatbot-header" id="chatbot-header">
-      <span><span class="english-text">Chat with Amma</span><span class="telugu-text">అమ్మతో చాట్ చేయండి</span></span>
+      <span><span class="english-text">Chat with Amma</span><span class="telugu-text">అమ్మతో చాట్ చేయండি</span></span>
       <button id="close-chatbot" class="close-button" aria-label="Close Chatbot">&times;</button>
     </div>
     <iframe src="https://talkwithamma.azurewebsites.net" width="100%" height="400" title="Chat with Amma chatbot"></iframe>
   </div>
 
+  <!-- Footer -->
   <footer>
     <div class="footer-container">
       <p>
@@ -318,8 +513,36 @@
         <a href="https://www.youtube.com/@pastorpmoses" target="_blank" aria-label="YouTube">
           <img src="images/youtube.png" alt="YouTube" />
         </a>
+        <a href="https://www.instagram.com/hsph_oduru/" target="_blank" aria-label="Instagram">
+          <img src="images/instagram.png" alt="Instagram" />
+        </a>
+        <a href="https://www.facebook.com/holy.jesus132" target="_blank" aria-label="Facebook">
+          <img src="images/facebook.png" alt="Facebook" />
+        </a>
       </div>
     </div>
   </footer>
+
+  <script>
+    // Mobile menu toggle
+    document.getElementById('menuButton')?.addEventListener('click', function() {
+      const mobileNav = document.getElementById('mobileNav');
+      const isExpanded = this.getAttribute('aria-expanded') === 'true';
+      
+      mobileNav.style.display = isExpanded ? 'none' : 'block';
+      this.setAttribute('aria-expanded', !isExpanded);
+    });
+
+    // Chatbot toggle
+    document.getElementById('chatbot-toggle')?.addEventListener('click', function() {
+      const popup = document.getElementById('chatbot-popup');
+      popup.classList.remove('hidden');
+    });
+
+    document.getElementById('close-chatbot')?.addEventListener('click', function() {
+      const popup = document.getElementById('chatbot-popup');
+      popup.classList.add('hidden');
+    });
+  </script>
 </body>
 </html>
