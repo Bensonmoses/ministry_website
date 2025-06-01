@@ -14,7 +14,7 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Noto+Sans:wght@400;600&display=swap" rel="stylesheet">
 
-  <!-- Inline CSS Fixes -->
+  <!-- CSS -->
   <style>
     body {
       background-color: #f9f9f9;
@@ -22,6 +22,38 @@
       font-family: 'Noto Sans', sans-serif;
       margin: 0;
       padding: 0;
+    }
+
+    header {
+      background-color: #b22222;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-family: 'Bungee', cursive;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffe4e1;
     }
 
     .language-toggle {
@@ -100,6 +132,15 @@
     }
 
     @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 10px;
+      }
+
       .page-title {
         padding: 20px 15px;
       }
@@ -110,10 +151,23 @@
     }
   </style>
 
-  <!-- External CSS (optional) -->
+  <!-- External CSS -->
   <link rel="stylesheet" href="css/chatbot.css" />
 </head>
 <body class="english">
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      Holy Spirit Prayer House
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="ministries.html">Ministries</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
   <!-- Language Toggle -->
   <div class="language-toggle" role="group" aria-label="Language switcher">
@@ -121,15 +175,6 @@
     <button onclick="toggleLanguage('telugu')" aria-label="Switch to Telugu">తెలుగు</button>
   </div>
 
-
-
-
-
-
-
-
-
-  
   <!-- Main Content -->
   <main>
     <section class="page-title">
@@ -172,17 +217,6 @@
     </section>
   </main>
 
-
-
-
-
-
-
-
-
-
-
-  
   <!-- Footer -->
   <footer>
     <div class="footer-container">
