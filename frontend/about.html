@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Basic Metadata -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Holy Spirit Prayer House - A place for faith, love, and community outreach." />
@@ -9,18 +8,13 @@
   <meta name="author" content="Holy Spirit Prayer House" />
   <title>Holy Spirit Prayer House | హోలీ స్పిరిట్ ప్రార్థన మందిరం</title>
   <link rel="icon" type="image/png" href="images/favicon.png" />
-
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+Telugu&display=swap" rel="stylesheet" />
-
-  <!-- External Stylesheets -->
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="css/founder.css" />
   <link rel="stylesheet" href="css/chatbot.css" />
 
-  <!-- Language Toggle Script -->
   <script>
     function toggleLanguage(lang) {
       localStorage.setItem("preferredLanguage", lang);
@@ -35,11 +29,10 @@
     });
   </script>
 
-  <!-- Inline CSS -->
   <style>
     body {
-      background-color: #f9f9f9;
-      color: #333;
+      background-color: #000; /* Black background */
+      color: #f5f5f5; /* Light text */
       font-family: 'Noto Sans', sans-serif;
       margin: 0;
       padding: 0;
@@ -113,9 +106,10 @@
       max-width: 960px;
       margin: 40px auto;
       padding: 40px 20px;
-      background-color: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      background-color: #fff; /* White box */
+      border-radius: 0;        /* Flat look */
+      box-shadow: none;        /* No 3D effect */
+      color: #000;             /* Black text inside white box */
     }
 
     .page-title h1,
@@ -214,13 +208,11 @@
   </style>
 </head>
 <body class="english">
-  <!-- Language Switcher UI -->
   <div class="language-toggle" role="region" aria-label="Language selection">
     <button onclick="toggleLanguage('english')" aria-pressed="true">English</button>
     <button onclick="toggleLanguage('telugu')" aria-pressed="false">తెలుగు</button>
   </div>
 
-  <!-- Header Section -->
   <header id="mainHeader">
     <div class="header-container" style="width: 100%; display: flex; justify-content: space-between; align-items: center;">
       <div class="logo">
@@ -241,8 +233,6 @@
       </nav>
       <button id="menuButton" class="mobile-menu-button" aria-label="Open Menu" aria-expanded="false" aria-controls="mobileNav">☰</button>
     </div>
-
-    <!-- Mobile nav -->
     <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
       <ul class="nav-links">
         <li><a href="index.html"><span class="english-text">Home</span><span class="telugu-text">హోమ్</span></a></li>
@@ -258,7 +248,6 @@
     </nav>
   </header>
 
-  <!-- Main Content -->
   <main>
     <section class="page-title" aria-label="About Us">
       <h1>
@@ -277,10 +266,10 @@
 
       <p>
         <span class="english-text">
-          “Repent and be baptized, every one of you, in the name of Jesus Christ for the forgiveness of your sins. And you will receive the gift of the Holy Spirit. The promise is for you and your children and for all who are far off—for all whom the Lord our God will call.” — Acts 2:38–39
+          “Repent and be baptized, every one of you, in the name of Jesus Christ for the forgiveness of your sins..." — Acts 2:38–39
         </span>
         <span class="telugu-text">
-          “మీ పాపముల క్షమాపణ కొరకు మీలో ప్రతి ఒక్కడు యేసుక్రీస్తు నామమునందు బాప్తిస్మము పొందుడి; మీరు పవిత్రాత్మ యొక్క బహుమతిని పొందుదురు. ఈ వాగ్దానం మీకును మీ పిల్లలకును దూరముగా ఉన్నవారికిని, మన దేవుడైన ప్రభువు పిలిచిన వారందరికిని వర్తించును.” — అపొస్తలుల కార్యములు 2:38–39
+          “మీ పాపముల క్షమాపణ కొరకు... అపొస్తలుల కార్యములు 2:38–39
         </span>
       </p>
 
@@ -291,16 +280,15 @@
 
       <p>
         <span class="english-text">
-          We introduce our God the Father, His Son and our Friend Jesus, and the Holy Spirit. We help people discover hope, develop faith, and demonstrate love by following the way of Jesus through the Word of God (The Bible) and the guidance of the Holy Spirit.
+          We introduce our God the Father, His Son and our Friend Jesus, and the Holy Spirit...
         </span>
         <span class="telugu-text">
-          మేము మా పరలోక తండ్రిని, ఆయన కుమారుడైన మరియు మా స్నేహితుడైన యేసును, అలాగే పవిత్రాత్మను పరిచయం చేస్తాము. దేవుని వాక్యం (బైబిల్) మరియు పవిత్రాత్మ సహాయంతో, మేము ప్రజలు ఆశను కనుగొనడంలో, విశ్వాసాన్ని పెంపొందించడంలో, ప్రేమను ప్రదర్శించడంలో సహాయపడతాము.
+          మేము మా పరలోక తండ్రిని, ఆయన కుమారుడైన యేసును, పవిత్రాత్మను పరిచయం చేస్తాము...
         </span>
       </p>
     </section>
   </main>
 
-  <!-- Chatbot Floating Button -->
   <button id="chatbot-toggle" class="chatbot-button" aria-label="Open Chatbot">
     <div class="chatbot-wrapper">
       <img src="images/founder.jpg" alt="Chat with Amma" />
@@ -311,7 +299,6 @@
     </div>
   </button>
 
-  <!-- Chatbot Popup IFrame -->
   <div id="chatbot-popup" class="chatbot-popup hidden" role="dialog" aria-modal="true" aria-labelledby="chatbot-header">
     <div class="chatbot-header" id="chatbot-header">
       <span><span class="english-text">Chat with Amma</span><span class="telugu-text">అమ్మతో చాట్ చేయండి</span></span>
@@ -320,7 +307,6 @@
     <iframe src="https://talkwithamma.azurewebsites.net" width="100%" height="400" title="Chat with Amma chatbot"></iframe>
   </div>
 
-  <!-- Footer -->
   <footer>
     <div class="footer-container">
       <p>
@@ -332,4 +318,8 @@
         <a href="https://www.youtube.com/@pastorpmoses" target="_blank" aria-label="YouTube">
           <img src="images/youtube.png" alt="YouTube" />
         </a>
-        <a href="https://www
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
