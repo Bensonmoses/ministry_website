@@ -1,44 +1,41 @@
-<!-- HTML STARTS -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <!-- Basic Metadata -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive for mobile -->
-  <meta name="description" content="Holy Spirit Prayer House - A place for faith, love, and community outreach.">
-  <meta name="keywords" content="Church, Holy Spirit, Prayer, Ministries, Donations">
-  <meta name="author" content="Holy Spirit Prayer House">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Holy Spirit Prayer House - A place for faith, love, and community outreach." />
+  <meta name="keywords" content="Church, Holy Spirit, Prayer, Ministries, Donations" />
+  <meta name="author" content="Holy Spirit Prayer House" />
   <title>Holy Spirit Prayer House | హోలీ స్పిరిట్ ప్రార్థన మందిరం</title>
-  <link rel="icon" type="image/png" href="images/favicon.png"> <!-- Site tab icon -->
+  <link rel="icon" type="image/png" href="images/favicon.png" />
 
-  <!-- Google Fonts (used throughout the site) -->
-  <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet"> <!-- Title font -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet"> <!-- Body font -->
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+Telugu&display=swap" rel="stylesheet"> <!-- Telugu font -->
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+Telugu&display=swap" rel="stylesheet" />
 
   <!-- External Stylesheets -->
-  <link rel="stylesheet" href="css/styles.css">        <!-- Main layout and styling -->
-  <link rel="stylesheet" href="css/founder.css">       <!-- Founder section styles -->
-  <link rel="stylesheet" href="css/chatbot.css">       <!-- Chatbot button & popup styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/founder.css" />
+  <link rel="stylesheet" href="css/chatbot.css" />
 
   <!-- Language Toggle Script -->
   <script>
-    // Save selected language to localStorage and apply it to <body>
     function toggleLanguage(lang) {
       localStorage.setItem("preferredLanguage", lang);
       document.body.classList.remove("english", "telugu");
       document.body.classList.add(lang);
     }
 
-    // Load saved language on page load
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
       const savedLang = localStorage.getItem("preferredLanguage") || "english";
       document.body.classList.remove("english", "telugu");
       document.body.classList.add(savedLang);
     });
   </script>
 
-  <!-- CSS -->
+  <!-- Inline CSS -->
   <style>
     body {
       background-color: #f9f9f9;
@@ -58,9 +55,8 @@
       flex-wrap: wrap;
     }
 
-    .logo {
-      font-size: 1.8rem;
-      font-family: 'Bungee', cursive;
+    .logo img {
+      max-height: 50px;
     }
 
     nav {
@@ -100,10 +96,9 @@
 
     .language-toggle button:hover {
       background-color: #f8f9fa;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     }
 
-    /* Focus style for accessibility */
     .language-toggle button:focus {
       outline: 2px solid #b22222;
       outline-offset: 2px;
@@ -148,7 +143,7 @@
     }
 
     footer {
-      background-color: #8B0000;
+      background-color: #8b0000;
       color: #fff;
       text-align: center;
       padding: 20px;
@@ -161,13 +156,50 @@
       filter: brightness(0) invert(1);
     }
 
+    #menuButton {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+    }
+
+    .mobile-nav {
+      display: none;
+      background-color: #b22222;
+      padding: 15px 20px;
+    }
+
+    .mobile-nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .mobile-nav ul li {
+      margin-bottom: 10px;
+    }
+
+    .mobile-nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+
     @media (max-width: 600px) {
       header {
         flex-direction: column;
         align-items: flex-start;
       }
 
-      nav {
+      nav.desktop-nav {
+        display: none;
+      }
+
+      #menuButton {
+        display: block;
         margin-top: 10px;
       }
 
@@ -180,35 +212,22 @@
       }
     }
   </style>
-
-  <!-- External CSS -->
-  <link rel="stylesheet" href="css/chatbot.css" />
 </head>
 <body class="english">
-
-    /* Language toggle behavior: show only selected language */
-    .telugu .english-text { display: none; }  /* Hide English when Telugu is active */
-    .english .telugu-text { display: none; }  /* Hide Telugu when English is active */
-  </style>
-</head>
-<body class="english">
-
   <!-- Language Switcher UI -->
-  <div class="language-toggle">
-    <button onclick="toggleLanguage('english')">English</button>
-    <button onclick="toggleLanguage('telugu')">తెలుగు</button>
+  <div class="language-toggle" role="region" aria-label="Language selection">
+    <button onclick="toggleLanguage('english')" aria-pressed="true">English</button>
+    <button onclick="toggleLanguage('telugu')" aria-pressed="false">తెలుగు</button>
   </div>
 
-  <!-- Header Section: Logo + Navigation (Desktop + Mobile) -->
+  <!-- Header Section -->
   <header id="mainHeader">
-    <div class="header-container">
+    <div class="header-container" style="width: 100%; display: flex; justify-content: space-between; align-items: center;">
       <div class="logo">
-        <img src="images/logo.webp" alt="Holy Spirit Prayer House Logo">
+        <img src="images/logo.webp" alt="Holy Spirit Prayer House Logo" />
       </div>
-      <nav class="desktop-nav">
-        <!-- Top navigation links (English + Telugu) -->
-        <ul class="nav-links">
-          <!-- Each link contains two spans: English & Telugu -->
+      <nav class="desktop-nav" role="navigation" aria-label="Primary navigation">
+        <ul class="nav-links" style="display: flex; list-style: none; margin: 0; padding: 0;">
           <li><a href="index.html"><span class="english-text">Home</span><span class="telugu-text">హోమ్</span></a></li>
           <li><a href="about.html"><span class="english-text">About</span><span class="telugu-text">గురించి</span></a></li>
           <li><a href="sermons.html"><span class="english-text">Sermons</span><span class="telugu-text">ప్రసంగాలు</span></a></li>
@@ -220,11 +239,11 @@
           <li><a href="donate.html" class="donate-btn"><span class="english-text">Donate Now</span><span class="telugu-text">దానం చేయండి</span></a></li>
         </ul>
       </nav>
-      <button id="menuButton" class="mobile-menu-button" aria-label="Open Menu">☰</button>
+      <button id="menuButton" class="mobile-menu-button" aria-label="Open Menu" aria-expanded="false" aria-controls="mobileNav">☰</button>
     </div>
 
-    <!-- Mobile version of the nav menu -->
-    <nav class="mobile-nav" id="mobileNav">
+    <!-- Mobile nav -->
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
       <ul class="nav-links">
         <li><a href="index.html"><span class="english-text">Home</span><span class="telugu-text">హోమ్</span></a></li>
         <li><a href="about.html"><span class="english-text">About</span><span class="telugu-text">గురించి</span></a></li>
@@ -239,13 +258,9 @@
     </nav>
   </header>
 
-
-
-  
-
   <!-- Main Content -->
   <main>
-    <section class="page-title">
+    <section class="page-title" aria-label="About Us">
       <h1>
         <span class="english-text">About Us</span>
         <span class="telugu-text">మా గురించి</span>
@@ -285,15 +300,10 @@
     </section>
   </main>
 
-
-
-
-  
-
- <!-- Chatbot Floating Button -->
+  <!-- Chatbot Floating Button -->
   <button id="chatbot-toggle" class="chatbot-button" aria-label="Open Chatbot">
     <div class="chatbot-wrapper">
-      <img src="images/founder.jpg" alt="Chat with Amma">
+      <img src="images/founder.jpg" alt="Chat with Amma" />
       <span>
         <span class="english-text">Talk with Amma</span>
         <span class="telugu-text">అమ్మతో చాట్ చేయండి</span>
@@ -302,38 +312,24 @@
   </button>
 
   <!-- Chatbot Popup IFrame -->
-  <div id="chatbot-popup" class="chatbot-popup hidden">
-    <div class="chatbot-header">
+  <div id="chatbot-popup" class="chatbot-popup hidden" role="dialog" aria-modal="true" aria-labelledby="chatbot-header">
+    <div class="chatbot-header" id="chatbot-header">
       <span><span class="english-text">Chat with Amma</span><span class="telugu-text">అమ్మతో చాట్ చేయండి</span></span>
-      <button id="close-chatbot" class="close-button">&times;</button>
+      <button id="close-chatbot" class="close-button" aria-label="Close Chatbot">&times;</button>
     </div>
-    <iframe src="https://talkwithamma.azurewebsites.net" width="100%" height="400"></iframe>
+    <iframe src="https://talkwithamma.azurewebsites.net" width="100%" height="400" title="Chat with Amma chatbot"></iframe>
   </div>
 
   <!-- Footer -->
   <footer>
     <div class="footer-container">
-      <p>&copy; 2025 Holy Spirit Prayer House | 
+      <p>
+        &copy; 2025 Holy Spirit Prayer House |
         <span class="english-text">All Rights Reserved</span>
         <span class="telugu-text">అన్ని హక్కులు పరిరక్షించబడినవి</span>
       </p>
-      <div class="social-icons">
-        <!-- Social media icon links -->
+      <div class="social-icons" role="region" aria-label="Social media links">
         <a href="https://www.youtube.com/@pastorpmoses" target="_blank" aria-label="YouTube">
-          <img src="images/youtube.png" alt="YouTube">
+          <img src="images/youtube.png" alt="YouTube" />
         </a>
-        <a href="https://www.instagram.com/hsph_oduru/" target="_blank" aria-label="Instagram">
-          <img src="images/instagram.png" alt="Instagram">
-        </a>
-        <a href="https://www.facebook.com/holy.jesus132" target="_blank" aria-label="Facebook">
-          <img src="images/facebook.png" alt="Facebook">
-        </a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- External JavaScript -->
-  <script src="js/chatbot.js" defer></script> <!-- Manages chatbot toggle -->
-  <script src="js/script.js" defer></script>   <!-- General page scripts (likely nav or menu) -->
-</body>
-</html>
+        <a href="https://www
