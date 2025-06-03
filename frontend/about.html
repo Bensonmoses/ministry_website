@@ -1,75 +1,527 @@
-<!-- HTML STARTS -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Basic Metadata -->
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive for mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Holy Spirit Prayer House - A place for faith, love, and community outreach.">
   <meta name="keywords" content="Church, Holy Spirit, Prayer, Ministries, Donations">
   <meta name="author" content="Holy Spirit Prayer House">
   <title>Holy Spirit Prayer House | హోలీ స్పిరిట్ ప్రార్థన మందిరం</title>
-  <link rel="icon" type="image/png" href="images/favicon.png"> <!-- Site tab icon -->
-
-  <!-- Google Fonts (used throughout the site) -->
-  <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet"> <!-- Title font -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet"> <!-- Body font -->
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+Telugu&display=swap" rel="stylesheet"> <!-- Telugu font -->
-
-  <!-- External Stylesheets -->
-  <link rel="stylesheet" href="css/styles.css">        <!-- Main layout and styling -->
-  <link rel="stylesheet" href="css/founder.css">       <!-- Founder section styles -->
-  <link rel="stylesheet" href="css/chatbot.css">       <!-- Chatbot button & popup styles -->
-
-  <!-- Language Toggle Script -->
-  <script>
-    // Save selected language to localStorage and apply it to <body>
-    function toggleLanguage(lang) {
-      localStorage.setItem("preferredLanguage", lang);
-      document.body.classList.remove("english", "telugu");
-      document.body.classList.add(lang);
+  
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+Telugu&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    // Load saved language on page load
-    document.addEventListener("DOMContentLoaded", function() {
-      const savedLang = localStorage.getItem("preferredLanguage") || "english";
-      document.body.classList.remove("english", "telugu");
-      document.body.classList.add(savedLang);
-    });
-  </script>
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+      min-height: 100vh;
+    }
 
-  <!-- Inline Style for Language Toggle + Default Appearance -->
-  <style>
+    /* Language Toggle Styles */
     .language-toggle {
-      text-align: center;            /* Center the language buttons */
-      padding: 20px 0;               /* Vertical space */
+      background: rgba(0,0,0,0.8);
+      padding: 15px 0;
+      text-align: center;
     }
 
     .language-toggle button {
-      margin: 0 5px;                 /* Space between buttons */
-      padding: 8px 16px;             /* Button padding */
+      margin: 0 5px;
+      padding: 8px 20px;
       font-size: 14px;
       cursor: pointer;
-      border: none;
-      background-color: #fff;        /* Bright white background */
-      font-family: 'Noto Sans', sans-serif;
-      color: #5f6368;
-      border-radius: 4px;
-      transition: background-color 0.3s, box-shadow 0.3s;
+      border: 2px solid #fff;
+      background: transparent;
+      color: #fff;
+      border-radius: 25px;
+      transition: all 0.3s ease;
+      font-weight: 500;
     }
 
     .language-toggle button:hover {
-      background-color: #f8f9fa;     /* Light grey on hover */
-      box-shadow: 0 1px 2px rgba(0,0,0,0.1); /* Soft shadow */
+      background: #fff;
+      color: #333;
+      transform: translateY(-2px);
     }
 
-    /* Language toggle behavior: show only selected language */
-    .telugu .english-text { display: none; }  /* Hide English when Telugu is active */
-    .english .telugu-text { display: none; }  /* Hide Telugu when English is active */
+    /* Language visibility */
+    .telugu .english-text { display: none; }
+    .english .telugu-text { display: none; }
+
+    /* Header Styles - Matching Home Page */
+    header {
+      background: #DC143C;
+      box-shadow: none;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      position: relative;
+    }
+
+    .logo {
+      position: absolute;
+      left: 20px;
+    }
+
+    .logo img {
+      height: 50px;
+      width: auto;
+      border-radius: 50%;
+      border: 2px solid #fff;
+    }
+
+    .desktop-nav {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    .desktop-nav ul {
+      display: flex;
+      list-style: none;
+      gap: 0;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    .desktop-nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 18px 25px;
+      transition: all 0.3s ease;
+      border-bottom: 3px solid transparent;
+      display: block;
+    }
+
+    .desktop-nav a:hover,
+    .desktop-nav a[style*="color: #ffe4e1"] {
+      background: rgba(255,255,255,0.1);
+      border-bottom: 3px solid #FFD700;
+    }
+
+    .donate-btn {
+      background: #FFD700 !important;
+      color: #DC143C !important;
+      font-weight: 700;
+      margin-left: 15px !important;
+      border-radius: 5px !important;
+      border-bottom: 3px solid #FFD700 !important;
+    }
+
+    .donate-btn:hover {
+      background: #FFF !important;
+      color: #DC143C !important;
+      border-bottom: 3px solid #FFD700 !important;
+    }
+
+    /* Mobile Menu Button */
+    .mobile-menu-button {
+      display: none;
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 24px;
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+
+    .mobile-menu-button:hover {
+      background: rgba(255,255,255,0.2);
+    }
+
+    /* Mobile Navigation - Matching Home Page */
+    .mobile-nav {
+      display: none;
+      background: #DC143C;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      padding: 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .mobile-nav ul {
+      list-style: none;
+      text-align: left;
+      margin: 0;
+      padding: 0;
+    }
+
+    .mobile-nav li {
+      margin: 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .mobile-nav a {
+      color: #fff;
+      text-decoration: none;
+      display: block;
+      padding: 15px 20px;
+      transition: background 0.3s ease;
+    }
+
+    .mobile-nav a:hover {
+      background: rgba(255,255,255,0.1);
+    }
+
+    .mobile-nav .donate-btn {
+      background: #FFD700 !important;
+      color: #DC143C !important;
+      font-weight: 700;
+      margin: 10px 20px;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    /* Main Content Area */
+    .main-content {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .content-card {
+      background: #f8f8f8;
+      border-radius: 15px;
+      padding: 60px 50px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+      margin: 20px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .content-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: linear-gradient(45deg, #8B0000, #DC143C);
+    }
+
+    .section-title {
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: #8B0000;
+      text-align: center;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .section-content {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      color: #444;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .bible-verse {
+      background: linear-gradient(135deg, #8B0000, #DC143C);
+      color: #fff;
+      padding: 25px 30px;
+      border-radius: 10px;
+      font-style: italic;
+      font-size: 1.1rem;
+      text-align: center;
+      margin: 30px 0;
+      box-shadow: 0 5px 20px rgba(139,0,0,0.3);
+    }
+
+    .mission-title {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #8B0000;
+      text-align: center;
+      margin-bottom: 25px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    /* Founders Section */
+    .founders-section {
+      background: #fff;
+      border-radius: 15px;
+      padding: 50px;
+      margin: 40px 0;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    }
+
+    .founders-title {
+      font-size: 2.5rem;
+      color: #8B0000;
+      text-align: center;
+      margin-bottom: 40px;
+      font-weight: 700;
+    }
+
+    .founder-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      justify-items: center;
+    }
+
+    .founder {
+      text-align: center;
+      background: #f9f9f9;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .founder:hover {
+      transform: translateY(-5px);
+    }
+
+    .founder-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #8B0000;
+      margin-bottom: 20px;
+    }
+
+    .founder h3 {
+      color: #8B0000;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .founder h4 {
+      color: #666;
+      font-size: 1.2rem;
+      font-weight: 400;
+    }
+
+    /* Chatbot Button */
+    .chatbot-button {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: linear-gradient(45deg, #8B0000, #DC143C);
+      border: none;
+      border-radius: 50px;
+      padding: 15px 25px;
+      color: #fff;
+      cursor: pointer;
+      box-shadow: 0 5px 20px rgba(139,0,0,0.4);
+      z-index: 1000;
+      transition: all 0.3s ease;
+    }
+
+    .chatbot-button:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 8px 30px rgba(139,0,0,0.6);
+    }
+
+    .chatbot-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .chatbot-wrapper img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+    }
+
+    /* Chatbot Popup */
+    .chatbot-popup {
+      position: fixed;
+      bottom: 100px;
+      right: 30px;
+      width: 350px;
+      height: 500px;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+      z-index: 1001;
+      overflow: hidden;
+    }
+
+    .chatbot-popup.hidden {
+      display: none;
+    }
+
+    .chatbot-header {
+      background: linear-gradient(45deg, #8B0000, #DC143C);
+      color: #fff;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .close-button {
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 24px;
+      cursor: pointer;
+      padding: 5px;
+      border-radius: 50%;
+      transition: background 0.3s ease;
+    }
+
+    .close-button:hover {
+      background: rgba(255,255,255,0.2);
+    }
+
+    /* Footer - Matching Home Page */
+    footer {
+      background: #2d2d2d;
+      color: #fff;
+      padding: 20px 0;
+      margin-top: 60px;
+      border-top: 3px solid #DC143C;
+    }
+
+    .footer-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-container p {
+      font-size: 14px;
+      margin: 0;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .social-icons a {
+      display: block;
+      width: 35px;
+      height: 35px;
+      background: #DC143C;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      background: #8B0000;
+      transform: translateY(-2px);
+    }
+
+    .social-icons img {
+      width: 18px;
+      height: 18px;
+      filter: brightness(0) invert(1);
+    }
+
+    /* Mobile Responsive - Updated for Home Page Match */
+    @media (max-width: 768px) {
+      .desktop-nav {
+        display: none;
+      }
+
+      .mobile-menu-button {
+        display: block;
+        position: absolute;
+        right: 20px;
+      }
+
+      .header-container {
+        justify-content: center;
+        padding: 15px 0;
+      }
+
+      .logo {
+        position: static;
+        margin-right: auto;
+      }
+
+      .section-title {
+        font-size: 2.5rem;
+      }
+
+      .mission-title {
+        font-size: 2rem;
+      }
+
+      .content-card {
+        padding: 40px 30px;
+      }
+
+      .founders-section {
+        padding: 30px 20px;
+      }
+
+      .founder-container {
+        grid-template-columns: 1fr;
+      }
+
+      .chatbot-popup {
+        width: 90vw;
+        right: 5vw;
+        height: 400px;
+      }
+
+      .footer-container {
+        text-align: center;
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .section-title {
+        font-size: 2rem;
+      }
+
+      .content-card {
+        padding: 30px 20px;
+      }
+
+      .section-content {
+        font-size: 1.1rem;
+      }
+    }
   </style>
 </head>
 
-  
 <body class="english">
   <!-- Language Toggle -->
   <div class="language-toggle">
@@ -78,10 +530,10 @@
   </div>
 
   <!-- Header -->
-  <header id="mainHeader">
+  <header>
     <div class="header-container">
       <div class="logo">
-        <img src="images/logo.webp" alt="Holy Spirit Prayer House Logo">
+        <img src="https://via.placeholder.com/60x60/8B0000/ffffff?text=HSPH" alt="Holy Spirit Prayer House Logo">
       </div>
       <nav class="desktop-nav">
         <ul class="nav-links">
@@ -108,130 +560,95 @@
         <li><a href="events.html"><span class="english-text">Events</span><span class="telugu-text">ఈవెంట్స్</span></a></li>
         <li><a href="contact.html"><span class="english-text">Contact</span><span class="telugu-text">సంప్రదించండి</span></a></li>
         <li><a href="volunteer.html"><span class="english-text">Get Involved</span><span class="telugu-text">చేరడం</span></a></li>
-        <li><a href="donate.html" class="donate-btn"><span class="english-text">Donate Now</span><span class="telugu-text">దానం చేయండి</span></a></li>
+        <li><a href="donate.html" class="donate-btn"><span class="english-text">Donate Now</span><span class="telugu-text">దానం చేయండি</span></a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-container">
-      <div class="hero-content">
-        <h1>
-          <span class="english-text">About Us</span>
-          <span class="telugu-text">మా గురించి</span>
-        </h1>
-        <p>
-          <span class="english-text">Bringing Hope, Love, and Support to the Community</span>
-          <span class="telugu-text">భక్తి, ప్రేమ, మద్దతు సమాజానికి అందించడమే మా లక్ష్యం</span>
-        </p>
-        <a href="contact.html" class="cta-button">
-          <span class="english-text">Get in Touch</span>
-          <span class="telugu-text">సంపర్కంలో ఉండండి</span>
-        </a>
-      </div>
-    </div>
-  </section>
+
+
+
+
+
+  
 
   <!-- Main Content -->
-  <main>
-    <section class="section-container">
-      <!-- Who We Are -->
-      <div class="section">
-        <h2>
-          <span class="english-text">Who We Are</span>
-          <span class="telugu-text">మేము ఎవరు</span>
-        </h2>
-        <p>
-          <span class="english-text">
-            We are a group of believers, a Church called by the name "Holy Spirit Prayer House" led by Rev. Palaparthi Moses, located in Oduru, West Godavari, Andhra Pradesh, India.
-          </span>
-          <span class="telugu-text">
-            మేము విశ్వాసుల సమూహం, "హోలీ స్పిరిట్ ప్రార్థన మందిరం" అనే చర్చ్, ఇది రెవ్. పాలపర్తి మోషే సారథ్యంలో ఆంధ్రప్రదేశ్ రాష్ట్రం, పశ్చిమ గోదావరి జిల్లాలోని ఓదూరులో ఉంది.
-          </span>
-        </p>
+  <div class="main-content">
+    <!-- About Us Section -->
+    <div class="content-card">
+      <h1 class="section-title">
+        <span class="english-text">About Us</span>
+        <span class="telugu-text">మా గురించి</span>
+      </h1>
+      <p class="section-content">
+        <span class="english-text">
+          We are a group of believers, a Church called by the name "Holy Spirit Prayer House" led by Rev. Palaparthi Moses, located in Oduru, West Godavari, Andhra Pradesh, India.
+        </span>
+        <span class="telugu-text">
+          మేము విశ్వాసుల సమూహం, "హోలీ స్పిరిట్ ప్రార్థన మందిరం" అనే చర్చ్, ఇది రెవ్. పాలపర్తి మోషే సారథ్యంలో ఆంధ్రప్రదేశ్ రాష్ట్రం, పశ్చిమ గోదావరి జిల్లాలోని ఓదూరులో ఉంది.
+        </span>
+      </p>
+      
+      <div class="bible-verse">
+        <span class="english-text">
+          "Repent and be baptized, every one of you, in the name of Jesus Christ for the forgiveness of your sins..." — Acts 2:38–39
+        </span>
+        <span class="telugu-text">
+          "మీ పాపముల క్షమాపణ కొరకు..." — అపొస్తలుల కార్యములు 2:38–39
+        </span>
       </div>
-
-      <!-- Our Foundation -->
-      <div class="section">
-        <h2>
-          <span class="english-text">Our Foundation</span>
-          <span class="telugu-text">మా పునాది</span>
-        </h2>
-        <div class="bible-verse">
-          <span class="english-text">
-            "Repent and be baptized, every one of you, in the name of Jesus Christ for the forgiveness of your sins..." — Acts 2:38–39
-          </span>
-          <span class="telugu-text">
-            "మీ పాపముల క్షమాపణ కొరకు..." — అపొస్తలుల కార్యములు 2:38–39
-          </span>
-        </div>
-        <p>
-          <span class="english-text">
-            Our faith is built on the solid foundation of God's Word and the transforming power of Jesus Christ.
-          </span>
-          <span class="telugu-text">
-            మా విశ్వాసం దేవుని వాక్యం మరియు యేసుక్రీస్తు యొక్క మార్చే శక్తిపై ఆధారపడి ఉంది.
-          </span>
-        </p>
-      </div>
-
-      <!-- Our Values -->
-      <div class="section">
-        <h2>
-          <span class="english-text">Our Values</span>
-          <span class="telugu-text">మా విలువలు</span>
-        </h2>
-        <p>
-          <span class="english-text">
-            We are dedicated to spreading faith, hope, and love through our ministries and community outreach programs. Our church serves as a beacon of light for those seeking spiritual guidance and support.
-          </span>
-          <span class="telugu-text">
-            మా సేవల ద్వారా విశ్వాసం, ఆశ మరియు ప్రేమను వ్యాప్తి చేయడమే మా లక్ష్యం. మా చర్చ్ ఆధ్యాత్మిక మార్గదర్శకత్వం మరియు మద్దతు కోరే వారికి వెలుగు మార్గంలా ఉంటుంది.
-          </span>
-        </p>
-      </div>
-    </section>
+    </div>
 
     <!-- Mission Section -->
-    <section class="mission-section">
-      <div class="mission-content">
-        <h2>
-          <span class="english-text">Our Mission</span>
-          <span class="telugu-text">మా లక్ష్యం</span>
-        </h2>
-        <p>
-          <span class="english-text">
-            We introduce our God the Father, His Son and our Friend Jesus, and the Holy Spirit to all who seek truth and salvation. Through prayer, worship, and community service, we strive to make a positive impact in the lives of those around us.
-          </span>
-          <span class="telugu-text">
-            మేము మా పరలోక తండ్రిని, ఆయన కుమారుడైన యేసును, పవిత్రాత్మను సత్యం మరియు మోక్షం కోరే వారందరికీ పరిచయం చేస్తాము. ప్రార్థన, ఆరాధన మరియు సమాజ సేవ ద్వారా మన చుట్టూ ఉన్న వారి జీవితాలపై సానుకూల ప్రభావం చూపడానికి ప్రయత్నిస్తాము.
-          </span>
-        </p>
-      </div>
-    </section>
+    <div class="content-card">
+      <h2 class="mission-title">
+        <span class="english-text">Our Mission (What We Do)</span>
+        <span class="telugu-text">మా లక్ష్యం</span>
+      </h2>
+      <p class="section-content">
+        <span class="english-text">
+          We introduce our God the Father, His Son and our Friend Jesus, and the Holy Spirit to all who seek truth and salvation. Through prayer, worship, and community service, we strive to make a positive impact in the lives of those around us.
+        </span>
+        <span class="telugu-text">
+          మేము మా పరలోక తండ్రిని, ఆయన కుమారుడైన యేసును, పవిత్రాత్మను సత్యం మరియు మోక్షం కోరే వారందరికీ పరిచయం చేస్తాము. ప్రార్థన, ఆరాధన మరియు సమాజ సేవ ద్వారా మన చుట్టూ ఉన్న వారి జీవితాలపై సానుకూల ప్రభావం చూపడానికి ప్రయత్నిస్తాము.
+        </span>
+      </p>
+    </div>
 
+
+
+
+
+
+
+
+
+    
     <!-- Founders Section -->
-    <section class="founders-section">
+    <div class="founders-section">
+      <h2 class="founders-title">
+        <span class="english-text">Our Leadership</span>
+        <span class="telugu-text">మా నాయకత్వం</span>
+      </h2>
       <div class="founder-container">
         <div class="founder">
-          <img src="images/founder.jpg" alt="Founder Image" class="founder-img">
-          <h2><span class="english-text">Founder</span><span class="telugu-text">స్థాపకుడు</span></h2>
-          <h3><span class="english-text">Pastor P. Moses</span><span class="telugu-text">పాస్టర్ పి. మోసెస్</span></h3>
+          <img src="https://via.placeholder.com/150x150/8B0000/ffffff?text=PM" alt="Founder Image" class="founder-img">
+          <h3><span class="english-text">Founder</span><span class="telugu-text">స్థాపకుడు</span></h3>
+          <h4><span class="english-text">Pastor P. Moses</span><span class="telugu-text">పాస్టర్ పి. మోసెస్</span></h4>
         </div>
-        <div class="co-founder">
-          <img src="images/co-founder.jpg" alt="Co-Founder Image" class="founder-img">
-          <h2><span class="english-text">Co-Founder</span><span class="telugu-text">సహ-స్థాపకుడు</span></h2>
-          <h3><span class="english-text">Bro. Billygraham Moses</span><span class="telugu-text">బ్రదర్ బిలీగ్రాహం మోసెస్</span></h3>
+        <div class="founder">
+          <img src="https://via.placeholder.com/150x150/8B0000/ffffff?text=BM" alt="Co-Founder Image" class="founder-img">
+          <h3><span class="english-text">Co-Founder</span><span class="telugu-text">సహ-స్థాపకుడు</span></h3>
+          <h4><span class="english-text">Bro. Billygraham Moses</span><span class="telugu-text">బ్రదర్ బిలీగ్రాహం మోసెస్</span></h4>
         </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </div>
 
   <!-- Chatbot Button -->
   <button id="chatbot-toggle" class="chatbot-button" aria-label="Open Chatbot">
     <div class="chatbot-wrapper">
-      <img src="images/founder.jpg" alt="Chat with Amma">
+      <img src="https://via.placeholder.com/40x40/ffffff/8B0000?text=A" alt="Chat with Amma">
       <span>
         <span class="english-text">Talk with Amma</span>
         <span class="telugu-text">అమ్మతో చాట్ చేయండి</span>
@@ -245,7 +662,7 @@
       <span><span class="english-text">Chat with Amma</span><span class="telugu-text">అమ్మతో చాట్ చేయండి</span></span>
       <button id="close-chatbot" class="close-button">&times;</button>
     </div>
-    <iframe src="https://talkwithamma.azurewebsites.net" width="100%" height="400"></iframe>
+    <iframe src="https://talkwithamma.azurewebsites.net" width="100%" height="450"></iframe>
   </div>
 
   <!-- Footer -->
@@ -258,19 +675,32 @@
       </p>
       <div class="social-icons">
         <a href="https://www.youtube.com/@pastorpmoses" target="_blank" aria-label="YouTube">
-          <img src="images/youtube.png" alt="YouTube">
+          <img src="https://via.placeholder.com/20x20/ffffff/ffffff?text=Y" alt="YouTube">
         </a>
         <a href="https://www.instagram.com/hsph_oduru/" target="_blank" aria-label="Instagram">
-          <img src="images/instagram.png" alt="Instagram">
+          <img src="https://via.placeholder.com/20x20/ffffff/ffffff?text=I" alt="Instagram">
         </a>
         <a href="https://www.facebook.com/holy.jesus132" target="_blank" aria-label="Facebook">
-          <img src="images/facebook.png" alt="Facebook">
+          <img src="https://via.placeholder.com/20x20/ffffff/ffffff?text=F" alt="Facebook">
         </a>
       </div>
     </div>
   </footer>
 
   <script>
+    // Language toggle functionality
+    function toggleLanguage(lang) {
+      document.body.classList.remove("english", "telugu");
+      document.body.classList.add(lang);
+    }
+
+    // Load saved language on page load
+    document.addEventListener("DOMContentLoaded", function() {
+      const savedLang = "english"; // Default to English since localStorage is not available
+      document.body.classList.remove("english", "telugu");
+      document.body.classList.add(savedLang);
+    });
+
     // Mobile menu toggle
     document.getElementById('menuButton')?.addEventListener('click', function() {
       const mobileNav = document.getElementById('mobileNav');
@@ -289,6 +719,17 @@
     document.getElementById('close-chatbot')?.addEventListener('click', function() {
       const popup = document.getElementById('chatbot-popup');
       popup.classList.add('hidden');
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(event) {
+      const mobileNav = document.getElementById('mobileNav');
+      const menuButton = document.getElementById('menuButton');
+      
+      if (!mobileNav.contains(event.target) && !menuButton.contains(event.target)) {
+        mobileNav.style.display = 'none';
+        menuButton.setAttribute('aria-expanded', 'false');
+      }
     });
   </script>
 </body>
