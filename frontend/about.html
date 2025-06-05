@@ -10,76 +10,11 @@
   <title>Holy Spirit Prayer House | హోలీ స్పిరిట్ ప్రార్థన మందిరం</title>
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+Telugu&display=swap" rel="stylesheet">
 
-<style>
-    /* ==============================================
-       GLOBAL STYLES
-    ============================================== */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    :root {
-      --primary-red: #dc2626;
-      --dark-red: #b91c1c;
-      --deep-red: #8B0000;
-      --black: #000000;
-      --dark-gray: #1a1a1a;
-      --light-gray: #f8f9fa;
-      --white: #ffffff;
-      --shadow-light: rgba(0,0,0,0.1);
-      --shadow-medium: rgba(0,0,0,0.15);
-      --shadow-heavy: rgba(220,38,38,0.3);
-
-      /* Typography Scale */
-      --font-size-xs: 0.75rem;
-      --font-size-sm: 0.875rem;
-      --font-size-base: 1rem;
-      --font-size-lg: 1.125rem;
-      --font-size-xl: 1.25rem;
-      --font-size-2xl: 1.5rem;
-      --font-size-3xl: 1.875rem;
-      --font-size-4xl: 2.25rem;
-      --font-size-5xl: 3rem;
-      --font-size-6xl: 3.75rem;
-
-      /* Spacing Scale */
-      --space-1: 0.25rem;
-      --space-2: 0.5rem;
-      --space-3: 0.75rem;
-      --space-4: 1rem;
-      --space-5: 1.25rem;
-      --space-6: 1.5rem;
-      --space-8: 2rem;
-      --space-10: 2.5rem;
-      --space-12: 3rem;
-      --space-16: 4rem;
-      --space-20: 5rem;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      line-height: 1.7;
-      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 50%, #dee2e6 100%);
-      scroll-behavior: smooth;
-      color: #2d3748;
-      font-size: var(--font-size-base);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    /* Telugu Font Enhancement */
-    .telugu-text {
-      font-family: 'Noto Sans Telugu', sans-serif;
-      font-weight: 400;
-    }
-
+  <style>
     /* ==============================================
        HEADER STYLES
     ============================================== */
@@ -87,34 +22,29 @@
     /* Language Toggle Styles */
     .language-toggle {
       text-align: center;
-      padding: var(--space-6) 0;
-      background: linear-gradient(135deg, var(--black) 0%, #333333 100%);
+      padding: 20px 0;
+      background: linear-gradient(135deg, #000000 0%, #333333 100%);
     }
 
     .language-toggle button {
-      margin: 0 var(--space-2);
-      padding: var(--space-3) var(--space-5);
-      font-size: var(--font-size-sm);
+      margin: 0 5px;
+      padding: 8px 16px;
+      font-size: 14px;
       cursor: pointer;
-      border: 2px solid var(--primary-red);
-      background-color: var(--white);
-      font-family: inherit;
-      color: var(--primary-red);
-      border-radius: 30px;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      box-shadow: 0 4px 12px rgba(220,38,38,0.2);
-      font-weight: 500;
+      border: 2px solid #dc2626;
+      background-color: #fff;
+      font-family: 'Roboto', sans-serif;
+      color: #dc2626;
+      border-radius: 25px;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 10px rgba(220,38,38,0.2);
     }
 
     .language-toggle button:hover {
-      background-color: var(--primary-red);
+      background-color: #dc2626;
       color: white;
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(220,38,38,0.4);
-    }
-
-    .language-toggle button:active {
-      transform: translateY(0);
+      box-shadow: 0 4px 15px rgba(220,38,38,0.4);
     }
 
     /* Language Visibility Rules */
@@ -123,8 +53,8 @@
 
     /* Header Styles */
     #mainHeader {
-      background: linear-gradient(135deg, var(--primary-red) 0%, var(--black) 100%);
-      box-shadow: 0 4px 25px var(--shadow-heavy);
+      background: linear-gradient(135deg, #dc2626 0%, #000000 100%);
+      box-shadow: 0 4px 20px rgba(220,38,38,0.3);
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -136,19 +66,14 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: var(--space-4);
+      padding: 1rem;
     }
 
     .logo img {
-      height: 55px;
+      height: 50px;
       width: auto;
       border-radius: 50%;
-      box-shadow: 0 4px 15px var(--shadow-medium);
-      transition: transform 0.3s ease;
-    }
-
-    .logo img:hover {
-      transform: scale(1.05);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
     }
 
     .desktop-nav {
@@ -160,17 +85,16 @@
       list-style: none;
       margin: 0;
       padding: 0;
-      gap: var(--space-2);
+      gap: 1rem;
     }
 
     .nav-links a {
       color: white;
       text-decoration: none;
-      padding: var(--space-3) var(--space-4);
+      padding: 10px 15px;
       border-radius: 25px;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: all 0.3s ease;
       font-weight: 500;
-      font-size: var(--font-size-sm);
     }
 
     .nav-links a:hover {
@@ -179,26 +103,21 @@
     }
 
     .donate-btn {
-      background: linear-gradient(135deg, var(--primary-red) 0%, var(--dark-red) 100%) !important;
+      background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%) !important;
       color: white !important;
-      font-weight: 600;
+      font-weight: bold;
       box-shadow: 0 4px 15px rgba(220,38,38,0.4);
     }
 
     .mobile-menu-button {
       display: none;
       background: rgba(220,38,38,0.3);
-      border: 2px solid var(--primary-red);
+      border: 2px solid #dc2626;
       color: white;
-      font-size: var(--font-size-xl);
-      padding: var(--space-3);
-      border-radius: 8px;
+      font-size: 1.5rem;
+      padding: 10px;
+      border-radius: 5px;
       cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .mobile-menu-button:hover {
-      background: rgba(220,38,38,0.5);
     }
 
     .mobile-nav {
@@ -208,8 +127,7 @@
       top: 100%;
       left: 0;
       right: 0;
-      backdrop-filter: blur(15px);
-      box-shadow: 0 10px 30px var(--shadow-medium);
+      backdrop-filter: blur(10px);
     }
 
     .mobile-nav.active {
@@ -218,9 +136,9 @@
 
     .mobile-nav .nav-links {
       flex-direction: column;
-      padding: var(--space-4);
+      padding: 1rem;
     }
-
+    
     /* ==============================================
        MAIN CONTENT STYLES
     ============================================== */
@@ -361,16 +279,18 @@
       border-radius: 2px;
     }
 
-    /* ==============================================
+
+
+/* ==============================================
        FOUNDER SECTION STYLES
     ============================================== */
 
     .founders-section {
-      background: linear-gradient(135deg, var(--black) 0%, var(--primary-red) 50%, var(--black) 100%);
-      padding: var(--space-20) 0;
-      margin-top: auto;
-      border-top: 4px solid var(--primary-red);
-      border-bottom: 4px solid var(--primary-red);
+      background: linear-gradient(135deg, #000000 0%, #dc2626 50%, #000000 100%);
+      padding: 3rem 0;
+      margin-top: 2rem;
+      border-top: 3px solid #dc2626;
+      border-bottom: 3px solid #dc2626;
       position: relative;
       overflow: hidden;
     }
@@ -387,22 +307,22 @@
     }
 
     .founder-container {
-      max-width: 900px;
+      max-width: 800px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: var(--space-12);
-      padding: 0 var(--space-8);
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2.5rem;
+      padding: 0 2rem;
     }
 
     .founder, .co-founder {
       text-align: center;
       background: rgba(255,255,255,0.98);
-      padding: var(--space-10);
-      border-radius: 20px;
-      box-shadow: 0 15px 40px var(--shadow-medium);
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
       transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      border: 3px solid transparent;
+      border: 2px solid transparent;
       position: relative;
       overflow: hidden;
     }
@@ -415,7 +335,7 @@
       width: 100%;
       height: 100%;
       background: linear-gradient(90deg, transparent, rgba(220,38,38,0.1), transparent);
-      transition: left 0.6s ease;
+      transition: left 0.5s ease;
     }
 
     .founder:hover::before, .co-founder:hover::before {
@@ -423,40 +343,39 @@
     }
 
     .founder:hover, .co-founder:hover {
-      transform: translateY(-10px) scale(1.02);
-      box-shadow: 0 25px 50px rgba(220,38,38,0.3);
-      border: 3px solid var(--primary-red);
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 20px 40px rgba(220,38,38,0.25);
+      border: 2px solid #dc2626;
     }
 
     .founder-img {
-      width: 140px;
-      height: 140px;
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
       object-fit: cover;
-      margin: 0 auto var(--space-6);
-      border: 5px solid var(--primary-red);
-      box-shadow: 0 10px 25px var(--shadow-medium);
-      transition: all 0.4s ease;
+      margin: 0 auto 1.5rem;
+      border: 4px solid #dc2626;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
     }
 
     .founder:hover .founder-img, .co-founder:hover .founder-img {
       transform: scale(1.1);
-      box-shadow: 0 15px 35px rgba(220,38,38,0.4);
+      box-shadow: 0 12px 25px rgba(220,38,38,0.4);
     }
 
     .founder h2, .co-founder h2 {
-      color: var(--primary-red);
-      margin-bottom: var(--space-2);
-      font-size: var(--font-size-xl);
+      color: #dc2626;
+      margin-bottom: 0.5rem;
+      font-size: 1.3rem;
       font-weight: 600;
-      font-family: 'Playfair Display', serif;
     }
 
     .founder h3, .co-founder h3 {
-      color: #2d3748;
+      color: #333333;
       font-weight: 500;
-      font-size: var(--font-size-lg);
-      margin-bottom: var(--space-4);
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
     }
 
     /* ==============================================
@@ -465,13 +384,13 @@
 
     .chatbot-button {
       position: fixed;
-      bottom: 30px;
-      right: 30px;
-      background: linear-gradient(135deg, var(--primary-red) 0%, var(--dark-red) 50%, var(--black) 100%);
-      border: 3px solid var(--primary-red);
+      bottom: 25px;
+      right: 25px;
+      background: linear-gradient(135deg, #dc2626 0%, #b91c1c 50%, #000000 100%);
+      border: 2px solid #dc2626;
       border-radius: 60px;
-      padding: var(--space-5) var(--space-8);
-      box-shadow: 0 12px 35px rgba(220,38,38,0.3);
+      padding: 18px 25px;
+      box-shadow: 0 10px 30px rgba(220,38,38,0.3);
       cursor: pointer;
       z-index: 1000;
       transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -479,8 +398,8 @@
 
     .chatbot-button:hover {
       transform: translateY(-8px) scale(1.05);
-      box-shadow: 0 20px 50px rgba(220,38,38,0.5);
-      background: linear-gradient(135deg, var(--dark-red) 0%, #991b1b 50%, var(--black) 100%);
+      box-shadow: 0 20px 45px rgba(220,38,38,0.5);
+      background: linear-gradient(135deg, #b91c1c 0%, #991b1b 50%, #000000 100%);
     }
 
     .chatbot-button:active {
@@ -492,35 +411,29 @@
       align-items: center;
       color: white;
       font-weight: 600;
-      font-size: var(--font-size-base);
     }
 
     .chatbot-wrapper img {
-      width: 50px;
-      height: 50px;
+      width: 45px;
+      height: 45px;
       border-radius: 50%;
-      margin-right: var(--space-3);
-      border: 3px solid rgba(255,255,255,0.3);
-      transition: transform 0.3s ease;
-    }
-
-    .chatbot-button:hover .chatbot-wrapper img {
-      transform: scale(1.1);
+      margin-right: 12px;
+      border: 2px solid rgba(255,255,255,0.3);
     }
 
     .chatbot-popup {
       position: fixed;
-      bottom: 120px;
-      right: 30px;
-      width: 400px;
-      height: 520px;
+      bottom: 100px;
+      right: 25px;
+      width: 380px;
+      height: 500px;
       background: white;
-      border-radius: 25px;
-      box-shadow: 0 30px 60px var(--shadow-medium);
+      border-radius: 20px;
+      box-shadow: 0 25px 50px rgba(0,0,0,0.15);
       z-index: 1001;
       overflow: hidden;
       transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      border: 2px solid rgba(220,38,38,0.1);
+      border: 1px solid rgba(220,38,38,0.1);
     }
 
     .chatbot-popup.hidden {
@@ -528,30 +441,24 @@
     }
 
     .chatbot-header {
-      background: linear-gradient(135deg, var(--primary-red) 0%, var(--dark-red) 50%, var(--black) 100%);
+      background: linear-gradient(135deg, #dc2626 0%, #b91c1c 50%, #000000 100%);
       color: white;
-      padding: var(--space-6);
+      padding: 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      box-shadow: 0 4px 15px var(--shadow-light);
-      font-weight: 600;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
 
     .close-button {
       background: none;
       border: none;
       color: white;
-      font-size: var(--font-size-2xl);
+      font-size: 1.8rem;
       cursor: pointer;
       transition: all 0.3s ease;
-      padding: var(--space-2);
+      padding: 5px;
       border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
 
     .close-button:hover {
@@ -564,12 +471,11 @@
     ============================================== */
 
     footer {
-      background: linear-gradient(135deg, var(--black) 0%, var(--dark-gray) 50%, #333333 100%);
+      background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #333333 100%);
       color: white;
-      padding: var(--space-12) 0;
+      padding: 2.5rem 0;
       text-align: center;
       position: relative;
-
     }
 
     footer::before {
@@ -578,26 +484,21 @@
       top: 0;
       left: 0;
       right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, transparent, var(--primary-red), transparent);
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #dc2626, transparent);
     }
 
     .footer-container {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 0 var(--space-8);
-    }
-
-    .footer-container p {
-      font-size: var(--font-size-base);
-      margin-bottom: var(--space-6);
+      padding: 0 2rem;
     }
 
     .social-icons {
-      margin-top: var(--space-6);
+      margin-top: 1.5rem;
       display: flex;
       justify-content: center;
-      gap: var(--space-6);
+      gap: 1.5rem;
     }
 
     .social-icons a {
@@ -611,18 +512,18 @@
     }
 
     .social-icons img {
-      width: 50px;
-      height: 50px;
-      border-radius: 15px;
-      box-shadow: 0 8px 25px rgba(220,38,38,0.2);
-      border: 3px solid transparent;
+      width: 45px;
+      height: 45px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(220,38,38,0.2);
+      border: 2px solid transparent;
       transition: all 0.4s ease;
     }
 
     .social-icons img:hover {
-      border: 3px solid var(--primary-red);
+      border: 2px solid #dc2626;
       transform: scale(1.15);
-      box-shadow: 0 12px 35px rgba(220,38,38,0.4);
+      box-shadow: 0 10px 30px rgba(220,38,38,0.4);
     }
 
     /* ==============================================
@@ -660,29 +561,11 @@
       }
     }
 
-    .fade-in {
-      animation: fadeInUp 0.8s ease-out;
-    }
-
-    .slide-in-right {
-      animation: slideInFromRight 0.6s ease-out;
-    }
-
-    .pulse-animation {
-      animation: pulse 2s infinite;
-    }
-
     /* ==============================================
        RESPONSIVE DESIGN
     ============================================== */
 
     @media (max-width: 768px) {
-      :root {
-        --font-size-5xl: 2.25rem;
-        --font-size-4xl: 1.875rem;
-        --font-size-3xl: 1.5rem;
-      }
-
       .desktop-nav {
         display: none;
       }
@@ -691,41 +574,23 @@
         display: block;
       }
 
-      .page-wrapper {
-        min-height: calc(100vh - 150px);
-        padding: var(--space-6) 0;
+      .page-title {
+        font-size: 2.2rem;
       }
 
-      .main-content {
-        padding: 0 var(--space-4);
-
+      .hero p {
+        font-size: 1.1rem;
       }
 
-      .content-card {
-        padding: var(--space-10) var(--space-6);
-      }
-
-      .section-title {
-        font-size: var(--font-size-4xl);
-        letter-spacing: 1px;
-      }
-
-      .mission-title {
-        font-size: var(--font-size-3xl);
-      }
-
-      .section-content {
-        font-size: var(--font-size-base);
+      .section-container {
+        grid-template-columns: 1fr;
+        margin: 2rem auto;
       }
 
       .founder-container {
         grid-template-columns: 1fr;
-        gap: var(--space-8);
-        padding: 0 var(--space-4);
-      }
-
-      .founders-section {
-        padding: var(--space-12) 0;
+        gap: 2rem;
+        padding: 0 1rem;
       }
 
       .chatbot-popup {
@@ -737,91 +602,76 @@
       .chatbot-button {
         bottom: 20px;
         right: 20px;
-        padding: var(--space-4) var(--space-6);
-      }
-
-      .chatbot-wrapper {
-        font-size: var(--font-size-sm);
+        padding: 15px 20px;
       }
 
       .chatbot-wrapper img {
-        width: 45px;
-        height: 45px;
+        width: 40px;
+        height: 40px;
       }
 
       .social-icons {
-        gap: var(--space-4);
+        gap: 1rem;
       }
 
       .social-icons img {
-        width: 45px;
-        height: 45px;
+        width: 40px;
+        height: 40px;
       }
     }
 
     @media (max-width: 480px) {
       .founders-section {
-        padding: var(--space-10) 0;
+        padding: 2rem 0;
       }
 
       .founder, .co-founder {
-        padding: var(--space-6);
+        padding: 1.5rem;
       }
 
       .founder-img {
-        width: 120px;
-        height: 120px;
+        width: 100px;
+        height: 100px;
       }
 
       .chatbot-popup {
         height: 400px;
       }
+    }
 
-      .content-card {
-        padding: var(--space-8) var(--space-4);
-      }
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-      .bible-verse {
-        padding: var(--space-6);
-        font-size: var(--font-size-base);
-      }
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 50%, #dee2e6 100%);
+      scroll-behavior: smooth;
     }
 
     /* ==============================================
-       ACCESSIBILITY IMPROVEMENTS
+       ADDITIONAL ENHANCEMENTS
     ============================================== */
 
-    @media (prefers-reduced-motion: reduce) {
-      * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-      }
+    .fade-in {
+      animation: fadeInUp 0.8s ease-out;
     }
 
-    /* Focus styles for accessibility */
-    button:focus-visible,
-    a:focus-visible {
-      outline: 3px solid var(--primary-red);
-      outline-offset: 2px;
+    .slide-in-right {
+      animation: slideInFromRight 0.6s ease-out;
     }
 
-    /* High contrast mode support */
-    @media (prefers-contrast: high) {
-      .content-card {
-        border: 2px solid #333;
-      }
-
-      .section-content {
-        color: #000;
-      }
+    .pulse-animation {
+      animation: pulse 2s infinite;
     }
   </style>
 </head>
 
 <body class="english">
-
-
 
   <!-- ==============================================
        HEADER SECTION
@@ -829,8 +679,8 @@
 
   <!-- Language Switcher UI -->
   <div class="language-toggle">
-    <button onclick="toggleLanguage('english')" aria-label="Switch to English">English</button>
-    <button onclick="toggleLanguage('telugu')" aria-label="Switch to Telugu">తెలుగు</button>
+    <button onclick="toggleLanguage('english')">English</button>
+    <button onclick="toggleLanguage('telugu')">తెలుగు</button>
   </div>
 
   <!-- Header Section: Logo + Navigation -->
@@ -839,10 +689,10 @@
       <div class="logo">
         <img src="images/logo.webp" alt="Holy Spirit Prayer House Logo">
       </div>
-      <nav class="desktop-nav" aria-label="Main navigation">
+      <nav class="desktop-nav">
         <ul class="nav-links">
           <li><a href="index.html"><span class="english-text">Home</span><span class="telugu-text">హోమ్</span></a></li>
-          <li><a href="about.html" style="color: #ffe4e1;" aria-current="page"><span class="english-text">About</span><span class="telugu-text">గురించి</span></a></li>
+          <li><a href="about.html" style="color: #ffe4e1;"><span class="english-text">About</span><span class="telugu-text">గురించి</span></a></li>
           <li><a href="sermons.html"><span class="english-text">Sermons</span><span class="telugu-text">ప్రసంగాలు</span></a></li>
           <li><a href="ministries.html"><span class="english-text">Ministries</span><span class="telugu-text">సేవలు</span></a></li>
           <li><a href="orphanage.html"><span class="english-text">Orphanage</span><span class="telugu-text">అనాథాశ్రమం</span></a></li>
@@ -852,24 +702,24 @@
           <li><a href="donate.html" class="donate-btn"><span class="english-text">Donate Now</span><span class="telugu-text">దానం చేయండి</span></a></li>
         </ul>
       </nav>
-      <button id="menuButton" class="mobile-menu-button" aria-label="Open Menu" aria-expanded="false">☰</button>
+      <button id="menuButton" class="mobile-menu-button" aria-label="Open Menu">☰</button>
     </div>
 
     <!-- Mobile Navigation -->
-    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+    <nav class="mobile-nav" id="mobileNav">
       <ul class="nav-links">
         <li><a href="index.html"><span class="english-text">Home</span><span class="telugu-text">హోమ్</span></a></li>
-        <li><a href="about.html" aria-current="page"><span class="english-text">About</span><span class="telugu-text">గురించి</span></a></li>
+        <li><a href="about.html"><span class="english-text">About</span><span class="telugu-text">గురించి</span></a></li>
         <li><a href="sermons.html"><span class="english-text">Sermons</span><span class="telugu-text">ప్రసంగాలు</span></a></li>
         <li><a href="ministries.html"><span class="english-text">Ministries</span><span class="telugu-text">సేవలు</span></a></li>
         <li><a href="orphanage.html"><span class="english-text">Orphanage</span><span class="telugu-text">అనాథాశ్రమం</span></a></li>
         <li><a href="events.html"><span class="english-text">Events</span><span class="telugu-text">ఈవెంట్స్</span></a></li>
-        <li><a href="contact.html"><span class="english-text">Contact</span><span class="telugu-text">
+        <li><a href="contact.html"><span class="english-text">Contact</span><span class="telugu-text">సంప్రదించండి</span></a></li>
         <li><a href="volunteer.html"><span class="english-text">Get Involved</span><span class="telugu-text">చేరడం</span></a></li>
         <li><a href="donate.html" class="donate-btn"><span class="english-text">Donate Now</span><span class="telugu-text">దానం చేయండি</span></a></li>
       </ul>
     </nav>
-  </header>
+  </header>    
 
 
 
@@ -930,7 +780,7 @@
 
 
 
-  <!-- ==============================================
+ <!-- ==============================================
        FOUNDER SECTION
   ============================================== -->
 
