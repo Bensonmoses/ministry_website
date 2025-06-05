@@ -69,6 +69,9 @@
       scroll-behavior: smooth;
       color: #2d3748;
       font-size: var(--font-size-base);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
 
     /* Telugu Font Enhancement */
@@ -222,9 +225,19 @@
        MAIN CONTENT STYLES
     ============================================== */
 
+    .page-wrapper {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: calc(100vh - 200px); /* Adjust based on header height */
+      padding: var(--space-8) 0;
+    }
+
     .main-content {
       max-width: 1100px;
-      margin: var(--space-12) auto;
+      width: 100%;
       padding: 0 var(--space-6);
     }
 
@@ -355,7 +368,7 @@
     .founders-section {
       background: linear-gradient(135deg, var(--black) 0%, var(--primary-red) 50%, var(--black) 100%);
       padding: var(--space-20) 0;
-      margin-top: var(--space-8);
+      margin-top: auto;
       border-top: 4px solid var(--primary-red);
       border-bottom: 4px solid var(--primary-red);
       position: relative;
@@ -556,7 +569,6 @@
       padding: var(--space-12) 0;
       text-align: center;
       position: relative;
-      margin-top: var(--space-16);
     }
 
     footer::before {
@@ -678,9 +690,13 @@
         display: block;
       }
 
+      .page-wrapper {
+        min-height: calc(100vh - 150px);
+        padding: var(--space-6) 0;
+      }
+
       .main-content {
         padding: 0 var(--space-4);
-        margin: var(--space-8) auto;
       }
 
       .content-card {
@@ -802,6 +818,8 @@
 </head>
 
 <body class="english">
+
+
 
   <!-- ==============================================
        HEADER SECTION
