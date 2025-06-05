@@ -1,5 +1,4 @@
-
-<!DOCTYPE html>More actions
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <!-- Basic Metadata -->
@@ -140,11 +139,9 @@
       padding: 1rem;
     }
 
-  
-
     /* Main Content Area */
     .main-content {
-      max-width: 1000px;
+      max-width: 1200px;
       margin: 40px auto;
       padding: 0 20px;
     }
@@ -200,16 +197,172 @@
       box-shadow: 0 5px 20px rgba(139,0,0,0.3);
     }
 
-    .mission-title {
-      font-size: 3rem;
-      font-weight: 700;
-      color: #8B0000;
-      text-align: center;
-      margin-bottom: 25px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
+    /* ==============================================
+       SERMONS CONTENT STYLES
+    ============================================== */
+
+    .sermons-container {
+      display: grid;
+      gap: 2rem;
+      margin-top: 2rem;
     }
-  
+
+    .sermon-section {
+      background: white;
+      border-radius: 15px;
+      padding: 2rem;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      border-left: 5px solid #dc2626;
+    }
+
+    .sermon-section h2 {
+      color: #8B0000;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+      border-bottom: 2px solid #dc2626;
+      padding-bottom: 0.5rem;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .video-card {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .video-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(220,38,38,0.2);
+    }
+
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+    }
+
+    .video-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .video-info {
+      padding: 1rem;
+    }
+
+    .video-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 0.5rem;
+      line-height: 1.4;
+    }
+
+    .video-description {
+      font-size: 0.9rem;
+      color: #666;
+      line-height: 1.5;
+    }
+
+    .social-feed-section {
+      background: white;
+      border-radius: 15px;
+      padding: 2rem;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      border-left: 5px solid #dc2626;
+      margin-top: 2rem;
+    }
+
+    .social-tabs {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2rem;
+      gap: 1rem;
+    }
+
+    .social-tab {
+      padding: 0.75rem 1.5rem;
+      border: 2px solid #dc2626;
+      background: white;
+      color: #dc2626;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
+
+    .social-tab.active,
+    .social-tab:hover {
+      background: #dc2626;
+      color: white;
+    }
+
+    .social-content {
+      display: none;
+      text-align: center;
+    }
+
+    .social-content.active {
+      display: block;
+    }
+
+    .social-embed {
+      max-width: 100%;
+      margin: 0 auto;
+    }
+
+    .cta-section {
+      background: linear-gradient(135deg, #8B0000, #DC143C);
+      color: white;
+      padding: 2rem;
+      border-radius: 15px;
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background: white;
+      color: #dc2626;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+      background: #f8f9fa;
+    }
+
+    .cta-button svg {
+      width: 20px;
+      height: 20px;
+    }
 
 /* ==============================================
        FOUNDER SECTION STYLES
@@ -504,17 +657,12 @@
         display: block;
       }
 
-      .page-title {
-        font-size: 2.2rem;
+      .section-title {
+        font-size: 2.5rem;
       }
 
-      .hero p {
-        font-size: 1.1rem;
-      }
-
-      .section-container {
+      .video-grid {
         grid-template-columns: 1fr;
-        margin: 2rem auto;
       }
 
       .founder-container {
@@ -548,6 +696,16 @@
         width: 40px;
         height: 40px;
       }
+
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .social-tabs {
+        flex-direction: column;
+        align-items: center;
+      }
     }
 
     @media (max-width: 480px) {
@@ -566,6 +724,14 @@
 
       .chatbot-popup {
         height: 400px;
+      }
+
+      .content-card {
+        padding: 40px 30px;
+      }
+
+      .section-title {
+        font-size: 2rem;
       }
     }
 
@@ -622,8 +788,8 @@
       <nav class="desktop-nav">
         <ul class="nav-links">
           <li><a href="index.html"><span class="english-text">Home</span><span class="telugu-text">హోమ్</span></a></li>
-          <li><a href="about.html" style="color: #ffe4e1;"><span class="english-text">About</span><span class="telugu-text">గురించి</span></a></li>
-          <li><a href="sermons.html"><span class="english-text">Sermons</span><span class="telugu-text">ప్రసంగాలు</span></a></li>
+          <li><a href="about.html"><span class="english-text">About</span><span class="telugu-text">గురించి</span></a></li>
+          <li><a href="sermons.html" style="color: #ffe4e1;"><span class="english-text">Sermons</span><span class="telugu-text">ప్రసంగాలు</span></a></li>
           <li><a href="ministries.html"><span class="english-text">Ministries</span><span class="telugu-text">సేవలు</span></a></li>
           <li><a href="orphanage.html"><span class="english-text">Orphanage</span><span class="telugu-text">అనాథాశ్రమం</span></a></li>
           <li><a href="events.html"><span class="english-text">Events</span><span class="telugu-text">ఈవెంట్స్</span></a></li>
@@ -646,45 +812,61 @@
         <li><a href="events.html"><span class="english-text">Events</span><span class="telugu-text">ఈవెంట్స్</span></a></li>
         <li><a href="contact.html"><span class="english-text">Contact</span><span class="telugu-text">సంప్రదించండి</span></a></li>
         <li><a href="volunteer.html"><span class="english-text">Get Involved</span><span class="telugu-text">చేరడం</span></a></li>
-        <li><a href="donate.html" class="donate-btn"><span class="english-text">Donate Now</span><span class="telugu-text">దానం చేయండি</span></a></li>
+        <li><a href="donate.html" class="donate-btn"><span class="english-text">Donate Now</span><span class="telugu-text">దానం చేయండి</span></a></li>
       </ul>
     </nav>
   </header>
 
-
-
-
-
-
-  
-
- <!-- Main Content -->
+  <!-- Main Content -->
   <section class="main-content">
     <!-- About Us Section -->
     <section class="content-card">
       <h1 class="section-title">
-        <span class="english-text">Our Sermons</span>
-        <span class="telugu-text">మన సందేశాలు</span>
+        <span class="english-text">Our Sermons & Messages</span>
+        <span class="telugu-text">మన సందేశాలు మరియు ప్రసంగాలు</span>
       </h1>
       <p class="section-content">
         <span class="english-text">
-          We are a group of believers, a Church called by the name "Holy Spirit Prayer House" led by Rev. Palaparthi Moses, located in Oduru, West Godavari, Andhra Pradesh, India.
+          Experience the Word of God through inspiring sermons and teachings from Pastor P. Moses and our Holy Spirit Prayer House ministry. These messages are designed to strengthen your faith, provide spiritual guidance, and bring you closer to Christ.
         </span>
         <span class="telugu-text">
-          మేము విశ్వాసుల సమూహం, "హోలీ స్పిరిట్ ప్రార్థన మందిరం" అనే చర్చ్, ఇది రెవ్. పాలపర్తి మోషే సారథ్యంలో ఆంధ్రప్రదేశ్ రాష్ట్రం, పశ్చిమ గోదావరి జిల్లాలోని ఓదూరులో ఉంది.
+          పాస్టర్ పి. మోసెస్ మరియు మా హోలీ స్పిరిట్ ప్రార్థన మందిరం సేవ నుండి ప్రేరణాత్మక ప్రసంగాలు మరియు బోధనల ద్వారా దేవుని వాక్యాన్ని అనుభవించండి. ఈ సందేశాలు మీ విశ్వాసాన్ని బలోపేతం చేయడానికి, ఆధ్యాత్మిక మార్గదర్శకత్వం అందించడానికి మరియు మిమ్మల్ని క్రీస్తుకు దగ్గర చేయడానికి రూపొందించబడ్డాయి.
         </span>
       </p>
       
       <div class="bible-verse">
         <span class="english-text">
-          Listen to inspiring messages and teachings that strengthen faith and bring hope
+          "For the word of God is alive and active. Sharper than any double-edged sword..." - Hebrews 4:12
         </span>
         <span class="telugu-text">
-          విశ్వాసాన్ని బలోపేతం చేసే, ఆశను కలిగించే ప్రేరణాత్మక సందేశాలు మరియు బోధనలు వినండి.
+          "దేవుని వాక్యం సజీవమైనది మరియు శక్తివంతమైనది. ఇరుబయ్యాల కత్తి కంటే పదునైనది..." - హెబ్రీయులకు 4:12
         </span>
       </div>
     </section>
+
+    <!-- YouTube Sermons Section -->
+    <div class="sermons-container">
+      <div class="sermon-section">
+        <h2>
+          <span class="english-text">Latest Sermon Videos</span>
+          <span class="telugu-text">తాజా ప్రసంగ వీడియోలు</span>
+        </h2>
+    <div class="video-grid">
+      <!-- Replace the src with your actual YouTube video URLs -->
+      <div class="video-item">
+        <iframe width="100%" height="250" src="https://www.youtube.com/embed/VIDEO_ID_1" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="video-item">
+        <iframe width="100%" height="250" src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="video-item">
+        <iframe width="100%" height="250" src="https://www.youtube.com/embed/VIDEO_ID_3" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
 </section>
+
+        
 
 
 
