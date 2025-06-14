@@ -1,4 +1,4 @@
-<!DOCTYPE html>More actions
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <!-- Basic Metadata -->
@@ -11,10 +11,105 @@
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+Telugu&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&family=Noto+Sans+Telugu:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<style>
+  <style>
+    /* ==============================================
+       GLOBAL TYPOGRAPHY SYSTEM
+    ============================================== */
+    
+    :root {
+      /* Main Title Sizes */
+      --title-hero: 3.5rem;           /* Hero page title */
+      --title-main: 2.5rem;           /* Main section titles */
+      --title-sub: 1.8rem;            /* Sub-section titles */
+      
+      /* Content Text Sizes */
+      --text-large: 1.2rem;           /* Large body text */
+      --text-normal: 1rem;            /* Normal body text */
+      --text-small: 0.9rem;           /* Small text */
+      
+      /* Button and Navigation */
+      --text-button: 1.1rem;          /* Button text */
+      --text-nav: 1rem;               /* Navigation text */
+      
+      /* Line Heights */
+      --line-height-tight: 1.2;
+      --line-height-normal: 1.6;
+      --line-height-loose: 1.8;
+      
+      /* Font Weights */
+      --weight-light: 300;
+      --weight-normal: 400;
+      --weight-medium: 500;
+      --weight-semibold: 600;
+      --weight-bold: 700;
+    }
+
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', 'Noto Sans', sans-serif;
+      font-size: var(--text-normal);
+      font-weight: var(--weight-normal);
+      line-height: var(--line-height-normal);
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 50%, #dee2e6 100%);
+      scroll-behavior: smooth;
+      color: #333;
+    }
+
+    /* ==============================================
+       TYPOGRAPHY CLASSES
+    ============================================== */
+    
+    .title-hero {
+      font-size: var(--title-hero);
+      font-weight: var(--weight-bold);
+      line-height: var(--line-height-tight);
+      margin-bottom: 1rem;
+    }
+    
+    .title-main {
+      font-size: var(--title-main);
+      font-weight: var(--weight-semibold);
+      line-height: var(--line-height-tight);
+      margin-bottom: 1rem;
+    }
+    
+    .title-sub {
+      font-size: var(--title-sub);
+      font-weight: var(--weight-medium);
+      line-height: var(--line-height-normal);
+      margin-bottom: 0.8rem;
+    }
+    
+    .text-large {
+      font-size: var(--text-large);
+      font-weight: var(--weight-normal);
+      line-height: var(--line-height-loose);
+      margin-bottom: 1.2rem;
+    }
+    
+    .text-normal {
+      font-size: var(--text-normal);
+      font-weight: var(--weight-normal);
+      line-height: var(--line-height-normal);
+      margin-bottom: 1rem;
+    }
+    
+    .text-small {
+      font-size: var(--text-small);
+      font-weight: var(--weight-normal);
+      line-height: var(--line-height-normal);
+      margin-bottom: 0.8rem;
+    }
+
     /* ==============================================
        HEADER STYLES
     ============================================== */
@@ -29,7 +124,8 @@
     .language-toggle button {
       margin: 0 5px;
       padding: 8px 16px;
-      font-size: 14px;
+      font-size: var(--text-small);
+      font-weight: var(--weight-medium);
       cursor: pointer;
       border: 2px solid #dc2626;
       background-color: #fff;
@@ -94,7 +190,8 @@
       padding: 10px 15px;
       border-radius: 25px;
       transition: all 0.3s ease;
-      font-weight: 500;
+      font-size: var(--text-nav);
+      font-weight: var(--weight-medium);
     }
 
     .nav-links a:hover {
@@ -105,7 +202,7 @@
     .donate-btn {
       background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%) !important;
       color: white !important;
-      font-weight: bold;
+      font-weight: var(--weight-semibold) !important;
       box-shadow: 0 4px 15px rgba(220,38,38,0.4);
     }
 
@@ -139,78 +236,127 @@
       padding: 1rem;
     }
 
+    /* ==============================================
+       MAIN CONTENT STYLES
+    ============================================== */
 
-
-    /* Main Content Area */
-    .main-content {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-
-    .content-card {
-      background: #f8f8f8;
-      border-radius: 15px;
-      padding: 60px 50px;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-      margin: 20px 0;
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/background.jpg');
+      background-size: cover;
+      background-position: center;
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
       position: relative;
-      overflow: hidden;
     }
 
-    .content-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 5px;
-      background: linear-gradient(45deg, #8B0000, #DC143C);
+    .hero-container {
+      max-width: 800px;
+      padding: 2rem;
     }
 
-    .section-title {
-      font-size: 3.5rem;
-      font-weight: 700;
-      color: #8B0000;
+    .page-title {
+      font-family: 'Bungee', cursive;
+      font-size: var(--title-hero);
+      font-weight: var(--weight-bold);
+      line-height: var(--line-height-tight);
+      margin-bottom: 1.5rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      animation: fadeInUp 1s ease-out;
+    }
+
+    .hero p {
+      font-size: var(--text-large);
+      font-weight: var(--weight-normal);
+      line-height: var(--line-height-loose);
+      margin-bottom: 2rem;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+      animation: fadeInUp 1s ease-out 0.3s both;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+      color: white;
+      padding: 15px 30px;
+      text-decoration: none;
+      border-radius: 50px;
+      font-size: var(--text-button);
+      font-weight: var(--weight-semibold);
+      line-height: 1;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(220,38,38,0.3);
+      animation: fadeInUp 1s ease-out 0.6s both;
+      border: 2px solid transparent;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(220,38,38,0.5);
+      border: 2px solid #000000;
+      background: linear-gradient(135deg, #b91c1c 0%, #dc2626 100%);
+    }
+
+    /* Content Sections */
+    .section-container {
+      max-width: 1200px;
+      margin: 4rem auto;
+      padding: 0 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .section {
+      background: white;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
       text-align: center;
-      margin-bottom: 30px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+      border: 2px solid transparent;
     }
 
-    .section-content {
-      font-size: 1.2rem;
-      line-height: 1.8;
-      color: #444;
-      text-align: center;
-      margin-bottom: 40px;
+    .section:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(220,38,38,0.15);
+      border: 2px solid #dc2626;
     }
 
-    .bible-verse {
-      background: linear-gradient(135deg, #8B0000, #DC143C);
-      color: #fff;
-      padding: 25px 30px;
-      border-radius: 10px;
-      font-style: italic;
-      font-size: 1.1rem;
-      text-align: center;
-      margin: 30px 0;
-      box-shadow: 0 5px 20px rgba(139,0,0,0.3);
+    .section h2 {
+      color: #dc2626;
+      font-size: var(--title-sub);
+      font-weight: var(--weight-semibold);
+      line-height: var(--line-height-normal);
+      margin-bottom: 1rem;
     }
 
-    .mission-title {
-      font-size: 3rem;
-      font-weight: 700;
-      color: #8B0000;
-      text-align: center;
-      margin-bottom: 25px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
+    .section p {
+      color: #333;
+      font-size: var(--text-normal);
+      font-weight: var(--weight-normal);
+      line-height: var(--line-height-loose);
+      margin-bottom: 1.5rem;
     }
 
+    /* Special styling for different sections */
+    .about {
+      border-top: 4px solid #dc2626;
+    }
 
-/* ==============================================
+    .ministries {
+      border-top: 4px solid #000000;
+    }
+
+    .donate {
+      border-top: 4px solid #dc2626;
+    }
+
+    /* ==============================================
        FOUNDER SECTION STYLES
     ============================================== */
 
@@ -295,15 +441,17 @@
 
     .founder h2, .co-founder h2 {
       color: #dc2626;
+      font-size: var(--title-sub);
+      font-weight: var(--weight-semibold);
+      line-height: var(--line-height-normal);
       margin-bottom: 0.4rem;
-      font-size: 1.1rem;
-      font-weight: 600;
     }
 
     .founder h3, .co-founder h3 {
       color: #333333;
-      font-weight: 500;
-      font-size: 1rem;
+      font-size: var(--text-normal);
+      font-weight: var(--weight-medium);
+      line-height: var(--line-height-normal);
       margin-bottom: 0;
     }
 
@@ -339,7 +487,8 @@
       display: flex;
       align-items: center;
       color: white;
-      font-weight: 600;
+      font-size: var(--text-normal);
+      font-weight: var(--weight-semibold);
     }
 
     .chatbot-wrapper img {
@@ -377,6 +526,8 @@
       justify-content: space-between;
       align-items: center;
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      font-size: var(--text-normal);
+      font-weight: var(--weight-medium);
     }
 
     .close-button {
@@ -421,6 +572,13 @@
       max-width: 1000px;
       margin: 0 auto;
       padding: 0 1.5rem;
+    }
+
+    .footer-container p {
+      font-size: var(--text-small);
+      font-weight: var(--weight-normal);
+      line-height: var(--line-height-normal);
+      margin-bottom: 0;
     }
 
     .social-icons {
@@ -495,20 +653,24 @@
     ============================================== */
 
     @media (max-width: 768px) {
+      :root {
+        /* Adjust typography for mobile */
+        --title-hero: 2.5rem;
+        --title-main: 2rem;
+        --title-sub: 1.5rem;
+        --text-large: 1.1rem;
+        --text-normal: 0.95rem;
+        --text-small: 0.85rem;
+        --text-button: 1rem;
+        --text-nav: 0.95rem;
+      }
+
       .desktop-nav {
         display: none;
       }
 
       .mobile-menu-button {
         display: block;
-      }
-
-      .page-title {
-        font-size: 2.2rem;
-      }
-
-      .hero p {
-        font-size: 1.1rem;
       }
 
       .section-container {
@@ -550,6 +712,18 @@
     }
 
     @media (max-width: 480px) {
+      :root {
+        /* Further adjust typography for small mobile */
+        --title-hero: 2rem;
+        --title-main: 1.7rem;
+        --title-sub: 1.3rem;
+        --text-large: 1rem;
+        --text-normal: 0.9rem;
+        --text-small: 0.8rem;
+        --text-button: 0.95rem;
+        --text-nav: 0.9rem;
+      }
+
       .founders-section {
         padding: 2rem 0;
       }
@@ -566,20 +740,6 @@
       .chatbot-popup {
         height: 400px;
       }
-    }
-
-    /* Global Styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Roboto', sans-serif;
-      line-height: 1.6;
-      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 50%, #dee2e6 100%);
-      scroll-behavior: smooth;
     }
 
     /* ==============================================
@@ -645,10 +805,191 @@
         <li><a href="events.html"><span class="english-text">Events</span><span class="telugu-text">ఈవెంట్స్</span></a></li>
         <li><a href="contact.html"><span class="english-text">Contact</span><span class="telugu-text">సంప్రదించండి</span></a></li>
         <li><a href="volunteer.html"><span class="english-text">Get Involved</span><span class="telugu-text">చేరడం</span></a></li>
-        <li><a href="donate.html" class="donate-btn"><span class="english-text">Donate Now</span><span class="telugu-text">దానం చేయండি</span></a></li>
+        <li><a href="donate.html" class="donate-btn"><span class="english-text">Donate Now</span><span class="telugu-text">దానం చేయండి</span></a></li>
       </ul>
     </nav>
   </header>
+
+  
+
+  <!-- ==============================================
+       MAIN CONTENT SECTION
+  ============================================== -->
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <h1 class="page-title">
+          <span class="english-text">Holy Spirit Prayer House</span>
+          <span class="telugu-text">హోలీ స్పిరిట్ ప్రార్థన మందిరం</span>
+        </h1>
+        <p>
+          <span class="english-text">Bringing Hope, Love, and Support to the Community</span>
+          <span class="telugu-text">భక్తి, ప్రేమ, మద్దతు సమాజానికి అందించడమే మా లక్ష్యం</span>
+        </p>
+        <a href="#" class="cta-button">
+          <span class="english-text">Plan Your Visit</span>
+          <span class="telugu-text">మీ పర్యటన ప్లాన్ చేయండి</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Information Cards -->
+  <section class="section-container">
+    <div class="section about">
+      <h2><span class="english-text">About Us</span><span class="telugu-text">మా గురించి</span></h2>
+      <p><span class="english-text">We are dedicated to spreading faith and love through our ministries, serving our community with compassion and devotion.</span><span class="telugu-text">మా సేవల ద్వారా విశ్వాసాన్ని, ప్రేమను వ్యాప్తి చేయడమే మా లక్ష్యం, మా సమాజానికి దయ మరియు భక్తితో సేవ చేస్తున్నాం.</span></p>
+    </div>
+    <div class="section ministries">
+      <h2><span class="english-text">Our Ministries</span><span class="telugu-text">మా సేవలు</span></h2>
+      <p><span class="english-text">Serving the community through prayer, outreach, and support programs that touch hearts and transform lives.</span><span class="telugu-text">ప్రార్థన, సేవా కార్యక్రమాల ద్వారా సమాజానికి సహాయం అందిస్తున్నాం, హృదయాలను తాకి జీవితాలను మార్చుతున్నాం.</span></p>
+    </div>
+    <div class="section donate">
+      <h2><span class="english-text">Support Our Mission</span><span class="telugu-text">మా సేవలను మద్దతివ్వండి</span></h2>
+      <p><span class="english-text">Your donations help us continue our work in serving the needy and spreading God's love throughout our community.</span><span class="telugu-text">మీ విరాళాలు మేము అవసరమైన వారికి సహాయం చేసేందుకు మరియు దేవుని ప్రేమను వ్యాప్తి చేసేందుకు ఉపయోగపడతాయి.</span></p>
+      <a href="#" class="cta-button">
+        <span class="english-text">Donate Now</span>
+        <span class="telugu-text">దానం చేయండి</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ==============================================
+       FOUNDER SECTION
+  ============================================== -->
+
+  <section class="founders-section">
+    <div class="founder-container">
+      <div class="founder">
+        <img src="images/founder.jpg" alt="Founder Image" class="founder-img">
+        <h2><span class="english-text">Founder</span><span class="telugu-text">స్థాపకుడు</span></h2>
+        <h3><span class="english-text">Pastor P. Moses</span><span class="telugu-text">పాస్టర్ పి. మోసెస్</span></h3>
+      </div>
+      <div class="co-founder">
+        <img src="images/co-founder.jpg" alt="Co-Founder Image" class="founder-img">
+        <h2><span class="english-text">Co-Founder</span><span class="telugu-text">సహ-స్థాపకుడు</span></h2>
+        <h3><span class="english-text">Bro. Billygraham Moses</span><span class="telugu-text">బ్రదర్ బిలీగ్రాహం మోసెస్</span></h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================================
+       CHATBOT SECTION
+  ============================================== -->
+
+  <!-- Chatbot Floating Button -->
+  <button id="chatbot-toggle" class="chatbot-button" aria-label="Open Chatbot">
+    <div class="chatbot-wrapper">
+      <img src="images/founder.jpg" alt="Chat with Amma">
+    </div>
+  </button>
+
+  <!-- Chatbot Popup -->
+  <div id="chatbot-popup" class="chatbot-popup hidden">
+    <div class="chatbot-header">
+      <span><span class="english-text">Chat with Amma</span><span class="telugu-text">అమ్మతో చాట్ చేయండి</span></span>
+      <button id="close-chatbot" class="close-button">&times;</button>
+    </div>
+    <div style="padding: 20px; text-align: center; color: #333;">
+      <p>Chatbot interface would be integrated here</p>
+    </div>
+  </div>
+
+  <!-- ==============================================
+       FOOTER SECTION
+  ============================================== -->
+
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2025 Holy Spirit Prayer House | 
+        <span class="english-text">All Rights Reserved</span>
+        <span class="telugu-text">అన్ని హక్కులు పరిరక్షించబడినవి</span>
+      </p>
+      <div class="social-icons">
+        <a href="https://www.youtube.com/@pastorpmoses" target="_blank" aria-label="YouTube">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@v9/icons/youtube.svg" alt="YouTube" style="filter: invert(1);">
+        </a>
+        <a href="https://www.instagram.com/hsph_oduru/" target="_blank" aria-label="Instagram">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@v9/icons/instagram.svg" alt="Instagram" style="filter: invert(1);">
+        </a>
+        <a href="https://www.facebook.com/holy.jesus132" target="_blank" aria-label="Facebook">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@v9/icons/facebook.svg" alt="Facebook" style="filter: invert(1);">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /* ==============================================
+       HEADER JAVASCRIPT
+    ============================================== */
+
+    // Language Toggle Functionality
+    function toggleLanguage(lang) {
+      document.body.classList.remove("english", "telugu");
+      document.body.classList.add(lang);
+    }
+
+    // Load default language on page load
+    document.addEventListener("DOMContentLoaded", function() {
+      document.body.classList.add("english");
+    });
+
+    /* ==============================================
+       MAIN CONTENT JAVASCRIPT
+    ============================================== */
+
+    // Mobile Menu Toggle
+    document.addEventListener("DOMContentLoaded", function() {
+      const menuButton = document.getElementById('menuButton');
+      const mobileNav = document.getElementById('mobileNav');
+
+      if (menuButton && mobileNav) {
+        menuButton.addEventListener('click', function() {
+          mobileNav.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+          if (!menuButton.contains(event.target) && !mobileNav.contains(event.target)) {
+            mobileNav.classList.remove('active');
+          }
+        });
+      }
+    });
+
+    /* ==============================================
+       CHATBOT JAVASCRIPT
+    ============================================== */
+
+    // Chatbot Toggle Functionality
+    document.addEventListener("DOMContentLoaded", function() {
+      const chatbotToggle = document.getElementById('chatbot-toggle');
+      const chatbotPopup = document.getElementById('chatbot-popup');
+      const closeChatbot = document.getElementById('close-chatbot');
+
+      if (chatbotToggle && chatbotPopup && closeChatbot) {
+        chatbotToggle.addEventListener('click', function() {
+          chatbotPopup.classList.remove('hidden');
+        });
+
+        closeChatbot.addEventListener('click', function() {
+          chatbotPopup.classList.add('hidden');
+        });
+
+        // Close chatbot when clicking outside
+        document.addEventListener('click', function(event) {
+          if (!chatbotPopup.contains(event.target) && !chatbotToggle.contains(event.target)) {
+            chatbotPopup.classList.add('hidden');
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>
 
 
 
@@ -661,10 +1002,10 @@
   <section class="main-content">
     <!-- About Us Section -->
     <section class="content-card">
-      <h1 class="section-title">
+      <h2 class="section-title">
         <span class="english-text">About Us</span>
         <span class="telugu-text">మా గురించి</span>
-      </h1>
+      </h2>
       <p class="section-content">
         <span class="english-text">
           We are a group of believers, a Church called by the name "Holy Spirit Prayer House" led by Rev. Palaparthi Moses, located in Oduru, West Godavari, Andhra Pradesh, India.
