@@ -3,6 +3,10 @@
    Injects header, footer, WhatsApp button on every page
    ============================================================ */
 
+// Mark HTML so CSS knows JS loaded — must be first line so
+// [data-reveal] elements get opacity:0 before any paint
+document.documentElement.classList.add('js');
+
 const SITE = {
   phone:     '+919848315170',
   phoneDisplay: '+91 98483 15170',
@@ -187,6 +191,12 @@ function renderFooter() {
 function initReveal() {
   const els = document.querySelectorAll('[data-reveal]');
   if (!els.length) return;
+
+  // Fallback: if observer never fires (layout edge-case), reveal all after 800ms
+  const fallback = setTimeout(() => {
+    els.forEach(el => el.classList.add('is-visible'));
+  }, 800);
+
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (e.isIntersecting) {
@@ -194,7 +204,10 @@ function initReveal() {
         io.unobserve(e.target);
       }
     });
-  }, { threshold: 0.12 });
+    // Cancel fallback once observer fires at least once
+    clearTimeout(fallback);
+  }, { threshold: 0, rootMargin: '0px 0px -30px 0px' });
+
   els.forEach(el => io.observe(el));
 }
 
