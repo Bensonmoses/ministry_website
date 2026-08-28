@@ -183,6 +183,21 @@ function renderFooter() {
 </div>`;
 }
 
+// ── Scroll-reveal (IntersectionObserver) ──────────────
+function initReveal() {
+  const els = document.querySelectorAll('[data-reveal]');
+  if (!els.length) return;
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('is-visible');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  els.forEach(el => io.observe(el));
+}
+
 // ── Init ─────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   // Inject header
@@ -217,16 +232,19 @@ document.addEventListener('DOMContentLoaded', () => {
   // Chatbot
   const toggle = document.getElementById('chatbot-toggle');
   const popup  = document.getElementById('chatbot-popup');
-  const close  = document.getElementById('close-chatbot');
-  if (toggle) {
+  const closeC = document.getElementById('close-chatbot');
+  if (toggle && popup && closeC) {
     toggle.addEventListener('click', () => popup.classList.toggle('hidden'));
-    close.addEventListener('click',  () => popup.classList.add('hidden'));
+    closeC.addEventListener('click', () => popup.classList.add('hidden'));
   }
 
-  // Scroll shadow on header
+  // Scroll shadow on header + progress bar
   window.addEventListener('scroll', () => {
     const h = document.getElementById('mainHeader');
     if (h) h.style.boxShadow = window.scrollY > 60
-      ? '0 4px 30px rgba(0,0,0,0.5)' : '0 2px 20px rgba(0,0,0,0.4)';
-  });
+      ? '0 4px 32px rgba(0,0,0,0.55)' : '0 2px 24px rgba(0,0,0,0.45)';
+  }, { passive: true });
+
+  // Scroll-reveal
+  initReveal();
 });
