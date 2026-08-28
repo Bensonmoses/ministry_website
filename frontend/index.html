@@ -3,149 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Holy Spirit Prayer House — A beacon of faith, love, and community outreach in Oduru. Join us for worship, prayer, and service.">
-  <meta name="keywords" content="Holy Spirit Prayer House, Church, Prayer, Ministries, Oduru, Telugu Church, Christian">
+  <meta name="description" content="Holy Spirit Prayer House — A beacon of faith, love, and community outreach in Oduru, West Godavari. Join Bishop P. Moses for worship, prayer, and service.">
+  <meta name="keywords" content="Holy Spirit Prayer House, Church Oduru, Telugu Church, Bishop P Moses, Christian Ministry, West Godavari, Andhra Pradesh">
   <meta name="author" content="Holy Spirit Prayer House">
   <meta property="og:title" content="Holy Spirit Prayer House">
-  <meta property="og:description" content="A beacon of faith, love, and community outreach.">
+  <meta property="og:description" content="A beacon of faith, love, and community outreach in Oduru, Andhra Pradesh.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://holyspiritprayerhouse.com">
   <title>Holy Spirit Prayer House | హోలీ స్పిరిట్ ప్రార్థన మందిరం</title>
-
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Telugu:wght@400;600&display=swap" rel="stylesheet">
-
-  <!-- Main Stylesheet -->
   <link rel="stylesheet" href="css/styles.css">
-
-  <script>
-    // Language persistence
-    function toggleLanguage(lang) {
-      localStorage.setItem('hsph_lang', lang);
-      document.body.className = lang;
-      document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
-    }
-    document.addEventListener('DOMContentLoaded', () => {
-      const lang = localStorage.getItem('hsph_lang') || 'english';
-      toggleLanguage(lang);
-    });
-  </script>
 </head>
 
 <body class="english">
-
-<!-- ══════════════════════════════════
-     TOP BAR — contact + language
-══════════════════════════════════ -->
-<div class="top-bar">
-  <div class="top-bar__contact">
-    <span>✉ <a href="mailto:info@holyspiritprayerhouse.org">info@holyspiritprayerhouse.org</a></span>
-    <span>📍 Oduru, Andhra Pradesh, India</span>
-  </div>
-  <div style="display:flex;gap:0.4rem;">
-    <button class="lang-btn active" data-lang="english" onclick="toggleLanguage('english')">English</button>
-    <button class="lang-btn" data-lang="telugu" onclick="toggleLanguage('telugu')">తెలుగు</button>
-  </div>
-</div>
+<div id="site-header"></div>
 
 
-<!-- ══════════════════════════════════
-     STICKY HEADER
-══════════════════════════════════ -->
-<header id="mainHeader">
-  <div class="header-container">
-
-    <!-- Logo -->
-    <a href="index.html" class="logo">
-      <img src="images/logo.webp" alt="Holy Spirit Prayer House">
-      <div class="logo-text">
-        <strong>
-          <span class="english-text">Holy Spirit Prayer House</span>
-          <span class="telugu-text">హోలీ స్పిరిట్ మందిరం</span>
-        </strong>
-        <span>
-          <span class="english-text">Faith · Hope · Love</span>
-          <span class="telugu-text">విశ్వాసం · ఆశ · ప్రేమ</span>
-        </span>
-      </div>
-    </a>
-
-    <!-- Desktop Nav -->
-    <nav class="desktop-nav">
-      <ul class="nav-links">
-        <li><a href="index.html" class="active"><span class="english-text">Home</span><span class="telugu-text">హోమ్</span></a></li>
-        <li><a href="about.html"><span class="english-text">About</span><span class="telugu-text">గురించి</span></a></li>
-        <li><a href="sermons.html"><span class="english-text">Sermons</span><span class="telugu-text">ప్రసంగాలు</span></a></li>
-        <li><a href="ministries.html"><span class="english-text">Ministries</span><span class="telugu-text">సేవలు</span></a></li>
-        <li><a href="orphanage.html"><span class="english-text">Orphanage</span><span class="telugu-text">అనాథాశ్రమం</span></a></li>
-        <li><a href="events.html"><span class="english-text">Events</span><span class="telugu-text">ఈవెంట్స్</span></a></li>
-        <li><a href="contact.html"><span class="english-text">Contact</span><span class="telugu-text">సంప్రదించండి</span></a></li>
-        <li><a href="volunteer.html"><span class="english-text">Get Involved</span><span class="telugu-text">చేరడం</span></a></li>
-        <li><a href="donate.html" class="nav-donate"><span class="english-text">Donate</span><span class="telugu-text">దానం</span></a></li>
-      </ul>
-    </nav>
-
-    <!-- Mobile Hamburger -->
-    <button class="mobile-menu-button" id="menuButton" aria-label="Open Menu">&#9776;</button>
-  </div>
-
-  <!-- Mobile slide-in nav -->
-  <div class="mobile-overlay" id="mobileOverlay"></div>
-  <nav class="mobile-nav" id="mobileNav">
-    <button class="mobile-close" id="mobileClose">&times;</button>
-    <ul class="nav-links">
-      <li><a href="index.html"><span class="english-text">Home</span><span class="telugu-text">హోమ్</span></a></li>
-      <li><a href="about.html"><span class="english-text">About</span><span class="telugu-text">గురించి</span></a></li>
-      <li><a href="sermons.html"><span class="english-text">Sermons</span><span class="telugu-text">ప్రసంగాలు</span></a></li>
-      <li><a href="ministries.html"><span class="english-text">Ministries</span><span class="telugu-text">సేవలు</span></a></li>
-      <li><a href="orphanage.html"><span class="english-text">Orphanage</span><span class="telugu-text">అనాథాశ్రమం</span></a></li>
-      <li><a href="events.html"><span class="english-text">Events</span><span class="telugu-text">ఈవెంట్స్</span></a></li>
-      <li><a href="contact.html"><span class="english-text">Contact</span><span class="telugu-text">సంప్రదించండి</span></a></li>
-      <li><a href="volunteer.html"><span class="english-text">Get Involved</span><span class="telugu-text">చేరడం</span></a></li>
-      <li><a href="donate.html" class="nav-donate"><span class="english-text">Donate Now</span><span class="telugu-text">దానం చేయండి</span></a></li>
-    </ul>
-  </nav>
-</header>
-
-
-<!-- ══════════════════════════════════
-     HERO SECTION
-══════════════════════════════════ -->
+<!-- ══════════════════════════════════════════════════
+     HERO
+══════════════════════════════════════════════════ -->
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
-
   <div class="container">
     <div class="hero-content">
-
       <div class="hero-badge anim-1">
         ✝&nbsp;
-        <span class="english-text">Welcome to Holy Spirit Prayer House</span>
-        <span class="telugu-text">హోలీ స్పిరిట్ ప్రార్థన మందిరానికి స్వాగతం</span>
+        <span class="english-text">Welcome — Oduru, West Godavari, Andhra Pradesh</span>
+        <span class="telugu-text">స్వాగతం — ఒదురు, పశ్చిమ గోదావరి, ఆంధ్రప్రదేశ్</span>
       </div>
-
       <h1 class="hero-title anim-2">
         <span class="english-text">A Place of <em>Faith,</em><br>Hope &amp; Community</span>
-        <span class="telugu-text">విశ్వాసం, <em>ఆశ</em> మరియు<br>సమాజ సేవ</span>
+        <span class="telugu-text">విశ్వాసం, <em>ఆశ</em> మరియు<br>సమాజ సేవ మందిరం</span>
       </h1>
-
       <p class="hero-tagline anim-3">
-        <span class="english-text">Serving God and our community through prayer, compassion, and outreach. Everyone is welcome here.</span>
-        <span class="telugu-text">ప్రార్థన, దయ మరియు సేవ ద్వారా దేవునికి మరియు మా సమాజానికి సేవ చేస్తున్నాం. అందరూ ఇక్కడ స్వాగతం.</span>
+        <span class="english-text">For over 20 years, Bishop P. Moses has led this ministry — serving God through prayer, compassion, orphan care, and reaching the unreached across Andhra Pradesh.</span>
+        <span class="telugu-text">20 సంవత్సరాలకు పైగా బిషప్ పి. మోషే ఈ సేవను నడిపిస్తున్నారు — ప్రార్థన, దయ, అనాథ సంరక్షణ ద్వారా ఆంధ్రప్రదేశ్ అంతటా సేవ చేస్తున్నారు.</span>
       </p>
-
       <div class="hero-actions anim-4">
         <a href="about.html" class="btn btn-primary">
-          <span class="english-text">Plan Your Visit</span>
-          <span class="telugu-text">మీ పర్యటన ప్లాన్ చేయండి</span>
+          <span class="english-text">Our Story</span>
+          <span class="telugu-text">మా కథ</span>
         </a>
         <a href="sermons.html" class="btn btn-outline">
-          <span class="english-text">Watch Sermons</span>
-          <span class="telugu-text">ప్రసంగాలు చూడండి</span>
+          <span class="english-text">▶ Watch Sermons</span>
+          <span class="telugu-text">▶ ప్రసంగాలు చూడండి</span>
         </a>
       </div>
     </div>
   </div>
-
   <div class="hero-scroll">
     <span class="english-text">Scroll</span>
     <span class="telugu-text">క్రిందికి</span>
@@ -153,9 +59,9 @@
 </section>
 
 
-<!-- ══════════════════════════════════
+<!-- ══════════════════════════════════════════════════
      SERVICE TIMES BAR
-══════════════════════════════════ -->
+══════════════════════════════════════════════════ -->
 <div class="service-bar">
   <div class="container">
     <div class="service-item">
@@ -179,199 +85,158 @@
     <div class="service-item">
       <span class="service-item__day"><span class="english-text">Friday</span><span class="telugu-text">శుక్రవారం</span></span>
       <span class="service-item__time">7:00 PM</span>
-      <span class="service-item__label"><span class="english-text">Youth &amp; Fasting</span><span class="telugu-text">యువ & ఉపవాసం</span></span>
+      <span class="service-item__label"><span class="english-text">Youth &amp; Fasting</span><span class="telugu-text">యువ &amp; ఉపవాసం</span></span>
     </div>
   </div>
 </div>
 
 
-<!-- ══════════════════════════════════
-     WELCOME / MISSION PILLARS
-══════════════════════════════════ -->
+<!-- ══════════════════════════════════════════════════
+     MISSION PILLARS
+══════════════════════════════════════════════════ -->
 <section class="section">
   <div class="container">
-    <span class="section-eyebrow">
-      <span class="english-text">Our Mission</span>
-      <span class="telugu-text">మా లక్ష్యం</span>
-    </span>
-    <h2 class="section-title">
-      <span class="english-text">Why We Gather</span>
-      <span class="telugu-text">మేము ఎందుకు కలుస్తాము</span>
-    </h2>
-    <p class="section-sub">
-      <span class="english-text">Holy Spirit Prayer House exists to glorify God and serve the community through faith-centered programs and compassionate outreach.</span>
-      <span class="telugu-text">పరిశుద్ధాత్మ ప్రార్థన మందిరం దేవుని మహిమపరచడానికి మరియు విశ్వాస కేంద్రీకృత కార్యక్రమాల ద్వారా సమాజానికి సేవ చేయడానికి ఉనికిలో ఉంది.</span>
-    </p>
-
+    <div class="section-header" data-reveal>
+      <span class="section-eyebrow">
+        <span class="english-text">Our Mission</span>
+        <span class="telugu-text">మా లక్ష్యం</span>
+      </span>
+      <h2 class="section-title">
+        <span class="english-text">Why We Gather</span>
+        <span class="telugu-text">మేము ఎందుకు కలుస్తాము</span>
+      </h2>
+      <p class="section-sub">
+        <span class="english-text">Holy Spirit Prayer House exists to glorify God and serve the community through faith-centred programs, compassionate outreach, and unwavering prayer.</span>
+        <span class="telugu-text">పరిశుద్ధాత్మ ప్రార్థన మందిరం దేవుని మహిమపరచడానికి మరియు విశ్వాస కేంద్రీకృత కార్యక్రమాల ద్వారా సమాజానికి సేవ చేయడానికి ఉనికిలో ఉంది.</span>
+      </p>
+    </div>
     <div class="welcome-grid">
-      <div class="welcome-card">
+      <div class="welcome-card" data-reveal data-reveal-delay="1">
         <div class="welcome-card__icon">🙏</div>
-        <h3>
-          <span class="english-text">Worship &amp; Prayer</span>
-          <span class="telugu-text">ఆరాధన &amp; ప్రార్థన</span>
-        </h3>
-        <p>
-          <span class="english-text">We gather every week for spirit-filled worship, powerful prayer, and deep fellowship with God and each other.</span>
-          <span class="telugu-text">ఆత్మతో నిండిన ఆరాధన, శక్తివంతమైన ప్రార్థన మరియు లోతైన సహవాసం కోసం ప్రతి వారం కలుస్తాం.</span>
-        </p>
+        <h3><span class="english-text">Worship &amp; Prayer</span><span class="telugu-text">ఆరాధన &amp; ప్రార్థన</span></h3>
+        <p><span class="english-text">We gather every week for spirit-filled worship, powerful prayer, and deep fellowship with God and each other.</span><span class="telugu-text">ఆత్మతో నిండిన ఆరాధన మరియు శక్తివంతమైన ప్రార్థన కోసం ప్రతి వారం కలుస్తాం.</span></p>
       </div>
-      <div class="welcome-card">
+      <div class="welcome-card" data-reveal data-reveal-delay="2">
         <div class="welcome-card__icon">❤️</div>
-        <h3>
-          <span class="english-text">Community Outreach</span>
-          <span class="telugu-text">సమాజ సేవ</span>
-        </h3>
-        <p>
-          <span class="english-text">From orphanage care to food programs, we meet the practical needs of the vulnerable in our community.</span>
-          <span class="telugu-text">అనాథాశ్రమ సంరక్షణ నుండి ఆహార కార్యక్రమాల వరకు, మేము సమాజంలోని అవసరమైన వారి ప్రాయోగిక అవసరాలను తీరుస్తాం.</span>
-        </p>
+        <h3><span class="english-text">Community Outreach</span><span class="telugu-text">సమాజ సేవ</span></h3>
+        <p><span class="english-text">From orphanage care to food programs and medical camps — we meet the practical needs of the vulnerable in our community.</span><span class="telugu-text">అనాథాశ్రమ సంరక్షణ నుండి ఆహార కార్యక్రమాలు మరియు వైద్య శిబిరాల వరకు సేవ చేస్తాం.</span></p>
       </div>
-      <div class="welcome-card">
+      <div class="welcome-card" data-reveal data-reveal-delay="3">
         <div class="welcome-card__icon">✨</div>
-        <h3>
-          <span class="english-text">Spiritual Growth</span>
-          <span class="telugu-text">ఆధ్యాత్మిక వృద్ధి</span>
-        </h3>
-        <p>
-          <span class="english-text">Through Bible study, discipleship, and mentorship, we equip every believer to grow in their walk with Christ.</span>
-          <span class="telugu-text">బైబిల్ అధ్యయనం, శిష్యత్వం మరియు మార్గదర్శకత్వం ద్వారా, ప్రతి విశ్వాసిని క్రీస్తుతో నడకలో వృద్ధి చెందడానికి సన్నద్ధం చేస్తాం.</span>
-        </p>
+        <h3><span class="english-text">Spiritual Growth</span><span class="telugu-text">ఆధ్యాత్మిక వృద్ధి</span></h3>
+        <p><span class="english-text">Through Bible study, discipleship, and mentorship we equip every believer to grow deeper in their walk with Christ.</span><span class="telugu-text">బైబిల్ అధ్యయనం మరియు శిష్యత్వం ద్వారా ప్రతి విశ్వాసిని క్రీస్తుతో నడకలో వృద్ధి చెందించాం.</span></p>
       </div>
     </div>
   </div>
 </section>
 
 
-<!-- ══════════════════════════════════
+<!-- ══════════════════════════════════════════════════
      IMPACT STATISTICS
-══════════════════════════════════ -->
+══════════════════════════════════════════════════ -->
 <div class="stats-band">
   <div class="container">
     <div class="stats-grid">
-      <div class="stat-item">
+      <div class="stat-item" data-reveal data-reveal-delay="1">
         <div class="stat-item__number">20+</div>
-        <div class="stat-item__label">
-          <span class="english-text">Years of Ministry</span>
-          <span class="telugu-text">సేవా సంవత్సరాలు</span>
-        </div>
+        <div class="stat-item__label"><span class="english-text">Years of Ministry</span><span class="telugu-text">సేవా సంవత్సరాలు</span></div>
       </div>
-      <div class="stat-item">
+      <div class="stat-item" data-reveal data-reveal-delay="2">
         <div class="stat-item__number">500+</div>
-        <div class="stat-item__label">
-          <span class="english-text">Families Served</span>
-          <span class="telugu-text">కుటుంబాలకు సేవ</span>
-        </div>
+        <div class="stat-item__label"><span class="english-text">Families Served</span><span class="telugu-text">కుటుంబాలకు సేవ</span></div>
       </div>
-      <div class="stat-item">
+      <div class="stat-item" data-reveal data-reveal-delay="3">
         <div class="stat-item__number">50+</div>
-        <div class="stat-item__label">
-          <span class="english-text">Orphans Cared For</span>
-          <span class="telugu-text">అనాథ పిల్లలు</span>
-        </div>
+        <div class="stat-item__label"><span class="english-text">Orphans Cared For</span><span class="telugu-text">అనాథ పిల్లలు</span></div>
       </div>
-      <div class="stat-item">
+      <div class="stat-item" data-reveal data-reveal-delay="4">
         <div class="stat-item__number">12+</div>
-        <div class="stat-item__label">
-          <span class="english-text">Active Ministries</span>
-          <span class="telugu-text">క్రియాశీల సేవలు</span>
-        </div>
+        <div class="stat-item__label"><span class="english-text">Active Ministries</span><span class="telugu-text">క్రియాశీల సేవలు</span></div>
       </div>
     </div>
   </div>
 </div>
 
 
-<!-- ══════════════════════════════════
-     MINISTRIES SECTION
-══════════════════════════════════ -->
+<!-- ══════════════════════════════════════════════════
+     MINISTRIES
+══════════════════════════════════════════════════ -->
 <section class="section section--surface">
   <div class="container">
-    <span class="section-eyebrow">
-      <span class="english-text">What We Do</span>
-      <span class="telugu-text">మేమేం చేస్తాం</span>
-    </span>
-    <h2 class="section-title">
-      <span class="english-text">Our Ministries</span>
-      <span class="telugu-text">మా సేవలు</span>
-    </h2>
-
+    <div class="section-header" data-reveal>
+      <span class="section-eyebrow"><span class="english-text">What We Do</span><span class="telugu-text">మేమేం చేస్తాం</span></span>
+      <h2 class="section-title"><span class="english-text">Our Ministries</span><span class="telugu-text">మా సేవలు</span></h2>
+    </div>
     <div class="ministry-grid">
-
-      <div class="ministry-card">
+      <div class="ministry-card" data-reveal data-reveal-delay="1">
         <div class="ministry-card__stripe"></div>
         <div class="ministry-card__body">
           <div class="ministry-card__icon">🏠</div>
           <h3><span class="english-text">Orphanage Ministry</span><span class="telugu-text">అనాథాశ్రమ సేవ</span></h3>
-          <p><span class="english-text">Providing shelter, education, and love to orphaned children, raising them in the knowledge of God.</span><span class="telugu-text">అనాథ పిల్లలకు ఆశ్రయం, విద్య మరియు ప్రేమ అందిస్తున్నాం, వారిని దేవుని జ్ఞానంలో పెంచుతున్నాం.</span></p>
-          <a href="orphanage.html" class="ministry-card__link"><span class="english-text">Learn more</span><span class="telugu-text">మరింత తెలుసుకోండి</span> →</a>
+          <p><span class="english-text">Providing shelter, education, and love to orphaned children for over 20 years — raising them in the knowledge of God.</span><span class="telugu-text">20 సంవత్సరాలకు పైగా అనాథ పిల్లలకు ఆశ్రయం, విద్య మరియు ప్రేమ అందిస్తున్నాం.</span></p>
+          <a href="orphanage.html" class="ministry-card__link"><span class="english-text">Learn more</span><span class="telugu-text">మరింత</span> →</a>
         </div>
       </div>
-
-      <div class="ministry-card">
+      <div class="ministry-card" data-reveal data-reveal-delay="2">
         <div class="ministry-card__stripe"></div>
         <div class="ministry-card__body">
           <div class="ministry-card__icon">📖</div>
           <h3><span class="english-text">Bible &amp; Preaching</span><span class="telugu-text">బైబిల్ &amp; బోధన</span></h3>
-          <p><span class="english-text">Weekly sermons, Bible study groups, and discipleship programs to deepen your faith and understanding.</span><span class="telugu-text">వారపు ప్రసంగాలు, బైబిల్ అధ్యయన సమూహాలు మరియు మీ విశ్వాసాన్ని లోతుగా చేయడానికి శిష్యత్వ కార్యక్రమాలు.</span></p>
-          <a href="sermons.html" class="ministry-card__link"><span class="english-text">Watch sermons</span><span class="telugu-text">ప్రసంగాలు చూడండి</span> →</a>
+          <p><span class="english-text">Weekly sermons by Bishop P. Moses, Bible study groups, and discipleship programs to deepen your faith.</span><span class="telugu-text">బిషప్ పి. మోషే వారపు ప్రసంగాలు, బైబిల్ అధ్యయన సమూహాలు మరియు శిష్యత్వ కార్యక్రమాలు.</span></p>
+          <a href="sermons.html" class="ministry-card__link"><span class="english-text">Watch sermons</span><span class="telugu-text">ప్రసంగాలు</span> →</a>
         </div>
       </div>
-
-      <div class="ministry-card">
+      <div class="ministry-card" data-reveal data-reveal-delay="3">
         <div class="ministry-card__stripe"></div>
         <div class="ministry-card__body">
           <div class="ministry-card__icon">🌱</div>
           <h3><span class="english-text">Youth Ministry</span><span class="telugu-text">యువ సేవ</span></h3>
-          <p><span class="english-text">Empowering the next generation with faith, leadership, and purpose through engaging programs and camps.</span><span class="telugu-text">కార్యక్రమాలు మరియు క్యాంప్‌ల ద్వారా తదుపరి తరాన్ని విశ్వాసం, నాయకత్వంతో సాధికారత చేస్తున్నాం.</span></p>
-          <a href="ministries.html" class="ministry-card__link"><span class="english-text">Learn more</span><span class="telugu-text">మరింత తెలుసుకోండి</span> →</a>
+          <p><span class="english-text">Empowering the next generation with faith and purpose through Friday night prayer, camps, and mentorship.</span><span class="telugu-text">శుక్రవారం రాత్రి ప్రార్థన, క్యాంప్‌లు మరియు మార్గదర్శకత్వం ద్వారా యువతను సాధికారం చేస్తున్నాం.</span></p>
+          <a href="ministries.html" class="ministry-card__link"><span class="english-text">Learn more</span><span class="telugu-text">మరింత</span> →</a>
         </div>
       </div>
-
-      <div class="ministry-card">
+      <div class="ministry-card" data-reveal data-reveal-delay="1">
         <div class="ministry-card__stripe"></div>
         <div class="ministry-card__body">
           <div class="ministry-card__icon">🤝</div>
           <h3><span class="english-text">Community Relief</span><span class="telugu-text">సమాజ సహాయం</span></h3>
-          <p><span class="english-text">Food drives, medical camps, and emergency support for families in need throughout our region.</span><span class="telugu-text">మా ప్రాంతంలో అవసరమైన కుటుంబాలకు ఆహార పంపిణీ, వైద్య శిబిరాలు మరియు అత్యవసర సహాయం.</span></p>
+          <p><span class="english-text">Free medical camps, food drives, and emergency support for families in need across West Godavari district.</span><span class="telugu-text">పశ్చిమ గోదావరి జిల్లాలో ఉచిత వైద్య శిబిరాలు, ఆహార పంపిణీ మరియు అత్యవసర సహాయం.</span></p>
           <a href="volunteer.html" class="ministry-card__link"><span class="english-text">Get involved</span><span class="telugu-text">చేరండి</span> →</a>
         </div>
       </div>
-
-      <div class="ministry-card">
+      <div class="ministry-card" data-reveal data-reveal-delay="2">
         <div class="ministry-card__stripe"></div>
         <div class="ministry-card__body">
-          <div class="ministry-card__icon">🎵</div>
-          <h3><span class="english-text">Praise &amp; Worship</span><span class="telugu-text">స్తుతి &amp; ఆరాధన</span></h3>
-          <p><span class="english-text">Spirit-led worship through music, song, and dance that invites the presence of God into our gatherings.</span><span class="telugu-text">సంగీతం, పాట మరియు నృత్యం ద్వారా ఆత్మ నేతృత్వంలోని ఆరాధన.</span></p>
-          <a href="ministries.html" class="ministry-card__link"><span class="english-text">Learn more</span><span class="telugu-text">మరింత తెలుసుకోండి</span> →</a>
+          <div class="ministry-card__icon">📡</div>
+          <h3><span class="english-text">Media Ministry</span><span class="telugu-text">మీడియా సేవ</span></h3>
+          <p><span class="english-text">Reaching thousands through YouTube, Instagram and Facebook. Sermons available online to believers across India and worldwide.</span><span class="telugu-text">YouTube, Instagram మరియు Facebook ద్వారా వేలాది మందిని చేరుకోవడం. ప్రసంగాలు ఆన్‌లైన్‌లో అందుబాటులో ఉన్నాయి.</span></p>
+          <a href="sermons.html" class="ministry-card__link"><span class="english-text">Watch now</span><span class="telugu-text">చూడండి</span> →</a>
         </div>
       </div>
-
-      <div class="ministry-card">
+      <div class="ministry-card" data-reveal data-reveal-delay="3">
         <div class="ministry-card__stripe"></div>
         <div class="ministry-card__body">
-          <div class="ministry-card__icon">💒</div>
+          <div class="ministry-card__icon">🌸</div>
           <h3><span class="english-text">Women's Ministry</span><span class="telugu-text">మహిళా సేవ</span></h3>
-          <p><span class="english-text">Uplifting and equipping women through prayer groups, mentorship, and skill-building programs.</span><span class="telugu-text">ప్రార్థన సమూహాలు, మార్గదర్శకత్వం మరియు నైపుణ్య నిర్మాణ కార్యక్రమాల ద్వారా మహిళలను ఉన్నతపరచడం.</span></p>
-          <a href="ministries.html" class="ministry-card__link"><span class="english-text">Learn more</span><span class="telugu-text">మరింత తెలుసుకోండి</span> →</a>
+          <p><span class="english-text">Uplifting women through prayer groups, mentorship, and skill-building programs that have transformed hundreds of families.</span><span class="telugu-text">ప్రార్థన సమూహాలు మరియు నైపుణ్య నిర్మాణ కార్యక్రమాల ద్వారా మహిళలను ఉన్నతపరచడం.</span></p>
+          <a href="ministries.html" class="ministry-card__link"><span class="english-text">Learn more</span><span class="telugu-text">మరింత</span> →</a>
         </div>
       </div>
-
     </div>
   </div>
 </section>
 
 
-<!-- ══════════════════════════════════
+<!-- ══════════════════════════════════════════════════
      SCRIPTURE QUOTE
-══════════════════════════════════ -->
+══════════════════════════════════════════════════ -->
 <section class="scripture-section">
   <div class="container">
-    <p class="scripture-text">
-      <span class="english-text">"For I know the plans I have for you, declares the Lord, plans to prosper you and not to harm you, plans to give you hope and a future."</span>
-      <span class="telugu-text">"నేను మీ కోసం రూపొందించిన పథకాలు నాకు తెలుసు, అవి మిమ్మల్ని అభివృద్ధి చేయడానికి, హాని చేయడానికి కాదు."</span>
+    <p class="scripture-text" data-reveal>
+      <span class="english-text">"For I know the plans I have for you, declares the Lord — plans to prosper you and not to harm you, plans to give you hope and a future."</span>
+      <span class="telugu-text">"నేను మీ కోసం రూపొందించిన పథకాలు నాకు తెలుసు, అవి మిమ్మల్ని అభివృద్ధి చేయడానికి, హాని చేయడానికి కాదు — ఆశను మరియు భవిష్యత్తును ఇవ్వడానికి."</span>
     </p>
-    <p class="scripture-ref">
+    <p class="scripture-ref" data-reveal>
       <span class="english-text">— Jeremiah 29:11</span>
       <span class="telugu-text">— యిర్మీయా 29:11</span>
     </p>
@@ -379,72 +244,76 @@
 </section>
 
 
-<!-- ══════════════════════════════════
-     FOUNDERS SECTION
-══════════════════════════════════ -->
+<!-- ══════════════════════════════════════════════════
+     LEADERSHIP / FOUNDERS
+══════════════════════════════════════════════════ -->
 <section class="section">
   <div class="container" style="text-align:center;">
-    <span class="section-eyebrow">
-      <span class="english-text">Our Leadership</span>
-      <span class="telugu-text">మా నాయకత్వం</span>
-    </span>
-    <h2 class="section-title">
-      <span class="english-text">Meet the Founders</span>
-      <span class="telugu-text">స్థాపకులను కలవండి</span>
-    </h2>
-    <p class="section-sub" style="margin:0 auto 0;">
-      <span class="english-text">Dedicated servants of God who have given their lives to building this ministry from the ground up.</span>
-      <span class="telugu-text">దేవుని అంకితభావ సేవకులు, ఈ సేవను పూర్తిగా నిర్మించడానికి తమ జీవితాలు అర్పించారు.</span>
-    </p>
+    <div class="section-header section-header--center" data-reveal>
+      <span class="section-eyebrow"><span class="english-text">Our Leadership</span><span class="telugu-text">మా నాయకత్వం</span></span>
+      <h2 class="section-title"><span class="english-text">Meet the Founders</span><span class="telugu-text">స్థాపకులను కలవండి</span></h2>
+      <p class="section-sub">
+        <span class="english-text">Dedicated servants of God who have given their lives to building this ministry and reaching the unreached in Andhra Pradesh.</span>
+        <span class="telugu-text">దేవుని అంకితభావ సేవకులు — ఆంధ్రప్రదేశ్‌లో సేవను నిర్మించడానికి జీవితాలు అర్పించారు.</span>
+      </p>
+    </div>
 
     <div class="founders-grid">
-      <div class="founder-card">
-        <img src="images/founder.jpg" alt="Pastor P. Moses">
+      <div class="founder-card" data-reveal data-reveal-delay="1">
+        <img src="images/founder.jpg" alt="Bishop P. Moses" onerror="this.style.background='var(--off-white)';this.style.minHeight='116px';">
         <div class="founder-role">
-          <span class="english-text">Founder &amp; Senior Pastor</span>
-          <span class="telugu-text">స్థాపకుడు &amp; సీనియర్ పాస్టర్</span>
+          <span class="english-text">Founder &amp; Senior Bishop</span>
+          <span class="telugu-text">స్థాపకుడు &amp; సీనియర్ బిషప్</span>
         </div>
         <h3>
-          <span class="english-text">Pastor P. Moses</span>
-          <span class="telugu-text">పాస్టర్ పి. మోసెస్</span>
+          <span class="english-text">Bishop P. Moses</span>
+          <span class="telugu-text">బిషప్ పి. మోషే</span>
         </h3>
+        <p>
+          <span class="english-text">Over 20 years leading Holy Spirit Prayer House and the orphanage ministry in Oduru, West Godavari.</span>
+          <span class="telugu-text">ఒదురులో 20 సంవత్సరాలకు పైగా నాయకత్వం వహిస్తున్నారు.</span>
+        </p>
       </div>
 
-      <div class="founder-card">
-        <img src="images/co-founder.jpg" alt="Bro. Billygraham Moses">
+      <div class="founder-card" data-reveal data-reveal-delay="2">
+        <img src="images/co-founder.jpg" alt="Bro. Billygraham Moses" onerror="this.style.background='var(--off-white)';this.style.minHeight='116px';">
         <div class="founder-role">
           <span class="english-text">Co-Founder &amp; Minister</span>
           <span class="telugu-text">సహ-స్థాపకుడు &amp; మంత్రి</span>
         </div>
         <h3>
           <span class="english-text">Bro. Billygraham Moses</span>
-          <span class="telugu-text">బ్రదర్ బిలీగ్రాహం మోసెస్</span>
+          <span class="telugu-text">బ్రదర్ బిలీగ్రాహం మోషే</span>
         </h3>
+        <p>
+          <span class="english-text">Serving alongside the ministry in evangelism, discipleship, and community outreach programs.</span>
+          <span class="telugu-text">సువార్త మరియు శిష్యత్వంలో సేవ చేస్తున్నారు.</span>
+        </p>
       </div>
     </div>
   </div>
 </section>
 
 
-<!-- ══════════════════════════════════
-     YOUTUBE / SERMONS CTA
-══════════════════════════════════ -->
+<!-- ══════════════════════════════════════════════════
+     YOUTUBE CTA
+══════════════════════════════════════════════════ -->
 <section class="section section--dark">
   <div class="container">
-    <div class="sermon-card">
+    <div class="sermon-card" data-reveal>
       <div class="sermon-card__icon">▶</div>
       <div class="sermon-card__content">
         <h3>
           <span class="english-text">Watch Our Sermons on YouTube</span>
           <span class="telugu-text">YouTube లో మా ప్రసంగాలు చూడండి</span>
         </h3>
-        <p style="margin-bottom:1.25rem;">
-          <span class="english-text">New messages every week from Pastor P. Moses. Subscribe to stay connected and be uplifted wherever you are.</span>
-          <span class="telugu-text">పాస్టర్ పి. మోసెస్ నుండి ప్రతి వారం కొత్త సందేశాలు. సబ్‌స్క్రైబ్ చేసుకోండి.</span>
+        <p style="margin-bottom:1.5rem;">
+          <span class="english-text">New messages from Bishop P. Moses every week. Spirit-filled preaching you can watch from anywhere in India or abroad. Subscribe and never miss a message.</span>
+          <span class="telugu-text">బిషప్ పి. మోషే నుండి ప్రతి వారం కొత్త సందేశాలు. భారతదేశంలో లేదా విదేశాల నుండి ఎక్కడి నుండైనా చూడవచ్చు. సబ్‌స్క్రైబ్ చేయండి.</span>
         </p>
         <a href="https://www.youtube.com/@pastorpmoses" target="_blank" rel="noopener" class="btn btn-primary">
-          <span class="english-text">Subscribe on YouTube</span>
-          <span class="telugu-text">YouTube లో సబ్‌స్క్రైబ్ చేయండి</span>
+          <span class="english-text">▶ Subscribe on YouTube</span>
+          <span class="telugu-text">▶ YouTube లో సబ్‌స్క్రైబ్ చేయండి</span>
         </a>
       </div>
     </div>
@@ -452,193 +321,65 @@
 </section>
 
 
-<!-- ══════════════════════════════════
-     VOLUNTEER / DONATE CTA BAND
-══════════════════════════════════ -->
+<!-- ══════════════════════════════════════════════════
+     WHATSAPP CTA (India-focused)
+══════════════════════════════════════════════════ -->
+<section class="whatsapp-section" data-reveal>
+  <div class="container">
+    <div style="max-width:620px;margin:0 auto;">
+      <div style="font-size:3rem;margin-bottom:0.75rem;">💬</div>
+      <h2 style="font-family:'Playfair Display',serif;">
+        <span class="english-text">Connect Instantly on WhatsApp</span>
+        <span class="telugu-text">WhatsApp లో వెంటనే కనెక్ట్ అవ్వండి</span>
+      </h2>
+      <p>
+        <span class="english-text">Have a prayer request? Want to donate? Need directions? Message us on WhatsApp — we reply within minutes.</span>
+        <span class="telugu-text">ప్రార్థన విజ్ఞాపన ఉందా? దానం చేయాలా? WhatsApp లో సందేశం పంపండి — మేము నిమిషాల్లో జవాబిస్తాం.</span>
+      </p>
+      <a href="https://wa.me/919848315170?text=Hello%20Holy%20Spirit%20Prayer%20House!" target="_blank" class="btn btn-primary" style="background:#fff;color:#128C7E;margin-top:0.5rem;">
+        <span class="english-text">💬 Message +91 98483 15170</span>
+        <span class="telugu-text">💬 +91 98483 15170 కు సందేశం పంపండి</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+     CTA BAND
+══════════════════════════════════════════════════ -->
 <section class="cta-band">
   <div class="container">
-    <span class="section-eyebrow">
-      <span class="english-text">Make a Difference</span>
-      <span class="telugu-text">తేడా చేయండి</span>
-    </span>
-    <h2 class="section-title">
-      <span class="english-text">Join Our Mission</span>
-      <span class="telugu-text">మా లక్ష్యంలో చేరండి</span>
-    </h2>
-    <p class="section-sub" style="margin: 0 auto 2rem;">
-      <span class="english-text">Whether you give your time, talents, or treasure — every act of generosity transforms lives and glorifies God.</span>
-      <span class="telugu-text">మీ సమయం, ప్రతిభ లేదా ఐశ్వర్యం అందించండి — ప్రతి దాతృత్వ చర్య జీవితాలను మారుస్తుంది.</span>
-    </p>
+    <div data-reveal>
+      <span class="section-eyebrow"><span class="english-text">Make a Difference</span><span class="telugu-text">తేడా చేయండి</span></span>
+      <h2 class="section-title">
+        <span class="english-text">Join Our Mission</span>
+        <span class="telugu-text">మా లక్ష్యంలో చేరండి</span>
+      </h2>
+      <p class="section-sub" style="margin:0 auto 0;">
+        <span class="english-text">Whether you give your time, talents, or resources — every act of generosity transforms lives and glorifies God in West Godavari and beyond.</span>
+        <span class="telugu-text">మీ సమయం, ప్రతిభ లేదా వనరులు అందించండి — ప్రతి దాతృత్వ చర్య జీవితాలను మారుస్తుంది మరియు దేవుని మహిమపరుస్తుంది.</span>
+      </p>
+    </div>
     <div class="cta-actions">
       <a href="volunteer.html" class="btn btn-primary">
         <span class="english-text">Volunteer With Us</span>
-        <span class="telugu-text">మాతో స్వచ్ఛంద సేవ చేయండి</span>
+        <span class="telugu-text">మాతో స్వచ్ఛంద సేవ</span>
       </a>
       <a href="donate.html" class="btn btn-gold">
         <span class="english-text">Give / Donate</span>
         <span class="telugu-text">దానం చేయండి</span>
       </a>
+      <a href="contact.html" class="btn btn-ghost">
+        <span class="english-text">Contact Us</span>
+        <span class="telugu-text">సంప్రదించండి</span>
+      </a>
     </div>
   </div>
 </section>
 
 
-<!-- ══════════════════════════════════
-     FOOTER
-══════════════════════════════════ -->
-<footer>
-  <div class="container">
-    <div class="footer-grid">
-
-      <!-- Brand -->
-      <div class="footer-brand">
-        <a href="index.html" class="logo" style="margin-bottom:1rem;">
-          <img src="images/logo.webp" alt="Holy Spirit Prayer House">
-          <div class="logo-text">
-            <strong style="color:#fff;">
-              <span class="english-text">Holy Spirit Prayer House</span>
-              <span class="telugu-text">హోలీ స్పిరిట్ మందిరం</span>
-            </strong>
-          </div>
-        </a>
-        <p>
-          <span class="english-text">A beacon of faith, hope, and love in Oduru, Andhra Pradesh. Serving our community since over 20 years.</span>
-          <span class="telugu-text">ఆంధ్రప్రదేశ్‌లోని ఒదురులో విశ్వాసం, ఆశ మరియు ప్రేమ యొక్క దీపస్తంభం.</span>
-        </p>
-        <div class="footer-social">
-          <a href="https://www.youtube.com/@pastorpmoses" target="_blank" class="social-btn" aria-label="YouTube">▶</a>
-          <a href="https://www.instagram.com/hsph_oduru/" target="_blank" class="social-btn" aria-label="Instagram">📷</a>
-          <a href="https://www.facebook.com/holy.jesus132" target="_blank" class="social-btn" aria-label="Facebook">f</a>
-        </div>
-      </div>
-
-      <!-- Quick Links -->
-      <div class="footer-col">
-        <h4>
-          <span class="english-text">Quick Links</span>
-          <span class="telugu-text">త్వరిత లింక్‌లు</span>
-        </h4>
-        <ul>
-          <li><a href="about.html"><span class="english-text">About Us</span><span class="telugu-text">మా గురించి</span></a></li>
-          <li><a href="sermons.html"><span class="english-text">Sermons</span><span class="telugu-text">ప్రసంగాలు</span></a></li>
-          <li><a href="ministries.html"><span class="english-text">Ministries</span><span class="telugu-text">సేవలు</span></a></li>
-          <li><a href="orphanage.html"><span class="english-text">Orphanage</span><span class="telugu-text">అనాథాశ్రమం</span></a></li>
-          <li><a href="events.html"><span class="english-text">Events</span><span class="telugu-text">ఈవెంట్స్</span></a></li>
-        </ul>
-      </div>
-
-      <!-- Get Involved -->
-      <div class="footer-col">
-        <h4>
-          <span class="english-text">Get Involved</span>
-          <span class="telugu-text">చేరండి</span>
-        </h4>
-        <ul>
-          <li><a href="volunteer.html"><span class="english-text">Volunteer</span><span class="telugu-text">స్వచ్ఛంద సేవ</span></a></li>
-          <li><a href="donate.html"><span class="english-text">Donate</span><span class="telugu-text">దానం</span></a></li>
-          <li><a href="contact.html"><span class="english-text">Contact Us</span><span class="telugu-text">సంప్రదించండి</span></a></li>
-          <li><a href="https://www.youtube.com/@pastorpmoses" target="_blank"><span class="english-text">YouTube Channel</span><span class="telugu-text">YouTube ఛానల్</span></a></li>
-        </ul>
-      </div>
-
-      <!-- Contact -->
-      <div class="footer-col">
-        <h4>
-          <span class="english-text">Contact</span>
-          <span class="telugu-text">సంప్రదించండి</span>
-        </h4>
-        <ul class="footer-contact">
-          <li>
-            <span>📍</span>
-            <span>
-              <span class="english-text">Oduru Village, Andhra Pradesh, India</span>
-              <span class="telugu-text">ఒదురు గ్రామం, ఆంధ్రప్రదేశ్, భారతదేశం</span>
-            </span>
-          </li>
-          <li>
-            <span>✉</span>
-            <span><a href="mailto:info@holyspiritprayerhouse.org" style="color:inherit;">info@holyspiritprayerhouse.org</a></span>
-          </li>
-          <li>
-            <span>▶</span>
-            <span><a href="https://www.youtube.com/@pastorpmoses" target="_blank" style="color:var(--gold);">@pastorpmoses</a></span>
-          </li>
-        </ul>
-      </div>
-
-    </div>
-
-    <div class="footer-bottom">
-      <span>&copy; 2025 Holy Spirit Prayer House.
-        <span class="english-text">All Rights Reserved.</span>
-        <span class="telugu-text">అన్ని హక్కులు పరిరక్షించబడినవి.</span>
-      </span>
-      <span>
-        <span class="english-text">Made with ❤️ for God's Glory</span>
-        <span class="telugu-text">దేవుని మహిమ కోసం ❤️తో తయారు చేయబడింది</span>
-      </span>
-    </div>
-  </div>
-</footer>
-
-
-<!-- ══════════════════════════════════
-     FLOATING CHATBOT BUTTON
-══════════════════════════════════ -->
-<button id="chatbot-toggle" class="chatbot-button" aria-label="Chat with us">
-  <img src="images/founder.jpg" alt="Chat">
-  <span class="english-text">Chat with Amma</span>
-  <span class="telugu-text">అమ్మతో మాట్లాడండి</span>
-</button>
-
-<div id="chatbot-popup" class="chatbot-popup hidden">
-  <div class="chatbot-header">
-    <span>
-      <span class="english-text">💬 Chat with Amma</span>
-      <span class="telugu-text">💬 అమ్మతో చాట్</span>
-    </span>
-    <button id="close-chatbot" class="close-button">&times;</button>
-  </div>
-  <div style="padding:1.5rem;text-align:center;color:#666;font-size:0.9rem;">
-    <p style="margin-bottom:0.5rem;">
-      <span class="english-text">Hello! How can we help you today?</span>
-      <span class="telugu-text">నమస్కారం! మేము మీకు ఎలా సహాయం చేయగలం?</span>
-    </p>
-  </div>
-</div>
-
-
-<!-- ══════════════════════════════════
-     JAVASCRIPT
-══════════════════════════════════ -->
-<script>
-  // ── Mobile Menu ──
-  const menuBtn    = document.getElementById('menuButton');
-  const mobileNav  = document.getElementById('mobileNav');
-  const overlay    = document.getElementById('mobileOverlay');
-  const closeBtn   = document.getElementById('mobileClose');
-
-  function openMenu()  { mobileNav.classList.add('active');  overlay.classList.add('active');  document.body.style.overflow='hidden'; }
-  function closeMenu() { mobileNav.classList.remove('active'); overlay.classList.remove('active'); document.body.style.overflow=''; }
-
-  menuBtn.addEventListener('click', openMenu);
-  closeBtn.addEventListener('click', closeMenu);
-  overlay.addEventListener('click', closeMenu);
-
-  // ── Chatbot ──
-  const toggle = document.getElementById('chatbot-toggle');
-  const popup  = document.getElementById('chatbot-popup');
-  const close  = document.getElementById('close-chatbot');
-
-  toggle.addEventListener('click', () => popup.classList.toggle('hidden'));
-  close.addEventListener('click',  () => popup.classList.add('hidden'));
-
-  // ── Scroll-based header shadow ──
-  window.addEventListener('scroll', () => {
-    document.getElementById('mainHeader').style.boxShadow =
-      window.scrollY > 60 ? '0 4px 30px rgba(0,0,0,0.5)' : '0 2px 20px rgba(0,0,0,0.4)';
-  });
-</script>
-
+<div id="site-footer"></div>
+<script src="js/site.js"></script>
 </body>
 </html>
