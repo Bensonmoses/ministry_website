@@ -1,159 +1,95 @@
-<!-- HTML STARTS -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Basic Metadata -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive for mobile -->
-  <meta name="description" content="Holy Spirit Prayer House - A place for faith, love, and community outreach.">
-  <meta name="keywords" content="Church, Holy Spirit, Prayer, Ministries, Donations">
-  <meta name="author" content="Holy Spirit Prayer House">
-  <title>Holy Spirit Prayer House | హోలీ స్పిరిట్ ప్రార్థన మందిరం</title>
-  <link rel="icon" type="image/png" href="images/favicon.png"> <!-- Site tab icon -->
-
-  <!-- Google Fonts (used throughout the site) -->
-  <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet"> <!-- Title font -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet"> <!-- Body font -->
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+Telugu&display=swap" rel="stylesheet"> <!-- Telugu font -->
-
-  <!-- External Stylesheets -->
-  <link rel="stylesheet" href="css/styles.css">        <!-- Main layout and styling -->
-  <link rel="stylesheet" href="css/founder.css">       <!-- Founder section styles -->
-  <link rel="stylesheet" href="css/chatbot.css">       <!-- Chatbot button & popup styles -->
-
-  <!-- Language Toggle Script -->
-  <script>
-    // Save selected language to localStorage and apply it to <body>
-    function toggleLanguage(lang) {
-      localStorage.setItem("preferredLanguage", lang);
-      document.body.classList.remove("english", "telugu");
-      document.body.classList.add(lang);
-    }
-
-    // Load saved language on page load
-    document.addEventListener("DOMContentLoaded", function() {
-      const savedLang = localStorage.getItem("preferredLanguage") || "english";
-      document.body.classList.remove("english", "telugu");
-      document.body.classList.add(savedLang);
-    });
-  </script>
-
-  <!-- Inline Style for Language Toggle + Default Appearance -->
-  <style>
-    .language-toggle {
-      text-align: center;            /* Center the language buttons */
-      padding: 20px 0;               /* Vertical space */
-    }
-
-    .language-toggle button {
-      margin: 0 5px;                 /* Space between buttons */
-      padding: 8px 16px;             /* Button padding */
-      font-size: 14px;
-      cursor: pointer;
-      border: none;
-      background-color: #fff;        /* Bright white background */
-      font-family: 'Roboto', sans-serif;
-      color: #5f6368;
-      border-radius: 4px;
-      transition: background-color 0.3s, box-shadow 0.3s;
-    }
-
-    .language-toggle button:hover {
-      background-color: #f8f9fa;     /* Light grey on hover */
-      box-shadow: 0 1px 2px rgba(0,0,0,0.1); /* Soft shadow */
-    }
-
-    /* Language toggle behavior: show only selected language */
-    .telugu .english-text { display: none; }  /* Hide English when Telugu is active */
-    .english .telugu-text { display: none; }  /* Hide Telugu when English is active */
-  </style>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Get involved with Holy Spirit Prayer House — Volunteer, serve, donate and be part of God's work in West Godavari, Andhra Pradesh.">
+  <title>Get Involved | Holy Spirit Prayer House</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Telugu:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="english">
+<div id="site-header"></div>
 
-  <!-- Language Switcher UI -->
-  <div class="language-toggle">
-    <button onclick="toggleLanguage('english')">English</button>
-    <button onclick="toggleLanguage('telugu')">తెలుగు</button>
+<section class="page-hero">
+  <div class="container">
+    <span class="section-eyebrow"><span class="english-text">Serve</span><span class="telugu-text">సేవ</span></span>
+    <h1><span class="english-text">Get Involved</span><span class="telugu-text">భాగమవ్వండి</span></h1>
+    <p><span class="english-text">Every hand matters. Every prayer counts. Join us and be part of something that lasts for eternity.</span><span class="telugu-text">ప్రతి హస్తం ముఖ్యమైనది. ప్రతి ప్రార్థన విలువైనది. మాతో చేరండి మరియు శాశ్వతత్వానికి సంబంధించిన దానిలో భాగమవ్వండి.</span></p>
   </div>
+</section>
 
-  <!-- Header Section: Logo + Navigation (Desktop + Mobile) -->
-  <header id="mainHeader">
-    <div class="header-container">
-      <div class="logo">
-        <img src="images/logo.webp" alt="Holy Spirit Prayer House Logo">
+<!-- Ways to get involved -->
+<section class="section">
+  <div class="container">
+    <span class="section-eyebrow"><span class="english-text">Ways to Serve</span><span class="telugu-text">సేవ చేయు విధానాలు</span></h2></span>
+    <h2 class="section-title"><span class="english-text">How You Can Make a Difference</span><span class="telugu-text">మీరు ఎలా తేడా తీసుకు రాగలరు</span></h2>
+    <div class="welcome-grid" style="margin-top:2.5rem;">
+
+      <div class="welcome-card">
+        <div class="welcome-card__icon">🙏</div>
+        <h3><span class="english-text">Pray With Us</span><span class="telugu-text">మాతో ప్రార్థించండి</span></h3>
+        <p><span class="english-text">Prayer is the foundation of everything we do. Join our Wednesday prayer meeting or become a personal intercessor for this ministry from wherever you are.</span><span class="telugu-text">ప్రార్థన మేము చేసే ప్రతిదానికి పునాది. మా బుధవారం ప్రార్థన కూటానికి చేరండి లేదా మీరు ఉన్న చోటు నుండి ఈ సేవకు వ్యక్తిగత మధ్యస్థగా మారండి.</span></p>
       </div>
-      <nav class="desktop-nav">
-        <!-- Top navigation links (English + Telugu) -->
-        <ul class="nav-links">
-          <!-- Each link contains two spans: English & Telugu -->
-          <li><a href="index.html"><span class="english-text">Home</span><span class="telugu-text">హోమ్</span></a></li>
-          <li><a href="about.html"><span class="english-text">About</span><span class="telugu-text">గురించి</span></a></li>
-          <li><a href="sermons.html"><span class="english-text">Sermons</span><span class="telugu-text">ప్రసంగాలు</span></a></li>
-          <li><a href="ministries.html"><span class="english-text">Ministries</span><span class="telugu-text">సేవలు</span></a></li>
-          <li><a href="orphanage.html"><span class="english-text">Orphanage</span><span class="telugu-text">అనాథాశ్రమం</span></a></li>
-          <li><a href="events.html"><span class="english-text">Events</span><span class="telugu-text">ఈవెంట్స్</span></a></li>
-          <li><a href="contact.html"><span class="english-text">Contact</span><span class="telugu-text">సంప్రదించండి</span></a></li>
-          <li><a href="volunteer.html"><span class="english-text">Get Involved</span><span class="telugu-text">చేరడం</span></a></li>
-          <li><a href="donate.html" class="donate-btn"><span class="english-text">Donate Now</span><span class="telugu-text">దానం చేయండి</span></a></li>
-        </ul>
-      </nav>
-      <button id="menuButton" class="mobile-menu-button" aria-label="Open Menu">☰</button>
-    </div>
 
-    <!-- Mobile version of the nav menu -->
-    <nav class="mobile-nav" id="mobileNav">
-      <ul class="nav-links">
-        <li><a href="index.html"><span class="english-text">Home</span><span class="telugu-text">హోమ్</span></a></li>
-        <li><a href="about.html"><span class="english-text">About</span><span class="telugu-text">గురించి</span></a></li>
-        <li><a href="sermons.html"><span class="english-text">Sermons</span><span class="telugu-text">ప్రసంగాలు</span></a></li>
-        <li><a href="ministries.html"><span class="english-text">Ministries</span><span class="telugu-text">సేవలు</span></a></li>
-        <li><a href="orphanage.html"><span class="english-text">Orphanage</span><span class="telugu-text">అనాథాశ్రమం</span></a></li>
-        <li><a href="events.html"><span class="english-text">Events</span><span class="telugu-text">ఈవెంట్స్</span></a></li>
-        <li><a href="contact.html"><span class="english-text">Contact</span><span class="telugu-text">సంప్రదించండి</span></a></li>
-        <li><a href="volunteer.html"><span class="english-text">Get Involved</span><span class="telugu-text">చేరడం</span></a></li>
-        <li><a href="donate.html" class="donate-btn"><span class="english-text">Donate Now</span><span class="telugu-text">దానం చేయండి</span></a></li>
-      </ul>
-    </nav>
-  </header>
-
-
-
-
-
-  
-    
-
-    <!-- ✅ Get Involved Section -->
-    <section class="page-content">
-        <h1>Get Involved</h1>
-        <p>Volunteer with us and make a difference in the lives of many.</p>
-    </section>
-
-
-
-
-
-
-
-
-
-  <!-- Footer -->
-  <footer>
-    <div class="footer-container">
-      <p>&copy; 2025 Holy Spirit Prayer House |
-        <span class="english-text">All Rights Reserved</span>
-        <span class="telugu-text">అన్ని హక్కులు పరిరక్షించబడినవి</span>
-      </p>
-      <div class="social-icons">
-        <a href="https://www.youtube.com/@pastorpmoses" target="_blank" aria-label="YouTube"><img src="images/youtube.png" alt="YouTube"></a>
-        <a href="https://www.instagram.com/hsph_oduru/" target="_blank" aria-label="Instagram"><img src="images/instagram.png" alt="Instagram"></a>
-        <a href="https://www.facebook.com/holy.jesus132" target="_blank" aria-label="Facebook"><img src="images/facebook.png" alt="Facebook"></a>
+      <div class="welcome-card">
+        <div class="welcome-card__icon">💰</div>
+        <h3><span class="english-text">Give Financially</span><span class="telugu-text">ఆర్థికంగా దానం చేయండి</span></h3>
+        <p><span class="english-text">Fund the orphanage, ministry outreach and community care. Every rupee you give goes directly toward changing lives in West Godavari.</span><span class="telugu-text">అనాథాశ్రమం, సేవ మరియు సమాజ సంరక్షణకు నిధులు అందించండి. మీరు ఇచ్చే ప్రతి రూపాయి పశ్చిమ గోదావరిలో జీవితాలను మార్చడానికి నేరుగా వెళ్తుంది.</span></p>
+        <a href="donate.html" class="btn btn-primary" style="margin-top:1.25rem;font-size:0.85rem;"><span class="english-text">Donate Now</span><span class="telugu-text">దానం చేయండి</span></a>
       </div>
-    </div>
-  </footer>
 
-  <!-- External JavaScript Files -->
-  <script src="js/chatbot.js" defer></script>
-  <script src="js/script.js" defer></script>
-</body>
-</html>
+      <div class="welcome-card">
+        <div class="welcome-card__icon">👐</div>
+        <h3><span class="english-text">Volunteer Locally</span><span class="telugu-text">స్థానికంగా స్వచ్ఛంద సేవ</span></h3>
+        <p><span class="english-text">If you are near Oduru, come and serve hands-on — help with the orphanage, assist with medical camps, teach children, or support our events team.</span><span class="telugu-text">మీరు ఒదురు దగ్గర ఉంటే, వ్యక్తిగతంగా వచ్చి సేవ చేయండి — అనాథాశ్రమంతో సహాయం చేయండి, పిల్లలకు బోధించండి.</span></p>
+      </div>
+
+      <div class="welcome-card">
+        <div class="welcome-card__icon">📣</div>
+        <h3><span class="english-text">Share Our Message</span><span class="telugu-text">మా సందేశం పంచుకోండి</span></h3>
+        <p><span class="english-text">Follow and share Bishop P. Moses's YouTube sermons. Share our pages on social media. Tell your friends and family about this ministry. Spreading the word costs nothing.</span><span class="telugu-text">బిషప్ పి. మోషే YouTube ప్రసంగాలను ఫాలో చేసి షేర్ చేయండి. సోషల్ మీడియాలో మా పేజీలను షేర్ చేయండి.</span></p>
+        <a href="https://www.youtube.com/@pastorpmoses" target="_blank" class="btn btn-gold" style="margin-top:1.25rem;font-size:0.85rem;"><span class="english-text">▶ Our YouTube</span><span class="telugu-text">▶ మా YouTube</span></a>
+      </div>
+
+      <div class="welcome-card">
+        <div class="welcome-card__icon">🎓</div>
+        <h3><span class="english-text">Sponsor a Child</span><span class="telugu-text">పిల్లవాడిని స్పాన్సర్ చేయండి</span></h3>
+        <p><span class="english-text">A monthly commitment of ₹500 sponsors one child's meals for a month. ₹2,000/month sponsors education. Your name becomes part of a child's story.</span><span class="telugu-text">నెలకు ₹500 నిబద్ధత ఒక నెల పిల్లవాడి భోజనాన్ని స్పాన్సర్ చేస్తుంది. ₹2,000/నెల విద్యను స్పాన్సర్ చేస్తుంది.</span></p>
+        <a href="https://wa.me/919848315170?text=I%20want%20to%20sponsor%20a%20child%20at%20the%20orphanage" target="_blank" class="btn btn-primary" style="margin-top:1.25rem;font-size:0.85rem;"><span class="english-text">💬 Enquire on WhatsApp</span><span class="telugu-text">💬 WhatsApp లో విచారించండి</span></a>
+      </div>
+
+      <div class="welcome-card">
+        <div class="welcome-card__icon">🌐</div>
+        <h3><span class="english-text">Diaspora Partnership</span><span class="telugu-text">ప్రవాస భాగస్వామ్యం</span></h3>
+        <p><span class="english-text">Telugu believers abroad (USA, UK, Australia, Middle East) — you can partner with this ministry from anywhere in the world. Contact us for international giving options.</span><span class="telugu-text">విదేశాల్లో (USA, UK, Australia, Middle East) తెలుగు విశ్వాసులు — మీరు ప్రపంచంలో ఎక్కడి నుండైనా ఈ సేవతో భాగస్వామ్యం కలిగి ఉండవచ్చు.</span></p>
+        <a href="mailto:pastorpmoses2014@gmail.com?subject=Diaspora Partnership" class="btn btn-outline" style="margin-top:1.25rem;font-size:0.85rem;border-color:var(--crimson);color:var(--crimson);"><span class="english-text">✉ Email Us</span><span class="telugu-text">✉ ఇమెయిల్ చేయండి</span></a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WhatsApp CTA -->
+<section class="section section--dark">
+  <div class="container" style="max-width:700px;text-align:center;">
+    <div style="font-size:3rem;margin-bottom:1rem;">💬</div>
+    <h2 class="section-title"><span class="english-text">Ready to Get Involved?</span><span class="telugu-text">భాగమవ్వడానికి సిద్ధంగా ఉన్నారా?</span></h2>
+    <p class="section-sub" style="margin:0 auto 2rem;"><span class="english-text">The easiest first step is to send us a WhatsApp message. Tell us who you are and how you'd like to serve — we'll take it from there.</span><span class="telugu-text">మొదటి అడుగు WhatsApp సందేశం పంపడం. మీరు ఎవరో మరియు మీరు ఎలా సేవ చేయాలనుకుంటున్నారో చెప్పండి.</span></p>
+    <a href="https://wa.me/919848315170?text=Hi%20Bishop%20Moses!%20I%20want%20to%20get%20involved%20with%20Holy%20Spirit%20Prayer%20House" target="_blank" class="btn btn-primary" style="font-size:1rem;padding:1rem 2rem;">
+      <span class="english-text">💬 Message Us on WhatsApp</span>
+      <span class="telugu-text">💬 WhatsApp లో సందేశం పంపండి</span>
+    </a>
+  </div>
+</section>
+
+<!-- Scripture -->
+<section class="scripture-section">
+  <div class="container">
+    <p class="scripture-text"><span class="english-text">"Whatever you do, work at it with all your heart, as working for the Lord, not for human masters."</span><span class="telugu-text">"మీరు ఏ పని చేసినా మనుషుల కోసం కాదు, ప్రభువు కోసం పని చేస్తున్నట్లు మనసారా చేయండి."</span></p>
+    <p class="scripture-ref"><span class="english-text">— Colossians 3:23</span><span class="telugu-text">— కొలొస్సయులకు 3:23</span></p>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="js/site.js"></script>
+</body></html>
