@@ -1,171 +1,147 @@
-<!-- HTML STARTS -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Basic Metadata -->
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive for mobile -->
-  <meta name="description" content="Holy Spirit Prayer House - A place for faith, love, and community outreach.">
-  <meta name="keywords" content="Church, Holy Spirit, Prayer, Ministries, Donations">
-  <meta name="author" content="Holy Spirit Prayer House">
-  <title>Holy Spirit Prayer House | హోలీ స్పిరిట్ ప్రార్థన మందిరం</title>
-  <link rel="icon" type="image/png" href="images/favicon.png"> <!-- Site tab icon -->
-
-  <!-- Google Fonts (used throughout the site) -->
-  <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet"> <!-- Title font -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet"> <!-- Body font -->
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+Telugu&display=swap" rel="stylesheet"> <!-- Telugu font -->
-
-  <!-- External Stylesheets -->
-  <link rel="stylesheet" href="css/styles.css">        <!-- Main layout and styling -->
-  <link rel="stylesheet" href="css/founder.css">       <!-- Founder section styles -->
-  <link rel="stylesheet" href="css/chatbot.css">       <!-- Chatbot button & popup styles -->
-
-  <!-- Language Toggle Script -->
-  <script>
-    // Save selected language to localStorage and apply it to <body>
-    function toggleLanguage(lang) {
-      localStorage.setItem("preferredLanguage", lang);
-      document.body.classList.remove("english", "telugu");
-      document.body.classList.add(lang);
-    }
-
-    // Load saved language on page load
-    document.addEventListener("DOMContentLoaded", function() {
-      const savedLang = localStorage.getItem("preferredLanguage") || "english";
-      document.body.classList.remove("english", "telugu");
-      document.body.classList.add(savedLang);
-    });
-  </script>
-
-  <!-- Inline Style for Language Toggle + Default Appearance -->
-  <style>
-    .language-toggle {
-      text-align: center;            /* Center the language buttons */
-      padding: 20px 0;               /* Vertical space */
-    }
-
-    .language-toggle button {
-      margin: 0 5px;                 /* Space between buttons */
-      padding: 8px 16px;             /* Button padding */
-      font-size: 14px;
-      cursor: pointer;
-      border: none;
-      background-color: #fff;        /* Bright white background */
-      font-family: 'Roboto', sans-serif;
-      color: #5f6368;
-      border-radius: 4px;
-      transition: background-color 0.3s, box-shadow 0.3s;
-    }
-
-    .language-toggle button:hover {
-      background-color: #f8f9fa;     /* Light grey on hover */
-      box-shadow: 0 1px 2px rgba(0,0,0,0.1); /* Soft shadow */
-    }
-
-    /* Language toggle behavior: show only selected language */
-    .telugu .english-text { display: none; }  /* Hide English when Telugu is active */
-    .english .telugu-text { display: none; }  /* Hide Telugu when English is active */
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Holy Spirit Prayer House — Phone, WhatsApp, Email and Address in Oduru, West Godavari, Andhra Pradesh.">
+  <title>Contact Us | Holy Spirit Prayer House</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Telugu:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="english">
+<div id="site-header"></div>
 
-  <!-- Language Switcher UI -->
-  <div class="language-toggle">
-    <button onclick="toggleLanguage('english')">English</button>
-    <button onclick="toggleLanguage('telugu')">తెలుగు</button>
+<section class="page-hero">
+  <div class="container">
+    <span class="section-eyebrow"><span class="english-text">Reach Out</span><span class="telugu-text">సంప్రదించండి</span></span>
+    <h1><span class="english-text">Contact Us</span><span class="telugu-text">మమ్మల్ని సంప్రదించండి</span></h1>
+    <p><span class="english-text">We'd love to hear from you. Visit us, call us, or send a message on WhatsApp.</span><span class="telugu-text">మీ నుండి వినడం మాకు ఇష్టం. సందర్శించండి, కాల్ చేయండి, లేదా WhatsApp లో సందేశం పంపండి.</span></p>
   </div>
+</section>
 
-  <!-- Header Section: Logo + Navigation (Desktop + Mobile) -->
-  <header id="mainHeader">
-    <div class="header-container">
-      <div class="logo">
-        <img src="images/logo.webp" alt="Holy Spirit Prayer House Logo">
+<section class="section">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;">
+
+      <!-- Contact Cards -->
+      <div style="display:flex;flex-direction:column;gap:1.5rem;">
+
+        <div class="welcome-card" style="flex-direction:row;align-items:center;gap:1.25rem;text-align:left;">
+          <div class="welcome-card__icon" style="flex-shrink:0;">📞</div>
+          <div>
+            <h3 style="margin-bottom:0.3rem;font-size:1rem;"><span class="english-text">Phone (India)</span><span class="telugu-text">ఫోన్ (భారతదేశం)</span></h3>
+            <a href="tel:+919848315170" style="color:var(--crimson);font-weight:600;font-size:1.1rem;">+91 98483 15170</a>
+          </div>
+        </div>
+
+        <div class="welcome-card" style="flex-direction:row;align-items:center;gap:1.25rem;text-align:left;">
+          <div class="welcome-card__icon" style="flex-shrink:0;">💬</div>
+          <div>
+            <h3 style="margin-bottom:0.3rem;font-size:1rem;">WhatsApp</h3>
+            <a href="https://wa.me/919848315170" target="_blank" style="color:#25D366;font-weight:600;font-size:1.1rem;">+91 98483 15170</a>
+            <p style="font-size:0.82rem;color:var(--text-light);margin-top:0.2rem;"><span class="english-text">Quickest response</span><span class="telugu-text">త్వరిత స్పందన</span></p>
+          </div>
+        </div>
+
+        <div class="welcome-card" style="flex-direction:row;align-items:center;gap:1.25rem;text-align:left;">
+          <div class="welcome-card__icon" style="flex-shrink:0;">📞</div>
+          <div>
+            <h3 style="margin-bottom:0.3rem;font-size:1rem;"><span class="english-text">Phone (US)</span><span class="telugu-text">ఫోన్ (అమెరికా)</span></h3>
+            <a href="tel:+15516976451" style="color:var(--crimson);font-weight:600;font-size:1.1rem;">+1 (551) 697-6451</a>
+          </div>
+        </div>
+
+        <div class="welcome-card" style="flex-direction:row;align-items:center;gap:1.25rem;text-align:left;">
+          <div class="welcome-card__icon" style="flex-shrink:0;">✉</div>
+          <div>
+            <h3 style="margin-bottom:0.3rem;font-size:1rem;"><span class="english-text">Email</span><span class="telugu-text">ఇమెయిల్</span></h3>
+            <a href="mailto:pastorpmoses2014@gmail.com" style="color:var(--crimson);font-weight:600;">pastorpmoses2014@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="welcome-card" style="flex-direction:row;align-items:center;gap:1.25rem;text-align:left;">
+          <div class="welcome-card__icon" style="flex-shrink:0;">📍</div>
+          <div>
+            <h3 style="margin-bottom:0.3rem;font-size:1rem;"><span class="english-text">Address</span><span class="telugu-text">చిరునామా</span></h3>
+            <p style="font-weight:600;color:var(--text-dark);">
+              <span class="english-text">Holy Spirit Prayer House<br>4-92, Kotha Colony, Oduru<br>Penumantra Mandal, West Godavari<br>Andhra Pradesh — 534126</span>
+              <span class="telugu-text">హోలీ స్పిరిట్ ప్రార్థన మందిరం<br>4-92, కోత కాలనీ, ఒదురు<br>పెనుమంత్ర మండలం, పశ్చిమ గోదావరి<br>ఆంధ్రప్రదేశ్ — 534126</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- Service Times -->
+        <div style="background:var(--dark-2);border-radius:var(--radius-lg);padding:1.75rem;border:1px solid var(--border);">
+          <h3 style="color:var(--gold);font-family:'Playfair Display',serif;margin-bottom:1rem;"><span class="english-text">Service Times</span><span class="telugu-text">ఆరాధన సమయాలు</span></h3>
+          <div style="display:flex;flex-direction:column;gap:0.6rem;">
+            <div style="display:flex;justify-content:space-between;color:rgba(255,255,255,0.8);font-size:0.9rem;border-bottom:1px solid rgba(255,255,255,0.08);padding-bottom:0.5rem;">
+              <span><span class="english-text">Sunday Morning</span><span class="telugu-text">ఆదివారం ఉదయం</span></span><span style="color:var(--gold);font-weight:600;">9:00 AM</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;color:rgba(255,255,255,0.8);font-size:0.9rem;border-bottom:1px solid rgba(255,255,255,0.08);padding-bottom:0.5rem;">
+              <span><span class="english-text">Sunday Main Service</span><span class="telugu-text">ఆదివారం ప్రధాన ఆరాధన</span></span><span style="color:var(--gold);font-weight:600;">11:00 AM</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;color:rgba(255,255,255,0.8);font-size:0.9rem;border-bottom:1px solid rgba(255,255,255,0.08);padding-bottom:0.5rem;">
+              <span><span class="english-text">Wednesday Prayer</span><span class="telugu-text">బుధవారం ప్రార్థన</span></span><span style="color:var(--gold);font-weight:600;">6:30 PM</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;color:rgba(255,255,255,0.8);font-size:0.9rem;">
+              <span><span class="english-text">Friday Youth &amp; Fasting</span><span class="telugu-text">శుక్రవారం యువ &amp; ఉపవాసం</span></span><span style="color:var(--gold);font-weight:600;">7:00 PM</span>
+            </div>
+          </div>
+        </div>
       </div>
-      <nav class="desktop-nav">
-        <!-- Top navigation links (English + Telugu) -->
-        <ul class="nav-links">
-          <!-- Each link contains two spans: English & Telugu -->
-          <li><a href="index.html"><span class="english-text">Home</span><span class="telugu-text">హోమ్</span></a></li>
-          <li><a href="about.html"><span class="english-text">About</span><span class="telugu-text">గురించి</span></a></li>
-          <li><a href="sermons.html"><span class="english-text">Sermons</span><span class="telugu-text">ప్రసంగాలు</span></a></li>
-          <li><a href="ministries.html"><span class="english-text">Ministries</span><span class="telugu-text">సేవలు</span></a></li>
-          <li><a href="orphanage.html"><span class="english-text">Orphanage</span><span class="telugu-text">అనాథాశ్రమం</span></a></li>
-          <li><a href="events.html"><span class="english-text">Events</span><span class="telugu-text">ఈవెంట్స్</span></a></li>
-          <li><a href="contact.html"><span class="english-text">Contact</span><span class="telugu-text">సంప్రదించండి</span></a></li>
-          <li><a href="volunteer.html"><span class="english-text">Get Involved</span><span class="telugu-text">చేరడం</span></a></li>
-          <li><a href="donate.html" class="donate-btn"><span class="english-text">Donate Now</span><span class="telugu-text">దానం చేయండి</span></a></li>
-        </ul>
-      </nav>
-      <button id="menuButton" class="mobile-menu-button" aria-label="Open Menu">☰</button>
-    </div>
 
-    <!-- Mobile version of the nav menu -->
-    <nav class="mobile-nav" id="mobileNav">
-      <ul class="nav-links">
-        <li><a href="index.html"><span class="english-text">Home</span><span class="telugu-text">హోమ్</span></a></li>
-        <li><a href="about.html"><span class="english-text">About</span><span class="telugu-text">గురించి</span></a></li>
-        <li><a href="sermons.html"><span class="english-text">Sermons</span><span class="telugu-text">ప్రసంగాలు</span></a></li>
-        <li><a href="ministries.html"><span class="english-text">Ministries</span><span class="telugu-text">సేవలు</span></a></li>
-        <li><a href="orphanage.html"><span class="english-text">Orphanage</span><span class="telugu-text">అనాథాశ్రమం</span></a></li>
-        <li><a href="events.html"><span class="english-text">Events</span><span class="telugu-text">ఈవెంట్స్</span></a></li>
-        <li><a href="contact.html"><span class="english-text">Contact</span><span class="telugu-text">సంప్రదించండి</span></a></li>
-        <li><a href="volunteer.html"><span class="english-text">Get Involved</span><span class="telugu-text">చేరడం</span></a></li>
-        <li><a href="donate.html" class="donate-btn"><span class="english-text">Donate Now</span><span class="telugu-text">దానం చేయండి</span></a></li>
-      </ul>
-    </nav>
-  </header>
+      <!-- Map + Social -->
+      <div>
+        <!-- Google Map -->
+        <div style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-md);margin-bottom:2rem;border:1px solid rgba(0,0,0,0.08);">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30499.07!2d81.4!3d16.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTbCsDU0JzAwLjAiTiA4McKwMjQnMDAuMCJF!5e0!3m2!1sen!2sin!4v1"
+            width="100%" height="280" style="border:0;display:block;" allowfullscreen="" loading="lazy"
+            title="Holy Spirit Prayer House Location"></iframe>
+        </div>
 
-    
+        <!-- WhatsApp CTA -->
+        <a href="https://wa.me/919848315170" target="_blank" style="display:flex;align-items:center;gap:1rem;background:#25D366;color:#fff;border-radius:var(--radius-lg);padding:1.5rem;text-decoration:none;margin-bottom:1.5rem;transition:all 0.3s ease;box-shadow:0 8px 24px rgba(37,211,102,0.3);">
+          <span style="font-size:2rem;">💬</span>
+          <div>
+            <div style="font-weight:700;font-size:1.1rem;"><span class="english-text">Message us on WhatsApp</span><span class="telugu-text">WhatsApp లో మాకు సందేశం పంపండి</span></div>
+            <div style="font-size:0.85rem;opacity:0.85;"><span class="english-text">Get a reply within minutes</span><span class="telugu-text">నిమిషాల్లో జవాబు పొందండి</span></div>
+          </div>
+        </a>
 
-
-    
-
-    <!-- Contact Section -->
-    <section class="page-content">
-        <h1>
-            <span class="english-text">Contact Us</span>
-            <span class="telugu-text">మమ్మల్ని సంప్రదించండి</span>
-        </h1>
-        <p>
-            <span class="english-text">Email: pastorpmoses2014@gmail.com</span>
-            <span class="telugu-text">ఇమెయిల్: pastorpmoses2014@gmail.com</span>
-        </p>
-        <p>
-            <span class="english-text">Phone: +91 9848315170</span>
-            <span class="telugu-text">ఫోన్: +91 9848315170</span>
-        </p>
-        <p>
-            <span class="english-text">Phone: +1 (551) 697-6451</span>
-            <span class="telugu-text">ఫోన్: +1 (551) 697-6451</span>
-        </p>
-        <p>
-            <span class="english-text">Address: 94 Street, Andhra Pradesh, India</span>
-            <span class="telugu-text">చిరునామా: 94 వీధి, ఆంధ్రప్రదేశ్, ఇండియా</span>
-        </p>
-    </section>
-
-
-    
-
-
-  <!-- Footer -->
-  <footer>
-    <div class="footer-container">
-      <p>&copy; 2025 Holy Spirit Prayer House |
-        <span class="english-text">All Rights Reserved</span>
-        <span class="telugu-text">అన్ని హక్కులు పరిరక్షించబడినవి</span>
-      </p>
-      <div class="social-icons">
-        <a href="https://www.youtube.com/@pastorpmoses" target="_blank" aria-label="YouTube"><img src="images/youtube.png" alt="YouTube"></a>
-        <a href="https://www.instagram.com/hsph_oduru/" target="_blank" aria-label="Instagram"><img src="images/instagram.png" alt="Instagram"></a>
-        <a href="https://www.facebook.com/holy.jesus132" target="_blank" aria-label="Facebook"><img src="images/facebook.png" alt="Facebook"></a>
+        <!-- Social links -->
+        <div style="background:var(--off-white);border-radius:var(--radius-lg);padding:1.75rem;border:1px solid rgba(0,0,0,0.06);">
+          <h3 style="font-family:'Playfair Display',serif;font-size:1.1rem;margin-bottom:1.25rem;"><span class="english-text">Follow Us</span><span class="telugu-text">ఫాలో అవ్వండి</span></h3>
+          <div style="display:flex;flex-direction:column;gap:0.75rem;">
+            <a href="https://www.youtube.com/@pastorpmoses" target="_blank" style="display:flex;align-items:center;gap:0.75rem;color:var(--text-dark);font-weight:500;font-size:0.95rem;text-decoration:none;">
+              <span style="width:36px;height:36px;background:#FF0000;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1rem;">▶</span>
+              <span>YouTube — @pastorpmoses</span>
+            </a>
+            <a href="https://www.instagram.com/hsph_oduru/" target="_blank" style="display:flex;align-items:center;gap:0.75rem;color:var(--text-dark);font-weight:500;font-size:0.95rem;text-decoration:none;">
+              <span style="width:36px;height:36px;background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1rem;">📷</span>
+              <span>Instagram — @hsph_oduru</span>
+            </a>
+            <a href="https://www.facebook.com/holy.jesus132" target="_blank" style="display:flex;align-items:center;gap:0.75rem;color:var(--text-dark);font-weight:500;font-size:0.95rem;text-decoration:none;">
+              <span style="width:36px;height:36px;background:#1877F2;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1rem;font-weight:bold;">f</span>
+              <span>Facebook — holy.jesus132</span>
+            </a>
+          </div>
+        </div>
       </div>
-    </div>
-  </footer>
 
-  <!-- External JavaScript Files -->
-  <script src="js/chatbot.js" defer></script>
-  <script src="js/script.js" defer></script>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="js/site.js"></script>
+<style>
+  .welcome-card { flex-direction: row !important; text-align: left !important; }
+  .welcome-card__icon { margin: 0 !important; }
+  @media(max-width:768px){
+    .section .container > div[style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr !important;}
+    .welcome-card { flex-direction: row !important; }
+  }
+</style>
 </body>
 </html>
