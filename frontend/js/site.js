@@ -8,8 +8,10 @@
 document.documentElement.classList.add('js');
 
 const SITE = {
-  phone:     '+919848315170',
-  phoneDisplay: '+91 98483 15170',
+  phone:               '+919848315170',
+  phoneDisplay:        '+91 98483 15170',
+  billygrahamPhone:    '+919866378567',
+  billygrahamPhoneDisplay: '+91 98663 78567',
   email:     'pastorpmoses2014@gmail.com',
   address:   '4-92, Kotha Colony, Oduru, Penumantra Mandal, West Godavari - 534126, AP, India',
   youtube:   'https://www.youtube.com/@pastorpmoses',
@@ -42,12 +44,16 @@ function setActiveNav() {
 function renderHeader() {
   return `
 <div class="top-bar">
-  <div class="top-bar__contact">
-    <span>✉ <a href="mailto:${SITE.email}">${SITE.email}</a></span>
+  <div class="top-bar__left">
     <span>📞 <a href="tel:${SITE.phone}">${SITE.phoneDisplay}</a></span>
-    <span>📍 Oduru, West Godavari, AP</span>
+    <span class="top-sep">|</span>
+    <span>✉ <a href="mailto:${SITE.email}">${SITE.email}</a></span>
   </div>
-  <div style="display:flex;gap:0.4rem;">
+  <div class="top-bar__center">
+    <span class="english-text">✝ Welcome to Holy Spirit Prayer House (IPC)</span>
+    <span class="telugu-text">✝ హోలీ స్పిరిట్ ప్రార్థన మందిరానికి స్వాగతం (IPC)</span>
+  </div>
+  <div class="top-bar__right">
     <button class="lang-btn active" data-lang="english" onclick="toggleLanguage('english')">English</button>
     <button class="lang-btn" data-lang="telugu" onclick="toggleLanguage('telugu')">తెలుగు</button>
   </div>
