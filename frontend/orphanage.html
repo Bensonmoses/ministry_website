@@ -2,87 +2,352 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Holy Spirit Prayer House Orphanage — Providing shelter, love and education to orphaned children in Oduru, West Godavari, Andhra Pradesh.">
-  <title>Orphanage | Holy Spirit Prayer House</title>
+  <meta name="description" content="Mary House of Compassion Trust — Orphanage ministry by Bishop P. Moses in Oduru, West Godavari. Serving children with love, education and hope since 20+ years.">
+  <title>Orphanage — Mary House of Compassion Trust | Holy Spirit Prayer House</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Telugu:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .trust-hero {
+      background: linear-gradient(135deg, #7B1313 0%, #9B1C1C 40%, #4A0E0E 100%);
+      padding: 4.5rem 0 3.5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 3px solid var(--gold);
+    }
+    .trust-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 0%, rgba(201,168,76,0.18) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .trust-hero .container { position: relative; z-index: 1; }
+
+    .trust-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(201,168,76,0.15);
+      border: 1px solid rgba(201,168,76,0.5);
+      color: var(--gold-light);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 0.38rem 1rem;
+      border-radius: var(--radius-full);
+      margin-bottom: 1.25rem;
+    }
+
+    .trust-name {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      color: #fff;
+      margin-bottom: 0.5rem;
+      font-style: italic;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.3);
+    }
+    .trust-name span { color: var(--gold-light); font-style: normal; }
+
+    .trust-tagline {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.65);
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .trust-pillars {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--gold);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .trust-pillars span { display: flex; align-items: center; gap: 0.35rem; }
+    .trust-pillars .dot {
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--gold);
+      display: inline-block;
+    }
+
+    /* Services grid */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .service-card {
+      background: #fff;
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-light);
+      transition: all var(--transition);
+      border-left: 4px solid var(--crimson);
+    }
+    .service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+    .service-card__icon { font-size: 2rem; margin-bottom: 0.75rem; }
+    .service-card h3 { font-size: 1rem; margin-bottom: 0.5rem; color: var(--text-dark); }
+    .service-card p  { font-size: 0.88rem; color: var(--text-mid); line-height: 1.75; }
+
+    /* Goal band */
+    .goal-band {
+      background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 100%);
+      padding: 3rem 0;
+      text-align: center;
+      color: var(--dark);
+    }
+    .goal-band h2 { color: var(--dark); font-size: clamp(1.4rem,3vw,2rem); margin-bottom: 0.75rem; }
+    .goal-band p  { color: rgba(13,13,13,0.75); font-size: 1rem; max-width: 650px; margin: 0 auto; line-height: 1.85; }
+
+    @media(max-width:768px) {
+      .two-col-orphan { grid-template-columns: 1fr !important; }
+    }
+  </style>
 </head>
 <body class="english">
 <div id="site-header"></div>
 
-<section class="page-hero">
+<!-- ═══════════════════════════════════
+     TRUST HERO
+═══════════════════════════════════ -->
+<section class="trust-hero">
   <div class="container">
-    <span class="section-eyebrow"><span class="english-text">Children's Home</span><span class="telugu-text">పిల్లల నివాసం</span></span>
-    <h1><span class="english-text">Our Orphanage Ministry</span><span class="telugu-text">మా అనాథాశ్రమ సేవ</span></h1>
-    <p><span class="english-text">Every child deserves love, shelter, and a future. We are committed to providing all three.</span><span class="telugu-text">ప్రతి పిల్లవాడికి ప్రేమ, ఆశ్రయం మరియు భవిష్యత్తు అర్హం. మేము మూడూ అందించడానికి కట్టుబడి ఉన్నాం.</span></p>
+    <div class="trust-badge">✝ Orphanage Ministry</div>
+    <h1 class="trust-name">
+      <span>Mary</span> House of Compassion Trust
+    </h1>
+    <p class="trust-tagline">
+      <span class="english-text">I Choose JOY</span>
+      <span class="telugu-text">నేను ఆనందాన్ని ఎంచుకుంటాను</span>
+    </p>
+    <p style="color:rgba(255,255,255,0.6);font-size:0.95rem;max-width:520px;margin:0 auto;line-height:1.75;">
+      <span class="english-text">Founded by Bishop P. Moses — providing safe homes, education, and a future full of hope to orphaned and needy children in Oduru, West Godavari.</span>
+      <span class="telugu-text">బిషప్ పి. మోషే స్థాపించారు — ఒదురు, పశ్చిమ గోదావరిలో అనాథ మరియు అవసరమైన పిల్లలకు సురక్షిత నివాసాలు, విద్య మరియు ఆశతో నిండిన భవిష్యత్తు అందిస్తున్నారు.</span>
+    </p>
+    <div class="trust-pillars">
+      <span>🏠 <span class="english-text">Serving Children</span><span class="telugu-text">పిల్లలకు సేవ</span></span>
+      <span class="dot"></span>
+      <span>❤️ <span class="english-text">Sharing Hope</span><span class="telugu-text">ఆశను పంచడం</span></span>
+      <span class="dot"></span>
+      <span>✨ <span class="english-text">Spreading Love</span><span class="telugu-text">ప్రేమను వ్యాప్తి చేయడం</span></span>
+    </div>
   </div>
 </section>
 
-<!-- About the orphanage -->
+
+<!-- ═══════════════════════════════════
+     ABOUT THE ORPHANAGE
+═══════════════════════════════════ -->
 <section class="section">
   <div class="container">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;" class="two-col-orphan">
       <div>
-        <span class="section-eyebrow"><span class="english-text">About</span><span class="telugu-text">గురించి</span></span>
-        <h2 class="section-title"><span class="english-text">A Home Built on Love</span><span class="telugu-text">ప్రేమతో నిర్మించిన నివాసం</span></h2>
+        <span class="section-eyebrow"><span class="english-text">About the Trust</span><span class="telugu-text">ట్రస్ట్ గురించి</span></span>
+        <h2 class="section-title">
+          <span class="english-text">A Home Built on Love &amp; Faith</span>
+          <span class="telugu-text">ప్రేమ &amp; విశ్వాసంపై నిర్మించిన నివాసం</span>
+        </h2>
         <p style="color:var(--text-mid);line-height:1.9;margin-bottom:1rem;">
-          <span class="english-text">Our orphanage ministry, based in Oduru, West Godavari, has been providing a safe and loving home to orphaned and abandoned children for over two decades. Under the leadership of Bishop P. Moses, these children receive more than just food and shelter — they receive a family.</span>
-          <span class="telugu-text">ఒదురు, పశ్చిమ గోదావరిలో ఉన్న మా అనాథాశ్రమ సేవ రెండు దశాబ్దాలకు పైగా అనాథ మరియు వదలిపెట్టిన పిల్లలకు సురక్షితమైన మరియు ప్రేమగల నివాసం అందిస్తోంది. బిషప్ పి. మోషే నాయకత్వంలో, ఈ పిల్లలు ఆహారం మరియు ఆశ్రయం మాత్రమే కాదు — వారికి ఒక కుటుంబం దొరుకుతుంది.</span>
+          <span class="english-text">Mary House of Compassion Trust is an orphanage and child welfare ministry based in Oduru, West Godavari, Andhra Pradesh. Founded by Bishop P. Moses under Holy Spirit Prayer House, the trust has been serving orphaned, abandoned, and needy children for over two decades.</span>
+          <span class="telugu-text">మేరీ హౌస్ ఆఫ్ కంపాషన్ ట్రస్ట్ అనేది ఒదురు, పశ్చిమ గోదావరి, ఆంధ్రప్రదేశ్‌లో ఉన్న అనాథాశ్రమం మరియు శిశు సంక్షేమ సేవ. బిషప్ పి. మోషే స్థాపించారు.</span>
+        </p>
+        <p style="color:var(--text-mid);line-height:1.9;margin-bottom:1rem;">
+          <span class="english-text">The trust provides a safe, loving home environment where children grow up with joy, receive quality education, nutritious food, health care, and — most importantly — are raised in the knowledge of God's love and purpose for their lives.</span>
+          <span class="telugu-text">ట్రస్ట్ ఒక సురక్షితమైన, ప్రేమగల ఇంటి వాతావరణం అందిస్తుంది, అక్కడ పిల్లలు ఆనందంతో పెరుగుతారు, నాణ్యమైన విద్య, పౌష్టికాహారం మరియు ఆరోగ్య సంరక్షణ పొందుతారు.</span>
         </p>
         <p style="color:var(--text-mid);line-height:1.9;margin-bottom:2rem;">
-          <span class="english-text">Each child is enrolled in school, receives regular meals, medical care, and is raised in the knowledge of God's love. Many of our children have gone on to higher education and successful careers.</span>
-          <span class="telugu-text">ప్రతి పిల్లవాడు పాఠశాలలో చేర్చబడతారు, క్రమం తప్పకుండా భోజనం, వైద్య సంరక్షణ పొందుతారు మరియు దేవుని ప్రేమ జ్ఞానంలో పెంచబడతారు.</span>
+          <span class="english-text">Many children who grew up in this trust have gone on to higher education and are now living productive, independent lives — a testament to the transforming power of compassion and faith.</span>
+          <span class="telugu-text">ఈ ట్రస్ట్‌లో పెరిగిన అనేక మంది పిల్లలు ఉన్నత విద్యలో చేరి ఇప్పుడు ఉత్పాదక, స్వతంత్ర జీవితాలు జీవిస్తున్నారు.</span>
         </p>
         <div style="display:flex;gap:1rem;flex-wrap:wrap;">
           <a href="donate.html" class="btn btn-primary"><span class="english-text">Sponsor a Child</span><span class="telugu-text">పిల్లవాడిని స్పాన్సర్ చేయండి</span></a>
-          <a href="https://wa.me/919848315170?text=I%20want%20to%20know%20more%20about%20the%20orphanage" target="_blank" class="btn btn-gold"><span class="english-text">💬 Ask on WhatsApp</span><span class="telugu-text">💬 WhatsApp లో అడగండి</span></a>
+          <a href="https://wa.me/919848315170?text=I%20want%20to%20know%20more%20about%20Mary%20House%20of%20Compassion%20Trust" target="_blank" class="btn btn-gold"><span class="english-text">💬 WhatsApp Us</span><span class="telugu-text">💬 WhatsApp చేయండి</span></a>
         </div>
       </div>
       <div>
-        <img src="images/family.jpg" alt="Children at the orphanage" style="border-radius:var(--radius-lg);width:100%;object-fit:cover;box-shadow:var(--shadow-lg);" onerror="this.style.background='var(--off-white)';this.style.minHeight='280px';">
+        <img src="images/family.jpg" alt="Children at Mary House of Compassion Trust"
+          style="border-radius:var(--radius-lg);width:100%;object-fit:cover;min-height:280px;box-shadow:var(--shadow-lg);"
+          onerror="this.style.background='var(--off-white)';this.style.minHeight='280px';this.alt='';this.style.display='flex';">
+        <!-- Stats below image -->
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin-top:1.5rem;">
+          <div style="background:var(--crimson);border-radius:var(--radius-md);padding:1.25rem 0.75rem;text-align:center;color:#fff;">
+            <div style="font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;line-height:1;">50+</div>
+            <div style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.1em;opacity:0.85;margin-top:0.25rem;"><span class="english-text">Children</span><span class="telugu-text">పిల్లలు</span></div>
+          </div>
+          <div style="background:var(--gold);border-radius:var(--radius-md);padding:1.25rem 0.75rem;text-align:center;color:var(--dark);">
+            <div style="font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;line-height:1;">20+</div>
+            <div style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.1em;opacity:0.75;margin-top:0.25rem;"><span class="english-text">Years</span><span class="telugu-text">సంవత్సరాలు</span></div>
+          </div>
+          <div style="background:var(--dark-2);border-radius:var(--radius-md);padding:1.25rem 0.75rem;text-align:center;color:#fff;">
+            <div style="font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;line-height:1;">100%</div>
+            <div style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.1em;opacity:0.85;margin-top:0.25rem;"><span class="english-text">In School</span><span class="telugu-text">పాఠశాలలో</span></div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Stats -->
-<div class="stats-band">
-  <div class="container">
-    <div class="stats-grid">
-      <div class="stat-item"><div class="stat-item__number">50+</div><div class="stat-item__label"><span class="english-text">Children Cared For</span><span class="telugu-text">పిల్లలకు సంరక్షణ</span></div></div>
-      <div class="stat-item"><div class="stat-item__number">20+</div><div class="stat-item__label"><span class="english-text">Years Running</span><span class="telugu-text">సంవత్సరాల నిర్వహణ</span></div></div>
-      <div class="stat-item"><div class="stat-item__number">100%</div><div class="stat-item__label"><span class="english-text">School Enrollment</span><span class="telugu-text">పాఠశాల నమోదు</span></div></div>
-      <div class="stat-item"><div class="stat-item__number">❤️</div><div class="stat-item__label"><span class="english-text">Raised with Love &amp; Faith</span><span class="telugu-text">ప్రేమ &amp; విశ్వాసంతో పెంచబడ్డారు</span></div></div>
-    </div>
-  </div>
-</div>
 
-<!-- What we provide -->
+<!-- ═══════════════════════════════════
+     SERVICES PROVIDED
+═══════════════════════════════════ -->
 <section class="section section--surface">
-  <div class="container" style="text-align:center;">
-    <span class="section-eyebrow"><span class="english-text">What We Provide</span><span class="telugu-text">మేమేం అందిస్తాం</span></span>
-    <h2 class="section-title"><span class="english-text">Complete Care for Every Child</span><span class="telugu-text">ప్రతి పిల్లవాడికి సంపూర్ణ సంరక్షణ</span></h2>
-    <div class="welcome-grid" style="margin-top:2.5rem;">
-      <div class="welcome-card"><div class="welcome-card__icon">🍚</div><h3><span class="english-text">Daily Meals</span><span class="telugu-text">రోజువారీ భోజనం</span></h3><p><span class="english-text">Three nutritious meals every day, ensuring every child grows healthy and strong.</span><span class="telugu-text">ప్రతి రోజు మూడు పోషకాహారం, ప్రతి పిల్లవాడు ఆరోగ్యంగా పెరగడం నిర్ధారిస్తుంది.</span></p></div>
-      <div class="welcome-card"><div class="welcome-card__icon">📚</div><h3><span class="english-text">Education</span><span class="telugu-text">విద్య</span></h3><p><span class="english-text">Every child is enrolled in school. We support their studies with tuition, books and stationery.</span><span class="telugu-text">ప్రతి పిల్లవాడు పాఠశాలలో చేర్చబడతారు. ట్యూషన్, పుస్తకాలతో వారి చదువులకు మద్దతు ఇస్తాం.</span></p></div>
-      <div class="welcome-card"><div class="welcome-card__icon">🏥</div><h3><span class="english-text">Medical Care</span><span class="telugu-text">వైద్య సంరక్షణ</span></h3><p><span class="english-text">Regular health check-ups, vaccinations and medical treatment for all children in our care.</span><span class="telugu-text">మా సంరక్షణలో ఉన్న అన్ని పిల్లలకు క్రమం తప్పకుండా ఆరోగ్య పరీక్షలు మరియు వైద్య చికిత్స.</span></p></div>
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow"><span class="english-text">What We Provide</span><span class="telugu-text">మేమేం అందిస్తాం</span></span>
+      <h2 class="section-title"><span class="english-text">Complete Care for Every Child</span><span class="telugu-text">ప్రతి పిల్లవాడికి సంపూర్ణ సంరక్షణ</span></h2>
+      <p class="section-sub">
+        <span class="english-text">Every service is rooted in the belief that every child deserves joy, security, and a future full of purpose.</span>
+        <span class="telugu-text">ప్రతి పిల్లవాడికి ఆనందం, భద్రత మరియు ఉద్దేశ్యంతో నిండిన భవిష్యత్తు అర్హం అనే నమ్మకంలో ప్రతి సేవ ఆధారపడి ఉంది.</span>
+      </p>
+    </div>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-card__icon">🏠</div>
+        <h3><span class="english-text">Safe &amp; Loving Home</span><span class="telugu-text">సురక్షిత &amp; ప్రేమగల నివాసం</span></h3>
+        <p><span class="english-text">A warm, secure home environment where children live with love and grow up in joy — just as every child deserves.</span><span class="telugu-text">పిల్లలు ప్రేమతో జీవించి ఆనందంగా పెరిగే వెచ్చని, సురక్షిత ఇంటి వాతావరణం.</span></p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-card__icon">🍚</div>
+        <h3><span class="english-text">Nutritious Meals Daily</span><span class="telugu-text">రోజువారీ పౌష్టికాహారం</span></h3>
+        <p><span class="english-text">Three healthy, balanced meals every day ensuring every child grows strong and healthy in body and mind.</span><span class="telugu-text">ప్రతి రోజు మూడు ఆరోగ్యకరమైన, సమతుల్య భోజనాలు — ప్రతి పిల్లవాడు శరీరంలో మరియు మనసులో బలంగా పెరగడం నిర్ధారిస్తుంది.</span></p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-card__icon">🏥</div>
+        <h3><span class="english-text">Health Care &amp; Medical Support</span><span class="telugu-text">ఆరోగ్య సంరక్షణ &amp; వైద్య మద్దతు</span></h3>
+        <p><span class="english-text">Regular health check-ups, vaccinations, and immediate medical care for all children in the trust.</span><span class="telugu-text">ట్రస్ట్‌లోని అన్ని పిల్లలకు క్రమం తప్పకుండా ఆరోగ్య పరీక్షలు, టీకాలు మరియు తక్షణ వైద్య సంరక్షణ.</span></p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-card__icon">📚</div>
+        <h3><span class="english-text">Education &amp; Skill Development</span><span class="telugu-text">విద్య &amp; నైపుణ్య అభివృద్ధి</span></h3>
+        <p><span class="english-text">Every child is enrolled in school. For those who want to study — education; for those who want to learn trades — vocational training.</span><span class="telugu-text">చదవాలనుకుంటే వారికి విద్య, చేతిపనులు నేర్చుకోవాలనుకుంటే వారికి వృత్తి శిక్షణ.</span></p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-card__icon">✝️</div>
+        <h3><span class="english-text">Spiritual Guidance</span><span class="telugu-text">ఆధ్యాత్మిక మార్గదర్శకత్వం</span></h3>
+        <p><span class="english-text">Children are raised in the knowledge of God's love — guided along God's path to walk in faith and purpose throughout life.</span><span class="telugu-text">దేవుని ప్రేమ జ్ఞానంలో పిల్లలు పెంచబడతారు — జీవితమంతా విశ్వాసంలో నడవడానికి దేవుని మార్గంలో నడిపించబడతారు.</span></p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-card__icon">🛠️</div>
+        <h3><span class="english-text">Life Skills &amp; Self-Sufficiency</span><span class="telugu-text">జీవన నైపుణ్యాలు &amp; స్వయం సమృద్ధి</span></h3>
+        <p><span class="english-text">Character development, life skills, and vocational training to prepare every child to live independently and succeed in the future.</span><span class="telugu-text">సద్గుణాల అభివృద్ధి, జీవన నైపుణ్యాల శిక్షణ — భవిష్యత్తులో స్వయం సమృద్ధి మార్గం.</span></p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-card__icon">🕐</div>
+        <h3><span class="english-text">24/7 Care &amp; Supervision</span><span class="telugu-text">24/7 సంరక్షణ &amp; పర్యవేక్షణ</span></h3>
+        <p><span class="english-text">Round-the-clock care and support — continuous supervision for the well-being of every child, every day, every hour.</span><span class="telugu-text">24/7 సంరక్షణ మరియు మద్దతు — ప్రతి పిల్లవాడి శ్రేయస్సు కోసం నిరంతర పర్యవేక్షణ.</span></p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-card__icon">💞</div>
+        <h3><span class="english-text">Love &amp; Compassion</span><span class="telugu-text">ప్రేమ &amp; కరుణ</span></h3>
+        <p><span class="english-text">More than services — we give what matters most: unconditional love, belonging, and the assurance that every child is deeply valued.</span><span class="telugu-text">సేవలకు మించి — మనం ఏం ముఖ్యమో అది ఇస్తాం: నిబంధనలు లేని ప్రేమ మరియు చెందే భావన.</span></p>
+      </div>
+
     </div>
   </div>
 </section>
 
-<!-- How to help -->
+
+<!-- ═══════════════════════════════════
+     MISSION / GOAL
+═══════════════════════════════════ -->
+<section class="goal-band">
+  <div class="container">
+    <div style="font-size:2.5rem;margin-bottom:0.75rem;">🌟</div>
+    <h2>
+      <span class="english-text">మా లక్ష్యం — Our Mission</span>
+      <span class="telugu-text">మా లక్ష్యం</span>
+    </h2>
+    <p>
+      <span class="english-text">"To build a future for every child filled with joy, hope, and purpose — to shelter the abandoned like lamps in the dark, and make their lives shine with happiness."</span>
+      <span class="telugu-text">ప్రతి పిల్లవాడికి ఆనందం, ఆశ, మరియు ఉద్దేశ్యంతో నిండిన భవిష్యత్తును నిర్మించడం. కొడగట్టిన దీపాల్లాంటి పిల్లలకు ఆశ్రయమిచ్చి, వారి భవిష్యత్తును ఆనందమయంగా తీర్చి దిద్దడం.</span>
+    </p>
+    <p style="margin-top:1.25rem;font-size:0.82rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--dark);">
+      <span class="english-text">— Bishop P. Moses, Founder &amp; Director, Mary House of Compassion Trust</span>
+      <span class="telugu-text">— బిషప్ పి. మోషే, స్థాపకుడు &amp; డైరెక్టర్</span>
+    </p>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════
+     SCRIPTURE
+═══════════════════════════════════ -->
+<section class="scripture-section">
+  <div class="container">
+    <p class="scripture-text">
+      <span class="english-text">"Do not forget to do good and to share with others, for with such sacrifices God is pleased."</span>
+      <span class="telugu-text">"ఉపకారమును ధర్మమున చేయ మరచిపోకుడి, అట్టి యాగములు దేవునికి ఇష్టమైనవి."</span>
+    </p>
+    <p class="scripture-ref">
+      <span class="english-text">— Hebrews 13:16</span>
+      <span class="telugu-text">— హెబ్రీ 13:16</span>
+    </p>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════
+     HOW TO HELP CTA
+═══════════════════════════════════ -->
 <section class="cta-band">
   <div class="container">
-    <h2 class="section-title"><span class="english-text">Be a Light in a Child's Life</span><span class="telugu-text">పిల్లవాడి జీవితంలో వెలుతురు అవ్వండి</span></h2>
-    <p class="section-sub" style="margin:0 auto 2rem;"><span class="english-text">A monthly donation of just ₹500 can feed a child for a month. Your support makes a lasting difference.</span><span class="telugu-text">నెలకు కేవలం ₹500 విరాళం ఒక నెల పిల్లవాడికి ఆహారం ఇవ్వగలదు. మీ మద్దతు శాశ్వత తేడా తెస్తుంది.</span></p>
+    <span class="section-eyebrow"><span class="english-text">Make a Difference</span><span class="telugu-text">తేడా చేయండి</span></span>
+    <h2 class="section-title">
+      <span class="english-text">Be a Light in a Child's Life</span>
+      <span class="telugu-text">పిల్లవాడి జీవితంలో వెలుతురు అవ్వండి</span>
+    </h2>
+    <p class="section-sub" style="margin:0 auto 0;">
+      <span class="english-text">A monthly donation of just ₹500 can feed a child for a month. ₹2,000/month sponsors education and care. Your support becomes a child's story of hope.</span>
+      <span class="telugu-text">నెలకు కేవలం ₹500 విరాళం ఒక నెల పిల్లవాడికి ఆహారం ఇవ్వగలదు. ₹2,000/నెల విద్య మరియు సంరక్షణను స్పాన్సర్ చేస్తుంది.</span>
+    </p>
     <div class="cta-actions">
-      <a href="donate.html" class="btn btn-primary"><span class="english-text">Donate Now</span><span class="telugu-text">దానం చేయండి</span></a>
-      <a href="volunteer.html" class="btn btn-gold"><span class="english-text">Volunteer</span><span class="telugu-text">స్వచ్ఛంద సేవ</span></a>
+      <a href="donate.html" class="btn btn-primary"><span class="english-text">Donate to the Orphanage</span><span class="telugu-text">అనాథాశ్రమానికి దానం</span></a>
+      <a href="https://wa.me/919848315170?text=I%20want%20to%20sponsor%20a%20child%20at%20Mary%20House%20of%20Compassion%20Trust" target="_blank" class="btn btn-gold"><span class="english-text">💬 Sponsor a Child</span><span class="telugu-text">💬 పిల్లవాడిని స్పాన్సర్ చేయండి</span></a>
+      <a href="volunteer.html" class="btn btn-ghost"><span class="english-text">Volunteer</span><span class="telugu-text">స్వచ్ఛంద సేవ</span></a>
+    </div>
+
+    <!-- Contact info block -->
+    <div style="margin-top:3rem;background:#fff;border-radius:var(--radius-lg);padding:2rem;max-width:600px;margin-left:auto;margin-right:auto;border:1px solid var(--border-light);box-shadow:var(--shadow-sm);">
+      <h3 style="font-family:'Playfair Display',serif;font-size:1.1rem;margin-bottom:1.25rem;color:var(--crimson);">
+        <span class="english-text">📍 Visit / Contact Us</span>
+        <span class="telugu-text">📍 సందర్శించండి / సంప్రదించండి</span>
+      </h3>
+      <div style="display:flex;flex-direction:column;gap:0.75rem;text-align:left;font-size:0.9rem;color:var(--text-mid);">
+        <div><strong style="color:var(--text-dark);">
+          <span class="english-text">Mary House of Compassion Trust</span>
+          <span class="telugu-text">మేరీ హౌస్ ఆఫ్ కంపాషన్ ట్రస్ట్</span>
+        </strong></div>
+        <div>📍 <span class="english-text">Holy Spirit Prayer House, Penumantra Mandal, West Godavari, Oduru — 534126</span><span class="telugu-text">హోలీ స్పిరిట్ ప్రార్థన మందిరం, పెనుమంత్ర మండలం, పశ్చిమ గోదావరి, ఒదూరు — 534126</span></div>
+        <div>📞 <a href="tel:+919848315170" style="color:var(--crimson);font-weight:600;">+91 98483 15170</a></div>
+        <div>💬 <a href="https://wa.me/919848315170" target="_blank" style="color:#25D366;font-weight:600;"><span class="english-text">WhatsApp: +91 98483 15170</span></a></div>
+        <div>▶ <a href="https://www.youtube.com/@pastorpmoses" target="_blank" style="color:#FF0000;font-weight:600;">YouTube: @pastorpmoses</a></div>
+      </div>
     </div>
   </div>
 </section>
+
 
 <div id="site-footer"></div>
 <script src="js/site.js"></script>
-<style>@media(max-width:768px){.section .container > div[style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr !important;}}</style>
 </body></html>
