@@ -147,46 +147,56 @@
       </div>
     </div>
 
+    <!-- Family Photo -->
+    <div class="family-photo-wrap">
+      <img src="images/family.jpg" alt="Bishop P. Moses Family — Esther, Benson, Billygraham and Late Mary Kumari"
+        onerror="this.closest('.family-photo-wrap').style.display='none'">
+      <div class="family-photo-caption">
+        <span class="english-text">Bishop P. Moses with his beloved family — a legacy of faith, love, and service to God</span>
+        <span class="telugu-text">బిషప్ పి. మోషే తన ప్రియమైన కుటుంబంతో — విశ్వాసం, ప్రేమ మరియు దేవుని సేవ యొక్క వారసత్వం</span>
+      </div>
+    </div>
+
     <!-- Three Children -->
     <div class="family-children-grid">
 
-      <!-- Elder Daughter -->
+      <!-- Esther — Elder Daughter -->
       <div class="family-card" style="--top-color:var(--gold);">
         <div class="family-avatar" style="background:linear-gradient(135deg,#7B3A9B,#5B2A7B);">
-          <img src="images/daughter.jpg" alt="Elder Daughter"
-            onerror="this.parentElement.innerHTML='✝'">
+          <img src="images/esther.jpg" alt="Esther"
+            onerror="this.parentElement.innerHTML='E'">
         </div>
         <div class="family-tag" style="color:var(--gold-dark);">
           <span class="english-text">First Child · Daughter</span>
           <span class="telugu-text">మొదటి సంతానం · కుమార్తె</span>
         </div>
         <h4 class="family-name">
-          <span class="english-text">Elder Daughter</span>
-          <span class="telugu-text">పెద్ద కుమార్తె</span>
+          <span class="english-text">Esther</span>
+          <span class="telugu-text">ఎస్తేర్</span>
         </h4>
         <p class="family-bio">
-          <span class="english-text">Married and blessed with a daughter — she carries the family's warmth and faith into her own home. Bishop Moses is a proud and grateful grandfather.</span>
-          <span class="telugu-text">వివాహమైంది మరియు ఒక కుమార్తెతో ఆశీర్వదించబడింది — బిషప్ మోషే గర్వంగా మరియు కృతజ్ఞంగా ఉన్న తాత.</span>
+          <span class="english-text">Married and blessed with a beautiful daughter — she carries the family's warmth, faith, and grace into her own home. Bishop Moses is a proud and grateful grandfather.</span>
+          <span class="telugu-text">వివాహమైంది మరియు ఒక అందమైన కుమార్తెతో ఆశీర్వదించబడింది — బిషప్ మోషే గర్వంగా మరియు కృతజ్ఞంగా ఉన్న తాత.</span>
         </p>
       </div>
 
-      <!-- Son in America -->
+      <!-- Benson — Son in America -->
       <div class="family-card" style="--top-color:#1B3A7A;">
         <div class="family-avatar" style="background:linear-gradient(135deg,#1B3A7A,#0D2050);">
-          <img src="images/son-america.jpg" alt="Son in America"
-            onerror="this.parentElement.innerHTML='🎓'">
+          <img src="images/benson.jpg" alt="Benson Moses"
+            onerror="this.parentElement.innerHTML='B'">
         </div>
         <div class="family-tag" style="color:#1B3A7A;">
           <span class="english-text">Second Child · Son</span>
           <span class="telugu-text">రెండవ సంతానం · కుమారుడు</span>
         </div>
         <h4 class="family-name">
-          <span class="english-text">Son — United States of America</span>
-          <span class="telugu-text">కుమారుడు — అమెరికా</span>
+          <span class="english-text">Benson Moses</span>
+          <span class="telugu-text">బెన్సన్ మోసెస్</span>
         </h4>
         <p class="family-bio">
-          <span class="english-text">Pursuing higher education in the United States — carrying the family's faith and values across continents. A source of great pride for Bishop Moses.</span>
-          <span class="telugu-text">అమెరికాలో ఉన్నత విద్యను అభ్యసిస్తున్నారు — కుటుంబ విశ్వాసం మరియు విలువలను ప్రపంచవ్యాప్తంగా తీసుకెళ్ళారు.</span>
+          <span class="english-text">Based in the United States — carrying the family's faith, values, and the love of God across continents. A source of immense pride and joy for Bishop Moses.</span>
+          <span class="telugu-text">అమెరికాలో నివసిస్తున్నారు — కుటుంబ విశ్వాసం మరియు దేవుని ప్రేమను ప్రపంచవ్యాప్తంగా తీసుకెళ్ళారు. బిషప్ మోషేకు గర్వకారణం.</span>
         </p>
       </div>
 
@@ -309,6 +319,34 @@
     font-size: 0.88rem;
     border-left: 2px solid rgba(201,168,76,0.35);
     padding-left: 0.85rem;
+  }
+
+  /* ── Family Photo ───────────────────────────── */
+  .family-photo-wrap {
+    margin-bottom: 2rem;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 36px rgba(0,0,0,0.12);
+    border: 1px solid var(--border-light);
+    position: relative;
+  }
+  .family-photo-wrap img {
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+  }
+  .family-photo-caption {
+    background: linear-gradient(135deg, var(--crimson-dark), var(--crimson));
+    color: rgba(255,255,255,0.88);
+    text-align: center;
+    padding: 0.85rem 1.5rem;
+    font-size: 0.88rem;
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 0.02em;
+    line-height: 1.6;
   }
 
   /* ── Family Children Grid ───────────────────── */
