@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bishop Palaparthi Moses — Founder and Senior Bishop of Holy Spirit Prayer House since 1995.">
+  <title>Bishop Palaparthi Moses | Holy Spirit Prayer House</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Telugu:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .person-hero {
+      background: linear-gradient(160deg, #0D0D0D 0%, #1E0A03 50%, #0D0D0D 100%);
+      padding: 5rem 0 0; border-bottom: 3px solid var(--gold);
+    }
+    .person-hero-inner {
+      display: grid; grid-template-columns: 300px 1fr;
+      gap: 4rem; align-items: end; max-width: 960px; margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    .person-hero-photo {
+      border-radius: var(--radius-lg) var(--radius-lg) 0 0; overflow: hidden;
+      box-shadow: 0 -4px 30px rgba(0,0,0,0.4);
+      margin-top: 2rem;
+    }
+    .person-hero-photo img { width: 100%; display: block; max-height: 420px; object-fit: cover; object-position: center top; }
+    .person-hero-info { padding-bottom: 3rem; }
+    .person-role { font-size:0.68rem; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); margin-bottom:0.5rem; }
+    .person-hero-info h1 {
+      font-family:'Playfair Display',serif; font-size:clamp(2rem,4vw,2.9rem);
+      color:#fff; font-style:italic; line-height:1.2; margin-bottom:0.5rem;
+    }
+    .person-hero-info .tel { color:rgba(255,255,255,0.5); font-family:'Noto Sans Telugu',sans-serif; font-size:1rem; margin-bottom:1.5rem; display:block; }
+    .person-phone { display:inline-flex; align-items:center; gap:0.4rem; font-size:0.95rem; font-weight:600; color:var(--gold); text-decoration:none; }
+    .person-bio { padding: 4rem 0; }
+    .person-bio-inner { max-width: 820px; margin: 0 auto; padding: 0 1.5rem; }
+    .person-bio-inner p { color:var(--text-mid); line-height:1.95; font-size:0.97rem; margin-bottom:1.1rem; }
+    .person-stats { display:flex; gap:1rem; flex-wrap:wrap; margin: 2rem 0; }
+    .pstat { background:var(--off-white); border:1px solid var(--border-light); border-radius:var(--radius-md); padding:1rem 1.25rem; text-align:center; min-width:90px; }
+    .pstat strong { display:block; font-family:'Playfair Display',serif; font-size:1.6rem; color:var(--crimson); line-height:1; }
+    .pstat span { font-size:0.72rem; color:var(--text-light); text-transform:uppercase; letter-spacing:0.08em; }
+    .photo-section { background:var(--off-white); padding:4rem 0; }
+    .photo-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:1rem; }
+    .photo-card { border-radius:var(--radius-md); overflow:hidden; aspect-ratio:4/3; cursor:pointer; box-shadow:var(--shadow-sm); transition:transform 0.2s,box-shadow 0.2s; }
+    .photo-card:hover { transform:translateY(-3px); box-shadow:var(--shadow-lg); }
+    .photo-card img { width:100%; height:100%; object-fit:cover; display:block; }
+    .lightbox { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.95); z-index:9999; align-items:center; justify-content:center; flex-direction:column; }
+    .lightbox.open { display:flex; }
+    .lightbox img { max-width:90vw; max-height:85vh; object-fit:contain; border-radius:4px; }
+    .lb-close { position:absolute; top:1rem; right:1.5rem; color:#fff; font-size:2.2rem; cursor:pointer; background:none; border:none; }
+    .lb-nav { position:absolute; top:50%; transform:translateY(-50%); color:rgba(255,255,255,0.7); font-size:2.5rem; background:none; border:none; cursor:pointer; padding:1rem; }
+    .lb-prev { left:1rem; } .lb-next { right:1rem; }
+    .lb-count { color:rgba(255,255,255,0.5); font-size:0.8rem; margin-top:0.75rem; }
+    .empty-photos { text-align:center; padding:3rem; color:var(--text-light); }
+    @media(max-width:768px){
+      .person-hero-inner { grid-template-columns:1fr; }
+      .person-hero-photo { max-width:240px; border-radius:var(--radius-lg); }
+      .person-hero { padding-bottom:2rem; }
+      .person-hero-info { padding-bottom:0; }
+    }
+  </style>
+</head>
+<body class="english">
+<div id="site-header"></div>
+
+<section class="person-hero">
+  <div class="person-hero-inner">
+    <div class="person-hero-photo">
+      <img src="images/founder.jpg" alt="Bishop Palaparthi Moses"
+        onerror="this.style.background='#1A0800';this.style.minHeight='320px';">
+    </div>
+    <div class="person-hero-info">
+      <div class="person-role">
+        <span class="english-text">Founder · Senior Bishop · IPC</span>
+        <span class="telugu-text">స్థాపకుడు · సీనియర్ బిషప్ · IPC</span>
+      </div>
+      <h1>
+        <span class="english-text">Bishop Palaparthi Moses</span>
+        <span class="telugu-text">బిషప్ పాలపర్తి మోషే</span>
+      </h1>
+      <span class="tel">
+        <span class="english-text">Holy Spirit Prayer House (IPC) · Oduru, West Godavari · Since 1995</span>
+        <span class="telugu-text">హోలీ స్పిరిట్ ప్రార్థన మందిరం (IPC) · ఒదురు, పశ్చిమ గోదావరి · 1995 నుండి</span>
+      </span>
+      <a href="tel:+919848315170" class="person-phone">📞 +91 98483 15170</a>
+    </div>
+  </div>
+</section>
+
+<section class="person-bio">
+  <div class="person-bio-inner">
+    <span class="section-eyebrow">
+      <span class="english-text">His Story</span>
+      <span class="telugu-text">ఆయన కథ</span>
+    </span>
+    <h2 class="section-title" style="margin-bottom:1.5rem;">
+      <span class="english-text">A Life Poured Out for God</span>
+      <span class="telugu-text">దేవుని కోసం అంకితమైన జీవితం</span>
+    </h2>
+    <p>
+      <span class="english-text">In 1995, Bishop Palaparthi Moses heard the call of God and founded Holy Spirit Prayer House (IPC) in Oduru, Penumantra Mandal, West Godavari, Andhra Pradesh. What began as a small gathering of prayer has grown into a full, vibrant church community touching thousands of lives.</span>
+      <span class="telugu-text">1995లో, బిషప్ పాలపర్తి మోషే దేవుని పిలుపు విన్నారు మరియు ఒదురు, పేనుమంత్ర మండలం, పశ్చిమ గోదావరిలో హోలీ స్పిరిట్ ప్రార్థన మందిరం (IPC) స్థాపించారు.</span>
+    </p>
+    <p>
+      <span class="english-text">Over more than 30 years, Bishop Moses has led this ministry through prayer, evangelism, village outreach, Bible teaching, medical camps, food distribution, and the care of orphaned children. His ministry has taken him across India and beyond — including ministry visits to Dubai and Kuwait — carrying the Gospel wherever God opens doors.</span>
+      <span class="telugu-text">30 సంవత్సరాలకు పైగా, బిషప్ మోషే ప్రార్థన, సువార్త, గ్రామ అవుట్‌రీచ్, బైబిల్ బోధన, వైద్య శిబిరాలు, ఆహార పంపిణీ మరియు అనాథ పిల్లల సంరక్షణ ద్వారా ఈ సేవను నడిపించారు.</span>
+    </p>
+    <p>
+      <span class="english-text">He is also the Founder and Director of Mary House of Compassion Trust — an orphanage in Oduru caring for 15 children and giving them a safe home, education, nutrition, and a future full of hope in the Lord Jesus Christ.</span>
+      <span class="telugu-text">ఆయన మేరీ హౌస్ ఆఫ్ కంపాషన్ ట్రస్ట్ స్థాపకుడు మరియు డైరెక్టర్ కూడా — ఒదురులో 15 పిల్లలను సంరక్షించే అనాథాశ్రమం.</span>
+    </p>
+    <div class="person-stats">
+      <div class="pstat"><strong>1995</strong><span><span class="english-text">Founded</span><span class="telugu-text">స్థాపించారు</span></span></div>
+      <div class="pstat"><strong>30+</strong><span><span class="english-text">Years</span><span class="telugu-text">సంవత్సరాలు</span></span></div>
+      <div class="pstat"><strong>15</strong><span><span class="english-text">Children</span><span class="telugu-text">పిల్లలు</span></span></div>
+      <div class="pstat"><strong>2+</strong><span><span class="english-text">Nations</span><span class="telugu-text">దేశాలు</span></span></div>
+    </div>
+    <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1rem;">
+      <a href="gallery.html?album=Moses" class="btn btn-outline">
+        <span class="english-text">📸 View All Photos</span>
+        <span class="telugu-text">📸 అన్ని ఫోటోలు చూడండి</span>
+      </a>
+      <a href="gallery.html?album=Moses_Dubai" class="btn btn-outline">Dubai Gallery</a>
+      <a href="gallery.html?album=Moses_Kuwait" class="btn btn-outline">Kuwait Gallery</a>
+    </div>
+  </div>
+</section>
+
+<!-- Photo preview from Moses folder -->
+<section class="photo-section">
+  <div class="container">
+    <span class="section-eyebrow" style="display:block;text-align:center;margin-bottom:0.5rem;">
+      <span class="english-text">Photo Gallery</span>
+      <span class="telugu-text">ఫోటో గ్యాలరీ</span>
+    </span>
+    <h2 class="section-title" style="text-align:center;margin-bottom:2rem;">
+      <span class="english-text">Moments of Ministry</span>
+      <span class="telugu-text">సేవ యొక్క క్షణాలు</span>
+    </h2>
+    <div id="photo-grid" class="photo-grid"></div>
+    <div id="empty-msg" class="empty-photos">
+      <div style="font-size:2.5rem;margin-bottom:0.75rem;">📷</div>
+      <p>
+        <span class="english-text">Photos will appear here once added to the Moses album.</span>
+        <span class="telugu-text">మోషే ఆల్బమ్‌కి జోడించిన తర్వాత ఫోటోలు ఇక్కడ కనిపిస్తాయి.</span>
+      </p>
+      <a href="gallery.html?album=Moses" class="btn btn-primary" style="margin-top:1rem;">View Gallery</a>
+    </div>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox"><button class="lb-close" id="lb-close">&times;</button><button class="lb-nav lb-prev" id="lb-prev">&#8249;</button><img id="lb-img" src="" alt=""><button class="lb-nav lb-next" id="lb-next">&#8250;</button><div class="lb-count" id="lb-count"></div></div>
+
+<div id="site-footer"></div>
+<script src="js/site.js"></script>
+<script>
+(async () => {
+  let photos = [];
+  try {
+    const r = await fetch('images/manifest.json');
+    const m = await r.json();
+    photos = (m.albums['Moses'] || {}).photos || [];
+  } catch {}
+  const grid = document.getElementById('photo-grid');
+  const empty = document.getElementById('empty-msg');
+  if (!photos.length) { empty.style.display = 'block'; return; }
+  empty.style.display = 'none';
+  let cur = 0;
+  const lb = document.getElementById('lightbox'), lbImg = document.getElementById('lb-img'), lbC = document.getElementById('lb-count');
+  const open = i => { cur=i; lbImg.src=photos[i].path; lbC.textContent=`${i+1}/${photos.length}`; lb.classList.add('open'); document.body.style.overflow='hidden'; };
+  const close = () => { lb.classList.remove('open'); document.body.style.overflow=''; };
+  document.getElementById('lb-close').onclick = close;
+  document.getElementById('lb-prev').onclick = () => open((cur-1+photos.length)%photos.length);
+  document.getElementById('lb-next').onclick = () => open((cur+1)%photos.length);
+  lb.onclick = e => { if(e.target===lb) close(); };
+  document.addEventListener('keydown', e => { if(!lb.classList.contains('open'))return; if(e.key==='ArrowLeft')open((cur-1+photos.length)%photos.length); if(e.key==='ArrowRight')open((cur+1)%photos.length); if(e.key==='Escape')close(); });
+  photos.slice(0, 12).forEach((p, i) => {
+    const c = document.createElement('div'); c.className='photo-card';
+    c.innerHTML=`<img src="${p.path}" alt="${p.caption||''}" loading="lazy">`;
+    c.onclick = () => open(i); grid.appendChild(c);
+  });
+})();
+</script>
+</body>
+</html>
