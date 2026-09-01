@@ -173,11 +173,11 @@ function renderFooter() {
             </li>
             <li>
               <span class="fc-icon">📞</span>
-              <span><a href="tel:${SITE.phone}" style="color:rgba(255,255,255,0.65);transition:color 0.2s;" onmouseover="this.style.color='#C9A84C'" onmouseout="this.style.color='rgba(255,255,255,0.65)'">${SITE.phoneDisplay}</a></span>
+              <span><a href="tel:${SITE.phone}" style="color:rgba(255,255,255,0.6);transition:color 0.2s;" onmouseover="this.style.color='#C9A84C'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">${SITE.phoneDisplay}</a></span>
             </li>
             <li>
               <span class="fc-icon">✉</span>
-              <span><a href="mailto:${SITE.email}" style="color:var(--gold);word-break:break-all;">${SITE.email}</a></span>
+              <span><a href="mailto:${SITE.email}" style="color:var(--gold);">${SITE.email}</a></span>
             </li>
             <li>
               <span class="fc-icon">💬</span>
