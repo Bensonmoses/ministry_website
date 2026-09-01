@@ -113,6 +113,156 @@
     @media(max-width:768px) {
       .two-col-orphan { grid-template-columns: 1fr !important; }
     }
+
+    /* ── Meet the Children Grid ──────────────── */
+    .children-section { padding: 5rem 0; background: var(--off-white); }
+    .children-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    .child-card {
+      background: #fff;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-light);
+      overflow: hidden;
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+    }
+    .child-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+    .child-card__photo {
+      width: 100%; aspect-ratio: 4/3;
+      overflow: hidden; position: relative;
+      background: linear-gradient(135deg, #8B1515, #5A0E0E);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .child-card__photo img {
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: center top; display: block;
+    }
+    .child-card__fallback {
+      font-size: 4rem; color: rgba(255,255,255,0.25);
+      position: absolute; inset: 0;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .child-card__num {
+      position: absolute; top: 0.65rem; left: 0.65rem;
+      background: rgba(0,0,0,0.5);
+      color: #fff; font-size: 0.64rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 0.22rem 0.55rem;
+      border-radius: var(--radius-full);
+      backdrop-filter: blur(6px);
+    }
+    .child-card__sponsor-badge {
+      position: absolute; top: 0.65rem; right: 0.65rem;
+      background: var(--gold); color: var(--dark);
+      font-size: 0.6rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 0.22rem 0.5rem;
+      border-radius: var(--radius-full);
+    }
+    .child-card__body {
+      padding: 1.1rem 1.1rem 1.3rem;
+      flex: 1; display: flex; flex-direction: column;
+    }
+    .child-card__name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.08rem; font-weight: 600;
+      color: var(--text-dark); margin-bottom: 0.2rem;
+    }
+    .child-card__age {
+      font-size: 0.72rem; color: var(--crimson);
+      font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; margin-bottom: 0.6rem;
+    }
+    .child-card__desc {
+      font-size: 0.87rem; color: var(--text-mid);
+      line-height: 1.65; flex: 1; margin-bottom: 1rem;
+    }
+    .child-card__btn {
+      display: inline-flex; align-items: center; gap: 0.3rem;
+      background: var(--crimson); color: #fff;
+      font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 0.07em; text-transform: uppercase;
+      padding: 0.5rem 0.9rem; border-radius: var(--radius-full);
+      text-decoration: none; transition: background 0.18s;
+      align-self: flex-start;
+    }
+    .child-card__btn:hover { background: #7B1313; }
+
+    /* Individual child page styles */
+    .child-hero {
+      padding: 4rem 0 3rem;
+      background: linear-gradient(160deg, #1A0505 0%, #7B1313 50%, #1A0505 100%);
+      text-align: center;
+      border-bottom: 3px solid var(--gold);
+    }
+    .child-hero__photo {
+      width: 180px; height: 180px; border-radius: 50%;
+      border: 4px solid rgba(201,168,76,0.5); overflow: hidden;
+      margin: 0 auto 1.5rem;
+      box-shadow: 0 0 0 8px rgba(201,168,76,0.1), 0 0 50px rgba(201,168,76,0.2);
+      background: #3A1414;
+    }
+    .child-hero__photo img { width:100%; height:100%; object-fit:cover; object-position:center top; }
+    .child-hero__num {
+      display: inline-block;
+      background: rgba(201,168,76,0.2); border: 1px solid rgba(201,168,76,0.4);
+      color: var(--gold); font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      padding: 0.32rem 0.9rem; border-radius: var(--radius-full);
+      margin-bottom: 0.85rem;
+    }
+    .child-hero__name {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem); color: #fff;
+      font-style: italic; margin-bottom: 0.3rem; line-height: 1.2;
+    }
+    .child-hero__age {
+      font-size: 0.85rem; color: rgba(255,255,255,0.55);
+      letter-spacing: 0.15em; text-transform: uppercase;
+    }
+    .child-sponsor-box {
+      background: var(--crimson); color: #fff;
+      border-radius: var(--radius-lg); padding: 2.5rem;
+      text-align: center;
+    }
+    .child-sponsor-box h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem; margin-bottom: 0.5rem;
+    }
+    .child-sponsor-box p { opacity: 0.85; font-size: 0.95rem; margin-bottom: 1.5rem; }
+    .sponsor-amounts {
+      display: flex; gap: 1rem; justify-content: center;
+      flex-wrap: wrap; margin-bottom: 1.5rem;
+    }
+    .sponsor-amount {
+      background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.25);
+      border-radius: var(--radius-md); padding: 0.85rem 1.25rem; text-align: center;
+    }
+    .sponsor-amount strong { display: block; font-size: 1.3rem; }
+    .sponsor-amount span { font-size: 0.72rem; opacity: 0.75; letter-spacing: 0.08em; text-transform: uppercase; }
+    .child-gallery-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem; margin-top: 2rem;
+    }
+    .child-gallery-grid img {
+      width: 100%; aspect-ratio: 1; object-fit: cover;
+      border-radius: var(--radius-md); cursor: pointer;
+      transition: transform 0.2s; display: block;
+    }
+    .child-gallery-grid img:hover { transform: scale(1.03); }
+    @media(max-width:600px) {
+      .children-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+      .child-gallery-grid { grid-template-columns: repeat(2, 1fr); }
+    }
   </style>
 </head>
 <body class="english">
@@ -262,6 +412,258 @@
         <h3><span class="english-text">Love &amp; Compassion</span><span class="telugu-text">ప్రేమ &amp; కరుణ</span></h3>
         <p><span class="english-text">More than services — we give what matters most: unconditional love, belonging, and the assurance that every child is deeply valued.</span><span class="telugu-text">సేవలకు మించి — మనం ఏం ముఖ్యమో అది ఇస్తాం: నిబంధనలు లేని ప్రేమ మరియు చెందే భావన.</span></p>
       </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════
+     MEET THE CHILDREN
+═══════════════════════════════════ -->
+<section class="children-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">
+        <span class="english-text">❤️ 15 Children · 15 Stories of Hope</span>
+        <span class="telugu-text">❤️ 15 పిల్లలు · 15 ఆశ కథలు</span>
+      </span>
+      <h2 class="section-title">
+        <span class="english-text">Meet Our Children</span>
+        <span class="telugu-text">మా పిల్లలను కలవండి</span>
+      </h2>
+      <p class="section-sub">
+        <span class="english-text">Click on any child to read their story and discover how you can be the answer to their prayer — every child deserves a champion.</span>
+        <span class="telugu-text">ఏ పిల్లవాడి కథ చదవాలన్నా క్లిక్ చేయండి — ప్రతి పిల్లవాడికి ఒక వీరుడు అవసరం.</span>
+      </p>
+    </div>
+    <div class="children-grid">
+
+      <a href="orphan-1.html" class="child-card">
+        <div class="child-card__photo">
+          <img src="images/children/child-1.jpg" alt="Child 1"
+            onerror="this.style.display='none'">
+          <div class="child-card__fallback">🧒</div>
+          <span class="child-card__num">Child 1</span>
+          <span class="child-card__sponsor-badge">Sponsor</span>
+        </div>
+        <div class="child-card__body">
+          <div class="child-card__name english-text">[ Name Coming Soon ]</div>
+          <div class="child-card__age english-text">Age · Class — </div>
+          <p class="child-card__desc english-text">Details will be updated soon. Click to read this child's full story and learn how you can make a difference.</p>
+          <span class="child-card__btn english-text">Meet This Child →</span>
+        </div>
+      </a>
+
+      <a href="orphan-2.html" class="child-card">
+        <div class="child-card__photo">
+          <img src="images/children/child-2.jpg" alt="Child 2" onerror="this.style.display='none'">
+          <div class="child-card__fallback">🧒</div>
+          <span class="child-card__num">Child 2</span>
+          <span class="child-card__sponsor-badge">Sponsor</span>
+        </div>
+        <div class="child-card__body">
+          <div class="child-card__name english-text">[ Name Coming Soon ]</div>
+          <div class="child-card__age english-text">Age · Class — </div>
+          <p class="child-card__desc english-text">Details will be updated soon. Click to read this child's full story and learn how you can make a difference.</p>
+          <span class="child-card__btn english-text">Meet This Child →</span>
+        </div>
+      </a>
+
+      <a href="orphan-3.html" class="child-card">
+        <div class="child-card__photo">
+          <img src="images/children/child-3.jpg" alt="Child 3" onerror="this.style.display='none'">
+          <div class="child-card__fallback">🧒</div>
+          <span class="child-card__num">Child 3</span>
+          <span class="child-card__sponsor-badge">Sponsor</span>
+        </div>
+        <div class="child-card__body">
+          <div class="child-card__name english-text">[ Name Coming Soon ]</div>
+          <div class="child-card__age english-text">Age · Class — </div>
+          <p class="child-card__desc english-text">Details will be updated soon. Click to read this child's full story and learn how you can make a difference.</p>
+          <span class="child-card__btn english-text">Meet This Child →</span>
+        </div>
+      </a>
+
+      <a href="orphan-4.html" class="child-card">
+        <div class="child-card__photo">
+          <img src="images/children/child-4.jpg" alt="Child 4" onerror="this.style.display='none'">
+          <div class="child-card__fallback">🧒</div>
+          <span class="child-card__num">Child 4</span>
+          <span class="child-card__sponsor-badge">Sponsor</span>
+        </div>
+        <div class="child-card__body">
+          <div class="child-card__name english-text">[ Name Coming Soon ]</div>
+          <div class="child-card__age english-text">Age · Class — </div>
+          <p class="child-card__desc english-text">Details will be updated soon. Click to read this child's full story and learn how you can make a difference.</p>
+          <span class="child-card__btn english-text">Meet This Child →</span>
+        </div>
+      </a>
+
+      <a href="orphan-5.html" class="child-card">
+        <div class="child-card__photo">
+          <img src="images/children/child-5.jpg" alt="Child 5" onerror="this.style.display='none'">
+          <div class="child-card__fallback">🧒</div>
+          <span class="child-card__num">Child 5</span>
+          <span class="child-card__sponsor-badge">Sponsor</span>
+        </div>
+        <div class="child-card__body">
+          <div class="child-card__name english-text">[ Name Coming Soon ]</div>
+          <div class="child-card__age english-text">Age · Class — </div>
+          <p class="child-card__desc english-text">Details will be updated soon. Click to read this child's full story and learn how you can make a difference.</p>
+          <span class="child-card__btn english-text">Meet This Child →</span>
+        </div>
+      </a>
+
+      <a href="orphan-6.html" class="child-card">
+        <div class="child-card__photo">
+          <img src="images/children/child-6.jpg" alt="Child 6" onerror="this.style.display='none'">
+          <div class="child-card__fallback">🧒</div>
+          <span class="child-card__num">Child 6</span>
+          <span class="child-card__sponsor-badge">Sponsor</span>
+        </div>
+        <div class="child-card__body">
+          <div class="child-card__name english-text">[ Name Coming Soon ]</div>
+          <div class="child-card__age english-text">Age · Class — </div>
+          <p class="child-card__desc english-text">Details will be updated soon. Click to read this child's full story and learn how you can make a difference.</p>
+          <span class="child-card__btn english-text">Meet This Child →</span>
+        </div>
+      </a>
+
+      <a href="orphan-7.html" class="child-card">
+        <div class="child-card__photo">
+          <img src="images/children/child-7.jpg" alt="Child 7" onerror="this.style.display='none'">
+          <div class="child-card__fallback">🧒</div>
+          <span class="child-card__num">Child 7</span>
+          <span class="child-card__sponsor-badge">Sponsor</span>
+        </div>
+        <div class="child-card__body">
+          <div class="child-card__name english-text">[ Name Coming Soon ]</div>
+          <div class="child-card__age english-text">Age · Class — </div>
+          <p class="child-card__desc english-text">Details will be updated soon. Click to read this child's full story and learn how you can make a difference.</p>
+          <span class="child-card__btn english-text">Meet This Child →</span>
+        </div>
+      </a>
+
+      <a href="orphan-8.html" class="child-card">
+        <div class="child-card__photo">
+          <img src="images/children/child-8.jpg" alt="Child 8" onerror="this.style.display='none'">
+          <div class="child-card__fallback">🧒</div>
+          <span class="child-card__num">Child 8</span>
+          <span class="child-card__sponsor-badge">Sponsor</span>
+        </div>
+        <div class="child-card__body">
+          <div class="child-card__name english-text">[ Name Coming Soon ]</div>
+          <div class="child-card__age english-text">Age · Class — </div>
+          <p class="child-card__desc english-text">Details will be updated soon. Click to read this child's full story and learn how you can make a difference.</p>
+          <span class="child-card__btn english-text">Meet This Child →</span>
+        </div>
+      </a>
+
+      <a href="orphan-9.html" class="child-card">
+        <div class="child-card__photo">
+          <img src="images/children/child-9.jpg" alt="Child 9" onerror="this.style.display='none'">
+          <div class="child-card__fallback">🧒</div>
+          <span class="child-card__num">Child 9</span>
+          <span class="child-card__sponsor-badge">Sponsor</span>
+        </div>
+        <div class="child-card__body">
+          <div class="child-card__name english-text">[ Name Coming Soon ]</div>
+          <div class="child-card__age english-text">Age · Class — </div>
+          <p class="child-card__desc english-text">Details will be updated soon. Click to read this child's full story and learn how you can make a difference.</p>
+          <span class="child-card__btn english-text">Meet This Child →</span>
+        </div>
+      </a>
+
+      <a href="orphan-10.html" class="child-card">
+        <div class="child-card__photo">
+          <img src="images/children/child-10.jpg" alt="Child 10" onerror="this.style.display='none'">
+          <div class="child-card__fallback">🧒</div>
+          <span class="child-card__num">Child 10</span>
+          <span class="child-card__sponsor-badge">Sponsor</span>
+        </div>
+        <div class="child-card__body">
+          <div class="child-card__name english-text">[ Name Coming Soon ]</div>
+          <div class="child-card__age english-text">Age · Class — </div>
+          <p class="child-card__desc english-text">Details will be updated soon. Click to read this child's full story and learn how you can make a difference.</p>
+          <span class="child-card__btn english-text">Meet This Child →</span>
+        </div>
+      </a>
+
+      <a href="orphan-11.html" class="child-card">
+        <div class="child-card__photo">
+          <img src="images/children/child-11.jpg" alt="Child 11" onerror="this.style.display='none'">
+          <div class="child-card__fallback">🧒</div>
+          <span class="child-card__num">Child 11</span>
+          <span class="child-card__sponsor-badge">Sponsor</span>
+        </div>
+        <div class="child-card__body">
+          <div class="child-card__name english-text">[ Name Coming Soon ]</div>
+          <div class="child-card__age english-text">Age · Class — </div>
+          <p class="child-card__desc english-text">Details will be updated soon. Click to read this child's full story and learn how you can make a difference.</p>
+          <span class="child-card__btn english-text">Meet This Child →</span>
+        </div>
+      </a>
+
+      <a href="orphan-12.html" class="child-card">
+        <div class="child-card__photo">
+          <img src="images/children/child-12.jpg" alt="Child 12" onerror="this.style.display='none'">
+          <div class="child-card__fallback">🧒</div>
+          <span class="child-card__num">Child 12</span>
+          <span class="child-card__sponsor-badge">Sponsor</span>
+        </div>
+        <div class="child-card__body">
+          <div class="child-card__name english-text">[ Name Coming Soon ]</div>
+          <div class="child-card__age english-text">Age · Class — </div>
+          <p class="child-card__desc english-text">Details will be updated soon. Click to read this child's full story and learn how you can make a difference.</p>
+          <span class="child-card__btn english-text">Meet This Child →</span>
+        </div>
+      </a>
+
+      <a href="orphan-13.html" class="child-card">
+        <div class="child-card__photo">
+          <img src="images/children/child-13.jpg" alt="Child 13" onerror="this.style.display='none'">
+          <div class="child-card__fallback">🧒</div>
+          <span class="child-card__num">Child 13</span>
+          <span class="child-card__sponsor-badge">Sponsor</span>
+        </div>
+        <div class="child-card__body">
+          <div class="child-card__name english-text">[ Name Coming Soon ]</div>
+          <div class="child-card__age english-text">Age · Class — </div>
+          <p class="child-card__desc english-text">Details will be updated soon. Click to read this child's full story and learn how you can make a difference.</p>
+          <span class="child-card__btn english-text">Meet This Child →</span>
+        </div>
+      </a>
+
+      <a href="orphan-14.html" class="child-card">
+        <div class="child-card__photo">
+          <img src="images/children/child-14.jpg" alt="Child 14" onerror="this.style.display='none'">
+          <div class="child-card__fallback">🧒</div>
+          <span class="child-card__num">Child 14</span>
+          <span class="child-card__sponsor-badge">Sponsor</span>
+        </div>
+        <div class="child-card__body">
+          <div class="child-card__name english-text">[ Name Coming Soon ]</div>
+          <div class="child-card__age english-text">Age · Class — </div>
+          <p class="child-card__desc english-text">Details will be updated soon. Click to read this child's full story and learn how you can make a difference.</p>
+          <span class="child-card__btn english-text">Meet This Child →</span>
+        </div>
+      </a>
+
+      <a href="orphan-15.html" class="child-card">
+        <div class="child-card__photo">
+          <img src="images/children/child-15.jpg" alt="Child 15" onerror="this.style.display='none'">
+          <div class="child-card__fallback">🧒</div>
+          <span class="child-card__num">Child 15</span>
+          <span class="child-card__sponsor-badge">Sponsor</span>
+        </div>
+        <div class="child-card__body">
+          <div class="child-card__name english-text">[ Name Coming Soon ]</div>
+          <div class="child-card__age english-text">Age · Class — </div>
+          <p class="child-card__desc english-text">Details will be updated soon. Click to read this child's full story and learn how you can make a difference.</p>
+          <span class="child-card__btn english-text">Meet This Child →</span>
+        </div>
+      </a>
 
     </div>
   </div>
