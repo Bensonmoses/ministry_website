@@ -155,6 +155,21 @@
 <div id="site-footer"></div>
 <script src="js/site.js"></script>
 <script>
+(function(){
+  var nav = document.querySelector('nav');
+  if(!nav) return;
+  nav.style.transition = 'transform 0.3s cubic-bezier(.4,0,.2,1)';
+  var lastY = 0, ticking = false;
+  window.addEventListener('scroll', function(){
+    if(!ticking){ requestAnimationFrame(function(){
+      var y = window.scrollY;
+      nav.style.transform = (y > lastY && y > 80) ? 'translateY(-100%)' : 'translateY(0)';
+      lastY = y; ticking = false;
+    }); ticking = true; }
+  }, {passive:true});
+})();
+</script>
+<script>
 (async()=>{let photos=[];try{const r=await fetch('images/manifest.json');const m=await r.json();photos=(m.albums['Billygraham']||{}).photos||[];}catch{}const grid=document.getElementById('photo-grid'),empty=document.getElementById('empty-msg');if(!photos.length){empty.style.display='block';return;}empty.style.display='none';let cur=0;const lb=document.getElementById('lightbox'),lbImg=document.getElementById('lb-img'),lbC=document.getElementById('lb-count');const open=i=>{cur=i;lbImg.src=photos[i].path;lbC.textContent=`${i+1}/${photos.length}`;lb.classList.add('open');document.body.style.overflow='hidden';};const close=()=>{lb.classList.remove('open');document.body.style.overflow='';};document.getElementById('lb-close').onclick=close;document.getElementById('lb-prev').onclick=()=>open((cur-1+photos.length)%photos.length);document.getElementById('lb-next').onclick=()=>open((cur+1)%photos.length);lb.onclick=e=>{if(e.target===lb)close();};document.addEventListener('keydown',e=>{if(!lb.classList.contains('open'))return;if(e.key==='ArrowLeft')open((cur-1+photos.length)%photos.length);if(e.key==='ArrowRight')open((cur+1)%photos.length);if(e.key==='Escape')close();});photos.slice(0,12).forEach((p,i)=>{const c=document.createElement('div');c.className='photo-card';c.innerHTML=`<img src="${p.path}" alt="${p.caption||''}" loading="lazy">`;c.onclick=()=>open(i);grid.appendChild(c);});})();
 </script>
 </body>
