@@ -79,10 +79,21 @@
 
     /* ── Memorial ────────────────────────────── */
     .memorial-full {
-      background: linear-gradient(160deg, #1A0802 0%, #3A1408 50%, #1A0802 100%);
+      background: linear-gradient(180deg, #08080e 0%, #130810 45%, #08080e 100%);
       padding: 5rem 0;
-      border-bottom: 1px solid rgba(201,168,76,0.2);
+      border-top: 5px solid var(--gold);
+      border-bottom: 5px solid var(--gold);
+      box-shadow: inset 0 0 120px rgba(201,168,76,0.06);
     }
+    .memorial-full::before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 50%; transform: translateX(-50%);
+      top: 0; width: 60%; height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(201,168,76,0.6), transparent);
+    }
+    .memorial-full { position: relative; }
     .memorial-inner {
       max-width: 700px; margin: 0 auto;
       display: flex; flex-direction: column; align-items: center;
@@ -364,7 +375,7 @@
         <a href="person-mary.html#sec-memorial" class="fam-action-btn" style="background:linear-gradient(135deg,#3A1408,#200A02);border:1px solid rgba(201,168,76,0.4);">🕊️ <span class="english-text">Memorial</span><span class="telugu-text">స్మారక</span></a>
         <a href="person-mary.html#sec-songs" class="fam-action-btn" style="background:linear-gradient(135deg,#C9A84C,#a8893e);">🎵 <span class="english-text">Her Songs</span><span class="telugu-text">పాటలు</span></a>
         <a href="person-mary.html#sec-pictures" class="fam-action-btn" style="background:linear-gradient(135deg,#4a4a4a,#222);">📷 <span class="english-text">Pictures</span><span class="telugu-text">చిత్రాలు</span></a>
-        <a href="person-mary.html" class="fam-action-btn" style="background:transparent;border:1.5px solid rgba(201,168,76,0.5);color:var(--gold);">→ <span class="english-text">Full Memorial Page</span><span class="telugu-text">స్మారక పేజీ</span></a>
+        <a href="person-mary.html" class="fam-action-btn" style="background:rgba(201,168,76,0.12);border:1.5px solid rgba(201,168,76,0.65);color:var(--gold,#C9A84C);">→ <span class="english-text">Full Memorial Page</span><span class="telugu-text">స్మారక పేజీ</span></a>
       </div>
     </div>
   </div>
