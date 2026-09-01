@@ -1497,6 +1497,35 @@ footer {
   .page-hero { padding: 3.5rem 0 2.5rem; }
 
   .section-header { margin-bottom: 2rem; }
+
+  /* ── Global mobile centering enforcement ─────────────────── */
+  /* Ensure all button groups, cards, and section text are centered on mobile */
+  .btn-group,
+  .cta-actions,
+  .fam-action-btns,
+  .card-actions,
+  .action-row,
+  .button-row { justify-content: center; align-items: center; }
+
+  /* Section headers always centered on mobile */
+  .section-title,
+  .section-sub,
+  .section-eyebrow { text-align: center; margin-left: auto; margin-right: auto; }
+
+  /* Cards centered */
+  .card,
+  .service-card,
+  .contact-tile { text-align: center; align-items: center; }
+
+  /* Single buttons centered */
+  .btn:only-child { margin-left: auto; margin-right: auto; }
+
+  /* Person page section nav buttons — adequate tap target */
+  .snav-btn { padding: 0.65rem 1.4rem !important; font-size: 0.82rem !important; }
+
+  /* Person page stats grid centered */
+  .pstat-grid,
+  .bishop-stats { justify-content: center; }
 }
 
 @media (max-width: 480px) {
