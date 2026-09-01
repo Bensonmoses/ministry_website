@@ -292,13 +292,34 @@
     .profile-link-dark { color: var(--crimson); }
     @media (max-width: 768px) {
       .memorial-photo-frame { width: 160px; height: 160px; }
-      .bishop-inner { grid-template-columns: 1fr; }
-      .bishop-photo { max-width: 260px; }
+
+      /* Bishop — center everything when stacked */
+      .bishop-inner { grid-template-columns: 1fr; gap: 2rem; }
+      .bishop-photo { max-width: 260px; margin: 0 auto; }
+      .bishop-info { text-align: center; }
+      .bishop-info .role { text-align: center; }
+      .bishop-info h2 { text-align: center; }
+      .bishop-info .phone-link { justify-content: center; display: flex; }
+      .bishop-info p { text-align: center; }
+      .bishop-stats { justify-content: center; }
+
+      /* Children — center photos and text when stacked */
       .child-block,
-      .child-block.reverse { grid-template-columns: 1fr; }
+      .child-block.reverse { grid-template-columns: 1fr; gap: 1.75rem; padding: 0 1rem; }
       .child-block.reverse .child-photo { order: 0; }
       .child-block.reverse .child-info { order: 1; }
-      .child-photo { max-width: 220px; }
+      .child-photo { max-width: 220px; margin: 0 auto; }
+      .child-info { text-align: center; }
+      .child-info .child-number { text-align: center; }
+      .child-info h2 { text-align: center; }
+      .child-info .child-role { text-align: center; }
+      .child-info p { text-align: center; }
+
+      /* Action buttons always centered */
+      .fam-action-btns { justify-content: center; }
+
+      /* Memorial text centered */
+      .memorial-text-col p { text-align: center; }
     }
   </style>
 </head>
