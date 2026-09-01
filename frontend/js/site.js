@@ -183,7 +183,7 @@ function renderFooter() {
             <li>
               <span class="fc-icon">📞</span>
               <div style="display:flex;flex-direction:column;gap:0.18rem;">
-                <span style="color:rgba(255,255,255,0.28);font-size:0.65rem;text-transform:uppercase;letter-spacing:0.1em;">Bro P. Billy Graham</span>
+                <span style="color:rgba(255,255,255,0.28);font-size:0.65rem;text-transform:uppercase;letter-spacing:0.1em;">Bro P. Billygraham</span>
                 <a href="tel:${SITE.billygrahamPhone}" style="color:rgba(255,255,255,0.6);transition:color 0.2s;" onmouseover="this.style.color='#C9A84C'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">${SITE.billygrahamPhoneDisplay}</a>
               </div>
             </li>
