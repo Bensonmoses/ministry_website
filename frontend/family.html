@@ -7,6 +7,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Telugu:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <style>
+    /* ── Action Buttons ─────────────────────── */
+    .fam-action-btn {
+      display:inline-flex;align-items:center;gap:0.4rem;
+      padding:0.55rem 1.15rem;border-radius:50px;
+      font-size:0.8rem;font-weight:700;color:#fff;
+      text-decoration:none;white-space:nowrap;
+      box-shadow:0 3px 10px rgba(0,0,0,0.22);
+      transition:opacity 0.2s,transform 0.2s,box-shadow 0.2s;
+    }
+    .fam-action-btn:hover { opacity:0.9;transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,0.3); }
+    .fam-action-btns { display:flex;gap:0.55rem;flex-wrap:wrap;margin-top:1.25rem; }
+    @media(max-width:480px){ .fam-action-btn { font-size:0.75rem;padding:0.5rem 0.95rem; } }
+
     /* ── Family Hero ─────────────────────────── */
     .family-hero {
       position: relative;
@@ -304,20 +317,6 @@
 </section>
 
 
-<!-- Family Section Nav -->
-<nav style="background:#fff;border-bottom:3px solid rgba(155,28,28,0.14);position:sticky;top:0;z-index:80;box-shadow:0 4px 18px rgba(0,0,0,0.09);">
-  <div class="container" style="display:flex;justify-content:center;flex-wrap:wrap;gap:0.9rem;overflow-x:auto;padding:1.1rem 1.5rem;scrollbar-width:none;">
-    <a href="#fam-mary" class="fsnav-btn" style="background:linear-gradient(135deg,#200A02,#3A1408);color:var(--gold,#C9A84C);border:1.5px solid rgba(201,168,76,0.4);">🕊️ <span class="english-text">Mary Kumari</span><span class="telugu-text">మేరీ కుమారి</span></a>
-    <a href="#fam-bishop" class="fsnav-btn" style="background:linear-gradient(135deg,#9B1C1C,#7a1515);color:#fff;">✝ <span class="english-text">Bishop Moses</span><span class="telugu-text">బిషప్ మోషే</span></a>
-    <a href="#fam-children" class="fsnav-btn" style="background:linear-gradient(135deg,#1B3A7A,#0D2050);color:#fff;">👨‍👩‍👧‍👦 <span class="english-text">Their Children</span><span class="telugu-text">వారి సంతానం</span></a>
-    <a href="#fam-channels" class="fsnav-btn" style="background:linear-gradient(135deg,#C9A84C,#a8893e);color:#fff;">▶ <span class="english-text">Watch & Follow</span><span class="telugu-text">చూడండి</span></a>
-  </div>
-</nav>
-<style>
-  .fsnav-btn { display:inline-flex;align-items:center;gap:0.55rem;padding:0.78rem 1.8rem;border-radius:50px;font-size:0.9rem;font-weight:700;text-decoration:none;white-space:nowrap;letter-spacing:0.04em;transition:opacity 0.22s,transform 0.22s,box-shadow 0.22s;flex-shrink:0;box-shadow:0 4px 14px rgba(0,0,0,0.22); }
-  .fsnav-btn:hover { opacity:0.92;transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,0.3); }
-</style>
-
 <!-- ═══════════════════════
      LATE MARY KUMARI MEMORIAL
 ═══════════════════════ -->
@@ -361,10 +360,12 @@
         <em>"Precious in the sight of the Lord is the death of His faithful servants."</em><br>
         <span style="font-size:0.82rem;color:rgba(201,168,76,0.7);">— Psalm 116:15</span>
       </div>
-      <a href="person-mary.html" class="profile-link">
-        <span class="english-text">Read Memorial →</span>
-        <span class="telugu-text">స్మారక పేజీ చూడండి →</span>
-      </a>
+      <div class="fam-action-btns">
+        <a href="person-mary.html#sec-memorial" class="fam-action-btn" style="background:linear-gradient(135deg,#3A1408,#200A02);border:1px solid rgba(201,168,76,0.4);">🕊️ <span class="english-text">Memorial</span><span class="telugu-text">స్మారక</span></a>
+        <a href="person-mary.html#sec-songs" class="fam-action-btn" style="background:linear-gradient(135deg,#C9A84C,#a8893e);">🎵 <span class="english-text">Her Songs</span><span class="telugu-text">పాటలు</span></a>
+        <a href="person-mary.html#sec-pictures" class="fam-action-btn" style="background:linear-gradient(135deg,#4a4a4a,#222);">📷 <span class="english-text">Pictures</span><span class="telugu-text">చిత్రాలు</span></a>
+        <a href="person-mary.html" class="fam-action-btn" style="background:transparent;border:1.5px solid rgba(201,168,76,0.5);color:var(--gold);">→ <span class="english-text">Full Memorial Page</span><span class="telugu-text">స్మారక పేజీ</span></a>
+      </div>
     </div>
   </div>
 </section>
@@ -417,10 +418,12 @@
           <div class="bstat"><strong>30+</strong><span><span class="english-text">Years</span><span class="telugu-text">సంవత్సరాలు</span></span></div>
           <div class="bstat"><strong>3</strong><span><span class="english-text">Children</span><span class="telugu-text">పిల్లలు</span></span></div>
         </div>
-        <a href="person-moses.html" class="profile-link profile-link-dark">
-          <span class="english-text">View Full Profile →</span>
-          <span class="telugu-text">పూర్తి ప్రొఫైల్ చూడండి →</span>
-        </a>
+        <div class="fam-action-btns">
+          <a href="person-moses.html#sec-messages" class="fam-action-btn" style="background:linear-gradient(135deg,#9B1C1C,#7a1515);">🎙️ <span class="english-text">Watch Messages</span><span class="telugu-text">ప్రసంగాలు</span></a>
+          <a href="person-moses.html#sec-songs" class="fam-action-btn" style="background:linear-gradient(135deg,#C9A84C,#a8893e);">🎵 <span class="english-text">Listen Songs</span><span class="telugu-text">పాటలు</span></a>
+          <a href="person-moses.html#sec-pictures" class="fam-action-btn" style="background:linear-gradient(135deg,#4a4a4a,#222);">📷 <span class="english-text">See Pictures</span><span class="telugu-text">చిత్రాలు</span></a>
+          <a href="person-moses.html" class="fam-action-btn" style="background:transparent;border:1.5px solid rgba(155,28,28,0.4);color:var(--crimson);">→ <span class="english-text">Full Profile</span><span class="telugu-text">పూర్తి ప్రొఫైల్</span></a>
+        </div>
       </div>
     </div>
   </div>
@@ -474,10 +477,12 @@
           <span class="english-text">Her life reflects the grace, warmth, and quiet strength of her mother Mary Kumari — a blessing to her family and to all who know her.</span>
           <span class="telugu-text">ఆమె జీవితం ఆమె తల్లి మేరీ కుమారి యొక్క కృప, వెచ్చదనం మరియు నిశ్శబ్ద బలాన్ని ప్రతిబింబిస్తుంది.</span>
         </p>
-        <a href="person-esthar.html" class="profile-link profile-link-dark">
-          <span class="english-text">View Profile & Gallery →</span>
-          <span class="telugu-text">ప్రొఫైల్ & గ్యాలరీ చూడండి →</span>
-        </a>
+        <div class="fam-action-btns">
+          <a href="person-esthar.html#sec-messages" class="fam-action-btn" style="background:linear-gradient(135deg,#7B3A9B,#5B2A7B);">🎙️ <span class="english-text">Watch Messages</span><span class="telugu-text">ప్రసంగాలు</span></a>
+          <a href="person-esthar.html#sec-songs" class="fam-action-btn" style="background:linear-gradient(135deg,#C9A84C,#a8893e);">🎵 <span class="english-text">Listen Songs</span><span class="telugu-text">పాటలు</span></a>
+          <a href="person-esthar.html#sec-pictures" class="fam-action-btn" style="background:linear-gradient(135deg,#4a4a4a,#222);">📷 <span class="english-text">See Pictures</span><span class="telugu-text">చిత్రాలు</span></a>
+          <a href="person-esthar.html" class="fam-action-btn" style="background:transparent;border:1.5px solid rgba(123,58,155,0.4);color:#7B3A9B;">→ <span class="english-text">Full Profile</span><span class="telugu-text">పూర్తి ప్రొఫైల్</span></a>
+        </div>
       </div>
     </div>
 
@@ -514,10 +519,12 @@
           <span class="english-text">A source of immense pride and joy for Bishop Moses — his journey abroad is a testament that the calling of God has no borders and His grace follows His children across every continent.</span>
           <span class="telugu-text">బిషప్ మోషేకు గొప్ప గర్వం మరియు సంతోషం యొక్క మూలం — ఆయన యొక్క విదేశ ప్రయాణం దేవుని పిలుపుకు సరిహద్దులు లేవని సాక్ష్యమిస్తుంది.</span>
         </p>
-        <a href="person-benson.html" class="profile-link profile-link-dark">
-          <span class="english-text">View Profile & Gallery →</span>
-          <span class="telugu-text">ప్రొఫైల్ & గ్యాలరీ చూడండి →</span>
-        </a>
+        <div class="fam-action-btns">
+          <a href="person-benson.html#sec-messages" class="fam-action-btn" style="background:linear-gradient(135deg,#1B3A7A,#0D2050);">🎙️ <span class="english-text">Watch Messages</span><span class="telugu-text">ప్రసంగాలు</span></a>
+          <a href="person-benson.html#sec-songs" class="fam-action-btn" style="background:linear-gradient(135deg,#C9A84C,#a8893e);">🎵 <span class="english-text">Listen Songs</span><span class="telugu-text">పాటలు</span></a>
+          <a href="person-benson.html#sec-pictures" class="fam-action-btn" style="background:linear-gradient(135deg,#4a4a4a,#222);">📷 <span class="english-text">See Pictures</span><span class="telugu-text">చిత్రాలు</span></a>
+          <a href="person-benson.html" class="fam-action-btn" style="background:transparent;border:1.5px solid rgba(27,58,122,0.4);color:#1B3A7A;">→ <span class="english-text">Full Profile</span><span class="telugu-text">పూర్తి ప్రొఫైల్</span></a>
+        </div>
       </div>
     </div>
 
@@ -556,10 +563,12 @@
         </p>
         <a href="tel:+919866378567" style="display:inline-flex;align-items:center;gap:0.4rem;font-size:0.9rem;font-weight:600;color:var(--crimson);margin-top:0.5rem;">📞 +91 98663 78567</a>
         <br>
-        <a href="person-billygraham.html" class="profile-link profile-link-dark" style="margin-top:0.75rem;">
-          <span class="english-text">View Profile & Gallery →</span>
-          <span class="telugu-text">ప్రొఫైల్ & గ్యాలరీ చూడండి →</span>
-        </a>
+        <div class="fam-action-btns" style="margin-top:0.75rem;">
+          <a href="person-billygraham.html#sec-messages" class="fam-action-btn" style="background:linear-gradient(135deg,#9B1C1C,#7a1515);">🎙️ <span class="english-text">Watch Messages</span><span class="telugu-text">ప్రసంగాలు</span></a>
+          <a href="person-billygraham.html#sec-songs" class="fam-action-btn" style="background:linear-gradient(135deg,#C9A84C,#a8893e);">🎵 <span class="english-text">Listen Songs</span><span class="telugu-text">పాటలు</span></a>
+          <a href="person-billygraham.html#sec-pictures" class="fam-action-btn" style="background:linear-gradient(135deg,#4a4a4a,#222);">📷 <span class="english-text">See Pictures</span><span class="telugu-text">చిత్రాలు</span></a>
+          <a href="person-billygraham.html" class="fam-action-btn" style="background:transparent;border:1.5px solid rgba(155,28,28,0.4);color:var(--crimson);">→ <span class="english-text">Full Profile</span><span class="telugu-text">పూర్తి ప్రొఫైల్</span></a>
+        </div>
       </div>
     </div>
 
