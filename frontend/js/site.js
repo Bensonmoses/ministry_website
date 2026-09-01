@@ -110,58 +110,99 @@ function renderHeader() {
 function renderFooter() {
   return `
 <footer>
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a href="index.html" class="logo" style="margin-bottom:1rem;">
-          <img src="images/logo.webp" alt="Holy Spirit Prayer House">
-          <div class="logo-text">
-            <strong style="color:#fff;">
-              <span class="english-text">Holy Spirit Prayer House</span>
-              <span class="telugu-text">హోలీ స్పిరిట్ మందిరం</span>
-            </strong>
+  <div class="footer-inner">
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Brand column -->
+        <div class="footer-brand">
+          <a href="index.html" class="logo" style="margin-bottom:0.75rem;gap:0.75rem;">
+            <img src="images/logo.webp" alt="Holy Spirit Prayer House" style="width:52px;height:52px;border-radius:50%;border:2px solid rgba(201,168,76,0.35);">
+            <div class="logo-text">
+              <strong style="color:#fff;font-size:0.92rem;letter-spacing:0.02em;">
+                <span class="english-text">Holy Spirit Prayer House</span>
+                <span class="telugu-text">హోలీ స్పిరిట్ మందిరం</span>
+              </strong>
+            </div>
+          </a>
+          <div class="footer-divider"></div>
+          <p>
+            <span class="english-text">A beacon of faith, hope, and love in Oduru, West Godavari, Andhra Pradesh. Serving the community for over 30 years.</span>
+            <span class="telugu-text">ఒదురులో విశ్వాసం, ఆశ మరియు ప్రేమ యొక్క దీపస్తంభం. 30 సంవత్సరాలకు పైగా సమాజానికి సేవ చేస్తున్నాం.</span>
+          </p>
+          <div class="footer-social">
+            <a href="${SITE.youtube}" target="_blank" class="social-btn" aria-label="YouTube" title="YouTube">▶</a>
+            <a href="${SITE.instagram}" target="_blank" class="social-btn" aria-label="Instagram" title="Instagram">📷</a>
+            <a href="${SITE.facebook}" target="_blank" class="social-btn" aria-label="Facebook" title="Facebook">f</a>
+            <a href="${SITE.whatsapp}" target="_blank" class="social-btn" aria-label="WhatsApp" title="WhatsApp">💬</a>
           </div>
-        </a>
-        <p><span class="english-text">A beacon of faith, hope, and love in Oduru, West Godavari, Andhra Pradesh. Serving the community for over 30 years.</span><span class="telugu-text">ఒదురులో విశ్వాసం, ఆశ మరియు ప్రేమ యొక్క దీపస్తంభం. 30 సంవత్సరాలకు పైగా సమాజానికి సేవ చేస్తున్నాం.</span></p>
-        <div class="footer-social">
-          <a href="${SITE.youtube}" target="_blank" class="social-btn" aria-label="YouTube">▶</a>
-          <a href="${SITE.instagram}" target="_blank" class="social-btn" aria-label="Instagram">📷</a>
-          <a href="${SITE.facebook}" target="_blank" class="social-btn" aria-label="Facebook">f</a>
-          <a href="${SITE.whatsapp}" target="_blank" class="social-btn" aria-label="WhatsApp">💬</a>
         </div>
-      </div>
-      <div class="footer-col">
-        <h4><span class="english-text">Quick Links</span><span class="telugu-text">లింక్‌లు</span></h4>
-        <ul>
-          <li><a href="about.html"><span class="english-text">About Us</span><span class="telugu-text">మా గురించి</span></a></li>
-          <li><a href="sermons.html"><span class="english-text">Sermons</span><span class="telugu-text">ప్రసంగాలు</span></a></li>
-          <li><a href="ministries.html"><span class="english-text">Ministries</span><span class="telugu-text">సేవలు</span></a></li>
-          <li><a href="orphanage.html"><span class="english-text">Orphanage</span><span class="telugu-text">అనాథాశ్రమం</span></a></li>
-          <li><a href="events.html"><span class="english-text">Events</span><span class="telugu-text">ఈవెంట్స్</span></a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4><span class="english-text">Get Involved</span><span class="telugu-text">చేరండి</span></h4>
-        <ul>
-          <li><a href="volunteer.html"><span class="english-text">Volunteer</span><span class="telugu-text">స్వచ్ఛంద సేవ</span></a></li>
-          <li><a href="donate.html"><span class="english-text">Donate</span><span class="telugu-text">దానం</span></a></li>
-          <li><a href="contact.html"><span class="english-text">Contact Us</span><span class="telugu-text">సంప్రదించండి</span></a></li>
-          <li><a href="${SITE.youtube}" target="_blank"><span class="english-text">YouTube Channel</span><span class="telugu-text">YouTube ఛానల్</span></a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4><span class="english-text">Contact</span><span class="telugu-text">సంప్రదించండి</span></h4>
-        <ul class="footer-contact">
-          <li><span>📍</span><span><span class="english-text">Oduru, West Godavari, Andhra Pradesh, India</span><span class="telugu-text">ఒదురు, పశ్చిమ గోదావరి, ఆంధ్రప్రదేశ్</span></span></li>
-          <li><span>📞</span><span><a href="tel:${SITE.phone}" style="color:inherit;">${SITE.phoneDisplay}</a></span></li>
-          <li><span>✉</span><span><a href="mailto:${SITE.email}" style="color:var(--gold);">${SITE.email}</a></span></li>
-          <li><span>💬</span><span><a href="${SITE.whatsapp}" target="_blank" style="color:#25D366;">WhatsApp Us</a></span></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>&copy; 2025 Holy Spirit Prayer House. <span class="english-text">All Rights Reserved.</span><span class="telugu-text">అన్ని హక్కులు పరిరక్షించబడినవి.</span></span>
-      <span><span class="english-text">Made with ❤️ for God's Glory</span><span class="telugu-text">దేవుని మహిమ కోసం ❤️తో</span></span>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4><span class="english-text">Quick Links</span><span class="telugu-text">లింక్‌లు</span></h4>
+          <ul>
+            <li><a href="about.html"><span class="english-text">About Us</span><span class="telugu-text">మా గురించి</span></a></li>
+            <li><a href="sermons.html"><span class="english-text">Sermons</span><span class="telugu-text">ప్రసంగాలు</span></a></li>
+            <li><a href="ministries.html"><span class="english-text">Ministries</span><span class="telugu-text">సేవలు</span></a></li>
+            <li><a href="orphanage.html"><span class="english-text">Orphanage</span><span class="telugu-text">అనాథాశ్రమం</span></a></li>
+            <li><a href="family.html"><span class="english-text">Our Family</span><span class="telugu-text">మా కుటుంబం</span></a></li>
+            <li><a href="events.html"><span class="english-text">Events</span><span class="telugu-text">ఈవెంట్స్</span></a></li>
+          </ul>
+        </div>
+
+        <!-- Get Involved -->
+        <div class="footer-col">
+          <h4><span class="english-text">Get Involved</span><span class="telugu-text">చేరండి</span></h4>
+          <ul>
+            <li><a href="volunteer.html"><span class="english-text">Volunteer</span><span class="telugu-text">స్వచ్ఛంద సేవ</span></a></li>
+            <li><a href="donate.html"><span class="english-text">Donate</span><span class="telugu-text">దానం</span></a></li>
+            <li><a href="contact.html"><span class="english-text">Contact Us</span><span class="telugu-text">సంప్రదించండి</span></a></li>
+            <li><a href="${SITE.youtube}" target="_blank"><span class="english-text">YouTube Channel</span><span class="telugu-text">YouTube ఛానల్</span></a></li>
+            <li><a href="orphanage.html#meet-children"><span class="english-text">Sponsor a Child</span><span class="telugu-text">పిల్లవాడిని స్పాన్సర్ చేయండి</span></a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-col">
+          <h4><span class="english-text">Contact Us</span><span class="telugu-text">సంప్రదించండి</span></h4>
+          <ul class="footer-contact">
+            <li>
+              <span class="fc-icon">📍</span>
+              <span><span class="english-text">Oduru, Penumantra Mandal, West Godavari, AP — 534126</span><span class="telugu-text">ఒదురు, పెనుమంత్ర మండలం, పశ్చిమ గోదావరి — 534126</span></span>
+            </li>
+            <li>
+              <span class="fc-icon">📞</span>
+              <span><a href="tel:${SITE.phone}" style="color:rgba(255,255,255,0.65);transition:color 0.2s;" onmouseover="this.style.color='#C9A84C'" onmouseout="this.style.color='rgba(255,255,255,0.65)'">${SITE.phoneDisplay}</a></span>
+            </li>
+            <li>
+              <span class="fc-icon">✉</span>
+              <span><a href="mailto:${SITE.email}" style="color:var(--gold);word-break:break-all;">${SITE.email}</a></span>
+            </li>
+            <li>
+              <span class="fc-icon">💬</span>
+              <span><a href="${SITE.whatsapp}" target="_blank" style="color:#25D366;font-weight:600;"><span class="english-text">Chat on WhatsApp</span><span class="telugu-text">WhatsApp లో మాట్లాడండి</span></a></span>
+            </li>
+          </ul>
+        </div>
+
+      </div><!-- /footer-grid -->
+    </div><!-- /container -->
+  </div><!-- /footer-inner -->
+
+  <div class="footer-bottom">
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;width:100%;">
+      <span style="display:inline-flex;align-items:center;gap:0.4rem;">
+        <span style="color:var(--gold);">✝</span>
+        &copy; 2025 Holy Spirit Prayer House.
+        <span class="english-text">All Rights Reserved.</span>
+        <span class="telugu-text">అన్ని హక్కులు పరిరక్షించబడినవి.</span>
+      </span>
+      <span style="display:inline-flex;align-items:center;gap:0.35rem;">
+        <span class="english-text">Made with</span><span class="telugu-text">తయారు చేశారు</span>
+        <span style="color:#e25555;">❤</span>
+        <span class="english-text">for God's Glory</span><span class="telugu-text">దేవుని మహిమ కోసం</span>
+      </span>
     </div>
   </div>
 </footer>
