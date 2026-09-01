@@ -60,13 +60,17 @@
 </section>
 
 <!-- Section Nav -->
-<nav style="background:#fff;border-bottom:2px solid rgba(123,58,155,0.1);position:sticky;top:0;z-index:80;box-shadow:0 2px 12px rgba(0,0,0,0.06);">
-  <div class="container" style="display:flex;gap:0.35rem;overflow-x:auto;padding:0.65rem 0;scrollbar-width:none;">
-    <a href="#sec-messages" style="background:linear-gradient(135deg,#7B3A9B,#5B2A7B);color:#fff;display:inline-flex;align-items:center;gap:0.4rem;padding:0.48rem 1.1rem;border-radius:var(--radius-full);font-size:0.75rem;font-weight:700;text-decoration:none;white-space:nowrap;flex-shrink:0;">🎙️ <span class="english-text">Messages</span><span class="telugu-text">సందేశాలు</span></a>
-    <a href="#sec-songs" style="background:linear-gradient(135deg,#C9A84C,#a8893e);color:#fff;display:inline-flex;align-items:center;gap:0.4rem;padding:0.48rem 1.1rem;border-radius:var(--radius-full);font-size:0.75rem;font-weight:700;text-decoration:none;white-space:nowrap;flex-shrink:0;">🎵 <span class="english-text">Songs</span><span class="telugu-text">పాటలు</span></a>
-    <a href="#sec-pictures" style="background:linear-gradient(135deg,#4a4a4a,#222);color:#fff;display:inline-flex;align-items:center;gap:0.4rem;padding:0.48rem 1.1rem;border-radius:var(--radius-full);font-size:0.75rem;font-weight:700;text-decoration:none;white-space:nowrap;flex-shrink:0;">📷 <span class="english-text">Pictures</span><span class="telugu-text">చిత్రాలు</span></a>
+<nav style="background:#fff;border-bottom:3px solid rgba(123,58,155,0.14);position:sticky;top:0;z-index:80;box-shadow:0 4px 18px rgba(0,0,0,0.09);">
+  <div class="container" style="display:flex;justify-content:center;flex-wrap:wrap;gap:0.9rem;overflow-x:auto;padding:1.1rem 1.5rem;scrollbar-width:none;">
+    <a href="#sec-messages" class="snav-btn" style="background:linear-gradient(135deg,#7B3A9B,#5B2A7B);color:#fff;">🎙️ <span class="english-text">Messages</span><span class="telugu-text">సందేశాలు</span></a>
+    <a href="#sec-songs" class="snav-btn" style="background:linear-gradient(135deg,#C9A84C,#a8893e);color:#fff;">🎵 <span class="english-text">Songs</span><span class="telugu-text">పాటలు</span></a>
+    <a href="#sec-pictures" class="snav-btn" style="background:linear-gradient(135deg,#4a4a4a,#222);color:#fff;">📷 <span class="english-text">Pictures</span><span class="telugu-text">చిత్రాలు</span></a>
   </div>
 </nav>
+<style>
+  .snav-btn { display:inline-flex;align-items:center;gap:0.55rem;padding:0.78rem 1.8rem;border-radius:50px;font-size:0.9rem;font-weight:700;text-decoration:none;white-space:nowrap;letter-spacing:0.04em;transition:opacity 0.22s,transform 0.22s,box-shadow 0.22s;flex-shrink:0;box-shadow:0 4px 14px rgba(0,0,0,0.22); }
+  .snav-btn:hover { opacity:0.92;transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,0.3); }
+</style>
 
 <section class="bio-section">
   <div class="bio-inner">
