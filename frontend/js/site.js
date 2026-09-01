@@ -46,6 +46,8 @@ function renderHeader() {
 <div class="top-bar">
   <div class="top-bar__left">
     <span>📞 <a href="tel:${SITE.phone}">${SITE.phoneDisplay}</a></span>
+    <span class="top-sep">·</span>
+    <span><a href="tel:${SITE.billygrahamPhone}">${SITE.billygrahamPhoneDisplay}</a></span>
     <span class="top-sep">|</span>
     <span>✉ <a href="mailto:${SITE.email}">${SITE.email}</a></span>
   </div>
@@ -173,7 +175,17 @@ function renderFooter() {
             </li>
             <li>
               <span class="fc-icon">📞</span>
-              <span><a href="tel:${SITE.phone}" style="color:rgba(255,255,255,0.6);transition:color 0.2s;" onmouseover="this.style.color='#C9A84C'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">${SITE.phoneDisplay}</a></span>
+              <div style="display:flex;flex-direction:column;gap:0.18rem;">
+                <span style="color:rgba(255,255,255,0.28);font-size:0.65rem;text-transform:uppercase;letter-spacing:0.1em;">Bishop P. Moses</span>
+                <a href="tel:${SITE.phone}" style="color:rgba(255,255,255,0.6);transition:color 0.2s;" onmouseover="this.style.color='#C9A84C'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">${SITE.phoneDisplay}</a>
+              </div>
+            </li>
+            <li>
+              <span class="fc-icon">📞</span>
+              <div style="display:flex;flex-direction:column;gap:0.18rem;">
+                <span style="color:rgba(255,255,255,0.28);font-size:0.65rem;text-transform:uppercase;letter-spacing:0.1em;">Bro P. Billy Graham</span>
+                <a href="tel:${SITE.billygrahamPhone}" style="color:rgba(255,255,255,0.6);transition:color 0.2s;" onmouseover="this.style.color='#C9A84C'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">${SITE.billygrahamPhoneDisplay}</a>
+              </div>
             </li>
             <li>
               <span class="fc-icon">✉</span>
