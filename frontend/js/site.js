@@ -49,10 +49,6 @@ function renderHeader() {
     <span class="top-sep">|</span>
     <span>✉ <a href="mailto:${SITE.email}">${SITE.email}</a></span>
   </div>
-  <div class="top-bar__center">
-    <span class="english-text">✝ Welcome to Holy Spirit Prayer House (IPC)</span>
-    <span class="telugu-text">✝ హోలీ స్పిరిట్ ప్రార్థన మందిరానికి స్వాగతం (IPC)</span>
-  </div>
   <div class="top-bar__right">
     <button class="lang-btn active" data-lang="english" onclick="toggleLanguage('english')">English</button>
     <button class="lang-btn" data-lang="telugu" onclick="toggleLanguage('telugu')">తెలుగు</button>
@@ -125,7 +121,7 @@ function renderFooter() {
             </strong>
           </div>
         </a>
-        <p><span class="english-text">A beacon of faith, hope, and love in Oduru, West Godavari, Andhra Pradesh. Serving the community for over 20 years.</span><span class="telugu-text">ఒదురులో విశ్వాసం, ఆశ మరియు ప్రేమ యొక్క దీపస్తంభం. 20 సంవత్సరాలకు పైగా సమాజానికి సేవ చేస్తున్నాం.</span></p>
+        <p><span class="english-text">A beacon of faith, hope, and love in Oduru, West Godavari, Andhra Pradesh. Serving the community for over 30 years.</span><span class="telugu-text">ఒదురులో విశ్వాసం, ఆశ మరియు ప్రేమ యొక్క దీపస్తంభం. 30 సంవత్సరాలకు పైగా సమాజానికి సేవ చేస్తున్నాం.</span></p>
         <div class="footer-social">
           <a href="${SITE.youtube}" target="_blank" class="social-btn" aria-label="YouTube">▶</a>
           <a href="${SITE.instagram}" target="_blank" class="social-btn" aria-label="Instagram">📷</a>
@@ -171,15 +167,14 @@ function renderFooter() {
 
 <!-- WhatsApp Floating Button -->
 <a href="${SITE.whatsapp}" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
-  <span class="whatsapp-icon">💬</span>
-  <span class="whatsapp-label"><span class="english-text">WhatsApp Us</span><span class="telugu-text">WhatsApp చేయండి</span></span>
+  <span class="float-icon">💬</span>
+  <span class="float-label"><span class="english-text">WhatsApp</span><span class="telugu-text">WhatsApp</span></span>
 </a>
 
 <!-- Chatbot Floating Button -->
 <button id="chatbot-toggle" class="chatbot-button" aria-label="Chat with us">
-  <img src="images/founder.jpg" alt="Chat">
-  <span class="english-text">Ask Us</span>
-  <span class="telugu-text">అడగండి</span>
+  <span class="float-icon">🙏</span>
+  <span class="float-label"><span class="english-text">Ask Us</span><span class="telugu-text">అడగండి</span></span>
 </button>
 <div id="chatbot-popup" class="chatbot-popup hidden">
   <div class="chatbot-header">
