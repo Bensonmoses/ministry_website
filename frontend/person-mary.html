@@ -74,6 +74,20 @@
   </div>
 </section>
 
+<!-- Section Nav -->
+<nav class="person-section-nav" style="background:#fff;border-bottom:2px solid rgba(155,28,28,0.1);position:sticky;top:0;z-index:80;box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+  <div class="container" style="display:flex;gap:0.35rem;overflow-x:auto;padding:0.65rem 0;scrollbar-width:none;">
+    <a href="#sec-memorial" class="snav-btn" style="background:linear-gradient(135deg,#9B1C1C,#7a1515);color:#fff;">🕊️ <span class="english-text">Memorial Services</span><span class="telugu-text">స్మారక సేవలు</span></a>
+    <a href="#sec-messages" class="snav-btn" style="background:linear-gradient(135deg,#1B3A7A,#0D2050);color:#fff;">🎙️ <span class="english-text">Her Messages</span><span class="telugu-text">ఆమె సందేశాలు</span></a>
+    <a href="#sec-songs" class="snav-btn" style="background:linear-gradient(135deg,#C9A84C,#a8893e);color:#fff;">🎵 <span class="english-text">Her Songs</span><span class="telugu-text">ఆమె పాటలు</span></a>
+    <a href="#sec-pictures" class="snav-btn" style="background:linear-gradient(135deg,#4a4a4a,#222);color:#fff;">📷 <span class="english-text">Her Pictures</span><span class="telugu-text">ఆమె చిత్రాలు</span></a>
+  </div>
+</nav>
+<style>
+  .snav-btn { display:inline-flex;align-items:center;gap:0.4rem;padding:0.48rem 1.1rem;border-radius:var(--radius-full);font-size:0.75rem;font-weight:700;text-decoration:none;white-space:nowrap;letter-spacing:0.03em;transition:opacity 0.18s,transform 0.18s;flex-shrink:0; }
+  .snav-btn:hover { opacity:0.85;transform:translateY(-1px); }
+</style>
+
 <section class="bio-section">
   <div class="bio-inner">
     <span class="section-eyebrow"><span class="english-text">Her Legacy</span><span class="telugu-text">ఆమె వారసత్వం</span></span>
@@ -103,14 +117,14 @@
 <!-- ═══════════════════════════════════
      MEMORIAL VIDEOS
 ═══════════════════════════════════ -->
-<section style="background:linear-gradient(180deg,#200A02 0%,#3A1408 60%,#200A02 100%);padding:4.5rem 0;border-top:1px solid rgba(201,168,76,0.18);border-bottom:1px solid rgba(201,168,76,0.18);">
+<section id="sec-memorial" style="background:linear-gradient(180deg,#200A02 0%,#3A1408 60%,#200A02 100%);padding:4.5rem 0;border-top:1px solid rgba(201,168,76,0.18);border-bottom:1px solid rgba(201,168,76,0.18);">
   <div class="container">
 
     <div style="text-align:center;margin-bottom:2.75rem;">
       <span style="display:inline-block;font-size:0.67rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:rgba(201,168,76,0.65);margin-bottom:0.5rem;">🕊️ In Her Memory</span>
       <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3.5vw,2.2rem);color:#fff;font-style:italic;margin:0 0 0.4rem;">
-        <span class="english-text">Memorial & Funeral Videos</span>
-        <span class="telugu-text">స్మారక & అంత్యక్రియల వీడియోలు</span>
+        <span class="english-text">Memorial Services</span>
+        <span class="telugu-text">స్మారక సేవలు</span>
       </h2>
       <p style="font-size:0.85rem;color:rgba(255,255,255,0.45);max-width:540px;margin:0 auto;line-height:1.7;">
         <span class="english-text">Sacred recordings preserved in honour of Late Palaparthi Mary Kumari — her life, her farewell, and the love of those who gathered to remember her.</span>
@@ -263,7 +277,67 @@
   }
 </style>
 
-<section class="photo-section">
+<!-- ════ HER MESSAGES ════ -->
+<section id="sec-messages" style="background:linear-gradient(180deg,#fff 0%,#f4f7ff 100%);padding:4rem 0;border-top:2px solid rgba(27,58,122,0.08);">
+  <div class="container">
+    <div style="display:flex;align-items:center;gap:1rem;margin-bottom:2.25rem;">
+      <span style="width:50px;height:50px;background:linear-gradient(135deg,#1B3A7A,#0D2050);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0;">🎙️</span>
+      <div>
+        <span class="section-eyebrow" style="color:#1B3A7A;opacity:0.7;">
+          <span class="english-text">Sermons & Testimonies</span>
+          <span class="telugu-text">ప్రసంగాలు & సాక్ష్యాలు</span>
+        </span>
+        <h2 class="section-title" style="margin:0;color:#1B3A7A;">
+          <span class="english-text">Her Messages</span>
+          <span class="telugu-text">ఆమె సందేశాలు</span>
+        </h2>
+      </div>
+    </div>
+    <div style="border:2px dashed rgba(27,58,122,0.2);border-radius:var(--radius-lg);padding:3.5rem 2rem;text-align:center;background:rgba(27,58,122,0.02);">
+      <div style="font-size:3rem;margin-bottom:0.85rem;">🎙️</div>
+      <p style="font-weight:700;font-size:1rem;color:#1B3A7A;margin:0 0 0.4rem;">
+        <span class="english-text">Coming Soon</span>
+        <span class="telugu-text">త్వరలో వస్తోంది</span>
+      </p>
+      <p style="color:var(--text-light);font-size:0.88rem;max-width:440px;margin:0 auto;line-height:1.7;">
+        <span class="english-text">Videos of Late Mary Kumari's messages, testimonies and words of faith will be added here — preserved forever for her family and all who knew her.</span>
+        <span class="telugu-text">స్వర్గీయ మేరీ కుమారి గారి సందేశాలు, సాక్ష్యాలు మరియు విశ్వాస వాక్యాల వీడియోలు ఇక్కడ జోడించబడతాయి.</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ════ HER SONGS ════ -->
+<section id="sec-songs" style="background:linear-gradient(180deg,#fffbf0 0%,#fff 100%);padding:4rem 0;border-top:2px solid rgba(201,168,76,0.12);">
+  <div class="container">
+    <div style="display:flex;align-items:center;gap:1rem;margin-bottom:2.25rem;">
+      <span style="width:50px;height:50px;background:linear-gradient(135deg,#C9A84C,#a8893e);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0;">🎵</span>
+      <div>
+        <span class="section-eyebrow" style="color:var(--gold);opacity:0.85;">
+          <span class="english-text">Worship & Praise</span>
+          <span class="telugu-text">ఆరాధన & స్తుతి</span>
+        </span>
+        <h2 class="section-title" style="margin:0;">
+          <span class="english-text">Her Songs</span>
+          <span class="telugu-text">ఆమె పాటలు</span>
+        </h2>
+      </div>
+    </div>
+    <div style="border:2px dashed rgba(201,168,76,0.28);border-radius:var(--radius-lg);padding:3.5rem 2rem;text-align:center;background:rgba(201,168,76,0.03);">
+      <div style="font-size:3rem;margin-bottom:0.85rem;">🎵</div>
+      <p style="font-weight:700;font-size:1rem;color:var(--gold);margin:0 0 0.4rem;">
+        <span class="english-text">Coming Soon</span>
+        <span class="telugu-text">త్వరలో వస్తోంది</span>
+      </p>
+      <p style="color:var(--text-light);font-size:0.88rem;max-width:440px;margin:0 auto;line-height:1.7;">
+        <span class="english-text">Songs sung and led by Late Mary Kumari in worship and praise — to be uploaded here in loving memory of her devotion to God.</span>
+        <span class="telugu-text">స్వర్గీయ మేరీ కుమారి పాడిన ఆరాధన పాటలు — ఆమె భక్తి స్మారకంగా ఇక్కడ అప్‌లోడ్ చేయబడతాయి.</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="sec-pictures" class="photo-section">
   <div class="container">
     <h2 class="section-title" style="text-align:center;margin-bottom:2rem;">
       <span class="english-text">Cherished Moments</span>
