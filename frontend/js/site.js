@@ -44,18 +44,18 @@ function setActiveNav() {
 function renderHeader() {
   return `
 <div class="top-bar">
-  <div class="top-bar__left">
+  <div class="top-bar__left"></div>
+  <div class="top-bar__center">
+    <button class="lang-btn active" data-lang="english" onclick="toggleLanguage('english')">English</button>
+    <button class="lang-btn" data-lang="telugu" onclick="toggleLanguage('telugu')">తెలుగు</button>
+  </div>
+  <div class="top-bar__right">
     <span>📞 <a href="tel:${SITE.phone}">${SITE.phoneDisplay}</a></span>
     <span class="top-sep">·</span>
     <span><a href="tel:${SITE.billygrahamPhone}">${SITE.billygrahamPhoneDisplay}</a></span>
     <span class="top-sep">|</span>
     <span>✉ <a href="mailto:${SITE.email}">${SITE.email}</a></span>
   </div>
-  <div class="top-bar__center">
-    <button class="lang-btn active" data-lang="english" onclick="toggleLanguage('english')">English</button>
-    <button class="lang-btn" data-lang="telugu" onclick="toggleLanguage('telugu')">తెలుగు</button>
-  </div>
-  <div class="top-bar__right"></div>
 </div>
 
 <header id="mainHeader">
