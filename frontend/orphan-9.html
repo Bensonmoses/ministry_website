@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Child 9 — Mary House of Compassion Trust. Sponsor this child and transform their future.">
+  <title>Child 9 — Mary House of Compassion Trust | Holy Spirit Prayer House</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Telugu:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* ── Child Hero ─────────────────────── */
+    .child-hero {
+      padding: 4.5rem 0 3.5rem;
+      background: linear-gradient(160deg, #1A0505 0%, #7B1313 55%, #1A0505 100%);
+      text-align: center;
+      border-bottom: 3px solid var(--gold);
+      position: relative; overflow: hidden;
+    }
+    .child-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 50% 0%, rgba(201,168,76,0.12) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .child-hero .container { position: relative; z-index: 1; }
+    .child-hero__photo {
+      width: 190px; height: 190px; border-radius: 50%;
+      border: 4px solid rgba(201,168,76,0.5); overflow: hidden;
+      margin: 0 auto 1.5rem;
+      box-shadow: 0 0 0 10px rgba(201,168,76,0.08), 0 0 60px rgba(201,168,76,0.22), 0 10px 40px rgba(0,0,0,0.5);
+      background: linear-gradient(135deg, #4A0E0E, #7B1313);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .child-hero__photo img {
+      width: 100%; height: 100%; object-fit: cover; object-position: center top;
+    }
+    .child-hero__photo-fallback { font-size: 5rem; color: rgba(255,255,255,0.2); }
+    .child-hero__badge {
+      display: inline-block;
+      background: rgba(201,168,76,0.18); border: 1px solid rgba(201,168,76,0.45);
+      color: var(--gold); font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      padding: 0.32rem 0.9rem; border-radius: var(--radius-full);
+      margin-bottom: 1rem;
+    }
+    .child-hero__name {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem); color: #fff;
+      font-style: italic; margin-bottom: 0.35rem; line-height: 1.2;
+    }
+    .child-hero__meta {
+      font-size: 0.85rem; color: rgba(255,255,255,0.5);
+      letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1.5rem;
+    }
+    .child-hero__actions { display: flex; gap: 0.85rem; justify-content: center; flex-wrap: wrap; }
+    .btn-sponsor {
+      background: var(--gold); color: var(--dark);
+      font-weight: 700; letter-spacing: 0.06em;
+      padding: 0.75rem 1.75rem; border-radius: var(--radius-full);
+      text-decoration: none; font-size: 0.9rem;
+      transition: background 0.18s;
+    }
+    .btn-sponsor:hover { background: #b8922a; }
+    .btn-back {
+      background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.75);
+      border: 1px solid rgba(255,255,255,0.2);
+      padding: 0.75rem 1.5rem; border-radius: var(--radius-full);
+      text-decoration: none; font-size: 0.88rem;
+      transition: background 0.18s;
+    }
+    .btn-back:hover { background: rgba(255,255,255,0.18); color: #fff; }
+
+    /* ── Story Section ──────────────────── */
+    .child-story { padding: 4.5rem 0; }
+    .child-story__inner {
+      display: grid; grid-template-columns: 1fr 340px;
+      gap: 4rem; align-items: start;
+      max-width: 960px; margin: 0 auto;
+    }
+    .child-story__text h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.75rem; color: var(--text-dark);
+      margin-bottom: 1.25rem;
+    }
+    .child-story__text p {
+      color: var(--text-mid); line-height: 1.95;
+      font-size: 0.96rem; margin-bottom: 1rem;
+    }
+    .child-needs {
+      background: var(--off-white);
+      border-radius: var(--radius-lg); padding: 1.75rem;
+      border: 1px solid var(--border-light);
+    }
+    .child-needs h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem; color: var(--crimson);
+      margin-bottom: 1.25rem;
+    }
+    .need-item {
+      display: flex; gap: 0.75rem; align-items: flex-start;
+      margin-bottom: 1rem;
+    }
+    .need-item__icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 0.1rem; }
+    .need-item__text { font-size: 0.88rem; color: var(--text-mid); line-height: 1.6; }
+    .need-item__text strong { color: var(--text-dark); display: block; margin-bottom: 0.15rem; }
+
+    /* ── Gallery ────────────────────────── */
+    .child-gallery { padding: 3.5rem 0; background: var(--off-white); }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.75rem; margin-top: 2rem;
+    }
+    .gallery-item {
+      aspect-ratio: 1; border-radius: var(--radius-md);
+      overflow: hidden; background: #ddd; cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .gallery-item:hover { transform: scale(1.03); }
+    .gallery-item img { width:100%; height:100%; object-fit:cover; display:block; }
+    .gallery-item--placeholder {
+      background: linear-gradient(135deg, #eee, #ddd);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2rem; color: #bbb;
+    }
+
+    /* ── Sponsor Box ────────────────────── */
+    .sponsor-section { padding: 4.5rem 0; }
+    .sponsor-box {
+      background: linear-gradient(135deg, var(--crimson), #7B1313);
+      border-radius: var(--radius-xl, 1.5rem); padding: 3rem;
+      text-align: center; color: #fff; max-width: 700px; margin: 0 auto;
+      box-shadow: var(--shadow-lg);
+    }
+    .sponsor-box h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.9rem; margin-bottom: 0.5rem; font-style: italic;
+    }
+    .sponsor-box p { opacity: 0.82; font-size: 0.97rem; max-width: 520px; margin: 0 auto 2rem; line-height: 1.8; }
+    .sponsor-tiers {
+      display: flex; gap: 1rem; justify-content: center;
+      flex-wrap: wrap; margin-bottom: 2rem;
+    }
+    .sponsor-tier {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: var(--radius-lg); padding: 1rem 1.5rem;
+      text-align: center; min-width: 130px;
+    }
+    .sponsor-tier strong { display: block; font-size: 1.4rem; font-family: 'Playfair Display', serif; }
+    .sponsor-tier span { font-size: 0.7rem; opacity: 0.7; letter-spacing: 0.1em; text-transform: uppercase; }
+    .sponsor-tier small { display: block; font-size: 0.78rem; opacity: 0.6; margin-top: 0.25rem; }
+    .sponsor-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-wa {
+      background: #25D366; color: #fff;
+      font-weight: 700; padding: 0.85rem 1.75rem;
+      border-radius: var(--radius-full); text-decoration: none;
+      font-size: 0.9rem; display: inline-flex; align-items: center; gap: 0.5rem;
+    }
+    .btn-wa:hover { background: #1EB858; }
+    .btn-call {
+      background: rgba(255,255,255,0.15); color: #fff;
+      border: 1px solid rgba(255,255,255,0.3);
+      font-weight: 700; padding: 0.85rem 1.75rem;
+      border-radius: var(--radius-full); text-decoration: none;
+      font-size: 0.9rem;
+    }
+    .sponsor-includes {
+      margin-top: 2rem; padding-top: 1.75rem;
+      border-top: 1px solid rgba(255,255,255,0.15);
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;
+    }
+    .sponsor-includes div { font-size: 0.82rem; opacity: 0.75; line-height: 1.5; }
+    .sponsor-includes div span { display: block; font-size: 1.3rem; margin-bottom: 0.25rem; }
+
+    /* ── Navigation ─────────────────────── */
+    .child-nav {
+      padding: 2rem 0; background: var(--off-white);
+      border-top: 1px solid var(--border-light);
+    }
+    .child-nav__inner {
+      display: flex; justify-content: space-between; align-items: center;
+      max-width: 860px; margin: 0 auto;
+    }
+    .child-nav a {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      color: var(--crimson); font-weight: 600; font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .child-nav a:hover { text-decoration: underline; }
+
+    @media(max-width: 768px) {
+      .child-story__inner { grid-template-columns: 1fr; gap: 2rem; }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .sponsor-includes { grid-template-columns: 1fr 1fr; }
+      .sponsor-tier { min-width: 100px; }
+    }
+  </style>
+</head>
+<body class="english">
+<div id="site-header"></div>
+
+
+<!-- ═══════════════════════════════════
+     CHILD HERO
+═══════════════════════════════════ -->
+<section class="child-hero">
+  <div class="container">
+    <div class="child-hero__photo">
+      <img src="images/children/child-9.jpg" alt="Child 9"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <div class="child-hero__photo-fallback">🧒</div>
+    </div>
+    <div class="child-hero__badge">✝ Mary House of Compassion Trust · Child 9</div>
+    <h1 class="child-hero__name english-text">[ Child's Name ]</h1>
+    <div class="child-hero__meta english-text">Age: — &nbsp;·&nbsp; Class: — &nbsp;·&nbsp; At the Trust since —</div>
+    <div class="child-hero__actions">
+      <a href="https://wa.me/919848315170?text=I%20want%20to%20sponsor%20Child%209%20at%20Mary%20House%20of%20Compassion%20Trust"
+        target="_blank" class="btn-sponsor">❤️ Sponsor This Child</a>
+      <a href="orphanage.html" class="btn-back">← All Children</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════
+     CHILD STORY + NEEDS
+═══════════════════════════════════ -->
+<section class="child-story">
+  <div class="container">
+    <div class="child-story__inner">
+
+      <div class="child-story__text">
+        <h2 class="english-text">[ Child's Name ]'s Story</h2>
+        <p class="english-text">
+          [ This section will be filled with the child's personal story — where they came from, how they joined Mary House of Compassion Trust, and what their life looks like today. ]
+        </p>
+        <p class="english-text">
+          [ Second paragraph — describe the child's personality, favourite subjects, dreams for the future, and what makes them special. ]
+        </p>
+        <p class="english-text">
+          [ Third paragraph — what a sponsor's support means to this specific child: education, meals, healthcare, and the love of a family. ]
+        </p>
+        <div style="margin-top: 2rem; padding: 1.5rem; background: linear-gradient(135deg, rgba(155,28,28,0.07), rgba(155,28,28,0.03)); border-radius: var(--radius-lg); border-left: 3px solid var(--crimson);">
+          <p style="margin:0; font-family:'Playfair Display',serif; font-style:italic; color: var(--crimson); font-size:1rem; line-height:1.8;">
+            "[ A short quote or prayer request from this child, or a note from Bishop Moses about them. ]"
+          </p>
+          <p style="margin:0.5rem 0 0; font-size:0.8rem; color:var(--text-light);">— Bishop P. Moses</p>
+        </div>
+      </div>
+
+      <div>
+        <div class="child-needs">
+          <h3>🙏 What This Child Needs</h3>
+          <div class="need-item">
+            <div class="need-item__icon">📚</div>
+            <div class="need-item__text">
+              <strong>Education</strong>
+              School fees, books, uniform, and stationery — ensuring they never miss a day of learning.
+            </div>
+          </div>
+          <div class="need-item">
+            <div class="need-item__icon">🍚</div>
+            <div class="need-item__text">
+              <strong>Nutritious Meals</strong>
+              Three healthy meals every day — the fuel they need to study, grow, and thrive.
+            </div>
+          </div>
+          <div class="need-item">
+            <div class="need-item__icon">🏥</div>
+            <div class="need-item__text">
+              <strong>Healthcare</strong>
+              Regular check-ups, medicines, and immediate care whenever needed.
+            </div>
+          </div>
+          <div class="need-item">
+            <div class="need-item__icon">❤️</div>
+            <div class="need-item__text">
+              <strong>Love &amp; Belonging</strong>
+              The assurance that someone in the world believes in them and is praying for them.
+            </div>
+          </div>
+          <div class="need-item">
+            <div class="need-item__icon">✝️</div>
+            <div class="need-item__text">
+              <strong>Spiritual Guidance</strong>
+              Growing up grounded in faith, knowing God has a plan for their life.
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick facts card -->
+        <div style="margin-top:1.25rem; background:#fff; border-radius:var(--radius-lg); padding:1.5rem; border:1px solid var(--border-light); box-shadow:var(--shadow-xs);">
+          <h4 style="font-size:0.78rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--crimson);margin-bottom:1rem;">Quick Facts</h4>
+          <div style="display:grid;gap:0.6rem;font-size:0.88rem;color:var(--text-mid);">
+            <div><strong style="color:var(--text-dark);display:inline-block;width:90px;">Name:</strong> [ Name ]</div>
+            <div><strong style="color:var(--text-dark);display:inline-block;width:90px;">Age:</strong> — years</div>
+            <div><strong style="color:var(--text-dark);display:inline-block;width:90px;">Class:</strong> — Standard</div>
+            <div><strong style="color:var(--text-dark);display:inline-block;width:90px;">Favourite:</strong> [ Subject / Activity ]</div>
+            <div><strong style="color:var(--text-dark);display:inline-block;width:90px;">Dream:</strong> [ Future ambition ]</div>
+            <div><strong style="color:var(--text-dark);display:inline-block;width:90px;">Since:</strong> [ Year joined ]</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════
+     PHOTO GALLERY
+═══════════════════════════════════ -->
+<section class="child-gallery">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow english-text">📸 Photo Gallery</span>
+      <h2 class="section-title english-text">Moments from [ Child's Name ]'s Life</h2>
+    </div>
+    <div class="gallery-grid">
+      <!-- Photos will be added when user provides them -->
+      <!-- Pattern: images/children/child-1/photo-1.jpg -->
+      <div class="gallery-item gallery-item--placeholder">📷</div>
+      <div class="gallery-item gallery-item--placeholder">📷</div>
+      <div class="gallery-item gallery-item--placeholder">📷</div>
+      <div class="gallery-item gallery-item--placeholder">📷</div>
+      <div class="gallery-item gallery-item--placeholder">📷</div>
+      <div class="gallery-item gallery-item--placeholder">📷</div>
+      <div class="gallery-item gallery-item--placeholder">📷</div>
+      <div class="gallery-item gallery-item--placeholder">📷</div>
+    </div>
+    <p style="text-align:center;margin-top:1.5rem;font-size:0.85rem;color:var(--text-light);">More photos coming soon</p>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════
+     SPONSOR THIS CHILD
+═══════════════════════════════════ -->
+<section class="sponsor-section">
+  <div class="container">
+    <div class="sponsor-box">
+      <h2>Sponsor [ Child's Name ]</h2>
+      <p>Your monthly support gives this child education, meals, healthcare, and — most importantly — the certainty that someone in the world loves and cares for them.</p>
+
+      <div class="sponsor-tiers">
+        <div class="sponsor-tier">
+          <strong>₹500</strong>
+          <span>Per Month</span>
+          <small>Meals for 30 days</small>
+        </div>
+        <div class="sponsor-tier">
+          <strong>₹1,500</strong>
+          <span>Per Month</span>
+          <small>Meals + Education</small>
+        </div>
+        <div class="sponsor-tier">
+          <strong>₹2,500</strong>
+          <span>Per Month</span>
+          <small>Full Sponsorship</small>
+        </div>
+        <div class="sponsor-tier">
+          <strong>Any</strong>
+          <span>Amount</span>
+          <small>Every rupee helps</small>
+        </div>
+      </div>
+
+      <div class="sponsor-actions">
+        <a href="https://wa.me/919848315170?text=I%20want%20to%20sponsor%20Child%209%20at%20Mary%20House%20of%20Compassion%20Trust"
+          target="_blank" class="btn-wa">💬 WhatsApp to Sponsor</a>
+        <a href="tel:+919848315170" class="btn-call">📞 Call Bishop Moses</a>
+      </div>
+
+      <div class="sponsor-includes">
+        <div><span>🍚</span>Nutritious meals every day of the month</div>
+        <div><span>📚</span>School fees, books &amp; uniform</div>
+        <div><span>🏥</span>Healthcare &amp; medical support</div>
+        <div><span>✝️</span>Spiritual guidance &amp; prayer</div>
+        <div><span>❤️</span>Updates &amp; photos of the child</div>
+        <div><span>🙏</span>Tax exemption receipt provided</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════
+     SCRIPTURE
+═══════════════════════════════════ -->
+<section class="scripture-section">
+  <div class="container">
+    <p class="scripture-text">
+      <span class="english-text">"Whoever welcomes one of these little children in my name welcomes me."</span>
+    </p>
+    <p class="scripture-ref">
+      <span class="english-text">— Mark 9:37</span>
+    </p>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════
+     PREV / NEXT NAVIGATION
+═══════════════════════════════════ -->
+<section class="child-nav">
+  <div class="container">
+    <div class="child-nav__inner">
+      <a href="orphan-8.html">← Previous Child</a>
+      <span style="font-size:0.8rem;color:var(--text-light);">Child 9 of 15</span>
+      <a href="orphan-10.html">Next Child →</a>
+    </div>
+  </div>
+</section>
+
+
+<div id="site-footer"></div>
+<script src="js/site.js"></script>
+</body>
+</html>
