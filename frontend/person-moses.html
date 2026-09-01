@@ -225,6 +225,21 @@
 <div id="site-footer"></div>
 <script src="js/site.js"></script>
 <script>
+(function(){
+  var nav = document.querySelector('nav.person-section-nav');
+  if(!nav) return;
+  nav.style.transition = 'transform 0.3s cubic-bezier(.4,0,.2,1)';
+  var lastY = 0, ticking = false;
+  window.addEventListener('scroll', function(){
+    if(!ticking){ requestAnimationFrame(function(){
+      var y = window.scrollY;
+      nav.style.transform = (y > lastY && y > 80) ? 'translateY(-100%)' : 'translateY(0)';
+      lastY = y; ticking = false;
+    }); ticking = true; }
+  }, {passive:true});
+})();
+</script>
+<script>
 (async () => {
   let photos = [];
   try {
