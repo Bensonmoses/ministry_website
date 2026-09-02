@@ -88,6 +88,20 @@
   align-items: center;
 }
 
+/* Child card body and CTA button — always centered, never flex-start */
+.child-card__body {
+  align-items: center;
+  text-align: center;
+}
+.child-card__name,
+.child-card__age,
+.child-card__desc {
+  text-align: center;
+}
+.child-card__btn {
+  align-self: center;
+}
+
 /* Single .btn always centers its own text */
 .btn {
   display: inline-flex;
