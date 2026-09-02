@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -177,8 +177,9 @@
     .child-card__fallback {
       font-size: 4rem; color: rgba(255,255,255,0.25);
       position: absolute; inset: 0;
-      display: flex; align-items: center; justify-content: center;
+      display: none; align-items: center; justify-content: center;
     }
+    .child-card__fallback.visible { display: flex; }
     .child-card__num {
       position: absolute; top: 0.65rem; left: 0.65rem;
       background: rgba(0,0,0,0.5);
@@ -481,7 +482,7 @@
       <a href="orphan-1.html" class="child-card">
         <div class="child-card__photo">
           <img src="images/Orphanage/Child-1.jpeg" alt="Child 1"
-            onerror="this.style.display='none'">
+            onerror="this.style.display='none';this.nextElementSibling.classList.add('visible')">
           <div class="child-card__fallback">🧒</div>
           <span class="child-card__num">Child 1</span>
           <span class="child-card__sponsor-badge">Sponsor</span>
@@ -508,7 +509,7 @@
 
       <a href="orphan-2.html" class="child-card">
         <div class="child-card__photo">
-          <img src="images/Orphanage/Child-2.jpeg" alt="Child 2" onerror="this.style.display='none'">
+          <img src="images/Orphanage/Child-2.jpeg" alt="Child 2" onerror="this.style.display='none';this.nextElementSibling.classList.add('visible')">
           <div class="child-card__fallback">🧒</div>
           <span class="child-card__num">Child 2</span>
           <span class="child-card__sponsor-badge">Sponsor</span>
@@ -535,7 +536,7 @@
 
       <a href="orphan-3.html" class="child-card">
         <div class="child-card__photo">
-          <img src="images/Orphanage/Child-3.jpeg" alt="Child 3" onerror="this.style.display='none'">
+          <img src="images/Orphanage/Child-3.jpeg" alt="Child 3" onerror="this.style.display='none';this.nextElementSibling.classList.add('visible')">
           <div class="child-card__fallback">🧒</div>
           <span class="child-card__num">Child 3</span>
           <span class="child-card__sponsor-badge">Sponsor</span>
@@ -562,7 +563,7 @@
 
       <a href="orphan-4.html" class="child-card">
         <div class="child-card__photo">
-          <img src="images/Orphanage/Child-4.jpeg" alt="Child 4" onerror="this.style.display='none'">
+          <img src="images/Orphanage/Child-4.jpeg" alt="Child 4" onerror="this.style.display='none';this.nextElementSibling.classList.add('visible')">
           <div class="child-card__fallback">🧒</div>
           <span class="child-card__num">Child 4</span>
           <span class="child-card__sponsor-badge">Sponsor</span>
@@ -589,7 +590,7 @@
 
       <a href="orphan-5.html" class="child-card">
         <div class="child-card__photo">
-          <img src="images/Orphanage/Child-5.jpeg" alt="Child 5" onerror="this.style.display='none'">
+          <img src="images/Orphanage/Child-5.jpeg" alt="Child 5" onerror="this.style.display='none';this.nextElementSibling.classList.add('visible')">
           <div class="child-card__fallback">🧒</div>
           <span class="child-card__num">Child 5</span>
           <span class="child-card__sponsor-badge">Sponsor</span>
@@ -616,7 +617,7 @@
 
       <a href="orphan-6.html" class="child-card">
         <div class="child-card__photo">
-          <img src="images/Orphanage/Child-6.jpeg" alt="Sundar Kumar" onerror="this.style.display='none'">
+          <img src="images/Orphanage/Child-6.jpeg" alt="Sundar Kumar" onerror="this.style.display='none';this.nextElementSibling.classList.add('visible')">
           <div class="child-card__fallback">🧒</div>
           <span class="child-card__num">Child 6</span>
           <span class="child-card__sponsor-badge">Sponsor</span>
@@ -643,7 +644,7 @@
 
       <a href="orphan-7.html" class="child-card">
         <div class="child-card__photo">
-          <img src="images/Orphanage/Child-7.jpeg" alt="Neerikshana Raju" onerror="this.style.display='none'">
+          <img src="images/Orphanage/Child-7.jpeg" alt="Neerikshana Raju" onerror="this.style.display='none';this.nextElementSibling.classList.add('visible')">
           <div class="child-card__fallback">🧒</div>
           <span class="child-card__num">Child 7</span>
           <span class="child-card__sponsor-badge">Sponsor</span>
@@ -670,7 +671,7 @@
 
       <a href="orphan-8.html" class="child-card">
         <div class="child-card__photo">
-          <img src="images/Orphanage/Child-8.jpeg" alt="Child 8" onerror="this.style.display='none'">
+          <img src="images/Orphanage/Child-8.jpeg" alt="Child 8" onerror="this.style.display='none';this.nextElementSibling.classList.add('visible')">
           <div class="child-card__fallback">🧒</div>
           <span class="child-card__num">Child 8</span>
           <span class="child-card__sponsor-badge">Sponsor</span>
@@ -697,7 +698,7 @@
 
       <a href="orphan-9.html" class="child-card">
         <div class="child-card__photo">
-          <img src="images/Orphanage/Child-9.jpeg" alt="Child 9" onerror="this.style.display='none'">
+          <img src="images/Orphanage/Child-9.jpeg" alt="Child 9" onerror="this.style.display='none';this.nextElementSibling.classList.add('visible')">
           <div class="child-card__fallback">🧒</div>
           <span class="child-card__num">Child 9</span>
           <span class="child-card__sponsor-badge">Sponsor</span>
@@ -724,7 +725,7 @@
 
       <a href="orphan-10.html" class="child-card">
         <div class="child-card__photo">
-          <img src="images/Orphanage/Child-10.jpeg" alt="Child 10" onerror="this.style.display='none'">
+          <img src="images/Orphanage/Child-10.jpeg" alt="Child 10" onerror="this.style.display='none';this.nextElementSibling.classList.add('visible')">
           <div class="child-card__fallback">🧒</div>
           <span class="child-card__num">Child 10</span>
           <span class="child-card__sponsor-badge">Sponsor</span>
@@ -751,7 +752,7 @@
 
       <a href="orphan-11.html" class="child-card">
         <div class="child-card__photo">
-          <img src="images/children/child-11.jpg" alt="Child 11" onerror="this.style.display='none'">
+          <img src="images/children/child-11.jpg" alt="Child 11" onerror="this.style.display='none';this.nextElementSibling.classList.add('visible')">
           <div class="child-card__fallback">🧒</div>
           <span class="child-card__num">Child 11</span>
           <span class="child-card__sponsor-badge">Sponsor</span>
@@ -778,7 +779,7 @@
 
       <a href="orphan-12.html" class="child-card">
         <div class="child-card__photo">
-          <img src="images/children/child-12.jpg" alt="Child 12" onerror="this.style.display='none'">
+          <img src="images/children/child-12.jpg" alt="Child 12" onerror="this.style.display='none';this.nextElementSibling.classList.add('visible')">
           <div class="child-card__fallback">🧒</div>
           <span class="child-card__num">Child 12</span>
           <span class="child-card__sponsor-badge">Sponsor</span>
@@ -805,7 +806,7 @@
 
       <a href="orphan-13.html" class="child-card">
         <div class="child-card__photo">
-          <img src="images/children/child-13.jpg" alt="Child 13" onerror="this.style.display='none'">
+          <img src="images/children/child-13.jpg" alt="Child 13" onerror="this.style.display='none';this.nextElementSibling.classList.add('visible')">
           <div class="child-card__fallback">🧒</div>
           <span class="child-card__num">Child 13</span>
           <span class="child-card__sponsor-badge">Sponsor</span>
@@ -832,7 +833,7 @@
 
       <a href="orphan-14.html" class="child-card">
         <div class="child-card__photo">
-          <img src="images/children/child-14.jpg" alt="Child 14" onerror="this.style.display='none'">
+          <img src="images/children/child-14.jpg" alt="Child 14" onerror="this.style.display='none';this.nextElementSibling.classList.add('visible')">
           <div class="child-card__fallback">🧒</div>
           <span class="child-card__num">Child 14</span>
           <span class="child-card__sponsor-badge">Sponsor</span>
