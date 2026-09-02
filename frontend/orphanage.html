@@ -7,15 +7,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Telugu:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <style>
+    /* ── Hero: same structure/feel as home page ── */
     .trust-hero {
-      background: #4A0E0E; /* fallback while images load */
-      padding: 4.5rem 0 3.5rem;
-      text-align: center;
       position: relative;
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
       overflow: hidden;
+      background: #1a0505;
       border-bottom: 3px solid var(--gold);
     }
-    /* Sliding background images */
     .trust-hero__bg {
       position: absolute; inset: 0;
       width: 100%; height: 100%;
@@ -24,73 +25,87 @@
       transition: opacity 1.4s ease-in-out;
       z-index: 0; pointer-events: none;
     }
-    /* Dark crimson overlay so text is always readable */
     .trust-hero__overlay {
       position: absolute; inset: 0; z-index: 1; pointer-events: none;
       background: linear-gradient(135deg,
-        rgba(74,14,14,0.78) 0%,
-        rgba(123,19,19,0.68) 50%,
-        rgba(74,14,14,0.78) 100%);
+        rgba(0,0,0,0.72) 0%,
+        rgba(107,15,15,0.32) 50%,
+        rgba(0,0,0,0.76) 100%);
     }
     .trust-hero__overlay::after {
       content: ''; position: absolute; inset: 0;
-      background: radial-gradient(ellipse at 50% 0%, rgba(201,168,76,0.16) 0%, transparent 65%);
+      background: radial-gradient(ellipse at 50% 0%, rgba(201,168,76,0.13) 0%, transparent 65%);
     }
     .trust-hero .container { position: relative; z-index: 2; }
 
+    /* Hero content — centred, same as .hero-content */
+    .trust-hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      padding: 4rem 1.5rem;
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    /* Badge — identical to .hero-badge */
     .trust-badge {
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
-      background: rgba(201,168,76,0.15);
-      border: 1px solid rgba(201,168,76,0.5);
+      gap: 0.55rem;
+      background: rgba(201,168,76,0.13);
+      border: 1px solid rgba(201,168,76,0.38);
       color: var(--gold-light);
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.18em;
+      font-size: 0.77rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
-      padding: 0.38rem 1rem;
+      padding: 0.4rem 1.1rem;
       border-radius: var(--radius-full);
-      margin-bottom: 1.25rem;
+      margin-bottom: 1.6rem;
     }
 
+    /* Title — identical to .hero-title */
     .trust-name {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-size: clamp(2.4rem, 6vw, 4.2rem);
+      font-weight: 700;
+      font-style: normal;
       color: #fff;
-      margin-bottom: 0.5rem;
-      font-style: italic;
-      text-shadow: 0 2px 12px rgba(0,0,0,0.3);
+      line-height: 1.1;
+      margin-bottom: 1.3rem;
+      text-shadow: 0 2px 24px rgba(0,0,0,0.5);
     }
-    .trust-name span { color: var(--gold-light); font-style: normal; }
+    /* Gold accent word — like .hero-title em */
+    .trust-name em {
+      font-style: normal;
+      color: var(--gold-light);
+    }
 
+    /* Tagline — identical to .hero-tagline */
     .trust-tagline {
-      font-size: 1rem;
-      color: rgba(255,255,255,0.65);
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      margin-bottom: 1rem;
+      font-size: clamp(1rem, 2vw, 1.18rem);
+      color: rgba(255,255,255,0.78);
+      line-height: 1.85;
+      margin-bottom: 2.5rem;
+      max-width: 540px;
+      letter-spacing: normal;
+      text-transform: none;
     }
 
-    .trust-pillars {
+    /* Action buttons row — like .hero-actions */
+    .trust-actions {
       display: flex;
-      align-items: center;
-      justify-content: center;
       gap: 1rem;
       flex-wrap: wrap;
-      margin-top: 1.5rem;
-      font-size: 0.82rem;
-      font-weight: 600;
-      color: var(--gold);
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
+      align-items: center;
+      justify-content: center;
     }
-    .trust-pillars span { display: flex; align-items: center; gap: 0.35rem; }
-    .trust-pillars .dot {
-      width: 5px; height: 5px;
-      border-radius: 50%;
-      background: var(--gold);
-      display: inline-block;
+
+    @media(max-width:600px) {
+      .trust-hero { min-height: 80vh; }
+      .trust-name { font-size: 2rem; }
+      .trust-tagline { font-size: 0.97rem; }
     }
 
     /* Services grid */
@@ -309,28 +324,30 @@
   <img class="trust-hero__bg" id="heroBg2" src="images/Orphanage/Main-2.jpeg" alt="" style="opacity:0;">
   <div class="trust-hero__overlay"></div>
   <div class="container">
-    <div class="trust-badge">
-      <span class="english-text">✝ Orphanage Ministry</span>
-      <span class="telugu-text">✝ అనాథాశ్రమ సేవ</span>
-    </div>
-    <h1 class="trust-name">
-      <span class="english-text"><span>Mary</span> House of Compassion Trust</span>
-      <span class="telugu-text"><span>మేరీ</span> హౌస్ ఆఫ్ కంపాషన్ ట్రస్ట్</span>
-    </h1>
-    <p class="trust-tagline">
-      <span class="english-text">I Choose JOY</span>
-      <span class="telugu-text">నేను ఆనందాన్ని ఎంచుకుంటాను</span>
-    </p>
-    <p style="color:rgba(255,255,255,0.6);font-size:0.95rem;max-width:520px;margin:0 auto;line-height:1.75;">
-      <span class="english-text">Founded by Bishop P. Moses — providing safe homes, education, and a future full of hope to orphaned and needy children in Oduru, West Godavari.</span>
-      <span class="telugu-text">బిషప్ పి. మోషే స్థాపించారు — ఒదురు, పశ్చిమ గోదావరిలో అనాథ మరియు అవసరమైన పిల్లలకు సురక్షిత నివాసాలు, విద్య మరియు ఆశతో నిండిన భవిష్యత్తు అందిస్తున్నారు.</span>
-    </p>
-    <div class="trust-pillars">
-      <span>🏠 <span class="english-text">Serving Children</span><span class="telugu-text">పిల్లలకు సేవ</span></span>
-      <span class="dot"></span>
-      <span>❤️ <span class="english-text">Sharing Hope</span><span class="telugu-text">ఆశను పంచడం</span></span>
-      <span class="dot"></span>
-      <span>✨ <span class="english-text">Spreading Love</span><span class="telugu-text">ప్రేమను వ్యాప్తి చేయడం</span></span>
+    <div class="trust-hero-content">
+      <div class="trust-badge">
+        ✝&nbsp;
+        <span class="english-text">Orphanage Ministry · Oduru, West Godavari</span>
+        <span class="telugu-text">అనాథాశ్రమ సేవ · ఒదురు, పశ్చిమ గోదావరి</span>
+      </div>
+      <h1 class="trust-name">
+        <span class="english-text"><em>Mary</em> House of<br>Compassion Trust</span>
+        <span class="telugu-text"><em>మేరీ</em> హౌస్ ఆఫ్<br>కంపాషన్ ట్రస్ట్</span>
+      </h1>
+      <p class="trust-tagline">
+        <span class="english-text">Founded by Bishop P. Moses — providing safe homes, education, and a future full of hope to orphaned and needy children across Andhra Pradesh.</span>
+        <span class="telugu-text">బిషప్ పి. మోషే స్థాపించారు — ఆంధ్రప్రదేశ్‌లో అనాథ పిల్లలకు సురక్షిత నివాసాలు, విద్య మరియు ఆశతో నిండిన భవిష్యత్తు అందిస్తున్నారు.</span>
+      </p>
+      <div class="trust-actions">
+        <a href="#meet-children" class="btn btn-primary">
+          <span class="english-text">Meet the Children</span>
+          <span class="telugu-text">పిల్లలను కలవండి</span>
+        </a>
+        <a href="#support" class="btn btn-outline">
+          <span class="english-text">Support This Ministry</span>
+          <span class="telugu-text">ఈ సేవకు సహాయం చేయండి</span>
+        </a>
+      </div>
     </div>
   </div>
 </section>
