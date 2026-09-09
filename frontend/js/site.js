@@ -1,4 +1,4 @@
-/* ============================================================
+﻿/* ============================================================
    HOLY SPIRIT PRAYER HOUSE — Shared Site Components
    Injects header, footer, WhatsApp button on every page
    ============================================================ */
@@ -130,7 +130,7 @@ function renderFooter() {
           <div class="footer-divider"></div>
           <p>
             <span class="english-text">A beacon of faith, hope, and love in Oduru, West Godavari, Andhra Pradesh. Serving the community for over 30 years.</span>
-            <span class="telugu-text">ఒదురులో విశ్వాసం, ఆశ మరియు ప్రేమ యొక్క దీపస్తంభం. 30 సంవత్సరాలకు పైగా సమాజానికి సేవ చేస్తున్నాం.</span>
+            <span class="telugu-text">ఒడూరులో విశ్వాసం, ఆశ మరియు ప్రేమ యొక్క దీపస్తంభం. 30 సంవత్సరాలకు పైగా సమాజానికి సేవ చేస్తున్నాం.</span>
           </p>
           <div class="footer-social">
             <a href="${SITE.youtube}" target="_blank" class="social-btn" aria-label="YouTube" title="YouTube">▶</a>
@@ -171,7 +171,7 @@ function renderFooter() {
           <ul class="footer-contact">
             <li>
               <span class="fc-icon">📍</span>
-              <span><span class="english-text">Oduru, Penumantra Mandal, West Godavari, AP — 534126</span><span class="telugu-text">ఒదురు, పెనుమంత్ర మండలం, పశ్చిమ గోదావరి — 534126</span></span>
+              <span><span class="english-text">Oduru, Penumantra Mandal, West Godavari, AP — 534126</span><span class="telugu-text">ఒడూరు, పెనుమంత్ర మండలం, పశ్చిమ గోదావరి — 534126</span></span>
             </li>
             <li>
               <span class="fc-icon">📞</span>
