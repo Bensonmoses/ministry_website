@@ -61,7 +61,7 @@ function renderHeader() {
 <header id="mainHeader">
   <div class="header-container">
     <a href="index.html" class="logo">
-      <img src="images/logo.webp" alt="Holy Spirit Prayer House">
+      <img src="images/logo_new.jpeg" alt="Holy Spirit Prayer House">
       <div class="logo-text">
         <strong>
           <span class="english-text">Holy Spirit Prayer House</span>
@@ -119,7 +119,7 @@ function renderFooter() {
         <!-- Brand column -->
         <div class="footer-brand">
           <a href="index.html" class="logo" style="margin-bottom:0.75rem;gap:0.75rem;">
-            <img src="images/logo.webp" alt="Holy Spirit Prayer House" style="width:52px;height:52px;border-radius:50%;border:2px solid rgba(201,168,76,0.35);">
+            <img src="images/logo_new.jpeg" alt="Holy Spirit Prayer House" style="width:52px;height:52px;border-radius:50%;border:2px solid rgba(201,168,76,0.35);">
             <div class="logo-text">
               <strong style="color:#fff;font-size:0.92rem;letter-spacing:0.02em;">
                 <span class="english-text">Holy Spirit Prayer House</span>
