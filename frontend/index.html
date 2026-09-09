@@ -75,16 +75,16 @@
             <span class="telugu-text">పాలకొల్లు</span>
           </span>
         </div>
-        <div style="display:flex;flex-direction:column;gap:0.45rem;margin-top:0.5rem;">
-          <div style="display:flex;align-items:center;gap:0.5rem;white-space:nowrap;overflow:hidden;">
-            <span style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.05em;color:var(--gold);font-weight:600;min-width:70px;">Every Day</span>
-            <span style="font-size:0.95rem;font-weight:700;color:#fff;min-width:52px;">24 Hrs</span>
-            <span style="font-size:0.72rem;color:rgba(255,255,255,0.6);">Prayer Tower</span>
+        <div class="schedule-grid">
+          <div class="schedule-item schedule-item--highlight">
+            <span class="sched-day"><span class="english-text">Every Day</span><span class="telugu-text">ప్రతిరోజూ</span></span>
+            <span class="sched-time">24 Hrs</span>
+            <span class="sched-label"><span class="english-text">Prayer Tower</span><span class="telugu-text">ప్రార్థన టవర్</span></span>
           </div>
-          <div style="display:flex;align-items:center;gap:0.5rem;white-space:nowrap;overflow:hidden;">
-            <span style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.05em;color:rgba(255,255,255,0.5);font-weight:600;min-width:70px;">Every Sun</span>
-            <span style="font-size:0.95rem;font-weight:700;color:#fff;min-width:52px;">7:00 PM</span>
-            <span style="font-size:0.72rem;color:rgba(255,255,255,0.6);">Sunday Prayer</span>
+          <div class="schedule-item">
+            <span class="sched-day"><span class="english-text">Every Sunday</span><span class="telugu-text">ప్రతి ఆదివారం</span></span>
+            <span class="sched-time">7:00 PM</span>
+            <span class="sched-label"><span class="english-text">Sunday Prayer</span><span class="telugu-text">ఆది. ప్రార్థన</span></span>
           </div>
         </div>
       </div>
@@ -92,7 +92,7 @@
       <div class="schedule-col-sep"></div>
 
       <!-- ODURU -->
-      <div class="schedule-location">
+      <div class="schedule-location" style="flex:1;padding:1.25rem 1.75rem;">
         <div class="schedule-loc-header">
           <span class="schedule-loc-pin">📍</span>
           <span class="schedule-loc-name">
@@ -100,31 +100,31 @@
             <span class="telugu-text">ఒడూరు</span>
           </span>
         </div>
-        <div style="display:flex;flex-direction:column;gap:0.45rem;margin-top:0.5rem;">
-          <div style="display:flex;align-items:center;gap:0.5rem;white-space:nowrap;overflow:hidden;">
-            <span style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.05em;color:rgba(255,255,255,0.5);font-weight:600;min-width:70px;">Sunday</span>
-            <span style="font-size:0.95rem;font-weight:700;color:#fff;min-width:52px;">9:00 AM</span>
-            <span style="font-size:0.72rem;color:rgba(255,255,255,0.6);">Sunday School</span>
+        <div class="schedule-grid">
+          <div class="schedule-item">
+            <span class="sched-day"><span class="english-text">Sunday</span><span class="telugu-text">ఆదివారం</span></span>
+            <span class="sched-time">9:00 AM</span>
+            <span class="sched-label"><span class="english-text">Sunday School</span><span class="telugu-text">ఆది. పాఠశాల</span></span>
           </div>
-          <div style="display:flex;align-items:center;gap:0.5rem;white-space:nowrap;overflow:hidden;">
-            <span style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.05em;color:var(--gold);font-weight:600;min-width:70px;">Sunday</span>
-            <span style="font-size:0.95rem;font-weight:700;color:#fff;min-width:52px;">11:00 AM</span>
-            <span style="font-size:0.72rem;color:rgba(255,255,255,0.6);">Main Worship</span>
+          <div class="schedule-item">
+            <span class="sched-day"><span class="english-text">Sunday</span><span class="telugu-text">ఆదివారం</span></span>
+            <span class="sched-time">11:00 AM</span>
+            <span class="sched-label"><span class="english-text">Main Worship</span><span class="telugu-text">ప్రధాన ఆరాధన</span></span>
           </div>
-          <div style="display:flex;align-items:center;gap:0.5rem;white-space:nowrap;overflow:hidden;">
-            <span style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.05em;color:rgba(255,255,255,0.5);font-weight:600;min-width:70px;">Sun Night</span>
-            <span style="font-size:0.95rem;font-weight:700;color:#fff;min-width:52px;">7:00 PM</span>
-            <span style="font-size:0.72rem;color:rgba(255,255,255,0.6);">Youth Meeting</span>
+          <div class="schedule-item">
+            <span class="sched-day"><span class="english-text">Sun Night</span><span class="telugu-text">ఆది. రాత్రి</span></span>
+            <span class="sched-time">7:00 PM</span>
+            <span class="sched-label"><span class="english-text">Youth Meeting</span><span class="telugu-text">యువజన సమావేశం</span></span>
           </div>
-          <div style="display:flex;align-items:center;gap:0.5rem;white-space:nowrap;overflow:hidden;">
-            <span style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.05em;color:rgba(255,255,255,0.5);font-weight:600;min-width:70px;">Wednesday</span>
-            <span style="font-size:0.95rem;font-weight:700;color:#fff;min-width:52px;">7:00 PM</span>
-            <span style="font-size:0.72rem;color:rgba(255,255,255,0.6);">Women's Prayer</span>
+          <div class="schedule-item">
+            <span class="sched-day"><span class="english-text">Wednesday</span><span class="telugu-text">బుధవారం</span></span>
+            <span class="sched-time">7:00 PM</span>
+            <span class="sched-label"><span class="english-text">Women's Prayer</span><span class="telugu-text">మహిళా ప్రార్థన</span></span>
           </div>
-          <div style="display:flex;align-items:center;gap:0.5rem;white-space:nowrap;overflow:hidden;">
-            <span style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.05em;color:rgba(255,255,255,0.5);font-weight:600;min-width:70px;">Saturday</span>
-            <span style="font-size:0.95rem;font-weight:700;color:#fff;min-width:52px;">7:00 PM</span>
-            <span style="font-size:0.72rem;color:rgba(255,255,255,0.6);">Fasting Prayer</span>
+          <div class="schedule-item">
+            <span class="sched-day"><span class="english-text">Saturday</span><span class="telugu-text">శనివారం</span></span>
+            <span class="sched-time">7:00 PM</span>
+            <span class="sched-label"><span class="english-text">Fasting Prayer</span><span class="telugu-text">ఉపవాస ప్రార్థన</span></span>
           </div>
         </div>
       </div>
@@ -132,7 +132,7 @@
       <div class="schedule-col-sep"></div>
 
       <!-- BRAHMANCHERUVU -->
-      <div class="schedule-location">
+      <div class="schedule-location" style="flex:1;padding:1.25rem 1.75rem;">
         <div class="schedule-loc-header">
           <span class="schedule-loc-pin">📍</span>
           <span class="schedule-loc-name">
@@ -140,21 +140,21 @@
             <span class="telugu-text">బ్రాహ్మణచెరువు</span>
           </span>
         </div>
-        <div style="display:flex;flex-direction:column;gap:0.45rem;margin-top:0.5rem;">
-          <div style="display:flex;align-items:center;gap:0.5rem;white-space:nowrap;overflow:hidden;">
-            <span style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.05em;color:rgba(255,255,255,0.5);font-weight:600;min-width:70px;">Sunday</span>
-            <span style="font-size:0.95rem;font-weight:700;color:#fff;min-width:52px;">8:00 AM</span>
-            <span style="font-size:0.72rem;color:rgba(255,255,255,0.6);">Sunday School</span>
+        <div class="schedule-grid">
+          <div class="schedule-item">
+            <span class="sched-day"><span class="english-text">Sunday</span><span class="telugu-text">ఆదివారం</span></span>
+            <span class="sched-time">8:00 AM</span>
+            <span class="sched-label"><span class="english-text">Sunday School</span><span class="telugu-text">ఆది. పాఠశాల</span></span>
           </div>
-          <div style="display:flex;align-items:center;gap:0.5rem;white-space:nowrap;overflow:hidden;">
-            <span style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.05em;color:var(--gold);font-weight:600;min-width:70px;">Sunday</span>
-            <span style="font-size:0.95rem;font-weight:700;color:#fff;min-width:52px;">10:00 AM</span>
-            <span style="font-size:0.72rem;color:rgba(255,255,255,0.6);">Sunday Service</span>
+          <div class="schedule-item">
+            <span class="sched-day"><span class="english-text">Sunday</span><span class="telugu-text">ఆదివారం</span></span>
+            <span class="sched-time">10:00 AM</span>
+            <span class="sched-label"><span class="english-text">Sunday Service</span><span class="telugu-text">ఆది. సేవ</span></span>
           </div>
-          <div style="display:flex;align-items:center;gap:0.5rem;white-space:nowrap;overflow:hidden;">
-            <span style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.05em;color:rgba(255,255,255,0.5);font-weight:600;min-width:70px;">Friday</span>
-            <span style="font-size:0.95rem;font-weight:700;color:#fff;min-width:52px;">7:00 PM</span>
-            <span style="font-size:0.72rem;color:rgba(255,255,255,0.6);">Fasting Prayer</span>
+          <div class="schedule-item">
+            <span class="sched-day"><span class="english-text">Friday</span><span class="telugu-text">శుక్రవారం</span></span>
+            <span class="sched-time">7:00 PM</span>
+            <span class="sched-label"><span class="english-text">Fasting Prayer</span><span class="telugu-text">ఉపవాస ప్రార్థన</span></span>
           </div>
         </div>
       </div>
@@ -162,7 +162,7 @@
       <div class="schedule-col-sep"></div>
 
       <!-- PENUMARU -->
-      <div class="schedule-location">
+      <div class="schedule-location" style="flex:1;padding:1.25rem 1.75rem;">
         <div class="schedule-loc-header">
           <span class="schedule-loc-pin">📍</span>
           <span class="schedule-loc-name">
@@ -170,11 +170,11 @@
             <span class="telugu-text">పెనుమారు</span>
           </span>
         </div>
-        <div style="display:flex;flex-direction:column;gap:0.45rem;margin-top:0.5rem;">
-          <div style="display:flex;align-items:center;gap:0.5rem;white-space:nowrap;overflow:hidden;">
-            <span style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.05em;color:var(--gold);font-weight:600;min-width:70px;">Sunday</span>
-            <span style="font-size:0.95rem;font-weight:700;color:#fff;min-width:52px;">10:00 AM</span>
-            <span style="font-size:0.72rem;color:rgba(255,255,255,0.6);">Sunday Service</span>
+        <div class="schedule-grid">
+          <div class="schedule-item schedule-item--highlight">
+            <span class="sched-day"><span class="english-text">Sunday</span><span class="telugu-text">ఆదివారం</span></span>
+            <span class="sched-time">10:00 AM</span>
+            <span class="sched-label"><span class="english-text">Sunday Service</span><span class="telugu-text">ఆది. సేవ</span></span>
           </div>
         </div>
       </div>
