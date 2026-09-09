@@ -66,7 +66,7 @@
   <div class="container">
     <div class="schedule-locations-row">
 
-      <!-- PALAKOLLU -->
+      <!-- PALAKOLLU — 2 items → 1×2 grid -->
       <div class="schedule-location">
         <div class="schedule-loc-header">
           <span class="schedule-loc-pin">📍</span>
@@ -75,7 +75,7 @@
             <span class="telugu-text">పాలకొల్లు</span>
           </span>
         </div>
-        <div class="schedule-grid">
+        <div class="schedule-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem 0.75rem;">
           <div class="schedule-item schedule-item--highlight">
             <span class="sched-day"><span class="english-text">Every Day</span><span class="telugu-text">ప్రతిరోజూ</span></span>
             <span class="sched-time">24 Hrs</span>
@@ -91,7 +91,7 @@
 
       <div class="schedule-col-sep"></div>
 
-      <!-- ODURU -->
+      <!-- ODURU — 5 items → 3 rows × 2 cols -->
       <div class="schedule-location">
         <div class="schedule-loc-header">
           <span class="schedule-loc-pin">📍</span>
@@ -100,23 +100,38 @@
             <span class="telugu-text">ఒడూరు</span>
           </span>
         </div>
-        <div class="schedule-grid">
+        <div class="schedule-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem 0.75rem;">
           <div class="schedule-item">
             <span class="sched-day"><span class="english-text">Sunday</span><span class="telugu-text">ఆదివారం</span></span>
-            <span class="sched-time">10:00 AM</span>
-            <span class="sched-label"><span class="english-text">Sunday Worship</span><span class="telugu-text">ఆది. ఆరాధన</span></span>
+            <span class="sched-time">9:00 AM</span>
+            <span class="sched-label"><span class="english-text">Sunday School</span><span class="telugu-text">ఆది. పాఠశాల</span></span>
           </div>
           <div class="schedule-item">
-            <span class="sched-day"><span class="english-text">Wed &amp; Sat</span><span class="telugu-text">బుధ &amp; శని</span></span>
+            <span class="sched-day"><span class="english-text">Sunday</span><span class="telugu-text">ఆదివారం</span></span>
+            <span class="sched-time">11:00 AM</span>
+            <span class="sched-label"><span class="english-text">Main Worship</span><span class="telugu-text">ప్రధాన ఆరాధన</span></span>
+          </div>
+          <div class="schedule-item">
+            <span class="sched-day"><span class="english-text">Sun Night</span><span class="telugu-text">ఆది. రాత్రి</span></span>
             <span class="sched-time">7:00 PM</span>
-            <span class="sched-label"><span class="english-text">Prayer Meetings</span><span class="telugu-text">ప్రార్థన కూటాలు</span></span>
+            <span class="sched-label"><span class="english-text">Youth Meeting</span><span class="telugu-text">యువజన సమావేశం</span></span>
+          </div>
+          <div class="schedule-item">
+            <span class="sched-day"><span class="english-text">Wednesday</span><span class="telugu-text">బుధవారం</span></span>
+            <span class="sched-time">7:00 PM</span>
+            <span class="sched-label"><span class="english-text">Women's Prayer</span><span class="telugu-text">మహిళా ప్రార్థన</span></span>
+          </div>
+          <div class="schedule-item">
+            <span class="sched-day"><span class="english-text">Saturday</span><span class="telugu-text">శనివారం</span></span>
+            <span class="sched-time">7:00 PM</span>
+            <span class="sched-label"><span class="english-text">Fasting Prayer</span><span class="telugu-text">ఉపవాస ప్రార్థన</span></span>
           </div>
         </div>
       </div>
 
       <div class="schedule-col-sep"></div>
 
-      <!-- BRAHMANCHERUVU -->
+      <!-- BRAHMANCHERUVU — 3 items → 2 rows × 2 cols -->
       <div class="schedule-location">
         <div class="schedule-loc-header">
           <span class="schedule-loc-pin">📍</span>
@@ -125,7 +140,12 @@
             <span class="telugu-text">బ్రాహ్మణచెరువు</span>
           </span>
         </div>
-        <div class="schedule-grid">
+        <div class="schedule-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem 0.75rem;">
+          <div class="schedule-item">
+            <span class="sched-day"><span class="english-text">Sunday</span><span class="telugu-text">ఆదివారం</span></span>
+            <span class="sched-time">8:00 AM</span>
+            <span class="sched-label"><span class="english-text">Sunday School</span><span class="telugu-text">ఆది. పాఠశాల</span></span>
+          </div>
           <div class="schedule-item">
             <span class="sched-day"><span class="english-text">Sunday</span><span class="telugu-text">ఆదివారం</span></span>
             <span class="sched-time">10:00 AM</span>
@@ -141,7 +161,7 @@
 
       <div class="schedule-col-sep"></div>
 
-      <!-- PENUMARU -->
+      <!-- PENUMARU — 1 item → single cell -->
       <div class="schedule-location">
         <div class="schedule-loc-header">
           <span class="schedule-loc-pin">📍</span>
@@ -150,16 +170,11 @@
             <span class="telugu-text">పెనుమారు</span>
           </span>
         </div>
-        <div class="schedule-grid">
+        <div class="schedule-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem 0.75rem;">
           <div class="schedule-item schedule-item--highlight">
             <span class="sched-day"><span class="english-text">Sunday</span><span class="telugu-text">ఆదివారం</span></span>
             <span class="sched-time">10:00 AM</span>
             <span class="sched-label"><span class="english-text">Sunday Service</span><span class="telugu-text">ఆది. సేవ</span></span>
-          </div>
-          <div class="schedule-item">
-            <span class="sched-day"><span class="english-text">Branch</span><span class="telugu-text">శాఖ</span></span>
-            <span class="sched-time" style="font-size:0.75rem;letter-spacing:0.03em;">HSPH</span>
-            <span class="sched-label"><span class="english-text">Prayer House</span><span class="telugu-text">ప్రార్థన మందిరం</span></span>
           </div>
         </div>
       </div>
