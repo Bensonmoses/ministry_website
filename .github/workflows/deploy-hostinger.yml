@@ -1,0 +1,29 @@
+name: Deploy to Hostinger
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    name: Upload frontend to Hostinger public_html
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Deploy via FTP to Hostinger
+        uses: SamKirkland/FTP-Deploy-Action@4.3.4
+        with:
+          server:    ${{ secrets.HOSTINGER_FTP_SERVER }}
+          username:  ${{ secrets.HOSTINGER_FTP_USERNAME }}
+          password:  ${{ secrets.HOSTINGER_FTP_PASSWORD }}
+          local-dir: ./frontend/
+          server-dir: /public_html/
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
